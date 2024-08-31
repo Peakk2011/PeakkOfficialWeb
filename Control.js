@@ -475,3 +475,24 @@ TexthireUs.addEventListener("mouseleave", () =>  {
 		scale: 1,
 	});
 })
+
+SideBarTog.addEventListener("mouseenter", () =>  {
+	gsap.to(cursorInner, 0.15, {
+		scale: 2.5,
+    borderRadius: "2%",
+    width: "20px",
+	});
+  gsap.to(cursorOuter, 0.2, {
+		scale: 0,
+	});
+})
+SideBarTog.addEventListener("mouseleave", () =>  {
+	gsap.to(cursorInner, 0.15, {
+		scale: 1,
+    borderRadius: "50%",
+    width: "20px",
+	});
+  gsap.to(cursorOuter, 0.2, {
+		scale: 1,
+	});
+})
