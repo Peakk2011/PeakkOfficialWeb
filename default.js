@@ -18,19 +18,11 @@ const Pklogo = document.getElementById("PK-imagelogo");
 window.onscroll = function () {
   // pageYOffset or scrollY
   if (window.scrollY > 0) {
-    document.getElementById('Header').style.height = "70dvh";
-    document.querySelector(".headerconn").style.height = "80dvh";
-    document.getElementById('Header').style.borderBottom = "solid 1px #222";
-    document.getElementById('Header').style.background = "#0c0c0c";
     Nav.classList.add('scrolled')
     NavbarContent.style.height = "58px";
   } else {
     Nav.classList.remove('scrolled')
-    document.getElementById('Header').style.height = "100dvh";
-    document.getElementById('Header').style.borderBottom = "solid 0px #222";
-    document.getElementById('Header').style.background = "rgba(8, 8, 8, 0.70)";
     NavbarContent.style.height = "72px";
-    document.querySelector(".headerconn").style.height = "100dvh";
   }
 }
 
@@ -428,29 +420,6 @@ function handleMouseLeave(e) {
 	});
 }
 
-let ButtonRippleSticky = document.getElementById('ButtonRippleSticky');
-
-ButtonRippleSticky.addEventListener("mouseenter", () =>  {
-	gsap.to(cursorInner, 0.15, {
-		scale: 3.8,
-    borderRadius: "4%",
-    width: "55px",
-	});
-  gsap.to(cursorOuter, 0.2, {
-		scale: 0,
-	});
-})
-ButtonRippleSticky.addEventListener("mouseleave", () =>  {
-	gsap.to(cursorInner, 0.15, {
-		scale: 1,
-    borderRadius: "50%",
-    width: "20px",
-	});
-  gsap.to(cursorOuter, 0.2, {
-		scale: 1,
-	});
-})
-
 TexthireUs.addEventListener("mouseenter", () =>  {
 	gsap.to(cursorInner, 0.15, {
 		scale: 3.8,
@@ -461,6 +430,7 @@ TexthireUs.addEventListener("mouseenter", () =>  {
 		scale: 0,
 	});
 })
+
 TexthireUs.addEventListener("mouseleave", () =>  {
 	gsap.to(cursorInner, 0.15, {
 		scale: 1,
