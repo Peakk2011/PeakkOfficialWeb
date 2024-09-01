@@ -1,3 +1,24 @@
+// Smooth scroll
+
+document.addEventListener('wheel', function (event) {
+  //only vertical scroll
+  if (event.deltaY > 0) {
+    event.preventDefault();
+    smoothScroll(document.documentElement, 78650, 99999)
+  }
+})
+function smoothScroll(domElement, pixel, delay) {
+  const intervalToRepeat = 225255;
+  const step = (intervalToRepeat * pixel) / delay;
+  if (step < pixel) {
+    domElement.scrollTop += step;
+    setTimeout(function () {
+      smoothScroll(domElement, pixel - step, delay)
+    }, intervalToRepeat);
+  }
+
+}
+
 const Nav = document.getElementById('Navbar');
 const NavbarContent = document.querySelector(".navbar");
 const NavTools = document.getElementById('NavTools');
@@ -18,19 +39,59 @@ const Pklogo = document.getElementById("PK-imagelogo");
 window.onscroll = function () {
   // pageYOffset or scrollY
   if (window.scrollY > 0) {
-    document.getElementById('Header').style.height = "70dvh";
-    document.querySelector(".headerconn").style.height = "80dvh";
-    document.getElementById('Header').style.borderBottom = "solid 1px #222";
-    document.getElementById('Header').style.background = "#0c0c0c";
     Nav.classList.add('scrolled')
     NavbarContent.style.height = "58px";
   } else {
     Nav.classList.remove('scrolled')
-    document.getElementById('Header').style.height = "100dvh";
-    document.getElementById('Header').style.borderBottom = "solid 0px #222";
-    document.getElementById('Header').style.background = "rgba(8, 8, 8, 0.70)";
     NavbarContent.style.height = "72px";
-    document.querySelector(".headerconn").style.height = "100dvh";
+
+    // 3D Recommend Craard
+
+    const $card = document.querySelector('.card');
+    let bounds;
+
+    function rotateToMouse(e) {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      const leftX = mouseX - bounds.x;
+      const topY = mouseY - bounds.y;
+      const center = {
+        x: leftX - bounds.width / 2,
+        y: topY - bounds.height / 2
+      }
+      const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
+
+      $card.style.transform = `
+    scale3d(1.07, 1.07, 1.07)
+    rotate3d(
+      ${center.y / 100},
+      ${-center.x / 100},
+      0,
+      ${Math.log(distance) * 2}deg
+    )
+  `;
+
+      $card.querySelector('.glow').style.backgroundImage = `
+    radial-gradient(
+      circle at
+      ${center.x * 2 + bounds.width / 2}px
+      ${center.y * 2 + bounds.height / 2}px,
+      #ffffff55,
+      #0000000f
+    )
+  `;
+    }
+
+    $card.addEventListener('mouseenter', () => {
+      bounds = $card.getBoundingClientRect();
+      document.addEventListener('mousemove', rotateToMouse);
+    });
+
+    $card.addEventListener('mouseleave', () => {
+      document.removeEventListener('mousemove', rotateToMouse);
+      $card.style.transform = '';
+      $card.style.background = '';
+    });
   }
 }
 
@@ -135,7 +196,9 @@ SideBarTog.addEventListener("click", () => {
   BGBlur.style.zIndex = "4";
 })
 
-// TexthireUs.addEventListener("click", FuncOpenHire);
+// Enter Hireus page
+
+TexthireUs.addEventListener("click", FuncOpenHire);
 
 document.getElementById('Active').addEventListener("click", FuncOpenHire);
 
@@ -146,7 +209,7 @@ function FuncOpenHire() {
   }, 50);
   setTimeout(() => {
     window.open("hire.html", "_parent");
-  }, 480)
+  }, 770)
   Nav.removeEventListener('click', NavMoving);
 }
 
@@ -297,7 +360,6 @@ for (const button of buttons) {
 //magnetButton
 
 var magnets = document.querySelectorAll('#Text')
-var magnetsImg = document.querySelectorAll('#PKlogoHeader')
 var strength = 40
 
 magnets.forEach((magnet) => {
@@ -310,7 +372,6 @@ magnets.forEach((magnet) => {
 function moveMagnet(event) {
   var magnetButton = event.currentTarget
   var bounding = magnetButton.getBoundingClientRect()
-
   //console.log(magnetButton, bounding)
 
   TweenMax.to(magnetButton, 0.2, {
@@ -348,147 +409,243 @@ const cursorOuter = document.querySelector(".cursor--large");
 const cursorInner = document.querySelector(".cursor--small");
 let isStuck = false;
 let mouse = {
-	x: -100,
-	y: -100,
+  x: -100,
+  y: -100,
 };
 
 // Just in case you need to scroll
 let scrollHeight = 0;
-window.addEventListener('scroll', function(e) {
-	scrollHeight = window.scrollY
+window.addEventListener('scroll', function (e) {
+  scrollHeight = window.scrollY
 })
 
 let cursorOuterOriginalState = {
-	width: cursorOuter.getBoundingClientRect().width,
-	height: cursorOuter.getBoundingClientRect().height,
+  width: cursorOuter.getBoundingClientRect().width,
+  height: cursorOuter.getBoundingClientRect().height,
 };
 const buttonss = document.querySelectorAll("main button");
 
 buttonss.forEach((button) => {
-	button.addEventListener("pointerenter", handleMouseEnter);
-	button.addEventListener("pointerleave", handleMouseLeave);
+  button.addEventListener("pointerenter", handleMouseEnter);
+  button.addEventListener("pointerleave", handleMouseLeave);
 });
 
 document.body.addEventListener("pointermove", updateCursorPosition);
 document.body.addEventListener("pointerdown", () => {
-	gsap.to(cursorInner, 0.15, {
-		scale: 2,
-	});
+  gsap.to(cursorInner, 0.15, {
+    scale: 2,
+  });
 });
 document.body.addEventListener("pointerup", () => {
-	gsap.to(cursorInner, 0.15, {
-		scale: 1,
-	});
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+  });
 });
 
 function updateCursorPosition(e) {
-	mouse.x = e.pageX;
-	mouse.y = e.pageY;
+  mouse.x = e.pageX;
+  mouse.y = e.pageY;
 }
 
 function updateCursor() {
-	gsap.set(cursorInner, {
-		x: mouse.x,
-		y: mouse.y,
-	});
+  gsap.set(cursorInner, {
+    x: mouse.x,
+    y: mouse.y,
+  });
 
-	if (!isStuck) {
-		gsap.to(cursorOuter, {
-			duration: 0.15,
-			x: mouse.x - cursorOuterOriginalState.width/2,
-			y: mouse.y - cursorOuterOriginalState.height/2,
-		});
-	}
+  if (!isStuck) {
+    gsap.to(cursorOuter, {
+      duration: 0.15,
+      x: mouse.x - cursorOuterOriginalState.width / 2,
+      y: mouse.y - cursorOuterOriginalState.height / 2,
+    });
+  }
 
-	requestAnimationFrame(updateCursor);
+  requestAnimationFrame(updateCursor);
 }
 
 updateCursor();
 
 function handleMouseEnter(e) {
-	isStuck = true;
-	const targetBox = e.currentTarget.getBoundingClientRect();
-	gsap.to(cursorOuter, 0.2, {
-		x: targetBox.left, 
-		y: targetBox.top + scrollHeight,
-		width: targetBox.width,
-		height: targetBox.width,
-		borderRadius: 0,
-		backgroundColor: "rgba(255, 255, 255, 0.1)",
-	});
+  isStuck = true;
+  const targetBox = e.currentTarget.getBoundingClientRect();
+  gsap.to(cursorOuter, 0.2, {
+    x: targetBox.left,
+    y: targetBox.top + scrollHeight,
+    width: targetBox.width,
+    height: targetBox.width,
+    borderRadius: 0,
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+  });
 }
 
 function handleMouseLeave(e) {
-	isStuck = false;
-	gsap.to(cursorOuter, 0.2, {
-		width: cursorOuterOriginalState.width,
-		height: cursorOuterOriginalState.width,
-		borderRadius: "50%",
-		backgroundColor: "transparent",
-	});
+  isStuck = false;
+  gsap.to(cursorOuter, 0.2, {
+    width: cursorOuterOriginalState.width,
+    height: cursorOuterOriginalState.width,
+    borderRadius: "50%",
+    backgroundColor: "transparent",
+  });
 }
 
 let ButtonRippleSticky = document.getElementById('ButtonRippleSticky');
 
-ButtonRippleSticky.addEventListener("mouseenter", () =>  {
-	gsap.to(cursorInner, 0.15, {
-		scale: 3.8,
+ButtonRippleSticky.addEventListener("mouseenter", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 3.8,
     borderRadius: "4%",
     width: "55px",
-	});
+  });
   gsap.to(cursorOuter, 0.2, {
-		scale: 0,
-	});
+    scale: 0,
+  });
 })
-ButtonRippleSticky.addEventListener("mouseleave", () =>  {
-	gsap.to(cursorInner, 0.15, {
-		scale: 1,
+ButtonRippleSticky.addEventListener("mouseleave", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
     borderRadius: "50%",
     width: "20px",
-	});
+  });
   gsap.to(cursorOuter, 0.2, {
-		scale: 1,
-	});
+    scale: 1,
+  });
 })
 
-TexthireUs.addEventListener("mouseenter", () =>  {
-	gsap.to(cursorInner, 0.15, {
-		scale: 3.8,
+TexthireUs.addEventListener("mouseenter", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 3.8,
     borderRadius: "4%",
     width: "55px",
-	});
+  });
   gsap.to(cursorOuter, 0.2, {
-		scale: 0,
-	});
+    scale: 0,
+  });
 })
-TexthireUs.addEventListener("mouseleave", () =>  {
-	gsap.to(cursorInner, 0.15, {
-		scale: 1,
+TexthireUs.addEventListener("mouseleave", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
     borderRadius: "50%",
     width: "20px",
-	});
+  });
   gsap.to(cursorOuter, 0.2, {
-		scale: 1,
-	});
+    scale: 1,
+  });
 })
 
-SideBarTog.addEventListener("mouseenter", () =>  {
-	gsap.to(cursorInner, 0.15, {
-		scale: 2.5,
+SideBarTog.addEventListener("mouseenter", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 2.5,
     borderRadius: "2%",
     width: "20px",
-	});
+  });
   gsap.to(cursorOuter, 0.2, {
-		scale: 0,
-	});
+    scale: 0,
+  });
 })
-SideBarTog.addEventListener("mouseleave", () =>  {
-	gsap.to(cursorInner, 0.15, {
-		scale: 1,
+SideBarTog.addEventListener("mouseleave", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
     borderRadius: "50%",
     width: "20px",
-	});
+  });
   gsap.to(cursorOuter, 0.2, {
-		scale: 1,
-	});
+    scale: 1,
+  });
+})
+
+// Hire us btn2nd click events
+
+ButtonRippleSticky.addEventListener("click", () => {
+  setTimeout(() => {
+    FuncOpenHire()
+  }, 100);
+})
+
+// 3D Recommend Card
+
+/* Store the element in el */
+let el = document.getElementById('Recommended')
+
+/* Get the height and width of the element */
+const height = el.clientHeight
+const width = el.clientWidth
+
+/*
+  * Add a listener for mousemove event
+  * Which will trigger function 'handleMove'
+  * On mousemove
+  */
+el.addEventListener('mousemove', handleMove)
+el.addEventListener('mouseover', handleMove)
+el.addEventListener('click', handleMove)
+
+/* Define function a */
+function handleMove(e) {
+  /*
+    * Get position of mouse cursor
+    * With respect to the element
+    * On mouseover
+    */
+  /* Store the x position */
+  const xVal = e.layerX
+  /* Store the y position */
+  const yVal = e.layerY
+  /*
+    * Calculate rotation valuee along the Y-axis
+    * Here the multiplier 20 is to
+    * Control the rotation
+    * You can change the value and see the results
+    */
+  const yRotation = 4 * ((xVal - width / 2) / width)
+  /* Calculate the rotation along the X-axis */
+  const xRotation = -4 * ((yVal - height / 2) / height)
+  /* Generate string for CSS transform property */
+  const string = 'perspective(300px) scale(1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+  /* Apply the calculated transformation */
+  el.style.transform = string
+}
+/* Add listener for mouseout event, remove the rotation */
+el.addEventListener('mouseout', function () {
+  el.style.transform = 'perspective(300px) scale(1) rotateX(0) rotateY(0)'
+})
+/* Add listener for mousedown event, to simulate click */
+el.addEventListener('mousedown', function () {
+  el.style.transform = 'perspective(300px) scale(0.9) rotateX(0) rotateY(0)'
+})
+/* Add listener for mouseup, simulate release of mouse click */
+el.addEventListener('mouseup', function () {
+  el.style.transform = 'perspective(300px) scale(1) rotateX(0) rotateY(0)'
+})
+
+// Hide cursor when hover recommend card
+
+el.addEventListener("mouseenter", () => {
+  gsap.to(cursorInner, 0.15, {
+    opacity: 0,
+    scale: 12,
+    borderRadius: "0%",
+    transition: 0.4,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    opacity: 0,
+    scale: 0,
+    borderRadius: "50%",
+    transition: 0.4,
+  });
+})
+
+el.addEventListener("mouseleave", () => {
+  gsap.to(cursorInner, 0.15, {
+    opacity: 1,
+    scale: 1,
+    borderRadius: "50%",
+    transition: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    opacity: 1,
+    scale: 1,
+    borderRadius: "50%",
+    transition: 1,
+  });
 })

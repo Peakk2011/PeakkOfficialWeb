@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="transition: cubic-bezier(0.19, 1, 0.22, 1) 1s all;">
+<html lang="en" style="transition: cubic-bezier(0.19, 1, 0.22, 1) 1s all;" id="HTMl">
 
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
     <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
 </head>
-
 <body>
 
     <div class="cursor cursor--large"></div>
@@ -234,8 +233,38 @@
         </div>
     </header>
 
-    <script src="./eel.js"></script>
+    <div class="PriceTag">
+        <div class="PriceTagText">
+            <h1>ราคาการทําเว็บมีราคาใหนบ้าง?</h1>
+        </div>
+        <div class="PriceContent">
+            <div class="PriceContentArea">
+                <div class="FlexPriceCard">
+                    <h1>599฿</h1>
+                    <hr>
+                    <p>รายระเอียดสําหรับราคา 599฿</p>
+                </div>
+                <div class="SuggessProductPrace">
+                    <h1 id="TextSuggessPriceTag"><ion-icon name="cash-outline"></ion-icon>ราคาแนะนํา</h1>
+                    <div class="FlexPriceCard" id="Recommended">
+                        <h1>399฿</h1>
+                        <hr>
+                        <p>รายระเอียดสําหรับราคา 300฿</p>
+                    </div>
+                </div>
+                <div class="FlexPriceCard">
+                    <h1>999฿</h1>
+                    <hr>
+                    <p>รายระเอียดสําหรับราคา 999฿</p>
+                </div>
+            </div>
+            <div class="Buy399Price">
+                <button class="BuyRecomPrice">จ้างงานพวกเราโดยที่งานราคา 300฿</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="./eel.js"></script> -->
     <script src="Control.js"></script>
 </body>
-
 </html>
