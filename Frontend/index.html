@@ -17,7 +17,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
     <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js">
+    </script>
 </head>
+
 <body>
 
     <div class="cursor cursor--large"></div>
@@ -176,6 +179,26 @@
         </ul>
     </div>
 
+    <div class="PeakkFirst">
+        <div class="PeakkimageWall">
+            <img src="./Image/Artboard 2.svg" alt="">
+        </div>
+        <div class="PeakkFirstCon">
+            <div class="PeakkFirstText">
+                <h1>Peakkofficial</h1>
+                <hr>
+                <p>รับทําเว็บที่จับต้องได้ทุกคน</p>
+                <div class="PeakkButton">
+                    <button>ดาวน์โหลดแอพพวกเรา</button>
+                    <button>ติดต่อพวกเรา</button>
+                </div>
+            </div>
+            <div class="PeakkImage">
+                <img src="./Image/PeakkApps.png" alt="" id="tilt" data-tilt-reset-to-start="true" data-tilt data-tilt-scale="1.03" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt data-tilt-reverse="true">
+            </div>
+        </div>
+    </div>
+
     <header id="Header">
         <div class="headerconn">
             <div class="headerfirstconn">
@@ -235,7 +258,7 @@
 
     <div class="PriceTag">
         <div class="PriceTagText">
-            <h1>ราคาการทําเว็บมีราคาใหนบ้าง?</h1>
+            <h1 id="TextTitleSuggessTag">ราคาการทําเว็บมีราคาใหนบ้าง?</h1>
         </div>
         <div class="PriceContent">
             <div class="PriceContentArea">
@@ -259,12 +282,13 @@
                 </div>
             </div>
             <div class="Buy399Price">
-                <button class="BuyRecomPrice">จ้างงานพวกเราโดยที่งานราคา 300฿</button>
+                <button class="BuyRecomPrice" id="BuyRecomPrice">จ้างงานพวกเราโดยที่งานราคา 300฿</button>
             </div>
         </div>
     </div>
 
-    <!-- <script src="./eel.js"></script> -->
     <script src="Control.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
 </body>
+
 </html>

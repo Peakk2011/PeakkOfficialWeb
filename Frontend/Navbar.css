@@ -63,6 +63,14 @@ nav {
     position: relative;
 }
 
+.ExitNavbarCheck:hover{
+    cursor: none;
+}
+
+.navbarlink span:hover {
+    cursor: none;
+}
+
 .navbarlink a {
     color: #ffffe9;
 }
@@ -87,6 +95,7 @@ nav {
     background-color: #ffffe9;
     color: #000;
     transition: 0.3s;
+    cursor: none;
     -webkit-text-stroke-width: 0.8px;
 }
 

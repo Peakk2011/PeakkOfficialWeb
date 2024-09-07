@@ -1,9 +1,140 @@
+.PeakkFirst {
+  position: relative;
+  background-attachment: fixed;
+  height: 100vh;
+  border-bottom: solid 1px #222;
+  background-color: #0a0a0a;
+  z-index: 3;
+}
+
+.PeakkFirstCon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -110%);
+}
+
+.PeakkImage {
+  left: 50%;
+  transform: translate(-50%, 45px);
+  position: absolute;
+}
+
+.PeakkImage img {
+  width: 1500px;
+  background-attachment: fixed;
+  z-index: 4;
+  display: block;
+  box-shadow: 0px 14.0px 20.0px hwb(0 46% 54% / 0.233);
+  border-radius: 6px;
+  transition: 0.1s;
+}
+
+.PeakkImage img:hover {
+  outline: solid 1px #ffffe944;
+  cursor: none;
+  box-shadow: 0px 14.0px 20.0px hwb(0 46% 54% / 0.473);
+}
+
+@keyframes TurnOffAnim {
+  to {
+    transform: translateY(500px);
+    scale: 90%;
+  }
+}
+
+@keyframes TurnOffAnimOpacity {
+  to {
+    opacity: 0;
+    transform: translateY(900px);
+  }
+}
+
+@keyframes TextSlideOut {
+  to {
+    transform: translateY(500px);
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .PeakkImage img {
+    animation: TurnOffAnim cubic-bezier(0.165, 0.84, 0.44, 1) both;
+    animation-timeline: scroll();
+    animation-range: contain;
+  }
+  .PeakkimageWall img {
+    animation: TurnOffAnimOpacity cubic-bezier(0.165, 0.84, 0.44, 1) both;
+    animation-timeline: scroll();
+    animation-range: contain;
+  }
+  .PeakkFirstText {
+    animation: TextSlideOut cubic-bezier(0.165, 0.84, 0.44, 1) both;
+    animation-timeline: scroll();
+    animation-range: contain;
+  }
+}
+
+.PeakkFirstText h1 {
+  font-weight: 500;
+  font-size: 80px;
+  text-align: center;
+  color: #ffffe9;
+  line-height: 1.9;
+}
+
+.PeakkFirstText hr {
+  width: 50%;
+  margin: 0 auto;
+  border: solid 2px #ffffe9;
+  border-radius: 20px;
+}
+
+.PeakkFirstText p {
+  color: #fff;
+  font-family: lineseedregular;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 26px;
+}
+
+.PeakkFirstText {
+  transform: translateY(-105px);
+}
+
+.PeakkButton {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.PeakkButton button {
+  height: 42px;
+  border-radius: 4px;
+  width: 180px;
+  background-color: #0a0a0a;
+  color: #ffffe9;
+  border: solid 1px #ffffe9;
+  font-family: lineseedregular;
+  font-size: 16px;
+  box-shadow: 0px 14.0px 20.0px hwb(0 46% 54% / 0.233);
+}
+
+.PeakkimageWall img {
+  height: 120dvh;
+  width: 100%;
+  opacity: .03;
+  transform: translatey(0px);
+}
+
 header {
-  height: 710px;
+  height: 100dvh;
   position: relative;
   width: 100dvw;
   z-index: 3;
-  background-color: rgb(10, 10, 10);
+  background-color: #0c0c0c;
   backdrop-filter: blur(10px);
   background-attachment: fixed;
   transition: 0.4s;
@@ -14,7 +145,7 @@ header {
   display: flex;
   max-width: 1100px;
   margin: 0 auto;
-  height: 750px;
+  height: 100dvh;
   align-items: center;
 }
 
@@ -100,6 +231,7 @@ header {
 .headerButon button:hover {
   background-color: #ffffe9;
   color: #000;
+  cursor: none;
 }
 
 .headerImage svg {
@@ -108,6 +240,7 @@ header {
 }
 
 .headerImage svg:hover {
+  cursor: none;
   filter: drop-shadow(0px 0px 17px #ffffe0);
 }
 
@@ -305,12 +438,43 @@ body.dark .circles li {
 .PriceTagText {
   margin-top: 2.6rem;
   margin-bottom: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .PriceTagText h1 {
   color: #ffffe9;
   font-family: LineSeedThin;
   text-align: center;
+  z-index: 3;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.PriceTagText h1:hover {
+  cursor: none;
+}
+
+.PriceTagText h1:hover:after,
+.PriceTagText h1:hover:after {
+  transform: scalex(1);
+}
+
+.PriceTagText h1:after,
+.PriceTagText h1:after {
+  transition: 0.25s ease;
+  content: "";
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  height: 2px;
+  background-color: currentcolor;
+  transform: scalex(0);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
 }
 
 .PriceContent {
@@ -360,11 +524,7 @@ body.dark .circles li {
 }
 
 .FlexPriceCard p {
-
   /* Button suggess */
-
-  .BuyRecomPrice {}
-
   text-align: center;
   margin-top: 1.6rem;
   color: #fff;
@@ -442,10 +602,9 @@ body.dark .circles li {
 .BuyRecomPrice {
   position: relative;
   overflow: hidden;
-  transition: background 400ms;
   color: #000;
   background-color: #fffff3;
-  padding: 0.5rem 1.8rem;
+  padding: 0.5rem 1.4rem;
   /* font-family: 'Roboto', sans-serif; */
   font-size: 20px;
   outline: 0;
@@ -457,6 +616,12 @@ body.dark .circles li {
   text-align: center;
   font-family: LineSeedRegular;
   -webkit-text-stroke-width: 0.7px;
+  mix-blend-mode: difference;
+  transition: all 0.3s;
+}
+
+.BuyRecomPrice:hover {
+  cursor: none;
 }
 
 .Buy399Price {

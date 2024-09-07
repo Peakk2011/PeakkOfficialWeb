@@ -1,24 +1,3 @@
-// Smooth scroll
-
-document.addEventListener('wheel', function (event) {
-  //only vertical scroll
-  if (event.deltaY > 0) {
-    event.preventDefault();
-    smoothScroll(document.documentElement, 78650, 99999)
-  }
-})
-function smoothScroll(domElement, pixel, delay) {
-  const intervalToRepeat = 225255;
-  const step = (intervalToRepeat * pixel) / delay;
-  if (step < pixel) {
-    domElement.scrollTop += step;
-    setTimeout(function () {
-      smoothScroll(domElement, pixel - step, delay)
-    }, intervalToRepeat);
-  }
-
-}
-
 const Nav = document.getElementById('Navbar');
 const NavbarContent = document.querySelector(".navbar");
 const NavTools = document.getElementById('NavTools');
@@ -360,12 +339,28 @@ for (const button of buttons) {
 //magnetButton
 
 var magnets = document.querySelectorAll('#Text')
-var strength = 40
+var magnetsTextTitle = document.querySelectorAll('#TextTitleSuggessTag');
+var magnetsTextSuggesstion = document.querySelectorAll('.BuyRecomPrice');
+var strength = 65
 
 magnets.forEach((magnet) => {
   magnet.addEventListener('mousemove', moveMagnet);
   magnet.addEventListener('mouseout', function (event) {
     TweenMax.to(event.currentTarget, 1, { x: 0, y: 0, ease: Power4.easeOut })
+  });
+});
+
+magnetsTextTitle.forEach((magnet) => {
+  magnet.addEventListener('mousemove', moveMagnet);
+  magnet.addEventListener('mouseout', function (event) {
+    TweenMax.to(event.currentTarget, 1, { x: 0, y: 0, ease: Power4.easeOut })
+  });
+});
+
+magnetsTextSuggesstion.forEach((magnet) => {
+  magnet.addEventListener('mousemove', moveMagnet);
+  magnet.addEventListener('mouseout', function (event) {
+    TweenMax.to(event.currentTarget, 1, { x: 0, y: 0, ease: Power2.easeOut })
   });
 });
 
@@ -636,6 +631,146 @@ el.addEventListener("mouseenter", () => {
 })
 
 el.addEventListener("mouseleave", () => {
+  gsap.to(cursorInner, 0.15, {
+    opacity: 1,
+    scale: 1,
+    borderRadius: "50%",
+    transition: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    opacity: 1,
+    scale: 1,
+    borderRadius: "50%",
+    transition: 1,
+  });
+})
+
+// Price Tag hover suggesstion
+
+document.getElementById("TextSuggessPriceTag").addEventListener("mouseenter", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 3.8,
+    borderRadius: "1%",
+    width: "65px",
+    transition: 0.65,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 6,
+    opacity: 0,
+    borderRadius: "0%",
+    transition: 0.26,
+  });
+})
+
+document.getElementById("TextSuggessPriceTag").addEventListener("mouseleave", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+    borderRadius: "50%",
+    width: "20px",
+    transition: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 1,
+    transition: 1,
+    opacity: 1,
+    borderRadius: "50%",
+  });
+})
+
+// Price title tag hover
+
+document.getElementById("TextTitleSuggessTag").addEventListener("mouseenter", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 3.8,
+    borderRadius: "1%",
+    width: "120px",
+    transition: 0.65,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 0,
+    opacity: 0,
+    borderRadius: "0%",
+    transition: 0.26,
+  });
+})
+
+document.getElementById("TextTitleSuggessTag").addEventListener("mouseleave", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+    borderRadius: "50%",
+    width: "20px",
+    transition: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 1,
+    transition: 1,
+    opacity: 1,
+    borderRadius: "50%",
+  });
+})
+
+let BuyRecomMSHover = document.getElementById("BuyRecomPrice");
+
+BuyRecomMSHover.addEventListener("mouseenter", () => {
+  gsap.to(cursorInner, 0.40, {
+    scale: 3.25,
+    borderRadius: "1%",
+    width: "120px",
+    transition: 0.65,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 0,
+    opacity: 0,
+    borderRadius: "0%",
+    transition: 0.26,
+  });
+})
+
+BuyRecomMSHover.addEventListener("mouseleave", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+    borderRadius: "50%",
+    width: "20px",
+    transition: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 1,
+    transition: 1,
+    opacity: 1,
+    borderRadius: "50%",
+  });
+})
+
+// Home page Card 3d
+
+VanillaTilt.init(document.querySelectorAll("#tilt"), {
+  max: 2.5,
+  speed: 300,
+  easing: "linear",    // Easing on enter/exit.
+  glare: true,  // if it should have a "glare" effect
+  reset: true,
+}); 
+
+// Hide cursor when hover recommend card
+
+let imgTit = document.getElementById("tilt");
+
+imgTit.addEventListener("mouseenter", () => {
+  gsap.to(cursorInner, 0.15, {
+    opacity: 0,
+    scale: 14,
+    borderRadius: "0%",
+    transition: 0.4,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    opacity: 0,
+    scale: 0,
+    borderRadius: "50%",
+    transition: 0.4,
+  });
+})
+
+imgTit.addEventListener("mouseleave", () => {
   gsap.to(cursorInner, 0.15, {
     opacity: 1,
     scale: 1,
