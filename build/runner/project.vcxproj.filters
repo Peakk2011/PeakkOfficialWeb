@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\runner\flutter_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\runner\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\runner\utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\runner\win32_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\generated_plugin_registrant.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\runner\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\runner\Runner.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CA395869-19FA-30C0-AB9F-31EADA2130C3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

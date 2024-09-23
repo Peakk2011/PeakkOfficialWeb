@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x86</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|win32">
+      <Configuration>Debug</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|win32">
+      <Configuration>Profile</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|win32">
+      <Configuration>Release</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8C902543-C412-3C50-95D6-44975BF17994}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>win32</Platform>
+    <ProjectName>flutter_assemble</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\DesktopProject\Peakk\build\CMakeFiles\71c4947df1af47b70ff2ba3a36d91fc4\flutter_windows.dll.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Generating F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_windows.dll, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_export.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_windows.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_messenger.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_plugin_registrar.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_texture_registrar.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/standard_codec.cc, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc, _phony_</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=E:\Dev\flutter PROJECT_DIR=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp FLUTTER_ROOT=E:\Dev\flutter FLUTTER_EPHEMERAL_DIR=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral PROJECT_DIR=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp FLUTTER_TARGET=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\lib\main.dart DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\.dart_tool\package_config.json E:/Dev/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_windows.dll;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_export.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_windows.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_messenger.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_plugin_registrar.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_texture_registrar.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;F:\DesktopProject\Peakk\build\flutter\_phony_</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">Generating F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_windows.dll, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_export.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_windows.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_messenger.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_plugin_registrar.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_texture_registrar.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/standard_codec.cc, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc, _phony_</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=E:\Dev\flutter PROJECT_DIR=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp FLUTTER_ROOT=E:\Dev\flutter FLUTTER_EPHEMERAL_DIR=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral PROJECT_DIR=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp FLUTTER_TARGET=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\lib\main.dart DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\.dart_tool\package_config.json E:/Dev/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Profile
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_windows.dll;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_export.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_windows.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_messenger.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_plugin_registrar.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_texture_registrar.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;F:\DesktopProject\Peakk\build\flutter\_phony_</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Generating F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_windows.dll, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_export.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_windows.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_messenger.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_plugin_registrar.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/flutter_texture_registrar.h, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/standard_codec.cc, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc, F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc, _phony_</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=E:\Dev\flutter PROJECT_DIR=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp FLUTTER_ROOT=E:\Dev\flutter FLUTTER_EPHEMERAL_DIR=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral PROJECT_DIR=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp FLUTTER_TARGET=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\lib\main.dart DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\.dart_tool\package_config.json E:/Dev/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_windows.dll;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_export.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_windows.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_messenger.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_plugin_registrar.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_texture_registrar.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;F:\DesktopProject\Peakk\build\flutter\_phony_</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\DesktopProject\Peakk\build\CMakeFiles\3e01fe5bd5d7d9fb08befedcd0563f3d\flutter_assemble.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_windows.dll;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_export.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_windows.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_messenger.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_plugin_registrar.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_texture_registrar.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">F:\DesktopProject\Peakk\build\flutter\CMakeFiles\flutter_assemble</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_windows.dll;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_export.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_windows.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_messenger.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_plugin_registrar.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_texture_registrar.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">F:\DesktopProject\Peakk\build\flutter\CMakeFiles\flutter_assemble</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_windows.dll;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_export.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_windows.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_messenger.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_plugin_registrar.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\flutter_texture_registrar.h;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">F:\DesktopProject\Peakk\build\flutter\CMakeFiles\flutter_assemble</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SF:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows -BF:/DesktopProject/Peakk/build --check-stamp-file F:/DesktopProject/Peakk/build/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\generated_config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">F:\DesktopProject\Peakk\build\flutter\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">Building Custom Rule F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SF:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows -BF:/DesktopProject/Peakk/build --check-stamp-file F:/DesktopProject/Peakk/build/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\generated_config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">F:\DesktopProject\Peakk\build\flutter\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule F:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows/flutter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SF:/DesktopProject/Peakk/PkofficialMobile/PkofficialApp/windows -BF:/DesktopProject/Peakk/build --check-stamp-file F:/DesktopProject/Peakk/build/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">F:\DesktopProject\Peakk\PkofficialMobile\PkofficialApp\windows\flutter\ephemeral\generated_config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">F:\DesktopProject\Peakk\build\flutter\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="F:\DesktopProject\Peakk\build\flutter\CMakeFiles\flutter_assemble">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="F:\DesktopProject\Peakk\build\ZERO_CHECK.vcxproj">
+      <Project>{88D808C1-D6DA-38D7-B8A3-24525BA31200}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
