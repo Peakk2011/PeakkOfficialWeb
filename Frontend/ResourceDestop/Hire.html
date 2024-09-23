@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peakk</title>
+    <link rel="stylesheet" href="Custom.css">
+    <link rel="stylesheet" href="Font.css">
+    <link rel="stylesheet" href="Navbar.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="cursor.css">
+    <link rel="stylesheet" href="loading.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="Hire.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <link rel="stylesheet" href="NewNavbar.css">
+
+    <style>
+        * {
+            transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- func -->
+
+    <div class="cursor cursor--large"></div>
+    <div class="cursor cursor--small"></div>
+
+    <!-- New navbar interface -->
+
+    <nav id="Navbar">
+        <div class="navbar">
+            <div class="navbartext">
+                <img src="./Image/PeakkSolid.png" alt="">
+                <h1 id="TextNavbar">พีคออฟฟิเชียล</h1>
+            </div>
+            <div class="navbarlink">
+                <li><a href="javascript:void(0)" id="Text">กลับไปหน้าแรก</a></li>
+                <li><a href="#" id="TextSecContach">ติดต่อพวกเรา</a></li>
+                <div class="navbarlink2nd">
+                    <div class="ExitNavbarCheck" id="hamToside">
+                        <span style="cursor:pointer">&#9776;</span>
+                    </div>
+                </div>
+                <div class="Navbarsearch">
+                    <ion-icon name="search-sharp"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="NavMore" id="NavTools">
+
+        <div class="Navtools">
+            <div class="NavtoolsCon">
+                <div class="flexnavbartools" id="FlexLinksTools">
+                    <div id="tools1">
+                        <ion-icon name="bag-handle-sharp"></ion-icon>
+                        <h2>FOR PEAKK STORE</h2>
+                        <hr>
+                        <li><a href="#">Go to mobile site</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Themes</a></li>
+                    </div>
+                    <div id="tools2">
+                        <ion-icon name="bookmark-sharp"></ion-icon>
+                        <h2>USAGE TOOLS</h2>
+                        <hr>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Create account</a></li>
+                        <li><a href="#">login to peakk store</a></li>
+                    </div>
+                    <div id="tools3">
+                        <ion-icon name="checkbox-sharp"></ion-icon>
+                        <h2>RECOMMEND TOOLS</h2>
+                        <hr>
+                        <li><a href="#">Tags suggessed</a></li>
+                        <li><a href="#">About Peakk store</a></li>
+                        <li><a href="#">Peakk Store helps</a></li>
+                    </div>
+                    <div id="tools4">
+                        <ion-icon name="help-sharp"></ion-icon>
+                        <h2>PEAKK STORE HELP</h2>
+                        <hr>
+                        <li><a href="#">How to?</a></li>
+                        <li><a href="#">Another Web tools</a></li>
+                        <li><a href="#">Visit Peakk site</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="Loading">
+        <div class="loadingCon">
+            <div class="loadingImage">
+                <svg width="1920" height="2160" viewBox="0 0 3840 2160" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    id="TransparentLogo">
+                    <g clip-path="url(#clip0_0_1)">
+                        <path
+                            d="M1790.18 858.346C1803.43 857.757 1816.78 864.926 1822.82 875.881L2128.26 1429.39C2137.18 1445.55 2126.65 1462.42 2107.11 1463.29L2067.7 1465.04C2054.48 1465.63 2041.16 1458.5 2035.1 1447.58L1727.53 894.161C1718.54 877.988 1729.06 861.063 1748.64 860.192L1790.18 858.346Z"
+                            fill="black" />
+                        <path
+                            d="M1784.42 876.874C1775.16 876.05 1770.94 866.75 1776.98 860.493L1925.46 706.733C1927.79 704.326 1931.23 702.923 1934.83 702.923L1982.77 702.923C2009.98 702.923 2023.97 730.067 2006.04 748.076L1874.37 880.309C1871.76 882.927 1867.84 884.292 1863.91 883.943L1784.42 876.874Z"
+                            fill="black" />
+                        <path d="M1703 1447.33V1449.33C1703 1455.96 1708.37 1461.33 1715 1461.33V1461.33"
+                            stroke="#FFFFF1" stroke-opacity="0.0627451" stroke-width="8" />
+                        <path
+                            d="M1763 1302.33C1763 1290.18 1772.85 1280.33 1785 1280.33H1910C1922.15 1280.33 1932 1290.18 1932 1302.33V1338.33C1932 1350.49 1922.15 1360.33 1910 1360.33H1785C1772.85 1360.33 1763 1350.49 1763 1338.33V1302.33Z"
+                            fill="black" />
+                        <path
+                            d="M1778 1411.33C1778 1401.39 1786.06 1393.33 1796 1393.33H1910C1919.94 1393.33 1928 1401.39 1928 1411.33V1439.33C1928 1449.28 1919.94 1457.33 1910 1457.33H1796C1786.06 1457.33 1778 1449.28 1778 1439.33V1411.33Z"
+                            fill="black" />
+                        <path
+                            d="M1708 745.535C1708 733.214 1708 727.053 1710.4 722.347C1712.51 718.208 1715.87 714.842 1720.01 712.733C1724.72 710.335 1730.88 710.335 1743.2 710.335H1764.8C1777.12 710.335 1783.28 710.335 1787.99 712.733C1792.13 714.842 1795.49 718.208 1797.6 722.347C1800 727.053 1800 733.214 1800 745.535V848.135C1800 860.456 1800 866.617 1797.6 871.323C1795.49 875.462 1792.13 878.828 1787.99 880.937C1783.28 883.335 1777.12 883.335 1764.8 883.335H1743.2C1730.88 883.335 1724.72 883.335 1720.01 880.937C1715.87 878.828 1712.51 875.462 1710.4 871.323C1708 866.617 1708 860.456 1708 848.135V745.535Z"
+                            fill="black" />
+                        <path
+                            d="M1707.76 1457.33V860.971H1920.33C1966.73 860.971 2005.17 869.416 2035.65 886.305C2066.12 903.194 2088.93 926.296 2104.08 955.609C2119.22 984.728 2126.79 1017.54 2126.79 1054.03C2126.79 1090.72 2119.12 1123.72 2103.79 1153.04C2088.64 1182.16 2065.74 1205.26 2035.06 1222.34C2004.59 1239.23 1966.25 1247.68 1920.04 1247.68H1773.86V1171.38H1911.89C1941.2 1171.38 1964.98 1166.34 1983.23 1156.24C2001.48 1145.95 2014.87 1131.98 2023.42 1114.31C2031.96 1096.64 2036.23 1076.55 2036.23 1054.03C2036.23 1031.51 2031.96 1011.52 2023.42 994.047C2014.87 976.575 2001.38 962.889 1982.94 952.988C1964.69 943.088 1940.62 938.137 1910.72 938.137H1797.74V1457.33H1707.76Z"
+                            fill="black" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_0_1">
+                            <rect width="466" height="762" fill="white" transform="translate(1687 699)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="contextMenu" class="context-menu">
+        <div class="ContactMenuContent">
+            <ul>
+                <li id="FirstLink"><a href="#"><ion-icon name="open-outline"></ion-icon>Open Peakk Portfolio</a></li>
+                <li><a href="#"><ion-icon name="open-outline"></ion-icon>Open Peakk store for phone</a></li>
+                <li><a href="#"><ion-icon name="enter-outline"></ion-icon>Login Peakk store</a></li>
+                <li><a href="#"><ion-icon name="grid-outline"></ion-icon>Menu list</a></li>
+                <li><a href="#"><ion-icon name="options-outline"></ion-icon>Navbar Tools</a></li>
+                <li><a href="#"><ion-icon name="color-fill-outline"></ion-icon>Theme Swicher</a></li>
+                <li><a href="#"><ion-icon name="bag-handle-outline"></ion-icon>About Peakk store</a></li>
+            </ul>
+            <div class="IconsLinks">
+                <div class="IconslinksContent">
+                    <a href="#"><ion-icon name="settings-outline"></ion-icon></a>
+                    <a href="#"><ion-icon name="language-outline"></ion-icon></a>
+                    <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+                    <a href="#"><ion-icon name="help-outline"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Pk-SidebarTogPort" id="Sidebar">
+        <div class="Pk-BarCon">
+            <div class="Pk-Bartxt">
+                <img src="./Image/Peakk-Logo/PeakkLogo.png" alt="">
+                <h1>Peakk</h1>
+            </div>
+            <div class="Pk-links">
+                <li id="Active"><a href="#"><ion-icon name="cash-outline"></ion-icon>จ้างงานพวกเรา?</a></li>
+                <li><a href="#"><ion-icon name="open-outline"></ion-icon>ดูผลงานพวกเรา</a></li>
+                <li><a href="#"><ion-icon name="search-outline"></ion-icon>ติดต่อพวกเรา</a></li>
+                <li><a href="#"><ion-icon name="list-outline"></ion-icon>ช่องทางการติดต่อ</a></li>
+                <li><a href="#"><ion-icon name="arrow-forward-sharp"></ion-icon>mew.peakkteamsub?</a></li>
+                <li><a href="#"><ion-icon name="arrow-forward-sharp"></ion-icon>peakkofficial?</a></li>
+            </div>
+        </div>
+    </div>
+
+    <div id="bgblur"></div>
+
+    <header>
+        <!-- <div class="headerNavbartop">
+            <div class="headernavtop">
+                <div class="headernavlink">
+                    <h1>peakkofficial</h1>
+                    <p>Fronend Developer</p>
+                </div>
+                <div class="headernavlink">
+                    <h1>mew.peakkteamsub</h1>
+                    <p>Fronend Developer</p>
+                </div>
+                <div class="headernavlink">
+                    <h1>instagram</h1>
+                    <p>Ceakkofficial</p>
+                </div>
+                <div class="headernavlink">
+                    <h1>templates</h1>
+                    <p>Click here to open</p>
+                </div>
+            </div>
+        </div> -->
+        <div class="headrcon">
+            <div class="AbsoulteHeader">
+                <div class="Peakkofficial">
+                    <div class="peakkofficialtext">
+                        <h1 id="NotLine">peakkofficial</h1>
+                        <h1>peakkofficial</h1>
+                        <h1>peakkofficial</h1>
+                        <h1>peakkofficial</h1>
+                    </div>
+                </div>
+                <div class="headerInfoCenter">
+                    <h1>IG: Peakkofficial</h1>
+                    <h1>FB: Peakkofficial</h1>
+                    <h1>TK: Peakkofficial</h1>
+                </div>
+                <div class="headerInfoImage">
+                    <img src="./Image/Mew.png" alt="">
+                </div>
+            </div>
+            <div class="textoverlay">
+                <h1>จ้างงานพวกเรา</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="introduce">
+        <div class="introducecontent">
+            <h1 class="TxToutline">รับทําเว็บ</h1>
+            <div class="introductext">
+                <ion-icon name="person-sharp"></ion-icon>
+                <p>"เว็บระดับโปร โปรระดับจับต้องได้ทุกคน"</p>
+                <h1>ทําความรู้จักกับพวกเรา<br>ว่าพวกเราเป็นใคร</h1>
+                <strong>
+                    สวัสดีครับ พวกเรา/พวกผม Peakkofficial และในตอนนี้ท่านได้<br>เข้ามาดูเว็บไซต์ของพวกผมครับ
+                    แล้วท่านอาจจะสงสัยว่าพวกเราทําอะไร พวกเรารับทําเว็บไซต์,<br>(เว็บไซต์ขนาดกลางหรือเล็กกว่านั้น
+                    ไม่มีระบบ)<br>รับออกแบบเว็บไซต์ ราคาเริ่มต้นในการทําเว็บและการออกแบบเว็บ<br>ราคาเริ่มต้นราคาเพียง
+                    399฿
+                </strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="peakklogo">
+        <img src="Image/PeakkEvent.png" alt="" id="PKSugIMAGE">
+        <li><a href="#" id="ButtonSuggessinlinePeakktext">ติดต่อพวกเราเพื่อจ้างพวกเราทําเว็บไซต์</a></li>
+    </div>
+
+    <div class="Featured">
+        <div class="Fur">
+            <div class="FurText">
+                <ion-icon name="push-sharp"></ion-icon>
+                <h1>สิ่งที่ท่านจะได้เมื่อ<br>ท่านจ้างงานพวกผม</h1>
+            </div>
+            <div class="FurCard">
+
+                <div class="FurCardCon">
+                    <div class="FurCardText">
+                        <ion-icon name="bookmarks-sharp"></ion-icon>
+                        <h1>สามารถรับทําเฉพาะ</h1>
+                        <p>หากท่านอยากจะได้เว็บไซต์เฉพาะโดยราคานั้นทางเราไม่คิดตังเพื่มนะครับ</p>
+                    </div>
+                </div>
+
+                <div class="FurCardCon">
+                    <div class="FurCardText">
+                        <ion-icon name="bag-handle-sharp"></ion-icon>
+                        <h1>มีต้นแบบเว็บให้</h1>
+                        <p>หากท่านไม่มี Idea ในการให้ผมรับทําเว็บ พวกผม/พวกเรา จะมีต้นแบบให้ครับ</p>
+                    </div>
+                </div>
+
+                <div class="FurCardCon">
+                    <div class="FurCardText">
+                        <ion-icon name="apps-sharp"></ion-icon>
+                        <h1>สามารถปรับแก้ได้</h1>
+                        <p>เมื่อใดที่ท่านรู้สึกไม่โอเคกับการออกแบบและเว็บที่พวกผมทําให้ท่านสามารถแก้ได้ครับ</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="appDees">
+        <div class="Appimg">
+            <img src="./Image/PEAKKAPPSNEW.png" alt="">
+        </div>
+        <div class="AppTextDesip">
+
+            <div class="AppDesipCon">
+                <ion-icon name="bookmarks-sharp"></ion-icon>
+                <h1>ใส่ใจทุกเมื่อกับรายระเอียดที่ทั้วถึง</h1>
+                <hr>
+                <p>ได้รับเว็บไซต์ที่ท่านต้องการพร้อมกับรายระเอียดที่คาดไม่ถึง</p>
+            </div>
+
+            <div class="AppDesipCon">
+                <ion-icon name="brush-sharp"></ion-icon>
+                <h1>Design ที่ทันสมัย</h1>
+                <hr>
+                <p>ได้รับเว็บไซต์ที่มี design ที่ทันสมัยตัวอย่างเช่นในรูปนี้</p>
+            </div>
+
+            <div class="AppDesipCon">
+                <ion-icon name="cash-sharp"></ion-icon>
+                <h1>ใส่ใจทุกเมื่อกับรายระเอียดที่ทั้วถึง</h1>
+                <hr>
+                <p>ได้รับเว็บไซต์ที่ท่านต้องการพร้อมกับรายระเอียดที่คาดไม่ถึง</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="Started">
+        <div class="StrCon">
+            <div class="Strtext">
+                <h1>เริ่มต้นรับ<br>เว็บไซต์ได้ตอนนี้</h1>
+                <li><a href="#">จ้างพวกเราทําเว็บไซต์</a></li>
+            </div>
+        </div>
+    </div>
+
+    <script src="./eel.js"></script>
+    <script src="default.js"></script>
+    <script src="Hire.js"></script>
+    <script src="Slider.js"></script>
+</body>
+
+</html>

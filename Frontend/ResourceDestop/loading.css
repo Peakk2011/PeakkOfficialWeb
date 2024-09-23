@@ -1,0 +1,58 @@
+
+.Loading {
+    overflow: hidden;
+}
+
+.loadingCon {
+    position: absolute;
+}
+
+.loadingCon{
+    background-color: #ffffea;
+    height: 100vh;
+    animation: Bgload 2.3s cubic-bezier(0.46, 0, 0.07, 1);
+    z-index: 100;
+}
+
+@keyframes Bgload {
+    0% {
+        background-color: #ffffea; 
+    }
+    50% {
+        background-color: #ffffea;
+    }
+    61% {
+        background-color: #D0D0C4;
+    }
+    100% {
+        background-color: #D0D0C4;
+    }
+}
+
+.loadingImage svg {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    animation: ZoomAnim 2.7s cubic-bezier(0.55, 0.15, 0.167, 1);
+}
+
+@keyframes ZoomAnim {
+    0% {
+        scale: 80%;
+    }
+    28% {
+        scale: 60%;
+        filter: blur(5px);
+    }
+    42% {
+        scale: 60%;
+        filter: blur(0px);
+    }
+    45% {
+        scale: 80%;
+        filter: blur(0px);
+    }
+    100% {
+        scale: 35000%;
+    }
+}
