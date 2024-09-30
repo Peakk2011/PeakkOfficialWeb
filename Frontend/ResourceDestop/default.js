@@ -1,6 +1,5 @@
 const Nav = document.getElementById('Navbar');
 const NavbarContent = document.querySelector(".navbar");
-const NavTools = document.getElementById('NavTools');
 const TexthireUs = document.getElementById("Text");
 const SideBarTog = document.getElementById("hamToside");
 const ExitToNa = document.getElementById("ExitTonavbar");
@@ -13,16 +12,36 @@ const Sidebar = document.getElementById("Sidebar");
 const HTML = document.getElementById("HTMl");
 
 const Pklogo = document.getElementById("PK-imagelogo");
+const Navlink = document.querySelectorAll(".navbar > .navbarlink > li > a");
 
+// Add a click event listener to each one
+Navlink.forEach(Navlink => {
+    Navlink.addEventListener('mouseenter', () => {
+        gsap.to(cursorInner, 0.15, {
+            scale: 5,
+        });
+        gsap.to(cursorOuter, 0.2, {
+            scale: 0,
+        });
+    });
+    Navlink.addEventListener('mouseleave', () => {
+        gsap.to(cursorInner, 0.15, {
+            scale: 1,
+        });
+        gsap.to(cursorOuter, 0.2, {
+            scale: 1,
+        });
+    });
+});
 
 window.onscroll = function () {
   // pageYOffset or scrollY
   if (window.scrollY > 0) {
     Nav.classList.add('scrolled')
-    NavbarContent.style.height = "58px";
+    NavbarContent.style.height = "60px";
   } else {
     Nav.classList.remove('scrolled')
-    NavbarContent.style.height = "72px";
+    NavbarContent.style.height = "60px";
   }
 }
 
@@ -49,12 +68,6 @@ function NavMovingOut() {
   // }, 500);
   BGBlur.style.zIndex = "3";
 }
-
-NavTools.addEventListener('mouseover', () => {
-  NavTools.style.opacity = "1";
-  NavTools.style.transform = "translateY(0px)";
-  document.removeEventListener('mouseenter', NavMoving);
-})
 
 // Right click func
 
@@ -118,13 +131,13 @@ function rightClick(e) {
   }
 }
 
-SideBarTog.addEventListener("click", () => {
-  Nav.removeEventListener('click', NavMoving)
-  Nav.style.transform = "translateY(-72px)"
-  Sidebar.style.transform = "translate(0px)";
-  BGBlur.style.opacity = "1";
-  BGBlur.style.zIndex = "4";
-})
+// SideBarTog.addEventListener("click", () => {
+//   Nav.removeEventListener('click', NavMoving)
+//   Nav.style.transform = "translateY(-72px)"
+//   Sidebar.style.transform = "translate(0px)";
+//   BGBlur.style.opacity = "1";
+//   BGBlur.style.zIndex = "4";
+// })
 
 // TexthireUs.addEventListener("click", FuncOpenHire);
 
@@ -143,18 +156,14 @@ function FuncOpenHire() {
 
 // loading
 
-const logo = document.getElementById("TransparentLogo");
-const Loading = document.querySelector(".Loading");
+ClassLoading = document.getElementById("Loading");
 
 setTimeout(() => {
+  ClassLoading.style.opacity = "0";
   setTimeout(() => {
-    Loading.style.opacity = "0";
-  }, 300);
-  if (Loading.style.display == "none") {
-    document.body.style.overflow = "auto"
-  }
-}, 1500);
-
+    ClassLoading.style.display = "none";
+  }, 600);
+}, 3800);
 
 // end loading
 // Sticky magnetButton ripple click 
@@ -416,52 +425,32 @@ function handleMouseLeave(e) {
 	});
 }
 
-TexthireUs.addEventListener("mouseenter", () =>  {
-	gsap.to(cursorInner, 0.15, {
-		scale: 3.8,
-    borderRadius: "4%",
-    width: "55px",
-	});
-  gsap.to(cursorOuter, 0.2, {
-		scale: 0,
-	});
-})
 
-TexthireUs.addEventListener("mouseleave", () =>  {
-	gsap.to(cursorInner, 0.15, {
-		scale: 1,
-    borderRadius: "50%",
-    width: "20px",
-	});
-  gsap.to(cursorOuter, 0.2, {
-		scale: 1,
-	});
-})
+// SideBarTog.addEventListener("mouseenter", () =>  {
+// 	gsap.to(cursorInner, 0.15, {
+// 		scale: 2.5,
+//     borderRadius: "2%",
+//     width: "20px",
+// 	});
+//   gsap.to(cursorOuter, 0.2, {
+// 		scale: 0,
+// 	});
+// })
 
-SideBarTog.addEventListener("mouseenter", () =>  {
-	gsap.to(cursorInner, 0.15, {
-		scale: 2.5,
-    borderRadius: "2%",
-    width: "20px",
-	});
-  gsap.to(cursorOuter, 0.2, {
-		scale: 0,
-	});
-})
-SideBarTog.addEventListener("mouseleave", () =>  {
-	gsap.to(cursorInner, 0.15, {
-		scale: 1,
-    borderRadius: "50%",
-    width: "20px",
-	});
-  gsap.to(cursorOuter, 0.2, {
-		scale: 1,
-	});
-})
+// SideBarTog.addEventListener("mouseleave", () =>  {
+// 	gsap.to(cursorInner, 0.15, {
+// 		scale: 1,
+//     borderRadius: "50%",
+//     width: "20px",
+// 	});
+//   gsap.to(cursorOuter, 0.2, {
+// 		scale: 1,
+// 	});
+// })
 
 gsap.to(cursorInner, 0.15, {
-  transition: 0.46,
+  transition: 0.2,
 });
 gsap.to(cursorOuter, 0.2, {
-  transition: 0.46,
+  transition: 0.2,
 });

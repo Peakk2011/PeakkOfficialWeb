@@ -1,409 +1,201 @@
 <!DOCTYPE html>
-<html lang="en" style="transition: cubic-bezier(0.19, 1, 0.22, 1) 1s all;" id="HTMl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peakk</title>
-    <link rel="stylesheet" href="Custom.css">
-    <link rel="stylesheet" href="Font.css">
-    <link rel="stylesheet" href="Navbar.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="cursor.css">
-    <link rel="stylesheet" href="loading.css">
+    <title>Peakkofficial - Home</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="./Custom.css">
+    <link rel="stylesheet" href="./Font.css">
+    <link rel="stylesheet" href="./loading.css">
+    <link rel="stylesheet" href="./ResponsiveMain.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+    <!-- <link rel="stylesheet" href="cursor.css"> -->
+    <link rel="stylesheet" href="loading.css">
+
     <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
     <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
-    <style>
-        * {
-            transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
-        }
-    </style>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <!-- Data aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
 
+    <script>
+        AOS.init();
+    </script>
+
     <div class="cursor cursor--large"></div>
     <div class="cursor cursor--small"></div>
 
-    <nav id="Navbar">
-        <div class="navbar">
-            <div class="navbartext">
-                <img src="./Image/PeakkSolid.png" alt="">
-                <h1 id="TextNavbar">Peakk</h1>
+    <div class="Loading" id="Loading">
+        <div class="loadingImage">
+            <svg width="900" height="900" viewBox="0 0 3840 2160" fill="none" xmlns="http://www.w3.org/2000/svg"
+                id="TransparentLogo">
+                <g clip-path="url(#clip0_0_1)">
+                    <path
+                        d="M1790.18 858.346C1803.43 857.757 1816.78 864.926 1822.82 875.881L2128.26 1429.39C2137.18 1445.55 2126.65 1462.42 2107.11 1463.29L2067.7 1465.04C2054.48 1465.63 2041.16 1458.5 2035.1 1447.58L1727.53 894.161C1718.54 877.988 1729.06 861.063 1748.64 860.192L1790.18 858.346Z"
+                        fill="black" />
+                    <path
+                        d="M1784.42 876.874C1775.16 876.05 1770.94 866.75 1776.98 860.493L1925.46 706.733C1927.79 704.326 1931.23 702.923 1934.83 702.923L1982.77 702.923C2009.98 702.923 2023.97 730.067 2006.04 748.076L1874.37 880.309C1871.76 882.927 1867.84 884.292 1863.91 883.943L1784.42 876.874Z"
+                        fill="black" />
+                    <path d="M1703 1447.33V1449.33C1703 1455.96 1708.37 1461.33 1715 1461.33V1461.33" stroke="#FFFFF1"
+                        stroke-opacity="0.0627451" stroke-width="8" />
+                    <path
+                        d="M1763 1302.33C1763 1290.18 1772.85 1280.33 1785 1280.33H1910C1922.15 1280.33 1932 1290.18 1932 1302.33V1338.33C1932 1350.49 1922.15 1360.33 1910 1360.33H1785C1772.85 1360.33 1763 1350.49 1763 1338.33V1302.33Z"
+                        fill="black" />
+                    <path
+                        d="M1778 1411.33C1778 1401.39 1786.06 1393.33 1796 1393.33H1910C1919.94 1393.33 1928 1401.39 1928 1411.33V1439.33C1928 1449.28 1919.94 1457.33 1910 1457.33H1796C1786.06 1457.33 1778 1449.28 1778 1439.33V1411.33Z"
+                        fill="black" />
+                    <path
+                        d="M1708 745.535C1708 733.214 1708 727.053 1710.4 722.347C1712.51 718.208 1715.87 714.842 1720.01 712.733C1724.72 710.335 1730.88 710.335 1743.2 710.335H1764.8C1777.12 710.335 1783.28 710.335 1787.99 712.733C1792.13 714.842 1795.49 718.208 1797.6 722.347C1800 727.053 1800 733.214 1800 745.535V848.135C1800 860.456 1800 866.617 1797.6 871.323C1795.49 875.462 1792.13 878.828 1787.99 880.937C1783.28 883.335 1777.12 883.335 1764.8 883.335H1743.2C1730.88 883.335 1724.72 883.335 1720.01 880.937C1715.87 878.828 1712.51 875.462 1710.4 871.323C1708 866.617 1708 860.456 1708 848.135V745.535Z"
+                        fill="black" />
+                    <path
+                        d="M1707.76 1457.33V860.971H1920.33C1966.73 860.971 2005.17 869.416 2035.65 886.305C2066.12 903.194 2088.93 926.296 2104.08 955.609C2119.22 984.728 2126.79 1017.54 2126.79 1054.03C2126.79 1090.72 2119.12 1123.72 2103.79 1153.04C2088.64 1182.16 2065.74 1205.26 2035.06 1222.34C2004.59 1239.23 1966.25 1247.68 1920.04 1247.68H1773.86V1171.38H1911.89C1941.2 1171.38 1964.98 1166.34 1983.23 1156.24C2001.48 1145.95 2014.87 1131.98 2023.42 1114.31C2031.96 1096.64 2036.23 1076.55 2036.23 1054.03C2036.23 1031.51 2031.96 1011.52 2023.42 994.047C2014.87 976.575 2001.38 962.889 1982.94 952.988C1964.69 943.088 1940.62 938.137 1910.72 938.137H1797.74V1457.33H1707.76Z"
+                        fill="black" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_0_1">
+                        <rect width="466" height="762" fill="white" transform="translate(1687 699)" />
+                    </clipPath>
+                </defs>
+            </svg>
+
+        </div>
+    </div>
+
+    <nav>
+        <div class="Navbar">
+            <div class="NavLogo">
+                <svg width="467" height="798" viewBox="0 0 467 798" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_65_10)">
+                        <path
+                            d="M118.175 191.008L421.552 736.811C429.34 750.822 419.673 765.35 402.562 765.35L379.393 765.35C368.7 765.35 358.224 759.47 353.332 750.721L48.1369 204.918C40.2966 190.897 49.9588 176.326 67.0972 176.326L92.085 176.326C102.802 176.326 113.297 182.232 118.175 191.008Z"
+                            fill="#FFFFE9" stroke="#FFFFE9" stroke-width="9" />
+                        <path
+                            d="M119.692 176.203L265.336 25.384C266.84 23.8268 269.079 22.9319 271.402 22.9602L330.25 23.6759C336.538 23.7524 339.72 30.0251 335.587 34.1973L188.964 182.24C187.556 183.662 185.525 184.519 183.38 184.595L125.511 186.655C119.067 186.885 115.523 180.52 119.692 176.203Z"
+                            fill="#FFFFE9" stroke="#FFFFE9" stroke-width="8" />
+                        <path
+                            d="M102 607.5H227C237.217 607.5 245.5 615.783 245.5 626V643C245.5 653.217 237.217 661.5 227 661.5H102C91.7827 661.5 83.5 653.217 83.5 643V626C83.5 615.783 91.7827 607.5 102 607.5Z"
+                            fill="#FFFFE9" stroke="#FFFFE9" stroke-width="7" />
+                        <path
+                            d="M99 721C99 711.059 107.059 703 117 703H231C240.941 703 249 711.059 249 721V749C249 758.941 240.941 767 231 767H117C107.059 767 99 758.941 99 749V721Z"
+                            fill="#FFFFE9" />
+                        <path
+                            d="M24.7626 767V170.636H237.334C283.73 170.636 322.168 179.081 352.646 195.97C383.124 212.859 405.934 235.961 421.077 265.274C436.219 294.393 443.79 327.201 443.79 363.697C443.79 400.388 436.122 433.39 420.785 462.703C405.643 491.822 382.736 514.924 352.064 532.007C321.586 548.896 283.245 557.341 237.042 557.341H90.8635V481.048H228.889C258.202 481.048 281.983 476.001 300.231 465.906C318.479 455.617 331.874 441.64 340.416 423.974C348.958 406.309 353.229 386.216 353.229 363.697C353.229 341.179 348.958 321.183 340.416 303.712C331.874 286.24 318.382 272.554 299.94 262.653C281.692 252.753 257.62 247.803 227.724 247.803H114.741V767H24.7626Z"
+                            fill="#FFFFE9" />
+                        <path
+                            d="M25 55.2C25 42.8788 25 36.7183 27.3979 32.0122C29.5071 27.8726 32.8726 24.5071 37.0122 22.3979C41.7183 20 47.8788 20 60.2 20H81.8C94.1212 20 100.282 20 104.988 22.3979C109.127 24.5071 112.493 27.8726 114.602 32.0122C117 36.7183 117 42.8788 117 55.2V157.8C117 170.121 117 176.282 114.602 180.988C112.493 185.127 109.127 188.493 104.988 190.602C100.282 193 94.1212 193 81.8 193H60.2C47.8788 193 41.7183 193 37.0122 190.602C32.8726 188.493 29.5071 185.127 27.3979 180.988C25 176.282 25 170.121 25 157.8V55.2Z"
+                            fill="#FFFFE9" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_65_10">
+                            <rect width="467" height="798" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <h1>พีคออฟฟิเชียล</h1>
             </div>
-            <div class="navbarlink">
-                <li><a href="javascript:void(0)" id="Text">จ้างงานพวกเรา?</a></li>
-                <div class="ExitNavbarCheck" id="hamToside">
-                    <span style="cursor:pointer">&#9776;</span>
-                </div>
+            <div class="navbarlinks">
+                <li><a href="javascript:void(0)" id="HighlightNavbar">ภาพรวม</a></li>
+                <li><a href="Hire.html">จ้างงาน</a></li>
+                <li><a href="javascript:void(0)">เกียวกับ</a></li>
+                <li><a href="javascript:void(0)" class="ResThemeswic">เปลียนธีม</a></li>
+                <li><a href="javascript:void(0)" id="TextSecContach">ติดต่อพวกเรา</a></li>
+            </div>
+            <div class="iconsRes" id="iconsRes">
+                <ion-icon name="ellipsis-vertical-sharp"></ion-icon>
             </div>
         </div>
     </nav>
 
-    <div class="NavMore" id="NavTools">
+    <div class="sidebar" id="SidebarNew">
+        <div class="sidebartitile">
+            <svg width="467" height="798" viewBox="0 0 467 798" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_65_10)">
+                    <path
+                        d="M118.175 191.008L421.552 736.811C429.34 750.822 419.673 765.35 402.562 765.35L379.393 765.35C368.7 765.35 358.224 759.47 353.332 750.721L48.1369 204.918C40.2966 190.897 49.9588 176.326 67.0972 176.326L92.085 176.326C102.802 176.326 113.297 182.232 118.175 191.008Z"
+                        fill="#FFFFE9" stroke="#FFFFE9" stroke-width="9" />
+                    <path
+                        d="M119.692 176.203L265.336 25.384C266.84 23.8268 269.079 22.9319 271.402 22.9602L330.25 23.6759C336.538 23.7524 339.72 30.0251 335.587 34.1973L188.964 182.24C187.556 183.662 185.525 184.519 183.38 184.595L125.511 186.655C119.067 186.885 115.523 180.52 119.692 176.203Z"
+                        fill="#FFFFE9" stroke="#FFFFE9" stroke-width="8" />
+                    <path
+                        d="M102 607.5H227C237.217 607.5 245.5 615.783 245.5 626V643C245.5 653.217 237.217 661.5 227 661.5H102C91.7827 661.5 83.5 653.217 83.5 643V626C83.5 615.783 91.7827 607.5 102 607.5Z"
+                        fill="#FFFFE9" stroke="#FFFFE9" stroke-width="7" />
+                    <path
+                        d="M99 721C99 711.059 107.059 703 117 703H231C240.941 703 249 711.059 249 721V749C249 758.941 240.941 767 231 767H117C107.059 767 99 758.941 99 749V721Z"
+                        fill="#FFFFE9" />
+                    <path
+                        d="M24.7626 767V170.636H237.334C283.73 170.636 322.168 179.081 352.646 195.97C383.124 212.859 405.934 235.961 421.077 265.274C436.219 294.393 443.79 327.201 443.79 363.697C443.79 400.388 436.122 433.39 420.785 462.703C405.643 491.822 382.736 514.924 352.064 532.007C321.586 548.896 283.245 557.341 237.042 557.341H90.8635V481.048H228.889C258.202 481.048 281.983 476.001 300.231 465.906C318.479 455.617 331.874 441.64 340.416 423.974C348.958 406.309 353.229 386.216 353.229 363.697C353.229 341.179 348.958 321.183 340.416 303.712C331.874 286.24 318.382 272.554 299.94 262.653C281.692 252.753 257.62 247.803 227.724 247.803H114.741V767H24.7626Z"
+                        fill="#FFFFE9" />
+                    <path
+                        d="M25 55.2C25 42.8788 25 36.7183 27.3979 32.0122C29.5071 27.8726 32.8726 24.5071 37.0122 22.3979C41.7183 20 47.8788 20 60.2 20H81.8C94.1212 20 100.282 20 104.988 22.3979C109.127 24.5071 112.493 27.8726 114.602 32.0122C117 36.7183 117 42.8788 117 55.2V157.8C117 170.121 117 176.282 114.602 180.988C112.493 185.127 109.127 188.493 104.988 190.602C100.282 193 94.1212 193 81.8 193H60.2C47.8788 193 41.7183 193 37.0122 190.602C32.8726 188.493 29.5071 185.127 27.3979 180.988C25 176.282 25 170.121 25 157.8V55.2Z"
+                        fill="#FFFFE9" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_65_10">
+                        <rect width="467" height="798" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+            <h1>พีคออฟฟิเชียล</h1>
+        </div>
+        <div class="sidebarcon">
+            <li><a href="#" id="sidebarhigh"><ion-icon name="golf-sharp"></ion-icon>ภาพรวม</a></li>
+            <li><a href="#"><ion-icon name="cash-outline"></ion-icon>จ้างงาน</a></li>
+            <li><a href=""><ion-icon name="person-outline"></ion-icon>เกียวกับ</a></li>
+            <li><a href="javascript:void(0)" class="btn-toggle"><ion-icon name="brush-outline"></ion-icon>เปลียนธีม</a></li>
+            <li><a href="#"><ion-icon name="chevron-forward-outline"></ion-icon>ติดต่อพวกเรา</a></li>
+        </div>
+    </div>
 
-        <div class="Navtools">
-            <div class="NavtoolsCon">
-                <div class="flexnavbartools" id="FlexLinksTools">
-                    <div id="tools1">
-                        <ion-icon name="bag-handle-sharp"></ion-icon>
-                        <h2>FOR PEAKK STORE</h2>
-                        <hr>
-                        <li><a href="#">Go to mobile site</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">Themes</a></li>
-                    </div>
-                    <div id="tools2">
-                        <ion-icon name="bookmark-sharp"></ion-icon>
-                        <h2>USAGE TOOLS</h2>
-                        <hr>
-                        <li><a href="#">Search</a></li>
-                        <li><a href="#">Create account</a></li>
-                        <li><a href="#">login to peakk store</a></li>
-                    </div>
-                    <div id="tools3">
-                        <ion-icon name="checkbox-sharp"></ion-icon>
-                        <h2>RECOMMEND TOOLS</h2>
-                        <hr>
-                        <li><a href="#">Tags suggessed</a></li>
-                        <li><a href="#">About Peakk store</a></li>
-                        <li><a href="#">Peakk Store helps</a></li>
-                    </div>
-                    <div id="tools4">
-                        <ion-icon name="help-sharp"></ion-icon>
-                        <h2>PEAKK STORE HELP</h2>
-                        <hr>
-                        <li><a href="#">How to?</a></li>
-                        <li><a href="#">Another Web tools</a></li>
-                        <li><a href="#">Visit Peakk site</a></li>
-                    </div>
+    <div id="backgroundblur"></div>
+
+    <header>
+        <div class="headercon">
+            <div class="headerText">
+                <p>พวกเรารับทํา?</p>
+                <div class="headerTextMain">
+                    <h1><strong>w</strong>EB</h1>
                 </div>
             </div>
         </div>
-
-    </div>
-
-    <div class="Loading">
-        <div class="loadingCon">
-            <div class="loadingImage">
-                <svg width="1920" height="2160" viewBox="0 0 3840 2160" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    id="TransparentLogo">
-                    <g clip-path="url(#clip0_0_1)">
-                        <path
-                            d="M1790.18 858.346C1803.43 857.757 1816.78 864.926 1822.82 875.881L2128.26 1429.39C2137.18 1445.55 2126.65 1462.42 2107.11 1463.29L2067.7 1465.04C2054.48 1465.63 2041.16 1458.5 2035.1 1447.58L1727.53 894.161C1718.54 877.988 1729.06 861.063 1748.64 860.192L1790.18 858.346Z"
-                            fill="black" />
-                        <path
-                            d="M1784.42 876.874C1775.16 876.05 1770.94 866.75 1776.98 860.493L1925.46 706.733C1927.79 704.326 1931.23 702.923 1934.83 702.923L1982.77 702.923C2009.98 702.923 2023.97 730.067 2006.04 748.076L1874.37 880.309C1871.76 882.927 1867.84 884.292 1863.91 883.943L1784.42 876.874Z"
-                            fill="black" />
-                        <path d="M1703 1447.33V1449.33C1703 1455.96 1708.37 1461.33 1715 1461.33V1461.33"
-                            stroke="#FFFFF1" stroke-opacity="0.0627451" stroke-width="8" />
-                        <path
-                            d="M1763 1302.33C1763 1290.18 1772.85 1280.33 1785 1280.33H1910C1922.15 1280.33 1932 1290.18 1932 1302.33V1338.33C1932 1350.49 1922.15 1360.33 1910 1360.33H1785C1772.85 1360.33 1763 1350.49 1763 1338.33V1302.33Z"
-                            fill="black" />
-                        <path
-                            d="M1778 1411.33C1778 1401.39 1786.06 1393.33 1796 1393.33H1910C1919.94 1393.33 1928 1401.39 1928 1411.33V1439.33C1928 1449.28 1919.94 1457.33 1910 1457.33H1796C1786.06 1457.33 1778 1449.28 1778 1439.33V1411.33Z"
-                            fill="black" />
-                        <path
-                            d="M1708 745.535C1708 733.214 1708 727.053 1710.4 722.347C1712.51 718.208 1715.87 714.842 1720.01 712.733C1724.72 710.335 1730.88 710.335 1743.2 710.335H1764.8C1777.12 710.335 1783.28 710.335 1787.99 712.733C1792.13 714.842 1795.49 718.208 1797.6 722.347C1800 727.053 1800 733.214 1800 745.535V848.135C1800 860.456 1800 866.617 1797.6 871.323C1795.49 875.462 1792.13 878.828 1787.99 880.937C1783.28 883.335 1777.12 883.335 1764.8 883.335H1743.2C1730.88 883.335 1724.72 883.335 1720.01 880.937C1715.87 878.828 1712.51 875.462 1710.4 871.323C1708 866.617 1708 860.456 1708 848.135V745.535Z"
-                            fill="black" />
-                        <path
-                            d="M1707.76 1457.33V860.971H1920.33C1966.73 860.971 2005.17 869.416 2035.65 886.305C2066.12 903.194 2088.93 926.296 2104.08 955.609C2119.22 984.728 2126.79 1017.54 2126.79 1054.03C2126.79 1090.72 2119.12 1123.72 2103.79 1153.04C2088.64 1182.16 2065.74 1205.26 2035.06 1222.34C2004.59 1239.23 1966.25 1247.68 1920.04 1247.68H1773.86V1171.38H1911.89C1941.2 1171.38 1964.98 1166.34 1983.23 1156.24C2001.48 1145.95 2014.87 1131.98 2023.42 1114.31C2031.96 1096.64 2036.23 1076.55 2036.23 1054.03C2036.23 1031.51 2031.96 1011.52 2023.42 994.047C2014.87 976.575 2001.38 962.889 1982.94 952.988C1964.69 943.088 1940.62 938.137 1910.72 938.137H1797.74V1457.33H1707.76Z"
-                            fill="black" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_0_1">
-                            <rect width="466" height="762" fill="white" transform="translate(1687 699)" />
-                        </clipPath>
-                    </defs>
-                </svg>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="contextMenu" class="context-menu">
-        <div class="ContactMenuContent">
-            <ul>
-                <li id="FirstLink"><a href="#"><ion-icon name="open-outline"></ion-icon>เปิด Peakk instagram</a></li>
-                <li><a href="#"><ion-icon name="open-outline"></ion-icon>เปิด Peakk Portfolio</a></li>
-                <li><a href="#"><ion-icon name="grid-outline"></ion-icon>เปิดเมนูเพิ่มเติม</a></li>
-                <li><a href="#"><ion-icon name="options-outline"></ion-icon>เครื่องมือแถบนำทาง</a></li>
-                <li><a href="#"><ion-icon name="bag-handle-outline"></ion-icon>เกียวกับเว็บนี้</a></li>
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
             </ul>
-            <div class="IconsLinks">
-                <div class="IconslinksContent">
-                    <a href="#"><ion-icon name="settings-outline"></ion-icon></a>
-                    <a href="#"><ion-icon name="language-outline"></ion-icon></a>
-                    <a href="#"><ion-icon name="help-outline"></ion-icon></a>
-                </div>
-            </div>
         </div>
-    </div>
 
-    <div class="Pk-SidebarTogPort" id="Sidebar">
-        <div class="Pk-BarCon">
-            <div class="Pk-Bartxt">
-                <img src="./Image/Peakk-Logo/PeakkLogo.png" alt="">
-                <h1>Peakk</h1>
-            </div>
-            <div class="Pk-links">
-                <li id="Active"><a href="#"><ion-icon name="cash-outline"></ion-icon>จ้างงานพวกเรา?</a></li>
-                <li><a href="#"><ion-icon name="open-outline"></ion-icon>ดูผลงานพวกเรา</a></li>
-                <li><a href="#"><ion-icon name="search-outline"></ion-icon>ติดต่อพวกเรา</a></li>
-                <li><a href="#"><ion-icon name="list-outline"></ion-icon>ช่องทางการติดต่อ</a></li>
-                <li><a href="#"><ion-icon name="arrow-forward-sharp"></ion-icon>mew.peakkteamsub?</a></li>
-                <li><a href="#"><ion-icon name="arrow-forward-sharp"></ion-icon>peakkofficial?</a></li>
-            </div>
-        </div>
-    </div>
-
-    <div id="bgblur"></div>
-
-    <!-- Content -->
-
-    <div class="area">
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-
-    <div class="PeakkFirst">
-        <div class="PeakkimageWall">
-            <img src="./Image/Artboard 2.svg" alt="">
-        </div>
-        <div class="PeakkFirstCon">
-            <div class="PeakkFirstText">
-                <h1>Peakkofficial</h1>
-                <hr>
-                <p>รับทําเว็บที่จับต้องได้ทุกคน</p>
-                <div class="PeakkButton">
-                    <button>ดาวน์โหลดแอพพวกเรา</button>
-                    <button>ติดต่อพวกเรา</button>
-                </div>
-            </div>
-            <div class="PeakkImage">
-                <img src="./Image/PeakkOfficialApps.png" alt="" id="tilt" data-tilt-reset-to-start="true" data-tilt
-                    data-tilt-scale="1.03" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt
-                    data-tilt-reverse="true">
-            </div>
-        </div>
-    </div>
-
-    <header id="Header">
-        <div class="headerconn">
-            <div class="headerfirstconn">
-                <div class="headerText">
-                    <p id="TagHighSugg">ด้วยราคาเพียงแค่ 300฿</p>
-                    <h1 id="HeaderTextHyH1">รับทําเว็บ,<br>ออกแบบเว็บไซต์</h1>
-                    <hr>
-                    <p class="DesipTion">สวัสดีครับ ผมชื่อพีค ผมรับทําเว็บไซต์ด้วย 1 หน้าเว็บราคาเพียงแค่ 300฿
-                        นะครับโดยดีไซน์ที่ท่านด้องการและสามารถเลือกทําเฉพาะได้ครับ</p>
-                    <div class="headerButon">
-                        <button id="ButtonRippleSticky">จ้างงานพวกเรา?</button>
-                    </div>
-                </div>
-                <div class="bg-text-container">
-                    <div class="animate-text">
-                        <span>รับทําเว็บ&nbsp;</span>
-                        <span>รับทําเว็บ&nbsp;</span>
-                    </div>
-                    <div class="animate-text left">
-                        <span>รับทําเว็บ&nbsp;</span>
-                        <span>รับทําเว็บ&nbsp;</span>
-                    </div>
-                </div>
-                <div class="headerImage">
-                    <svg width="467" height="798" viewBox="0 0 467 798" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        id="PKlogoHeader">
-                        <g clip-path="url(#clip0_50_13)">
-                            <path
-                                d="M118.175 191.008L421.552 736.811C429.34 750.822 419.673 765.35 402.562 765.35L379.393 765.35C368.7 765.35 358.224 759.47 353.332 750.721L48.1369 204.918C40.2966 190.897 49.9588 176.326 67.0972 176.326L92.085 176.326C102.802 176.326 113.297 182.232 118.175 191.008Z"
-                                fill="#FFFFE9" stroke="#FFFFE9" stroke-width="9" />
-                            <path opacity="0.85"
-                                d="M119.692 176.203L265.336 25.384C266.84 23.8268 269.079 22.9319 271.402 22.9602L330.25 23.6759C336.538 23.7524 339.72 30.0251 335.587 34.1973L188.964 182.24C187.556 183.662 185.525 184.519 183.38 184.595L125.511 186.655C119.067 186.885 115.523 180.52 119.692 176.203Z"
-                                fill="#FFFFE9" stroke="#FFFFE9" stroke-width="8" />
-                            <path
-                                d="M102 607.5H227C237.217 607.5 245.5 615.783 245.5 626V643C245.5 653.217 237.217 661.5 227 661.5H102C91.7827 661.5 83.5 653.217 83.5 643V626C83.5 615.783 91.7827 607.5 102 607.5Z"
-                                fill="#FFFFE9" stroke="#FFFFE9" stroke-width="7" />
-                            <path
-                                d="M99 721C99 711.059 107.059 703 117 703H231C240.941 703 249 711.059 249 721V749C249 758.941 240.941 767 231 767H117C107.059 767 99 758.941 99 749V721Z"
-                                fill="#FFFFE9" />
-                            <path
-                                d="M24.7626 767V170.636H237.334C283.73 170.636 322.168 179.081 352.646 195.97C383.124 212.859 405.934 235.961 421.077 265.274C436.219 294.393 443.79 327.201 443.79 363.697C443.79 400.388 436.122 433.39 420.785 462.703C405.643 491.822 382.736 514.924 352.064 532.007C321.586 548.896 283.245 557.341 237.042 557.341H90.8635V481.048H228.889C258.202 481.048 281.983 476.001 300.231 465.906C318.479 455.617 331.874 441.64 340.416 423.974C348.958 406.309 353.229 386.216 353.229 363.697C353.229 341.179 348.958 321.183 340.416 303.712C331.874 286.24 318.382 272.554 299.94 262.653C281.692 252.753 257.62 247.803 227.724 247.803H114.741V767H24.7626Z"
-                                fill="#FFFFE9" />
-                            <path
-                                d="M25 55.2C25 42.8788 25 36.7183 27.3979 32.0122C29.5071 27.8726 32.8726 24.5071 37.0122 22.3979C41.7183 20 47.8788 20 60.2 20H81.8C94.1212 20 100.282 20 104.988 22.3979C109.127 24.5071 112.493 27.8726 114.602 32.0122C117 36.7183 117 42.8788 117 55.2V157.8C117 170.121 117 176.282 114.602 180.988C112.493 185.127 109.127 188.493 104.988 190.602C100.282 193 94.1212 193 81.8 193H60.2C47.8788 193 41.7183 193 37.0122 190.602C32.8726 188.493 29.5071 185.127 27.3979 180.988C25 176.282 25 170.121 25 157.8V55.2Z"
-                                fill="#FFFFE9" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_50_13">
-                                <rect width="467" height="798" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </div>
-            </div>
-        </div>
     </header>
 
-    <div class="PriceTag">
-        <div class="PriceTagText">
-            <h1 id="TextTitleSuggessTag">ราคาการทําเว็บมีราคาใหนบ้าง?</h1>
-        </div>
-        <div class="PriceContent">
-            <div class="PriceTagImageWAll"><img src="./Image/PriceTag.png" alt=""></div>
-            <div class="PriceContentArea">
-                <div class="FlexPriceCard">
-                    <h1>599฿</h1>
-                    <hr>
-                    <p>รายระเอียดสําหรับราคา 599฿</p>
-                </div>
-                <div class="SuggessProductPrace">
-                    <h1 id="TextSuggessPriceTag"><ion-icon name="cash-outline"></ion-icon>ราคาแนะนํา</h1>
-                    <div class="FlexPriceCard" id="Recommended">
-                        <h1>399฿</h1>
-                        <hr>
-                        <p>รายระเอียดสําหรับราคา 300฿</p>
-                    </div>
-                </div>
-                <div class="FlexPriceCard">
-                    <h1>999฿</h1>
-                    <hr>
-                    <p>รายระเอียดสําหรับราคา 999฿</p>
-                </div>
-            </div>
-            <div class="Buy399Price">
-                <button class="BuyRecomPrice" id="BuyRecomPrice">จ้างงานพวกเราโดยที่งานราคา 300฿</button>
-            </div>
+    <div class="navsoc">
+        <div class="navsoccon">
+            <li><a href="#"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
         </div>
     </div>
 
-    <div class="Contact">
-        <div class="ContactImage">
-            <img src="./Image/PeakkPostSection.png" alt="">
-        </div>
-        <div class="ContactContent">
-            <div class="ContentTet">
-                <h1><ion-icon name="person-sharp"></ion-icon>ติดต่อพวกเราได้ที่ใหน</h1>
-            </div>
-            <div class="contentcard">
-                <div class="CardSocSug">
-                    <div class="CardIcons">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </div>
-                    <div class="CardTextDesip">
-                        <h1>Facebook</h1>
-                    </div>
-                </div>
-                <div class="CardSocSug">
-                    <div class="CardIcons">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </div>
-                    <div class="CardTextDesip">
-                        <h1>Instagram</h1>
-                    </div>
-                </div>
-                <div class="CardSocSug">
-                    <div class="CardIcons">
-                        <ion-icon name="logo-tiktok"></ion-icon>
-                    </div>
-                    <div class="CardTextDesip">
-                        <h1>Tiktok</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <h1 class="TextINSTAGRAMpost">โพสต์โซเชียลของพวกเรา</h1>
-
-    <div class="imagePost">
-        <div class="imagePostinstagram">
-            <img src="Image/WhyBuyMe.svg" alt="">
-        </div>
-    </div>
-
-    <main>
-        <div class="mainContent">
-            <div class="mainTextHeading">
-                <h1>ทําไมต้องจํากัด<br>อยู่แค่โหมดนี้ด้วยล่ะ</h1>
-                <p>เลือกธีมที้คุณชอบและมีความสุขกับมัน </p>
-                <div class="buttonreadMain">
-                    <li><a href="#">สํารวจเพิ่มเติมเกียวธีม</a></li>
-                    <li><a href="#">ถามพวกเราเกียวกับเรืองนี้</a></li>
-                </div>
-            </div>
-            <div class="mainImageLight">
-                <img src="./Image/PeakkinterfaceLightMode.png" alt="">
-            </div>
-        </div>
-    </main>
-
-    <div class="WhyBy">
-        <div class="WhyBycon">
-            <div class="WhyByText">
-                <h1>ทําไมต้อง<br>จ้างงานพวกเรา</h1>
-                <div class="WhyByImage">
-                    <img src="./Image/WhyHireUs.png" alt="">
-                </div>
-            </div>
-            <div class="WhybyDesip">
-                <p>เพราะอะไรถึงต้องจ้างงานผม, เพราะว่า.. ทําไมถึงจ้างพวกผมในการทําเว็บด้วย
-                    เพราะว่า เว็บของพวกเรานั้น ไม่ได้ดีไปกว่าใครหรือแย่ไปกว่าใคร
-                    แต่พวกเราตั้งใจทําให้ดีที่สุดเพื่อที่จะได้คุณภาพของเว็บให้ดีที่สุด
-                    โดยที่ราคาที่ทําให้ใน 1 เว็บนั้นราคาเพียงแค่ 300 บาท
-                    แล้วอยากให้ท่านเห็นว่า พวกผมนั้นมองพวกคุณไม่ใช่แค่ลูกค้า
-                    เรามองพวกท่านว่าเป็นครอบครัว เราจะปฏิบัติต่อพวกท่านอย่าง
-                    เป็นกันเองนะครับ คือผมจะเล่าประสบการของผมนะครับ ผมเห็น
-                    ว่าบางคนที่รับทําเว็บนั้นอะมันแพง แล้วผมอยากได้ครับ แต่ตอนนั้น
-                    ผมไม่มีเงิน ผมก็เลยเรียนรู้ด้วยตัวผมเอง แล้วผมอยากจะทําเว็บให้
-                    คนทุกคนทุกท่านสามารถเข้าถึงเว็บไซต์ที่มีคุณภาพได้ครับ </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="Peakkrecommend">
-        <div class="Reco">
-            <div class="Recologo">
-                <div class="RecoImage">
-                    <img src="./Image/Peakk-Logo/TranprancyLogo.png" alt="">
-                </div>
-                <h1>รับทําเว็บได้เว็บมาพร้อม<br>รายระเอียดและคุณภาพ</h1>
-                <div class="RecoDesip">
-                    <div class="ReciDes">
-                        <p>พวกเราจะรับทําเว็บที่ไม่เหมือนใครทุกเว็บที่ผมทําผมจะใส่ใจรายระเอียดของเว็บที่ไม่มีใครได้ทํามาก่อน
-                            ราคาเริ่มต้นเริ่มเพียงแค่ 300฿
-                            หากท่านใดอยากอัพระดับเว็บราคาจะเพิ่มในแต่ล่ะเว็บที่ท่านเลือกครับ</p>
-                    </div>
-                    <div class="ReciDes">
-                        <p>พวกเรามีช่องทางการติดต่อหากลูกค้าต้องการที่จะจ้างงานผมหรืออยากได้เว็บไซต์พวกเราจะรับทําโดยการติดต่อจะมี
-                            instagram facebook tiktok ในเว็บนี้ท่านสามารถเห็นช่องทางในนี้ได้</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="Control.js"></script>
-    <script type="text/javascript" src="/eel.js"></script>
+    <script src="Control.js" defer></script>
+    <!-- <script src="default.js"></script> -->
+    <script src="Falut.js" defer></script>
+    <script src="../../eel.js" defer></script>
 </body>
 
 </html>

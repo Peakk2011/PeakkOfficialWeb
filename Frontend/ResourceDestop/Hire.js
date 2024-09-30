@@ -5,31 +5,28 @@ document.removeEventListener('mouseenter', NavMoving);
 Nav.removeEventListener('click', NavMoving);
 Nav.removeEventListener('mouseenter', NavMoving);
 Nav.removeEventListener('mouseover', NavMoving);
-NavTools.addEventListener('mouseover', () => {
-    NavTools.style.opacity = "0";
-    NavTools.style.display = "none";
-});
 
-SearchBuytton.addEventListener("mouseenter", () => {
-    gsap.to(cursorInner, 0.15, {
-        scale: 2.5,
-        borderRadius: "2%",
-        width: "20px",
-    });
-    gsap.to(cursorOuter, 0.2, {
-        scale: 0,
-    });
-})
-SearchBuytton.addEventListener("mouseleave", () => {
-    gsap.to(cursorInner, 0.15, {
-        scale: 1,
-        borderRadius: "50%",
-        width: "20px",
-    });
-    gsap.to(cursorOuter, 0.2, {
-        scale: 1,
-    });
-})
+// SearchBuytton.addEventListener("mouseenter", () => {
+//     gsap.to(cursorInner, 0.15, {
+//         scale: 2.5,
+//         borderRadius: "2%",
+//         width: "20px",
+//     });
+//     gsap.to(cursorOuter, 0.2, {
+//         scale: 0,
+//     });
+// })
+
+// SearchBuytton.addEventListener("mouseleave", () => {
+//     gsap.to(cursorInner, 0.15, {
+//         scale: 1,
+//         borderRadius: "50%",
+//         width: "20px",
+//     });
+//     gsap.to(cursorOuter, 0.2, {
+//         scale: 1,
+//     });
+// })
 
 // main button
 
