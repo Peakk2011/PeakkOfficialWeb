@@ -67,8 +67,8 @@ body.dark-theme .iconsRes {
         font-size: 44px !important;
         transform: translateX(38px) !important;
     }
-    body.dark-theme .circles li {
-        background: linear-gradient(#0000003d, #0000003d);
+    .area {
+        display: none;
     }
 }
 
@@ -87,6 +87,9 @@ body.dark-theme .iconsRes {
         font-size: 40px !important;
         transform: translateX(28px) !important;
     }
+    .area {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 340px) {
@@ -103,6 +106,9 @@ body.dark-theme .iconsRes {
     .headerText p {
         font-size: 40px !important;
         transform: translateX(28px) !important;
+    }
+    .area {
+        display: none;
     }
 }
 
