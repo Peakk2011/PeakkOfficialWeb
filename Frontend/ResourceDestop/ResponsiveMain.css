@@ -29,10 +29,11 @@ body.dark-theme .iconsRes {
     .iconsRes {
         display: block;
     }
+
     .navbarlinks {
-        display: none;        
+        display: none;
     }
-    
+
     .Navbar {
         max-width: 75%;
     }
@@ -67,18 +68,19 @@ body.dark-theme .iconsRes {
         font-size: 44px !important;
         transform: translateX(38px) !important;
     }
+
     .area {
         display: none;
     }
 }
 
 @media only screen and (max-width: 520px) {
-    .headerTextMain h1 {
+    body .headerTextMain h1 {
         font-size: 120px !important;
         letter-spacing: -10px !important;
     }
 
-    .headerTextMain strong {
+    body .headerTextMain strong {
         letter-spacing: -25px !important;
         font-size: 220px !important;
     }
@@ -87,6 +89,7 @@ body.dark-theme .iconsRes {
         font-size: 40px !important;
         transform: translateX(28px) !important;
     }
+
     .area {
         display: none;
     }
@@ -107,8 +110,26 @@ body.dark-theme .iconsRes {
         font-size: 40px !important;
         transform: translateX(28px) !important;
     }
+
     .area {
         display: none;
+    }
+}
+
+@media only screen and (max-height: 1080px) {
+    .headerTextMain h1 {
+        font-size: 220px !important;
+        letter-spacing: -15px !important;
+    }
+
+    .headerTextMain strong {
+        letter-spacing: -35px !important;
+        font-size: 350px !important;
+    }
+
+    .headerText p {
+        font-size: 44px !important;
+        transform: translateX(42px) !important;
     }
 }
 
@@ -123,7 +144,7 @@ body.dark-theme .iconsRes {
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.85s;
 }
 
-body.dark-theme .sidebar { 
+body.dark-theme .sidebar {
     background-color: #fffff1;
 }
 
@@ -139,6 +160,7 @@ body.dark-theme .sidebar {
         width: 13px;
         margin-left: 0.5rem;
     }
+
     &.sidebartitile h1 {
         color: #ffffe9;
         font-weight: 500;
@@ -157,7 +179,7 @@ body.dark-theme .sidebartitile svg {
     width: 13px;
     mix-blend-mode: difference;
     margin-left: 0.5rem;
-} 
+}
 
 .sidebarcon {
     max-width: 220px;
@@ -220,6 +242,148 @@ body.dark-theme .sidebarcon li a:hover {
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.85s;
 }
 
-body.dark-theme #backgroundblur { 
+body.dark-theme #backgroundblur {
     background-color: rgba(255, 255, 233, 0.650);
+}
+
+/* card responsive */
+
+@media only screen and (max-width: 2000px) {
+
+    .cardimage img {
+        width: 290px !important;
+    }
+
+    body.dark-theme .cardimage img {
+        width: 290px !important;
+    }
+
+    .cardtext h1 {
+        font-size: 32px !important;
+    }
+
+    body.dark-theme .cardtext h1 {
+        font-size: 32px !important;
+    }
+
+    .card {
+        gap: 25px !important;
+    }
+
+    body.dark-theme .card {
+        gap: 25px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1480px) {
+
+    .cardimage img {
+        width: 260px !important;
+    }
+
+    body.dark-theme .cardimage img {
+        width: 260px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+    .OffenCon  {
+        max-width: 80% !important;
+    }
+
+    .cardimage img {
+        width: 240px !important;
+    }
+
+    body.dark-theme .cardimage img {
+        width: 240px !important;
+    }
+
+    .cardtext h1 {
+        font-size: 28px !important;
+    }
+
+    body.dark-theme .cardtext h1 {
+        font-size: 28px !important;
+    }
+    
+    .card {
+        gap: 15px !important;
+    }
+    
+    body.dark-theme .card {
+        gap: 15px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .card {
+        overflow-x: auto;
+    }
+
+    .cardimage img {
+        margin-left: 0.5rem;
+    }
+    .cardtext h1 {
+        margin-left: 0.5rem;
+    }
+
+}
+
+/* Website introduce res */
+
+@media only screen and (max-width: 1280px) {
+
+    .ExpTit {
+        max-width: 80% !important;
+    }
+
+}
+
+@media only screen and (max-width: 1060px) {
+
+    .Expain {
+        transform: translateX(0px);
+        height: 700px !important;
+
+    }
+
+    .ExpTit {
+        flex-direction: column; 
+        justify-content: flex-start !important;
+    }
+
+    .ExpTit h4 {
+        margin-top: 4rem;
+        text-align: left !important;
+    }
+
+    .ExpTit h1 {
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+
+    .ExpText {
+        text-align: center !important;
+    }
+
+    .ExpTit a {
+        text-align: center !important;
+    }
+
+    /* other */
+
+    .OffenCon {
+        padding-top: 7rem !important;
+    }
+
+    .Offen {
+        height: 1000px;
+    }
+
 }

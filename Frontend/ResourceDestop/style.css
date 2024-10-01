@@ -431,7 +431,7 @@ body.dark-theme .navbarlinks li a:hover {
 
 @keyframes ScrollUp {
     100% {
-        font-size: 150px;
+        font-size: 190px;
     }
 }
 
@@ -456,6 +456,7 @@ body.dark-theme .navsoccon li a {
 
 body.dark-theme .navsoc::after {
     background-color: #000;
+    mix-blend-mode: difference;
 }
 
 .navsoc {
@@ -490,11 +491,13 @@ body.dark-theme .navsoc::after {
             transition: 0.4s;
         }
 
-        &.navsoccon li a:hover,.navsoccon ion-icon {
+        &.navsoccon li a:hover,
+        .navsoccon ion-icon {
             background-color: #ffffE9;
             color: #000;
             border-radius: 70px;
         }
+
         &.navsoccon ion-icon {
             transform: translateY(3px);
         }
@@ -510,5 +513,219 @@ body.dark-theme .navsoc::after {
     border-radius: 20px;
     bottom: 0;
     top: 50%;
-    transform: translate(50%,2.5rem);    
+    transform: translate(50%, 2.5rem);
+    mix-blend-mode: difference;
+}
+
+/* Expain */
+
+body.dark-theme .Expain {
+    border-bottom: solid 1px #222;
+    background-color: #fdfddc;
+}
+
+body.dark-theme .ExpainWallWave {
+    background-color: #fdfddc;
+}
+
+.ExpainWallWave {
+    height: 150px;
+    width: 100%;
+    clip-path: polygon(100% 100%, 0% 100%, 0.00% 26.67%, 5.00% 25.94%, 10.00% 23.92%, 15.00% 21.04%, 20.00% 17.94%, 25.00% 15.29%, 30.00% 13.66%, 35.00% 13.42%, 40.00% 14.61%, 45.00% 16.97%, 50.00% 20.00%, 55.00% 23.03%, 60.00% 25.39%, 65.00% 26.58%, 70.00% 26.34%, 75.00% 24.71%, 80.00% 22.06%, 85.00% 18.96%, 90.00% 16.08%, 95.00% 14.06%, 100.00% 13.33%);
+    background-color: #121212;
+}
+
+.Expain {
+    height: 565px;
+    width: 100%;
+    border-bottom: solid 1px #222;
+    background-color: #121212;
+    transform: translateY(-90px);
+
+    .Exp {
+
+        .ExpTit {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+            height: 565px;
+
+            &.ExpText {
+                width: 50%;
+                height: 565px;
+            }
+
+            &.ExpDes {
+                height: 565px;
+                width: 50%;
+            }
+
+            &.ExpTit h1 {
+                font-family: lineseedRegular;
+                letter-spacing: -3px;
+                color: #ffffe9;
+                font-weight: 400;
+                font-size: 55px;
+            }
+
+            &.ExpTit p {
+                font-family: SFPRO;
+                font-size: 29.5px;
+                color: #ffffe9;
+                margin-bottom: 0.5rem;
+            }
+
+            &.ExpTit a {
+                font-family: lineseedregular;
+                font-size: 18px;
+                letter-spacing: -0.4px;
+                display: inline-block;
+                color: #000;
+                padding: 0.4rem 1.65rem;
+                margin-top: 2.25rem;
+                background-color: #ffffe9;
+                border-radius: 50px;
+            }
+
+            &.ExpTit a>Strong {
+                font-family: Sfpro;
+                font-weight: 400;
+            }
+
+            &.ExpTit h4 {
+                color: #fff;
+                opacity: 100%;
+                font-weight: 400;
+                font-family: lineseedregular;
+                width: 370px;
+                letter-spacing: -0.7px;
+                text-align: end;
+                font-size: 20px;
+
+            }
+        }
+    }
+}
+
+body.dark-theme .ExpTit h1 {
+    color: #000 !important;
+}
+
+body.dark-theme .ExpTit h4 {
+    color: #000 !important;
+}
+
+body.dark-theme .ExpTit p {
+    color: #000 !important;
+}
+
+body.dark-theme .ExpTit a {
+    background-color: #000 !important;
+    color: #ffffE9 !important;
+}
+
+.Offen {
+    height: 1200px;
+    width: 100%;
+    border-bottom: solid 1px #222;
+
+    .OffenCon {
+        margin: 0 auto;
+        max-width: 1100px;
+        padding-top: 3rem;
+
+        .Offentext {
+
+            &.Offentext h1 {
+                color: #ffffe9;
+                font-weight: 300;
+                font-family: lineseedregular;
+                letter-spacing: -1.5px;
+                font-size: 45px;
+                line-height: 1.25;
+                margin-bottom: 1rem;
+            }
+
+            &.Offentext p {
+                color: #fff;
+                opacity: 30%;
+                font-family: lineseedthin;
+                -webkit-text-stroke-width: 0.5px;
+                margin-bottom: 1.65rem;
+            }
+        }
+
+        /* Card */
+
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+
+            .cardcon {
+
+                .cardimage {
+                    &.cardimage img {
+                        width: 340px;
+                        margin-top: 2.58rem;
+                        object-fit: cover;
+                        /* content: url(./Image/Present/1.png); */
+                        border-radius: 20px !important;
+                        outline: solid 1px #222;
+                    }
+                }
+
+                .cardtext {
+
+                    &.cardtext h1 {
+                        color: #ffffE9;
+                        font-family: lineseedregular;
+                        font-weight: 400;
+                        letter-spacing: -1px;
+                        margin-top: 2.5rem;
+                        line-height: 1.4;
+                        font-size: 36px;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+body.dark-theme .cardtext h1 {
+    color: #000 !important;
+}
+body.dark-theme .Offentext h1 {
+    color: #000 !important;
+}
+body.dark-theme .Offentext p {
+    color: #000 !important;
+    opacity: 80% !important;
+}
+
+body.dark-theme .cardimage img {
+    content: url('./Image/Present/1Light.png') !important;
+    /* default */
+    width: 340px !important;
+    margin-top: 2.58rem !important;
+    object-fit: cover !important;
+    outline: solid 1px #222 !important;
+    border-radius: 20px !important;
+}
+
+body.dark-theme #Im2 {
+    content: url(./Image/Present/2Light.png) !important;
+}
+
+body.dark-theme #Im3 {
+    content: url(./Image/Present/3Light.png) !important;
+}
+
+body.dark-theme #Im4 {
+    content: url(./Image/Present/4Light.png) !important;
 }

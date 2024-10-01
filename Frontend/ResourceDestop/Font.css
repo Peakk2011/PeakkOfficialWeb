@@ -38,7 +38,17 @@
 
 @font-face {
     font-family: SFPRO;
-    src: url(./Font/SF-Pro-Display-Semibold.otf);
+    src: url(./Font/SFPRODISPLAYREGULAR.OTF);
+}
+
+@font-face {
+    font-family: SFPROMed;
+    src: url(./Font/SFPRODISPLAYMEDIUM.OTF);
+}
+
+@font-face {
+    font-family: SFPROBold;
+    src: url(./Font/SFPRODISPLAYBOLD.OTF);
 }
 
 @font-face {
