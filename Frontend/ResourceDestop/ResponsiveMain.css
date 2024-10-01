@@ -74,20 +74,21 @@ body.dark-theme .iconsRes {
     }
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 700px) {
     body .headerTextMain h1 {
         font-size: 120px !important;
-        letter-spacing: -10px !important;
+        letter-spacing: -0px !important;
+        font-family: 'Pixelify Sans' !important;
     }
 
     body .headerTextMain strong {
-        letter-spacing: -25px !important;
-        font-size: 220px !important;
+        letter-spacing: 0px !important;
+        font-size: 120px !important;
     }
 
-    .headerText p {
-        font-size: 40px !important;
-        transform: translateX(28px) !important;
+    body .headerText p {
+        font-size: 34px !important;
+        margin-bottom: 1rem !important;
     }
 
     .area {
@@ -196,7 +197,7 @@ body.dark-theme .sidebartitile svg {
     margin: 0 auto;
     padding: 0rem 1.5rem;
     font-family: lineseedregular;
-    height: 40px;
+    height: 42px;
     margin-bottom: 0.5rem;
 }
 
@@ -373,7 +374,8 @@ body.dark-theme #backgroundblur {
 
     .ExpTit h1 {
         line-height: 1.2;
-        margin-bottom: 2rem;
+        margin-bottom: 1.25rem;
+        margin-top: 5rem;
     }
 
     .ExpText {
@@ -384,6 +386,10 @@ body.dark-theme #backgroundblur {
         text-align: center !important;
     }
 
+    .ExpTit p {
+        display: none;
+    }
+
     /* other */
 
     .OffenCon {
@@ -392,6 +398,91 @@ body.dark-theme #backgroundblur {
 
     .Offen {
         height: 1000px;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+    .ExpTit h1 {
+        font-size: 36px !important;
+        letter-spacing: -1px !important;
+    }
+    
+    .ExpTit h4 {
+        font-size: 16px !important;
+        width: 300px !important;
+    } 
+    
+}
+
+
+@media only screen and (max-width: 1280px) {
+
+    .CardIntroContent {
+        max-width: 80% !important;
+    }
+
+    .CardIntrotext h1 {
+        font-size: 42px !important;
+    }
+
+    .CardIntrotext p {
+        font-size: 13px !important;
+    }
+
+    .CardIntrotext ul {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 7px !important;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .CardIntroImage img {
+        width: 500px !important;
+    }
+
+    .body.dark-theme .CardIntroImage img {
+        width: 500px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1075px) {
+
+    .CardIntroContent {
+        flex-direction: column;
+        height: 950px !important;
+        justify-content: center !important;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .CardIntroImage img {
+        width: 450px !important;
+    }
+
+    .body.dark-theme .CardIntroImage img {
+        width: 450px !important;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+    .CardIntroImage img {
+        width: 100% !important;
+    }
+
+    .body.dark-theme .CardIntroImage img {
+        width: 100% !important;
+    }
+
+    .CardIntrotext p {
+        font-size: 18px !important;
     }
 
 }
