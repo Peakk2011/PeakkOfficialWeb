@@ -753,7 +753,9 @@ body.dark-theme #Im4 {
         .CardIntroImage {
 
             &.CardIntroImage img {
-                width: 600px;
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1 / 1;
                 object-fit: cover !important;
                 content: url(./Image/Present/PeakkFrameWeb.png);
             }
@@ -785,3 +787,15 @@ body.dark-theme .CardIntroImage img {
     content: url(./Image/Present/PeakkFrameWebLight.png) !important;
     filter: drop-shadow(10px 15px 0px #000);
 }
+
+/* @media only screen and (max-width: 450px) {
+
+    .CardIntroImage img {
+        width: 70%;
+    }
+
+    .body.dark-theme .CardIntroImage img {
+        width: 70% !important;
+    }
+
+} */
