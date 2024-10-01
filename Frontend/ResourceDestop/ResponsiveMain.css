@@ -332,6 +332,14 @@ body.dark-theme #backgroundblur {
     .cardtext h1 {
         margin-left: 0.5rem;
     }
+    
+    .cardtext h1 {
+        font-size: 28px !important;
+    }
+    
+    body.dark-theme .cardtext h1 {
+        font-size: 28px !important;
+    }
 
 }
 
