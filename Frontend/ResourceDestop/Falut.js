@@ -12,7 +12,7 @@ let mouse = {
 
 // Just in case you need to scroll
 let scrollHeight = 0;
-window.addEventListener('scroll', function(e) {
+window.addEventListener('scroll', function (e) {
 	scrollHeight = window.scrollY
 })
 
@@ -53,8 +53,8 @@ function updateCursor() {
 	if (!isStuck) {
 		gsap.to(cursorOuter, {
 			duration: 0.15,
-			x: mouse.x - cursorOuterOriginalState.width/2,
-			y: mouse.y - cursorOuterOriginalState.height/2,
+			x: mouse.x - cursorOuterOriginalState.width / 2,
+			y: mouse.y - cursorOuterOriginalState.height / 2,
 		});
 	}
 
@@ -67,7 +67,7 @@ function handleMouseEnter(e) {
 	isStuck = true;
 	const targetBox = e.currentTarget.getBoundingClientRect();
 	gsap.to(cursorOuter, 0.2, {
-		x: targetBox.left, 
+		x: targetBox.left,
 		y: targetBox.top + scrollHeight,
 		width: targetBox.width,
 		height: targetBox.width,
@@ -88,11 +88,21 @@ function handleMouseLeave(e) {
 
 // use Loading
 
-ClassLoading = document.getElementById("Loading");
+const ClassLoading = document.getElementById("Loading");
 
 setTimeout(() => {
-  ClassLoading.style.opacity = "0";
-  setTimeout(() => {
-    ClassLoading.style.display = "none";
-  }, 600);
-}, 3800);
+
+	ClassLoading.style.opacity = "50%";
+	ClassLoading.style.filter = "blur(20px)";
+
+	setTimeout(() => {
+		ClassLoading.style.filter = "blur(100px)";
+		ClassLoading.style.opacity = "0%";
+		ClassLoading.style.scale = "1000%";
+
+		setTimeout(() => {
+			ClassLoading.style.display = "none";
+		}, 1850);
+	}, 10); 
+
+}, 2450);
