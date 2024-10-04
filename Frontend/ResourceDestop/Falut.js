@@ -96,13 +96,13 @@ setTimeout(() => {
 	ClassLoading.style.filter = "blur(20px)";
 
 	setTimeout(() => {
-		ClassLoading.style.filter = "blur(100px)";
+		ClassLoading.style.filter = "blur(120px)";
 		ClassLoading.style.opacity = "0%";
-		ClassLoading.style.scale = "1000%";
+		ClassLoading.style.scale = "1500%";
 
 		setTimeout(() => {
 			ClassLoading.style.display = "none";
-		}, 1850);
+		}, 3000);
 	}, 10); 
 
 }, 2450);
