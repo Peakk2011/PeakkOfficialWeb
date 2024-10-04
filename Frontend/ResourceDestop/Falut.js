@@ -96,9 +96,9 @@ setTimeout(() => {
 	ClassLoading.style.filter = "blur(20px)";
 
 	setTimeout(() => {
-		ClassLoading.style.filter = "blur(120px)";
+		ClassLoading.style.filter = "blur(80px)";
 		ClassLoading.style.opacity = "0%";
-		ClassLoading.style.scale = "1500%";
+		ClassLoading.style.scale = "1000%";
 
 		setTimeout(() => {
 			ClassLoading.style.display = "none";
