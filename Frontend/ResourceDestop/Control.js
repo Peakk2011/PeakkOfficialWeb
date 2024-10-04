@@ -4,6 +4,35 @@ const btn = document.querySelector(".btn-toggle");
 const ResThemeswic = document.querySelector(".ResThemeswic");
 const ResThemeswic2 = document.querySelector(".ResThemeswic2");
 
+// other
+const PriceReveal = document.getElementById("PriceReveal");
+
+PriceReveal.addEventListener('click', () => {
+  overlayPrice.style.display = "block";
+  setTimeout(() => {
+  overlayPrice.style.opacity = "1";
+  }, 50);
+})
+
+PriceReveal.addEventListener('mouseenter', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 5,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 0,
+  });
+});
+PriceReveal.addEventListener('mouseleave', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 1,
+  });
+});
+
+let overlayPrice = document.getElementById("overlayPrice");
+
 const currentTheme = localStorage.getItem("theme");
 if (currentTheme == "dark") {
   document.body.classList.add("dark-theme");
@@ -76,7 +105,9 @@ backgroundblur.addEventListener("click", () => {
 })
 
 const Navlink = document.querySelectorAll(".navbarlinks > li > a");
+const PriceLinks = document.querySelectorAll(".PriceBenefit li a");
 const NavlinkBottom = document.querySelectorAll(".navsoc > .navsoccon > li > a");
+const PriceBtnLink = document.querySelectorAll(".PriceTagRecButton a")
 
 // Add a click event listener to each one
 Navlink.forEach(Navlink => {
@@ -97,6 +128,74 @@ Navlink.forEach(Navlink => {
     });
   });
 });
+
+// Add a click event listener to each one
+PriceBtnLink.forEach(PriceBtnLink => {
+  PriceBtnLink.addEventListener('mouseenter', () => {
+    gsap.to(cursorInner, 0.15, {
+      scale: 6,
+    });
+    gsap.to(cursorOuter, 0.2, {
+      scale: 0,
+    });
+  });
+  PriceBtnLink.addEventListener('mouseleave', () => {
+    gsap.to(cursorInner, 0.15, {
+      scale: 1,
+    });
+    gsap.to(cursorOuter, 0.2, {
+      scale: 1,
+    });
+  });
+});
+
+// Add a click event listener to each one
+PriceLinks.forEach(PriceLinks => {
+  PriceLinks.addEventListener('mouseenter', () => {
+    gsap.to(cursorInner, 0.15, {
+      scale: 5,
+    });
+    gsap.to(cursorOuter, 0.2, {
+      scale: 0,
+    });
+
+    // console.log("bububaba");
+    // overlayPrice.style.display = "block";
+    // setTimeout(() => {
+    //   overlayPrice.style.opacity = "1";    
+    // }, 300);
+
+    PriceLinks.style.opacity = "1";
+  });
+
+  PriceLinks.addEventListener('mouseleave', () => {
+    gsap.to(cursorInner, 0.15, {
+      scale: 1,
+    });
+    gsap.to(cursorOuter, 0.2, {
+      scale: 1,
+    });
+
+    PriceLinks.style.opacity = "30%";
+
+  });
+
+  PriceLinks.addEventListener('click', () => {
+    console.log("bububaba");
+    overlayPrice.style.display = "block";
+    setTimeout(() => {
+      overlayPrice.style.opacity = "1";
+    }, 50);
+  });
+
+});
+
+function CloseOverlayoff() {
+  overlayPrice.style.opacity = "0";
+  setTimeout(() => {
+    overlayPrice.style.display = "none";
+  }, 300);
+}
 
 // Add a click event listener to each one
 NavlinkBottom.forEach(NavlinkBottom => {

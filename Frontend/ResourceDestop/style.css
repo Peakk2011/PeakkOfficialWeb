@@ -440,7 +440,7 @@ body.dark-theme .navbarbot {
     position: fixed;
     width: 100%;
     height: 130px;
-    background-color: rgba(8, 8, 8, 0.664);
+    background-color: rgba(8, 8, 8, 0.860);
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     bottom: 0;
@@ -806,6 +806,347 @@ body.dark-theme .CardIntroImage img {
     object-fit: cover !important;
     content: url(./Image/Present/PeakkFrameWebLight.png) !important;
     filter: drop-shadow(10px 15px 0px #000);
+}
+
+body.dark-theme .PriceTagRec {
+    background-color: #ffffF0;
+}
+
+body.dark-theme #First {
+    border-left: solid 3px #000 !important;
+}
+
+body.dark-theme .PriceTagRecText span {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+body.dark-theme .PriceTagRecText h1 {
+    color: #000 !important;
+}
+
+body.dark-theme .PriceTagRecText p {
+    color: #000 !important;
+    opacity: 80% !important;
+}
+
+body.dark-theme .PriceTagRecText a {
+    color: #ffffe9 !important;
+    background-color: #000 !important;
+}
+
+.PriceTagRec {
+    width: 100%;
+    height: 1180px;
+    background-color: #060606;
+    position: relative;
+    /* border-top: solid 1px #222; */
+    border-bottom: solid 1px #222;
+
+    .PriceTagRecContent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto;
+        height: 1180px;
+    }
+
+    .PriceTagRecText {
+
+        .PriceTagRecTextFirst {
+            padding-left: 2.25rem;
+            margin-bottom: 0.85rem;
+        }
+
+        #First {
+            border-left: solid 3px #ffffE9;
+        }
+
+        &.PriceTagRecText span {
+            background-color: #0f0f0f;
+            color: #ffffE9;
+            font-family: lineseedregular;
+            border: solid 1px #222;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 210px;
+            height: 45px;
+            font-size: 18px;
+        }
+
+        &.PriceTagRecText h1 {
+            color: #ffffe9;
+            font-weight: 400;
+            font-family: lineseedregular;
+            letter-spacing: -1px;
+            line-height: 1.3;
+            font-size: 50px;
+            margin-bottom: 2rem;
+            padding-top: 2rem;
+        }
+
+        &.PriceTagRecText p {
+            color: #fff;
+            font-family: lineseedregular;
+            letter-spacing: -0.2px;
+            opacity: 30%;
+            font-size: 18px;
+            margin-bottom: 2.5rem;
+        }
+
+        &.PriceTagRecText a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 210px;
+            border-radius: 50px;
+            text-align: center;
+            background-color: #ffffE9;
+            color: #000;
+            font-family: lineseedregular;
+            letter-spacing: -0.3px;
+            font-size: 18px;
+            height: 45px;
+        }
+
+        #LinkksPrice {
+            font-family: "inter tight";
+            font-weight: 450;
+        }
+        
+    }
+
+    .PriceTagRecCard {
+        width: 450px;
+        height: 800px;
+        background-color: #0a0a0a;
+        border: solid 1px #222;
+        border-radius: 12px;
+        position: relative;
+
+        .PriceTagRecCardContent {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            padding-top: 1rem;
+        }
+
+    }
+
+}
+
+body.dark-theme
+.PriceTagRecCard {
+    background-color: #ffffee;
+}
+
+/* card text */
+
+body.dark-theme .PriceTagRecCardConText h1 {
+    color: #000 !important;
+}
+
+body.dark-theme .PriceTagRecCardConText p {
+    color: #000 !important;
+}
+
+body.dark-theme 
+.PriceTagRecCardConText span {
+    color: #000 !important;
+    opacity: 80% !important;
+}
+
+.PriceTagRecCardConText h1 {
+    color: #ffffe9;
+    font-family: lineseedregular !important;
+    font-weight: 600;
+    letter-spacing: -1px;
+    padding-top: 1rem;
+    font-size: 42px;
+    margin-bottom: 0.5rem;
+}
+
+.PriceTagRecCardConText p {
+    color: #fff;
+    font-size: 80px;
+    font-family: "inter tight";
+}
+
+.PriceTagRecCardConText span {
+    color: #fff;
+    opacity: 60%;
+    font-size: 16px;
+    font-family: lineseedregular;
+}
+
+.PriceTagRecButton {
+    position: absolute;
+    bottom: 0;
+    width: 370px;
+    margin-bottom: 1.5rem;
+}
+
+body.dark-theme .PriceTagRecButton a {
+    color: #ffffe9 !important;
+    background-color: #000 !important;
+}
+
+body.dark-theme .PriceTagRecButton button {
+    color: #ffffe9 !important;
+    background-color: #000 !important;
+}
+
+.PriceTagRecButton a {
+    display: flex;
+    height: 45px;
+    margin-bottom: 1.25rem;
+    font-family: lineseedregular;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    font-size: 18px;
+    border-radius: 60px;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    background-color: #ffffF0;
+}
+
+.PriceTagRecButton button {
+    display: flex;
+    height: 45px;
+    margin-bottom: 1.25rem;
+    font-family: lineseedregular;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    font-size: 18px;
+    border-radius: 60px;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    background-color: #ffffF0;
+    width: 370px;
+    border: none;
+    outline: none;
+}
+
+/* Pricebene */
+
+.PriceTagRecCardBene {
+    margin-top: 1.5rem;
+
+    &.PriceTagRecCardBene ul li a {
+        padding: 0.35rem 0px;
+        display: block;
+        color: #fff;
+        opacity: 30%;
+        font-family: lineseedregular;
+        letter-spacing: -0.5px;
+        font-size: 14px;
+    }
+
+    &.PriceTagRecCardBene ul li ion-icon {
+        margin-right: 0.35rem;
+        transform: translateY(0.5px);
+    }
+}
+
+body.dark-theme .PriceBenefit span {
+    opacity: 80% !important;
+    color: #000;
+}
+
+.PriceBenefit span {
+    color: #fff;
+    opacity: 60%;
+    font-family: lineseedregular;
+    margin-top: 1.5rem;
+    display: block;
+    font-size: 16px;
+}
+
+body.dark-theme .PriceTagRecCardBene ul li a {
+    color: #000 !important;
+    opacity: 80% !important;
+}
+
+/* Card overlay */
+
+body.dark-theme
+.overlayPrice {
+    background-color: rgba(255, 255, 246, 0.815);
+}
+
+.overlayPrice {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.715);
+    z-index: 5;
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.85s;
+}
+
+body.dark-theme .overlayPrice ul {
+    background-color: rgb(255, 255, 240);
+}
+
+.overlayPrice ul {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(10, 10, 10, 0.500);
+    border: solid 1px #222;
+    padding: 1.8rem 1.5rem;
+    border-radius: 16px;
+    width: 315px;
+}
+
+body.dark-theme .overlayPrice ul::before {
+    color: #000;
+    background-color: #fffff9;
+}
+
+.overlayPrice ul::before {
+    content: "สิ่งที่ท่านได้เมื่อจ้างราคานี้";
+    color: #ffffe9;
+    font-family: lineseedregular;
+    position: fixed;
+    left: 50%;
+    top: 0%;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    width: 210px;
+    padding: 0.5rem 0px;
+    text-align: center;
+    background-color: rgb(15, 15, 15);
+    border: solid 1px #222;
+}
+
+.overlayPrice ul li a {
+    color: #ffffe9;
+    font-family: lineseedregular;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+body.dark-theme
+.overlayPrice ul li a { 
+    color: #000 !important;
+}
+
+.overlayPrice ul li ion-icon {
+    margin-right: 0.5rem;
 }
 
 /* Config bugs */
