@@ -486,6 +486,7 @@ body.dark-theme #backgroundblur {
     .PriceTagRecCard {
         width: 380px !important;
         margin-bottom: 2rem;
+        height: 850px !important;
     }
 
     .PriceTagRecButton button {

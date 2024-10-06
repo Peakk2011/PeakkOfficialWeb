@@ -10,7 +10,7 @@ const PriceReveal = document.getElementById("PriceReveal");
 PriceReveal.addEventListener('click', () => {
   overlayPrice.style.display = "block";
   setTimeout(() => {
-  overlayPrice.style.opacity = "1";
+    overlayPrice.style.opacity = "1";
   }, 50);
 })
 
