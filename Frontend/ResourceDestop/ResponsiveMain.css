@@ -49,15 +49,15 @@ body.dark-theme .iconsRes {
 
     .headerTextMain h1 {
         font-size: 250px !important;
+        letter-spacing: -10px !important;
     }
 
     .headerTextMain strong {
-        font-size: 400px !important;
+        font-size: 250px !important;
     }
 
     .headerText p {
         font-size: 50px !important;
-        transform: translateX(50px) !important;
     }
 
 }
@@ -98,6 +98,7 @@ body.dark-theme .iconsRes {
     body .headerText p {
         font-size: 34px !important;
         margin-bottom: 1rem !important;
+        transform: translateX(-0px) !important;
     }
 
     .area {
@@ -194,7 +195,7 @@ body.dark-theme .sidebartitile h1 {
 
 body.dark-theme .sidebartitile svg {
     width: 13px;
-    mix-blend-mode: difference;
+    filter: brightness(0%);
     margin-left: 0.5rem;
 }
 
@@ -225,7 +226,7 @@ body.dark-theme .sidebarcon li a {
     margin-right: 0.5rem;
 }
 
-.sidebarcon li a:hover {
+.sidebarcon li a:active {
     background-color: #ffffe9;
     color: #000;
     border-radius: 5px;
@@ -242,7 +243,7 @@ body.dark-theme #sidebarhigh {
     color: #ffffe9;
 }
 
-body.dark-theme .sidebarcon li a:hover {
+body.dark-theme .sidebarcon li a:active {
     background-color: #000;
     color: #ffffe9;
 }
@@ -557,4 +558,15 @@ body.dark-theme #backgroundblur {
         width: 260px;
     }
 
+}
+
+@media only screen and (max-width: 500px) {
+    body.dark-theme .PriceTagRecCardContent::before {
+        display: none;   
+    }    
+
+    .PriceTagRecCardContent::before {
+        display: none;   
+    }   
+    
 }

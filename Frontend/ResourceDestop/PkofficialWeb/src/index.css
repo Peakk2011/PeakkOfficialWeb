@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter Tight", sans-serif;
+}
+
+body {
+  background-color: #0f0f0f;
+}
+
+
+.titlebar {
+  position: fixed;
+  border-bottom: solid 1px #222;
+  height: 46px;
+  width: 100%;
+  -webkit-app-region: drag;
+  z-index: 2;
+  background-color: #0f0f0f;
+
+  .titlebartext {
+    line-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.titlebartext h1 {
+      color: #fff;
+      font-weight: 350;
+      font-size: 18px;
+    }
+  }
+
+}
+
+iframe {
+  bottom: 0;
+  position: fixed;
+}
