@@ -848,7 +848,7 @@ body.dark-theme .PriceTagRecText a {
     background-color: #060606;
     position: relative;
     /* border-top: solid 1px #222; */
-    border-bottom: solid 1px #222;
+    /* border-bottom: solid 1px #222; */
 
     .PriceTagRecContent {
         display: flex;
@@ -923,7 +923,7 @@ body.dark-theme .PriceTagRecText a {
             font-family: "inter tight";
             font-weight: 450;
         }
-        
+
     }
 
     .PriceTagRecCard {
@@ -964,8 +964,7 @@ body.dark-theme .PriceTagRecCardContent::before {
     z-index: 0;
 }
 
-body.dark-theme
-.PriceTagRecCard {
+body.dark-theme .PriceTagRecCard {
     background-color: #fdfdf3;
     box-shadow: #000 -6px 6px 0px;
 }
@@ -980,8 +979,7 @@ body.dark-theme .PriceTagRecCardConText p {
     color: #000 !important;
 }
 
-body.dark-theme 
-.PriceTagRecCardConText span {
+body.dark-theme .PriceTagRecCardConText span {
     color: #000 !important;
     opacity: 80% !important;
 }
@@ -1101,8 +1099,7 @@ body.dark-theme .PriceTagRecCardBene ul li a {
 
 /* Card overlay */
 
-body.dark-theme
-.overlayPrice {
+body.dark-theme .overlayPrice {
     background-color: rgba(255, 255, 246, 0.815);
 }
 
@@ -1168,13 +1165,154 @@ body.dark-theme .overlayPrice ul::before {
     display: inline-block;
 }
 
-body.dark-theme
-.overlayPrice ul li a { 
+body.dark-theme .overlayPrice ul li a {
     color: #000 !important;
 }
 
 .overlayPrice ul li ion-icon {
     margin-right: 0.5rem;
+}
+
+/* All price */
+
+body.dark-theme .Allprice {
+    border: none;
+    background-color: #fdfdf3;
+}
+
+body.dark-theme .AllPctitle h1 {
+    color: #000 !important;
+}
+
+body.dark-theme .AllPctitle p {
+    color: #000 !important;
+    opacity: 80% !important;
+}
+
+.Allprice {
+    border-top: solid 1px #222;
+    border-bottom: solid 1px #222;
+    height: 1080px;
+    background-color: #080808;
+
+    .AllPctitle {
+
+        &.AllPctitle h1 {
+            color: #ffffe9;
+            letter-spacing: -1.5px;
+            font-family: lineseedregular;
+            font-weight: 400;
+            font-size: 50px;
+            text-align: center;
+            padding-top: 6rem;
+        }
+
+        &.AllPctitle p {
+            text-align: center;
+            margin-top: 0.5rem;
+            font-family: lineseedregular;
+            color: #fff;
+            opacity: 30%;
+            font-size: 20px;
+            letter-spacing: -0.8px;
+        }
+    }
+
+    .AllPCon {
+        width: 400px;
+        height: 600px;
+        background-color: #0c0c0c;
+        border: solid 1px #222;
+        border-radius: 10px;
+        position: relative;
+
+        .AllpcText {
+            padding: 1rem 2.25rem;
+
+            &.AllpcText h1 {
+                font-family: lineseedregular;
+                color: #ffffE9;
+                font-weight: 400;
+                letter-spacing: -1.5px;
+                font-size: 40px;
+                margin-top: 1rem;
+            }
+
+            &.AllpcText p {
+                color: #fff;
+                font-size: 90px;
+                font-family: lineseedregular;
+            }
+
+            &.AllpcText span {
+                color: #fff;
+                margin-top: 0.65rem;
+                display: inline-block;
+                opacity: 30%;
+                font-family: lineseedregular;
+                line-height: 1.4;
+                font-size: 16px;
+            }
+
+        }
+    }
+
+}
+
+body.dark-theme .AllPCon {
+    box-shadow: -10px 10px 0px #000;
+    background-color: #fdfdf3 !important; 
+}
+
+.AllPriceCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+}
+
+.AllpcBtn {
+    bottom: 25px;
+    position: absolute;
+
+    &.AllpcBtn a {
+        color: #000;
+        border-radius: 50px;
+        background-color: #ffffE9;
+        padding: 0px 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        letter-spacing: -0.3px;
+        height: 48px;
+        margin-bottom: 1.2rem;
+        width: 328px;
+        text-align: center;
+        font-family: lineseedregular;
+    }
+}
+
+body.dark-theme .AllpcBtn a {
+    background-color: #000 !important;
+    color: #ffffE9 !important;
+}
+
+body.dark-theme .AllpcText p {
+    color: #000 !important;
+}
+
+body.dark-theme .AllpcText h1 {
+    color: #000 !important;
+}
+
+body.dark-theme .AllpcText span {
+    opacity: 80% !important;
+    color: #000 !important;
 }
 
 /* Config bugs */
@@ -1214,7 +1352,7 @@ body.dark-theme
     /* .NavLogo h1 {
         display: none;
     } */
-/* 
+    /* 
     .ResThemeswic2 {
         display: none;
     } */

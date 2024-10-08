@@ -538,6 +538,37 @@ body.dark-theme #backgroundblur {
         font-size: 15.5px !important;
     }
 
+    /* All card */
+
+    .AllPriceCard {
+        flex-direction: column;
+    }
+
+    .AllPctitle p {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .Allprice {
+        height: 1750px;
+    }
+
+    .AllPCon {
+        width: 380px !important;
+    }
+
+    .AllpcBtn a {
+        width: 308px !important;
+    }
+
+    .AllPctitle h1 {
+        font-size: 44px !important; 
+    }
+
+    .AllPctitle p {
+        font-size: 18px !important;
+    }
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -558,6 +589,24 @@ body.dark-theme #backgroundblur {
         width: 260px;
     }
 
+    .AllPCon {
+        width: 340px !important;
+    }
+
+    .AllpcBtn a {
+        width: 268px !important;
+    }
+
+    body.dark-theme .AllPCon {
+        box-shadow: -5px 5px 0px #000;
+    }
+
+}
+
+@media only screen and (max-width: 360px) {
+    .PriceTagRecText p {
+        font-size: 13.5px !important;
+    }   
 }
 
 @media only screen and (max-width: 500px) {

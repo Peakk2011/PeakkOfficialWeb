@@ -108,6 +108,11 @@ const Navlink = document.querySelectorAll(".navbarlinks > li > a");
 const PriceLinks = document.querySelectorAll(".PriceBenefit li a");
 const NavlinkBottom = document.querySelectorAll(".navsoc > .navsoccon > li > a");
 const PriceBtnLink = document.querySelectorAll(".PriceTagRecButton a")
+const PeakkofficialExpainText = document.getElementById("PeakkofficialExpainText");
+const WeDoLinks = document.querySelectorAll(".WeDoLinks > li a");
+const LinkksPrice = document.getElementById("LinkksPrice");
+const VisitAllPrice = document.getElementById("VisitAllPrice");
+const AllpcBtn = document.querySelectorAll(".AllpcBtn a")
 
 // Add a click event listener to each one
 Navlink.forEach(Navlink => {
@@ -120,6 +125,25 @@ Navlink.forEach(Navlink => {
     });
   });
   Navlink.addEventListener('mouseleave', () => {
+    gsap.to(cursorInner, 0.15, {
+      scale: 1,
+    });
+    gsap.to(cursorOuter, 0.2, {
+      scale: 1,
+    });
+  });
+});
+// Add a click event listener to each one
+AllpcBtn.forEach(AllpcBtn => {
+  AllpcBtn.addEventListener('mouseenter', () => {
+    gsap.to(cursorInner, 0.15, {
+      scale: 5,
+    });
+    gsap.to(cursorOuter, 0.2, {
+      scale: 0,
+    });
+  });
+  AllpcBtn.addEventListener('mouseleave', () => {
     gsap.to(cursorInner, 0.15, {
       scale: 1,
     });
@@ -188,6 +212,76 @@ PriceLinks.forEach(PriceLinks => {
     }, 50);
   });
 
+});
+
+PeakkofficialExpainText.addEventListener('mouseenter', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 5,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 0,
+  });
+});
+PeakkofficialExpainText.addEventListener('mouseleave', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 1,
+  });
+});
+
+VisitAllPrice.addEventListener('mouseenter', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 5,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 0,
+  });
+});
+VisitAllPrice.addEventListener('mouseleave', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 1,
+  });
+});
+
+LinkksPrice.addEventListener('mouseenter', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 5,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 0,
+  });
+});
+LinkksPrice.addEventListener('mouseleave', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 1,
+  });
+});
+
+WeDoLinks.forEach(WeDoLinks => {
+  WeDoLinks.addEventListener('mouseenter', () => {
+    gsap.to(cursorInner, 0.15, {
+      scale: 5,
+    });
+    gsap.to(cursorOuter, 0.2, {
+      scale: 0,
+    });
+  });
+  WeDoLinks.addEventListener('mouseleave', () => {
+    gsap.to(cursorInner, 0.15, {
+      scale: 1,
+    });
+    gsap.to(cursorOuter, 0.2, {
+      scale: 1,
+    });
+  });
 });
 
 function CloseOverlayoff() {
