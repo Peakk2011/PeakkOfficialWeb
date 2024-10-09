@@ -38,10 +38,10 @@ window.onscroll = function () {
   // pageYOffset or scrollY
   if (window.scrollY > 0) {
     Nav.classList.add('scrolled')
-    NavbarContent.style.height = "60px";
+    NavbarContent.style.height = "55px";
   } else {
     Nav.classList.remove('scrolled')
-    NavbarContent.style.height = "60px";
+    NavbarContent.style.height = "55px";
   }
 }
 

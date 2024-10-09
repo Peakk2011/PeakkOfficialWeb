@@ -32,6 +32,33 @@
         AOS.init();
     </script>
 
+    <script defer>
+
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+
+        function CheckIT() {
+            console.info("Content load successfully");
+            console.info("Open Peakkofficial Website");
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", CheckIT);
+            console.info("Webpage loading");
+            // open fullsceen
+        } else {
+            CheckIT();
+        }
+
+        toggleFullScreen();
+
+    </script>
+
     <div class="cursor cursor--large"></div>
     <div class="cursor cursor--small"></div>
 
