@@ -343,7 +343,15 @@ body.dark-theme #backgroundblur {
 @media only screen and (max-width: 1150px) {
 
     .card {
-        overflow-x: auto;
+        position: relative;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+    }
+
+    .cardcon {
+        scroll-snap-align: start;
+        flex-shrink: 0;
     }
 
     .cardimage img {

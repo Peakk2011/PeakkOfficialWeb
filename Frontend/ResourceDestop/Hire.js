@@ -168,6 +168,27 @@
 // //     }
 // //   }
 
+// Drag to scroll
+
+(function () {
+    var curYPos, curXPos, curDown;
+
+    window.addEventListener('mousemove', function (e) {
+        if (curDown) {
+            window.scrollBy(curXPos - e.pageX, curYPos - e.pageY);
+        }
+    });
+
+    window.addEventListener('mousedown', function (e) {
+        curYPos = e.pageY;
+        // curXPos = e.pageX;
+        curDown = true;
+    });
+
+    window.addEventListener('mouseup', function (e) {
+        curDown = false;
+    });
+})()
 
 // Mouse interactive 
 
@@ -347,3 +368,25 @@ mediaQuery.addEventListener('change', handleMediaQueryChange);
 
 // Initial check
 handleMediaQueryChange(mediaQuery);
+
+const NavlinkBottom = document.querySelectorAll(".navsoc > .navsoccon > li > a");
+
+// Add a click event listener to each one
+NavlinkBottom.forEach(NavlinkBottom => {
+    NavlinkBottom.addEventListener('mouseenter', () => {
+        gsap.to(cursorInner, 0.15, {
+            scale: 5,
+        });
+        gsap.to(cursorOuter, 0.2, {
+            scale: 0,
+        });
+    });
+    NavlinkBottom.addEventListener('mouseleave', () => {
+        gsap.to(cursorInner, 0.15, {
+            scale: 1,
+        });
+        gsap.to(cursorOuter, 0.2, {
+            scale: 1,
+        });
+    });
+});

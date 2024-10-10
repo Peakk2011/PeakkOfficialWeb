@@ -1,3 +1,23 @@
+(function(){
+  var curYPos, curXPos, curDown;
+
+  window.addEventListener('mousemove', function(e){ 
+    if(curDown){
+      window.scrollBy(curXPos - e.pageX, curYPos - e.pageY);
+    }
+  });
+
+  window.addEventListener('mousedown', function(e){ 
+    curYPos = e.pageY; 
+    curXPos = e.pageX; 
+    curDown = true; 
+  });
+
+  window.addEventListener('mouseup', function(e){ 
+    curDown = false; 
+  });
+})()
+
 // Theme switcher
 
 const btn = document.querySelector(".btn-toggle");
@@ -311,185 +331,6 @@ NavlinkBottom.forEach(NavlinkBottom => {
   });
 });
 
-// 3D Recommend Card
-
-/* Store the element in el */
-let el = document.getElementById('Recommended')
-
-/* Get the height and width of the element */
-const height = el.clientHeight
-const width = el.clientWidth
-
-/*
-  * Add a listener for mousemove event
-  * Which will trigger function 'handleMove'
-  * On mousemove
-  */
-el.addEventListener('mousemove', handleMove)
-el.addEventListener('mouseover', handleMove)
-el.addEventListener('click', handleMove)
-
-/* Define function a */
-function handleMove(e) {
-  /*
-    * Get position of mouse cursor
-    * With respect to the element
-    * On mouseover
-    */
-  /* Store the x position */
-  const xVal = e.layerX
-  /* Store the y position */
-  const yVal = e.layerY
-  /*
-    * Calculate rotation valuee along the Y-axis
-    * Here the multiplier 20 is to
-    * Control the rotation
-    * You can change the value and see the results
-    */
-  const yRotation = 4 * ((xVal - width / 2) / width)
-  /* Calculate the rotation along the X-axis */
-  const xRotation = -4 * ((yVal - height / 2) / height)
-  /* Generate string for CSS transform property */
-  const string = 'perspective(300px) scale(1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
-  /* Apply the calculated transformation */
-  el.style.transform = string
-}
-/* Add listener for mouseout event, remove the rotation */
-el.addEventListener('mouseout', function () {
-  el.style.transform = 'perspective(300px) scale(1) rotateX(0) rotateY(0)'
-})
-/* Add listener for mousedown event, to simulate click */
-el.addEventListener('mousedown', function () {
-  el.style.transform = 'perspective(300px) scale(0.9) rotateX(0) rotateY(0)'
-})
-/* Add listener for mouseup, simulate release of mouse click */
-el.addEventListener('mouseup', function () {
-  el.style.transform = 'perspective(300px) scale(1) rotateX(0) rotateY(0)'
-})
-
-// Hide cursor when hover recommend card
-
-el.addEventListener("mouseenter", () => {
-  gsap.to(cursorInner, 0.15, {
-    opacity: 0,
-    scale: 12,
-    borderRadius: "0%",
-  });
-  gsap.to(cursorOuter, 0.2, {
-    opacity: 0,
-    scale: 0,
-    borderRadius: "50%",
-  });
-})
-
-el.addEventListener("mouseleave", () => {
-  gsap.to(cursorInner, 0.15, {
-    opacity: 1,
-    scale: 1,
-    borderRadius: "50%",
-  });
-  gsap.to(cursorOuter, 0.2, {
-    opacity: 1,
-    scale: 1,
-    borderRadius: "50%",
-  });
-})
-
-// Price title tag hover
-
-document.getElementById("TextTitleSuggessTag").addEventListener("mouseenter", () => {
-  gsap.to(cursorInner, 0.15, {
-    scale: 3.8,
-    borderRadius: "1%",
-    width: "120px",
-    transition: 0.65,
-  });
-  gsap.to(cursorOuter, 0.2, {
-    scale: 0,
-    opacity: 0,
-    borderRadius: "0%",
-    transition: 0.26,
-  });
-})
-
-document.getElementById("TextTitleSuggessTag").addEventListener("mouseleave", () => {
-  gsap.to(cursorInner, 0.15, {
-    scale: 1,
-    borderRadius: "50%",
-    width: "20px",
-  });
-  gsap.to(cursorOuter, 0.2, {
-    scale: 1,
-    opacity: 1,
-    borderRadius: "50%",
-  });
-})
-
-let BuyRecomMSHover = document.getElementById("BuyRecomPrice");
-
-let BuyviewMoreWhyby = document.getElementById("BuyviewMoreWhyby");
-let BuyviewMoreWhyby2 = document.getElementById("BuyviewMoreWhyby2");
-
-BuyRecomMSHover.addEventListener("mouseenter", () => {
-  gsap.to(cursorInner, 0.15, {
-    scale: 4.85,
-  });
-  gsap.to(cursorOuter, 0.2, {
-    scale: 0,
-    opacity: 0,
-  });
-})
-
-BuyRecomMSHover.addEventListener("mouseleave", () => {
-  gsap.to(cursorInner, 0.15, {
-    scale: 1,
-  });
-  gsap.to(cursorOuter, 0.2, {
-    scale: 1,
-    opacity: 1,
-  });
-})
-
-BuyviewMoreWhyby.addEventListener("mouseenter", () => {
-  gsap.to(cursorInner, 0.15, {
-    scale: 4.85,
-  });
-  gsap.to(cursorOuter, 0.2, {
-    scale: 0,
-    opacity: 0,
-  });
-})
-
-BuyviewMoreWhyby.addEventListener("mouseleave", () => {
-  gsap.to(cursorInner, 0.15, {
-    scale: 1,
-  });
-  gsap.to(cursorOuter, 0.2, {
-    scale: 1,
-    opacity: 1,
-  });
-})
-
-BuyviewMoreWhyby2.addEventListener("mouseenter", () => {
-  gsap.to(cursorInner, 0.15, {
-    scale: 4.85,
-  });
-  gsap.to(cursorOuter, 0.2, {
-    scale: 0,
-    opacity: 0,
-  });
-})
-
-BuyviewMoreWhyby2.addEventListener("mouseleave", () => {
-  gsap.to(cursorInner, 0.15, {
-    scale: 1,
-  });
-  gsap.to(cursorOuter, 0.2, {
-    scale: 1,
-    opacity: 1,
-  });
-})
-
 function OpenExpOverlay() {
   document.getElementById("ExpainLinkOverlay").style.display = "block";
   setTimeout(() => {
@@ -503,4 +344,48 @@ function CloseExpOverlay() {
   setTimeout(() => {
     document.getElementById("ExpainLinkOverlay").style.display = "none";
   }, 200);
+}
+
+
+// Slider
+
+const container = document.querySelector('.card');
+let startY;
+let startX;
+let scrollLeft;
+let scrollTop;
+let isDown;
+
+container.addEventListener('mousedown', e => mouseIsDown(e));
+container.addEventListener('mouseup', e => mouseUp(e))
+container.addEventListener('mouseleave', e => mouseLeave(e));
+container.addEventListener('mousemove', e => mouseMove(e));
+
+function mouseIsDown(e) {
+  isDown = true;
+  startY = e.pageY - container.offsetTop;
+  startX = e.pageX - container.offsetLeft;
+  scrollLeft = container.scrollLeft;
+  scrollTop = container.scrollTop;
+}
+function mouseUp(e) {
+  isDown = false;
+}
+function mouseLeave(e) {
+  isDown = false;
+}
+function mouseMove(e) {
+  if (isDown) {
+    e.preventDefault();
+    //Move vertcally
+    const y = e.pageY - container.offsetTop;
+    const walkY = y - startY;
+    container.scrollTop = scrollTop - walkY;
+
+    //Move Horizontally
+    const x = e.pageX - container.offsetLeft;
+    const walkX = x - startX;
+    container.scrollLeft = scrollLeft - walkX;
+
+  }
 }

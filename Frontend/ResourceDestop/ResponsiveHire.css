@@ -230,7 +230,7 @@ body.dark-theme .iconsRes {
     }
 
     .Featured {
-        height: 100dvh;
+        height: 915px;
     }
 
     .FurCard {
@@ -265,6 +265,18 @@ body.dark-theme .iconsRes {
     .AppDesipCon h1 {
         width: 220px !important;
         font-size: 32px !important;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .navbarbot {
+        display: block;
+    }
+
+    .navsoc {
+        bottom: 45px;
     }
 
 }
