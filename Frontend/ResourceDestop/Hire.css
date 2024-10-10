@@ -387,12 +387,6 @@ body.dark-theme
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.FurCardCon:hover {
-    transform: scale(105%);
-    cursor: none;
-    background-color: #131313;
-}
-
 body.dark-theme .FurCardText h1 {
     color: #000;
 }
@@ -607,79 +601,5 @@ body.dark-theme .Strtext li a {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-    }
-}
-
-@supports (animation-timeline: scroll()) {
-    .AbsoulteHeader {
-        animation: ScrollUp linear both;
-        animation-timeline: scroll();
-        animation-range: contain;
-    }
-
-    #RightPos {
-        animation: RightPost linear both;
-        animation-timeline: scroll();
-        animation-range: contain;
-    }
-
-    .textoverlay {
-        animation: Txtoverlay linear both;
-        animation-timeline: scroll();
-        animation-range: contain;
-    }
-
-    .headertext p {
-        animation: TextHeaderSde linear both;
-        animation-timeline: scroll();
-        animation-range: contain;
-    }
-
-    .headertext h1 {
-        animation: TextHeaderSde2 linear both;
-        animation-timeline: scroll();
-        animation-range: contain;
-    }
-}
-
-@keyframes ScrollUp {
-    100% {
-        position: absolute;
-        left: 50%;
-        top: 10%;
-        transform: translate(-50%, -50%);
-        filter: blur(20px);
-    }
-}
-
-@keyframes RightPost {
-    100% {
-        bottom: 200px;
-        opacity: 0;
-        filter: blur(30px);
-    }
-}
-
-@keyframes Txtoverlay {
-    100% {
-        top: 25%;
-        opacity: 0;
-        filter: blur(20px);
-    }
-}
-
-@keyframes TextHeaderSde {
-    100% {
-        transform: translateY(-200px);
-        opacity: 0;
-        filter: blur(10px);
-    }
-}
-
-@keyframes TextHeaderSde2 {
-    100% {
-        transform: translateY(-120px);
-        opacity: 0;
-        filter: blur(10px);
     }
 }

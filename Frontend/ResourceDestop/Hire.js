@@ -293,3 +293,57 @@ ResThemeswic2.addEventListener("click", function () {
     }
     localStorage.setItem("theme", theme);
 });
+
+// Slider
+
+const slider = document.querySelector('.FurCard');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+    console.log(walk);
+});
+
+// Responsive content chenge
+
+// Define a media query
+const mediaQuery = window.matchMedia('(min-width: 1000px)');
+
+// Function to handle changes in the media query status
+function handleMediaQueryChange(e) {
+    if (e.matches) {
+        // The viewport is at least 768 pixels wide
+        console.log('Desktop Peakkofficial');
+        document.getElementById("TextChenge").innerHTML = "ได้รับเว็บไซต์ที่มี design ที่ทันสมัยตัวอย่างเช่นในรูปนี้";
+    } else {
+        // The viewport is less than 768 pixels wide
+        document.getElementById("TextChenge").innerHTML = "เว็บที่พวกเรารับทํานั้นที่ทันสมัยและทําเพื่อคุณ";
+        console.log('Mobile Peakkofficial');
+    }
+}
+
+// Add a listener for changes in the media query status
+mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+// Initial check
+handleMediaQueryChange(mediaQuery);

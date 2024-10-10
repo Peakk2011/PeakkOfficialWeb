@@ -489,3 +489,18 @@ BuyviewMoreWhyby2.addEventListener("mouseleave", () => {
     opacity: 1,
   });
 })
+
+function OpenExpOverlay() {
+  document.getElementById("ExpainLinkOverlay").style.display = "block";
+  setTimeout(() => {
+    document.getElementById("ExpainLinkOverlay").style.opacity = "1";
+  }, 50);
+}
+
+function CloseExpOverlay() {
+  console.log("CloseExpOverlay()");
+  document.getElementById("ExpainLinkOverlay").style.opacity = "0";
+  setTimeout(() => {
+    document.getElementById("ExpainLinkOverlay").style.display = "none";
+  }, 200);
+}

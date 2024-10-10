@@ -179,8 +179,8 @@
                 <h1>พีคออฟฟิเชียล</h1>
             </div>
             <div class="sidebarcon">
-                <li><a href="#" id="sidebarhigh"><ion-icon name="golf-sharp"></ion-icon>ภาพรวม</a></li>
-                <li><a href="#"><ion-icon name="cash-outline"></ion-icon>จ้างงาน</a></li>
+                <li><a href="javascript:void(0)" id="sidebarhigh"><ion-icon name="golf-sharp"></ion-icon>ภาพรวม</a></li>
+                <li><a href="Hire.html"><ion-icon name="cash-outline"></ion-icon>จ้างงาน</a></li>
                 <li><a href=""><ion-icon name="person-outline"></ion-icon>เกียวกับ</a></li>
                 <li><a href="javascript:void(0)" class="btn-toggle"><ion-icon
                             name="color-fill-outline"></ion-icon>เปลียนธีม</a>
@@ -218,6 +218,15 @@
 
     </header>
 
+    <div id="ExpainLinkOverlay" onclick="CloseExpOverlay()">
+        <div class="ExpCho">
+            <h1>จะดูรายระเอียดได้ที่ใหน?</h1>
+            <div class="Explink">
+                <a href="https://www.instagram.com/peakkofficial/">ดูข้อมูลใน peakkofficial</a>
+                <a href="Hire.html">ดูข้อมูลในเว็บนี้</a>
+            </div>
+        </div>
+    </div>
 
     <div class="Expain">
         <div class="Exp">
@@ -225,7 +234,7 @@
                 <div class="ExpText">
                     <h1>จากคนที่รับทําเว็บไซต์</h1>
                     <p>Mew.peakkkteamsub Peakkofficial</p>
-                    <a href="#" id="PeakkofficialExpainText">ดูเพิ่มเติมใน <strong>Peakkofficial</strong></a>
+                    <a id="PeakkofficialExpainText" onclick="OpenExpOverlay()">ดูรายระเอียดเพิ่มเติม</a>
                     <br>
                 </div>
                 <div class="ExpDes">

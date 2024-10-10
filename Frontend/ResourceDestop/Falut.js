@@ -101,7 +101,7 @@ setTimeout(() => {
 
 		setTimeout(() => {
 			ClassLoading.style.display = "none";
-		}, 3000);
+		}, 500);
 	}, 10); 
 
 }, 2450);

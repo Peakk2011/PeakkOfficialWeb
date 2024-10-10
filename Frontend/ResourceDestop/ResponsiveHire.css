@@ -62,6 +62,213 @@ body.dark-theme .iconsRes {
 
 }
 
+@media only screen and (max-width: 1850px) {
+
+    .Furcontent {
+        width: 100%;
+        position: relative;
+        max-width: 100%;
+    }
+
+    .FurCard {
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+        /* gap: 0; */
+        width: 100%;
+    }
+
+    .FurCardCon {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 330px;
+        margin: 0.1rem;
+        margin-bottom: 1.5rem;
+        /* height: 100%; */
+    }
+
+
+}
+
+/* ALl */
+
+@media only screen and (max-width: 1280px) {
+
+    .Fur {
+        max-width: 80%;
+    }
+
+    .AppTextDesip {
+        max-width: 80%;
+    }
+
+    .StrImage img {
+        height: 40% !important;
+        object-fit: cover;
+    }
+
+    .FurCardCon {
+        width: 315px;
+        height: 520px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1280px) {
+    .Appimg img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    header {
+        height: 100dvh;
+    }
+
+    .headrcon {
+        scale: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100dvh;
+    }
+
+    .Fur {
+        max-width: 75%;
+    }
+
+    .AppTextDesip {
+        max-width: 75%;
+    }
+
+    .Strtext h1 {
+        font-size: 46px !important;
+        letter-spacing: -1px !important;
+    }
+
+    .Strtext li a {
+        font-size: 20px !important;
+        height: 45px !important;
+    }
+
+    .StrImage {
+        position: relative;
+        height: 500px;
+    }
+
+    body.dark-theme .StrImage {
+        background-color: #fdfdf3;
+
+    }
+
+    .StrImage img {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, -50%);
+        height: 400px !important;
+    }
+
+    .appDees {
+        height: 1280px;
+    }
+
+}
+
+@media only screen and (max-width: 730px) {
+
+    .headrcon {
+        scale: 45%;
+    }
+
+    .StrImage img {
+        height: 280px !important;
+    }
+
+}
+
+@media only screen and (max-width: 530px) {
+
+    .AppDesipCon {
+        width: 75%;
+        border: none;
+    }
+
+    .StrImage img {
+        /* aspect-ratio: 16 / 9; */
+        background-size: cover;
+        width: 80%;
+        height: 36% !important;
+    }
+
+    .FurCardCon {
+        width: 100%;
+        box-shadow: none !important;
+        outline: none !important;
+        border-radius: 20px !important;
+    }
+
+    body.dark-theme .FurCardCon {
+        background-color: #fffff9 !important;
+        border: solid 1px #f1f1f1;
+    }
+
+    .AppDesipCon p {
+        width: 240px;
+    }
+
+    .AppDesipCon h1 {
+        width: 260px !important;
+    }
+
+    .Featured {
+        height: 100dvh;
+    }
+
+    .FurCard {
+        padding-top: 1.5rem;
+    }
+
+    .FurText {
+        margin-top: 1rem;
+    }
+
+    .FurCardText p {
+        max-width: 240px !important;
+    }
+
+}
+
+@media only screen and (max-width: 380px) {
+
+    .headrcon {
+        scale: 32.5%;
+    }
+
+    .Strtext h1 {
+        font-size: 36px !important;
+        letter-spacing: -1.5px !important;
+    }
+
+    .FurText h1 {
+        font-size: 32px !important;
+    }
+
+    .AppDesipCon h1 {
+        width: 220px !important;
+        font-size: 32px !important;
+    }
+
+}
+
 .sidebar {
     width: 250px;
     height: 100dvh;
