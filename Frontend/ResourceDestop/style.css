@@ -104,6 +104,14 @@ body.dark-theme .headerText p {
     -webkit-text-fill-color: transparent !important;
 }
 
+@keyframes ScaleUp {
+    0% {
+        scale: 0%;
+        opacity: 0;
+        filter: blur(20px);
+    }
+}
+
 header {
     position: relative;
     width: 100%;
@@ -118,6 +126,9 @@ header {
         z-index: 5;
 
         .headerText {
+            animation: ScaleUp 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-delay: 0.9s;
+
             &.headerText p {
                 /* color: #ffffE9; */
                 /* font-family: LineSeedRegular; */
@@ -180,6 +191,15 @@ nav {
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     z-index: 10;
+    animation: fadeDown 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeDown {
+    0% {
+        transform: translateY(-100px);
+        filter: blur(10px);
+    }
 }
 
 .Navbar {
@@ -454,6 +474,19 @@ body.dark-theme .navbarbot {
     /* border-top: solid 1px #222; */
 }
 
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 130px);
+        filter: blur(20px);
+    }
+
+    100% {
+        opacity: 1;
+        /* transform: translateY(0px); */
+    }
+}
+
 .navsoc {
     position: fixed;
     bottom: 35px;
@@ -466,6 +499,9 @@ body.dark-theme .navbarbot {
     border-radius: 50px;
     transition: 0.4s all;
     z-index: 5;
+    /* Anim */
+    animation: fadeUp 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    animation-delay: 0.9s;
 
     .navsoccon {
         margin: 0 auto;
@@ -593,6 +629,20 @@ body.dark-theme .Expain {
             }
         }
     }
+}
+
+#FrameHire {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    display: none;
+}
+
+#GoToHireAnim {
+    transition: 0.35s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 #ExpainLinkOverlay {
@@ -1447,4 +1497,17 @@ body.dark-theme .AllpcText span {
     .ResThemeswic2 {
         display: none;
     } */
+}
+
+/* Open links anim */
+
+#FrameHireSidebar {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    transition: 0.2s;
 }

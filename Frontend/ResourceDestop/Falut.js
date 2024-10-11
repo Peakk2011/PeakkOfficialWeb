@@ -89,6 +89,7 @@ function handleMouseLeave(e) {
 // use Loading
 
 const ClassLoading = document.getElementById("Loading");
+const TransparentLogo = document.getElementById("TransparentLogo");
 
 setTimeout(() => {
 
@@ -104,4 +105,4 @@ setTimeout(() => {
 		}, 500);
 	}, 10); 
 
-}, 2450);
+}, 800);

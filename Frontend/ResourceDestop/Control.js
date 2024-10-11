@@ -1,20 +1,20 @@
-(function(){
+(function () {
   var curYPos, curXPos, curDown;
 
-  window.addEventListener('mousemove', function(e){ 
-    if(curDown){
+  window.addEventListener('mousemove', function (e) {
+    if (curDown) {
       window.scrollBy(curXPos - e.pageX, curYPos - e.pageY);
     }
   });
 
-  window.addEventListener('mousedown', function(e){ 
-    curYPos = e.pageY; 
-    curXPos = e.pageX; 
-    curDown = true; 
+  window.addEventListener('mousedown', function (e) {
+    curYPos = e.pageY;
+    curXPos = e.pageX;
+    curDown = true;
   });
 
-  window.addEventListener('mouseup', function(e){ 
-    curDown = false; 
+  window.addEventListener('mouseup', function (e) {
+    curDown = false;
   });
 })()
 
@@ -338,13 +338,13 @@ function OpenExpOverlay() {
   }, 50);
 }
 
-function CloseExpOverlay() {
-  console.log("CloseExpOverlay()");
-  document.getElementById("ExpainLinkOverlay").style.opacity = "0";
-  setTimeout(() => {
-    document.getElementById("ExpainLinkOverlay").style.display = "none";
-  }, 200);
-}
+// function CloseExpOverlay() {
+//   console.log("CloseExpOverlay()");
+//   document.getElementById("ExpainLinkOverlay").style.opacity = "0";
+//   setTimeout(() => {
+//     document.getElementById("ExpainLinkOverlay").style.display = "none";
+//   }, 200);
+// }
 
 
 // Slider
@@ -388,4 +388,84 @@ function mouseMove(e) {
     container.scrollLeft = scrollLeft - walkX;
 
   }
+}
+
+// New Links click ui
+
+const GoToHireAnimExp = document.getElementById("GoToHireAnim");
+const FrameHire = document.getElementById("FrameHire")
+
+GoToHireAnimExp.addEventListener("click", () => {
+  GoToHireAnimExp.style.color = "transparent";
+  GoToHireAnimExp.style.borderRadius = "0px";
+  ExpainLinkOverlay.style.zIndex = "100";
+
+  setTimeout(() => {
+    GoToHireAnimExp.style.padding = "6.5rem 1.5rem"
+    GoToHireAnimExp.style.transform = "scale(300%)"
+    setTimeout(() => {
+      GoToHireAnimExp.style.padding = "10rem 1.5rem"
+    }, 50);
+  }, 20);
+
+  setTimeout(() => {
+    FrameHire.style.display = "block"
+    // GoToHireAnimExp.style.opacity = "0";
+    setTimeout(() => {
+      FrameHire.style.width = "100%"
+      FrameHire.style.height = "100%"
+
+      setTimeout(() => {
+        FrameHire.style.opacity = "1"
+      }, 300);
+
+    }, 5);
+  }, 50);
+
+
+})
+
+// FrameHireSidebar
+
+function OpenWinHire() {
+  window.open("hire.html", "_parent");
+}
+
+SidebarHireOpen.addEventListener("click", () => {
+
+  contentIndex.style.opacity = "20%"
+  contentIndex.style.filter = "blur(5px)"
+  FrameHireSidebar.style.display = "block"
+
+  CloseSidebar()
+
+  setTimeout(() => {
+    contentIndex.style.opacity = "100%"
+    contentIndex.style.filter = "blur(0px)"
+    setTimeout(() => {
+
+      FrameHireSidebar.style.opacity = "1"
+
+    }, 100);
+  }, 300);
+
+
+})
+
+// if success load hire del to index if open index reversed
+
+function CloseSidebar() {
+  // backgroundblur.style.transform = "translateX(-100%)";
+  SidebarNew.style.transform = "translateX(-300px)"
+  backgroundblur.style.opacity = "0";
+
+  setTimeout(() => {
+    SidebarIns.style.transform = "translateX(-50px)";
+    SidebarIns.style.opacity = "0";
+    SidebarIns.style.filter = "blur(5px)";
+
+    setTimeout(() => {
+      backgroundblur.style.display = "none";
+    }, 400);
+  }, 30);
 }

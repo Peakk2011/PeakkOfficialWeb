@@ -390,3 +390,56 @@ NavlinkBottom.forEach(NavlinkBottom => {
         });
     });
 });
+
+function OpenWinIndex() {
+    window.open("index.html", "_parent");
+}
+
+function CloseSidebar() {
+    // backgroundblur.style.transform = "translateX(-100%)";
+    SidebarNew.style.transform = "translateX(-300px)"
+    backgroundblur.style.opacity = "0";
+
+    setTimeout(() => {
+        SidebarIns.style.transform = "translateX(-50px)";
+        SidebarIns.style.opacity = "0";
+        SidebarIns.style.filter = "blur(5px)";
+
+        setTimeout(() => {
+            backgroundblur.style.display = "none";
+        }, 400);
+    }, 30);
+}
+
+// FrameHireSidebar
+
+SidebarIndexOpen.addEventListener("click", () => {
+
+    contentHire.style.opacity = "0%"
+    OpenWinIndex()
+
+    setTimeout(() => {
+        contentHire.style.display = "none"
+    }, 300);
+
+    FrameIndexSidebar.style.display = "block"
+
+
+    CloseSidebar()
+
+    // setTimeout(() => {
+    //     contentHire.style.opacity = "100%"
+    //     contentHire.style.filter = "blur(0px)"
+    //     setTimeout(() => {
+
+    //         FrameIndexSidebar.style.opacity = "1"
+
+    //     }, 100);
+    // }, 300);
+
+
+
+})
+
+// FrameIndexSidebar.style.display = "none"
+// FrameIndexSidebar.style.opacity = "0"
