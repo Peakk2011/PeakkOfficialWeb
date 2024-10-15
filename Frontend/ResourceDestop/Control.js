@@ -393,7 +393,11 @@ function mouseMove(e) {
 // New Links click ui
 
 const GoToHireAnimExp = document.getElementById("GoToHireAnim");
-const FrameHire = document.getElementById("FrameHire")
+const FrameHire = document.getElementById("FrameHire");
+
+// add listener
+
+const GoToinstaAnim = document.getElementById("GoToinstaAnim");
 
 GoToHireAnimExp.addEventListener("click", () => {
   GoToHireAnimExp.style.color = "transparent";
@@ -425,11 +429,32 @@ GoToHireAnimExp.addEventListener("click", () => {
 
 })
 
-// FrameHireSidebar
+GoToinstaAnim.addEventListener("click", () => {
+  GoToinstaAnim.style.color = "transparent";
+  GoToinstaAnim.style.borderRadius = "0px";
+  ExpainLinkOverlay.style.zIndex = "100";
+
+  setTimeout(() => {
+    GoToinstaAnim.style.padding = "8.5rem 1.5rem"
+    GoToinstaAnim.style.transform = "scale(400%)"
+    setTimeout(() => {
+      GoToinstaAnim.style.padding = "10rem 1.5rem"
+    }, 50);
+  }, 20);
+
+  function PkOpenInstagram() {
+    window.open("https://www.instagram.com/peakkofficial/", "_parent");
+  }
+
+  PkOpenInstagram();
+
+})
 
 function OpenWinHire() {
   window.open("hire.html", "_parent");
 }
+
+// FrameHireSidebar
 
 SidebarHireOpen.addEventListener("click", () => {
 

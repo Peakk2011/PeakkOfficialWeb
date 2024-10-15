@@ -65,12 +65,14 @@ body.dark-theme .iconsRes {
 @media only screen and (max-width: 1850px) {
 
     .Furcontent {
+        /* Header */
         width: 100%;
         position: relative;
         max-width: 100%;
     }
 
     .FurCard {
+        /* HeaderCard */
         position: relative;
         display: flex;
         align-items: center;
@@ -82,6 +84,7 @@ body.dark-theme .iconsRes {
     }
 
     .FurCardCon {
+        /* Card */
         scroll-snap-align: start;
         flex-shrink: 0;
         display: flex;
@@ -401,4 +404,76 @@ body.dark-theme .sidebarcon li a:active {
 
 body.dark-theme #backgroundblur {
     background-color: rgba(255, 255, 233, 0.650);
+}
+
+@media only screen and (max-width: 1280px) {
+
+    .AllPriceTitile h1 {
+        font-size: 38px !important;
+    }
+
+    .AllPrice {
+        /* Header */
+        width: 100%;
+        position: relative;
+        max-width: 100%;
+        height: 1440px;
+
+    }
+
+    .AllPriceContent {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .AllPriceCard {
+        /* HeaderCard */
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+        gap: 25px;
+        width: 100%;
+        margin: auto;
+        justify-content: start !important;
+    }
+
+    .AllPriceTitile {
+        text-align: left !important;
+        margin-bottom: 2.25rem;
+    }
+
+    .AllPCon {
+        /* Card */
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        display: flex;
+        margin: 0.2rem;
+        margin-bottom: 1.5rem;
+        width: 360px;
+    }
+
+    .AllpcBtn a {
+        width: 288px !important;
+    }
+
+    .AllPriceTitile p {
+        display: block !important;
+    }
+
+}
+
+@media only screen and (max-width: 451px) {
+
+    .AllPCon {
+        width: 100%;
+    }
+
+    .AllpcBtn a {
+        width: 220px !important;
+        display: block;
+    }
+
 }

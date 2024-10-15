@@ -443,3 +443,18 @@ SidebarIndexOpen.addEventListener("click", () => {
 
 // FrameIndexSidebar.style.display = "none"
 // FrameIndexSidebar.style.opacity = "0"
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.querySelector(".navsoc").style.transform = "translate(-50%, 0%)"
+        document.querySelector(".navbarbot").style.transform = "translateY(0%)"
+        // document.querySelector(".navsoc").style.opacity = "1"
+    } else {
+        document.querySelector(".navsoc").style.transform = "translate(-50%, 100px)"
+        document.querySelector(".navbarbot").style.transform = "translateY(130px)"
+        // document.querySelector(".navsoc").style.opacity = "0"
+    }
+    prevScrollpos = currentScrollPos;
+}

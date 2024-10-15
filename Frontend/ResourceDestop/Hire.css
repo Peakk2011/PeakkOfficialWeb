@@ -445,7 +445,6 @@ body.dark-theme .appDees {
 .appDees {
     height: 1440px;
     width: 100%;
-    border-bottom: solid 1px #222;
     border-top: solid 1px #222;
     position: relative;
     background-color: #070707;
@@ -529,6 +528,233 @@ body.dark-theme .AppDesipCon p {
         margin-top: 1rem;
         font-size: 18px;
     }
+}
+
+body.dark-theme .AllPrice {
+    background-color: #fdfdf3;
+    border-bottom: none;
+}
+
+body.dark-theme .AllPriceTitile h1 {
+    color: #000 !important;
+}
+
+body.dark-theme .AllPriceTitile p {
+    color: #000 !important;
+    opacity: 80% !important;
+}
+
+.AllPrice {
+    height: 100dvh;
+    width: 100%;
+    border-bottom: solid 1px #222;
+    background-color: #070707;
+
+    .AllPriceTitile {
+        text-align: center;
+
+        &.AllPriceTitile h1 {
+            color: #ffffe9;
+            font-family: lineseedregular;
+            letter-spacing: -1.8px;
+            font-size: 48px;
+            padding-top: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        &.AllPriceTitile p {
+            color: #fff;
+            font-family: lineseedregular;
+            opacity: 30%;
+            font-size: 20px;
+            line-height: 1.4;
+            letter-spacing: -0.3px;
+            display: none;
+        }
+
+        &.AllPriceTitile p strong {
+            font-weight: 400;
+            font-family: sfpro;
+        }
+
+    }
+
+}
+
+body.dark-theme .tag {
+    background-color: #000;
+}
+
+body.dark-theme .tag:before {
+    border-right: 19px solid #000;
+}
+
+.tag {
+    display: inline-block;
+    width: auto;
+    height: 38px;
+    background-color: #222;
+    -webkit-border-radius: 3px 4px 4px 3px;
+    -moz-border-radius: 3px 4px 4px 3px;
+    border-radius: 3px 4px 4px 3px;
+    border: solid 1px #222;
+    margin-left: 19px;
+    position: relative;
+    color: #fff;
+    font-weight: 300;
+    font-family: 'lineseedregular', sans-serif;
+    letter-spacing: -0.6px;
+    font-size: 22px;
+    line-height: 38px;
+
+    margin-top: 2.5rem;
+
+    padding: 0 10px 0 15px;
+}
+
+/* Makes the triangle */
+.tag:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -19px;
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-right: 19px solid #222;
+}
+
+/* Makes the circle */
+.tag:after {
+    content: "";
+    background-color: #fff;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: 15px;
+}
+
+.AllPriceCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+}
+
+.AllpcBtn {
+    bottom: 25px;
+    position: absolute;
+
+    &.AllpcBtn a {
+        color: #000;
+        border-radius: 50px;
+        background-color: #ffffE9;
+        padding: 0px 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        letter-spacing: -0.3px;
+        height: 48px;
+        margin-bottom: 1.2rem;
+        width: 328px;
+        text-align: center;
+        font-family: lineseedregular;
+    }
+}
+
+body.dark-theme .AllPCon {
+    background-color: #fdfdf3;
+}
+
+body.dark-theme .AllpcText h1 {
+    color: #000 !important;
+}
+
+body.dark-theme .AllpcText p {
+    color: #000 !important;
+}
+
+body.dark-theme .AllpcText span {
+    color: #000 !important;
+    opacity: 80% !important;
+    -webkit-text-stroke-width: 0.3px;
+}
+
+body.dark-theme .AllpcText li a {
+    color: #000 !important;
+}
+
+body.dark-theme .AllPCon {
+    border: solid 1px #bfbfb8;
+}
+
+.AllPCon {
+    width: 400px;
+    height: 1000px;
+    background-color: #0c0c0c;
+    border: solid 1px #222;
+    border-radius: 10px;
+    position: relative;
+
+    .AllpcText {
+        padding: 1rem 2.25rem;
+
+        &.AllpcText h1 {
+            font-family: lineseedregular;
+            color: #ffffE9;
+            font-weight: 400;
+            letter-spacing: -1.5px;
+            font-size: 40px;
+            margin-top: 1rem;
+        }
+
+        &.AllpcText p {
+            color: #fff;
+            font-size: 90px;
+            font-family: lineseedregular;
+        }
+
+        &.AllpcText span {
+            color: #fff;
+            margin-top: 0.65rem;
+            display: inline-block;
+            opacity: 30%;
+            font-family: lineseedregular;
+            line-height: 1.4;
+            font-size: 16px;
+        }
+
+        &.AllpcText ul {
+            margin-top: 2.65rem;
+        }
+
+        &.AllpcText li a {
+            color: #fff;
+            font-family: lineseedregular;
+            display: block;
+            padding: 0.32rem 0rem;
+            font-size: 14px;
+        }
+
+        &.AllpcText ion-icon {
+            margin-right: 0.35rem;
+            transform: translateY(1px);
+        }
+
+    }
+}
+
+body.dark-theme .AllpcBtn a {
+    color: #ffffE9;
+    background-color: #000;
 }
 
 body.dark-theme .Started {
@@ -706,7 +932,7 @@ body.dark-theme .navbarbot {
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 10;
     transition: 0.2s;
 }
