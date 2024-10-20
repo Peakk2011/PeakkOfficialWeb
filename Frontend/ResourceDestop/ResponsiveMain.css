@@ -192,6 +192,7 @@ body.dark-theme .iconsRes {
 
 body.dark-theme .sidebar {
     background-color: #fffff1;
+    border-right: none;
 }
 
 .sidebartitile {

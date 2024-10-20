@@ -124,11 +124,6 @@ body.dark-theme .iconsRes {
 }
 
 
-@media only screen and (max-width: 1280px) {
-    .Appimg img {
-        display: none;
-    }
-}
 
 @media only screen and (max-width: 1000px) {
 
@@ -477,3 +472,15 @@ body.dark-theme #backgroundblur {
     }
 
 }
+
+@media only screen and (max-width: 1280px) {
+
+    .appDessContent {
+        max-width: 80%;
+    }
+
+    .Appimg img {
+        display: none;
+    }
+
+} 

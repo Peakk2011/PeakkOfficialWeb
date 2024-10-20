@@ -194,6 +194,7 @@
 
 const Navlink = document.querySelectorAll(".navbarlinks > li > a");
 const Strtext = document.querySelectorAll(".Strtext li a");
+const AllpcBtn = document.querySelectorAll(".AllpcBtn a");
 
 // Add a click event listener to each one
 Navlink.forEach(Navlink => {
@@ -206,6 +207,26 @@ Navlink.forEach(Navlink => {
         });
     });
     Navlink.addEventListener('mouseleave', () => {
+        gsap.to(cursorInner, 0.15, {
+            scale: 1,
+        });
+        gsap.to(cursorOuter, 0.2, {
+            scale: 1,
+        });
+    });
+});
+
+// Add a click event listener to each one
+AllpcBtn.forEach(AllpcBtn => {
+    AllpcBtn.addEventListener('mouseenter', () => {
+        gsap.to(cursorInner, 0.15, {
+            scale: 5,
+        });
+        gsap.to(cursorOuter, 0.2, {
+            scale: 0,
+        });
+    });
+    AllpcBtn.addEventListener('mouseleave', () => {
         gsap.to(cursorInner, 0.15, {
             scale: 1,
         });
@@ -444,17 +465,17 @@ SidebarIndexOpen.addEventListener("click", () => {
 // FrameIndexSidebar.style.display = "none"
 // FrameIndexSidebar.style.opacity = "0"
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.querySelector(".navsoc").style.transform = "translate(-50%, 0%)"
-        document.querySelector(".navbarbot").style.transform = "translateY(0%)"
-        // document.querySelector(".navsoc").style.opacity = "1"
-    } else {
-        document.querySelector(".navsoc").style.transform = "translate(-50%, 100px)"
-        document.querySelector(".navbarbot").style.transform = "translateY(130px)"
-        // document.querySelector(".navsoc").style.opacity = "0"
-    }
-    prevScrollpos = currentScrollPos;
-}
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function () {
+//     var currentScrollPos = window.pageYOffset;
+//     if (prevScrollpos > currentScrollPos) {
+//         document.querySelector(".navsoc").style.transform = "translate(-50%, 0%)"
+//         document.querySelector(".navbarbot").style.transform = "translateY(0%)"
+//         // document.querySelector(".navsoc").style.opacity = "1"
+//     } else {
+//         document.querySelector(".navsoc").style.transform = "translate(-50%, 100px)"
+//         document.querySelector(".navbarbot").style.transform = "translateY(130px)"
+//         // document.querySelector(".navsoc").style.opacity = "0"
+//     }
+//     prevScrollpos = currentScrollPos;
+// }
