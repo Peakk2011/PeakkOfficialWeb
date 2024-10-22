@@ -1,5 +1,5 @@
 import eel
-eel.init("./Frontend/ResourceDestop", allowed_extensions=['.js', '.html'])
+eel.init("./Frontend/ResourceDesktop", allowed_extensions=['.js', '.html'])
 
 @eel.expose
 def AlertHello():
