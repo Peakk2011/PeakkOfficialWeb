@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "ConnectPath.html"))
 })
 
-app.use('*', (req, res) => {
+app.use('/', (req, res) => {
     // res.status(404).send('<h1>404 Page Not Found!</h1>');
     res.status(400).sendFile(path.join(__dirname, "Error.html"));
 });
