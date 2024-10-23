@@ -131,11 +131,11 @@ header {
 
             &.headerText p {
                 /* color: #ffffE9; */
-                /* font-family: LineSeedRegular; */
-                font-family: Meltie;
+                font-family: LineSeedRegular;
+                /* font-family: Meltie; */
                 font-weight: 300;
-                letter-spacing: -1px;
-                font-size: 60px;
+                letter-spacing: -2.25px;
+                font-size: 45px;
                 margin-bottom: 1.5rem;
                 line-height: 1.5;
                 /* border-bottom: solid 1px #FFFFE9; */
@@ -152,13 +152,13 @@ header {
 
                 &.headerTextMain h1 {
                     color: #ffffE9;
-                    font-size: 350px;
+                    font-size: 250px;
                     font-weight: 300;
                     /* font-family: Silkscreen; */
                     font-family: "Pixelify Sans", sans-serif;
                     /* font-family: "Inter Tight", sans-serif; */
-                    letter-spacing: -25px;
                     line-height: 0.65;
+                    letter-spacing: -5px;
                 }
 
                 &.headerTextMain strong {
@@ -167,10 +167,11 @@ header {
                     /* letter-spacing: -65px; */
                     /* font-family: "Pixelify Sans", sans-serif; */
                     font-family: Silkscreen;
-                    font-size: 350px;
+                    font-size: 250px;
                     background: -webkit-linear-gradient(345deg, #82d6c4, #ffffE9);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
+                    letter-spacing: -5px;
                 }
             }
 
@@ -324,6 +325,8 @@ body.dark-theme .navbarlinks li a:hover {
     background-color: #060606;
     width: 100%;
     height: 100vh;
+    opacity: 20%;
+
 }
 
 .circles {
@@ -341,8 +344,7 @@ body.dark-theme .navbarlinks li a:hover {
     list-style: none;
     width: 80px;
     height: 80px;
-    background: linear-gradient(#82d6c4, #FFFFC1);
-    filter: blur(160px);
+    background: linear-gradient(#414141, #414141);
     animation: animate 25s linear infinite;
     bottom: -150px;
 
@@ -635,7 +637,7 @@ body.dark-theme .Expain {
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
     transition: 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
     display: none;
@@ -1507,7 +1509,7 @@ body.dark-theme .AllpcText span {
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 10;
     transition: 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
 }

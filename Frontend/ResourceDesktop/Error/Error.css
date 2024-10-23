@@ -462,5 +462,9 @@ li {
   .iconsRes {
     width: 100%;
   }
+  
+  .Navbar {
+    height: 70px;
+  }
 
 }
