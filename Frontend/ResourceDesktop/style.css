@@ -1477,11 +1477,15 @@ body.dark-theme .AllpcText span {
     }
 
     .Navbar {
-        height: 60px;
+        height: 65px;
     }
 
     .navsoc {
-        bottom: 45px;
+        bottom: 35px;
+    }
+
+    .navsoc::after {
+        display: none;
     }
 
     .CardIntroContent {
@@ -1490,6 +1494,7 @@ body.dark-theme .AllpcText span {
 
     .navbarbot {
         display: block;
+        height: 120px;
     }
 
     /* .NavLogo h1 {

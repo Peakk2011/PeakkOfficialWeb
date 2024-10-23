@@ -155,23 +155,6 @@ body.dark-theme .iconsRes {
     }
 }
 
-@media only screen and (max-height: 1080px) {
-    .headerTextMain h1 {
-        font-size: 220px !important;
-        letter-spacing: -15px !important;
-    }
-
-    .headerTextMain strong {
-        letter-spacing: -35px !important;
-        font-size: 350px !important;
-    }
-
-    .headerText p {
-        font-size: 44px !important;
-        transform: translateX(42px) !important;
-    }
-}
-
 .sidebar {
     width: 250px;
     height: 100dvh;
@@ -424,6 +407,7 @@ body.dark-theme #backgroundblur {
     .ExpTit h4 {
         margin-top: 4rem;
         text-align: left !important;
+        font-size: 17px  !important;
     }
 
     .ExpTit h1 {
