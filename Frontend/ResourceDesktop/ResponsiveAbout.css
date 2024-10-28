@@ -5,8 +5,9 @@
     }
     
     .Ctn {
-        position: absolute;
-        right: 0;
+        position: fixed;
+        right: 40px;
+        z-index: 3;
     }
 
 }
@@ -43,14 +44,14 @@
 @media screen and (max-width: 380px) {
 
     .headertext {
-        font-size: 2.8dvh;
-        width: 325px;
+        font-size: 2.4dvh;
+        width: 100%;
         letter-spacing: 0px;
         top: 50%;
     }
 
     #spantextfontch {
-        font-size: 5.5dvh;
+        font-size: 4.5dvh;
     }
 
     .headertext h1 {
@@ -58,11 +59,19 @@
     }
 
     .headertext strong {
-        font-size: 5.8dvh;
+        font-size: 5dvh;
     }
 
     .Ctn {
         display: none;
+    }
+
+    .NavText h1 {
+        display: none;
+    }
+
+    #LinkHighlight {
+        transform: scale(50%);
     }
 
 }

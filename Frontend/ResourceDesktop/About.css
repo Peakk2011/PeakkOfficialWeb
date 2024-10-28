@@ -2,10 +2,19 @@ nav {
     width: 100%;
     position: fixed;
     z-index: 5;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(7, 7, 7, 0.605);
 }
 
 body {
     background-color: #060606 !important;
+    scroll-snap-align: start;
+}
+
+html {
+    /* scroll-snap-type: both mandatory; */
+    scroll-snap-type: y mandatory;
 }
 
 :where(li, a) {
@@ -20,7 +29,7 @@ body {
     max-width: 80%;
     margin: 0 auto;
     position: relative;
-    height: 80px;
+    height: 70px;
 
     .NavText {
         display: flex;
@@ -154,6 +163,7 @@ header {
     position: relative;
     width: 100%;
     height: 100dvh;
+    scroll-snap-align: start;
 }
 
 .headercon {
@@ -273,3 +283,100 @@ header {
     font-size: 20px;
 }
 
+main {
+    height: 100dvh;
+    width: 100%;
+    background-color: #090909;
+    scroll-snap-align: start;
+}
+
+.maincontent {
+    max-width: 80%;
+    margin: auto;
+
+    .maintextHeader ion-icon {
+        color: #ffffe9;
+        font-size: 50px;
+        margin-bottom: 1rem;
+        margin-top: 14dvh;
+    }
+
+    .maintextHeader a {
+        display: block;
+        width: fit-content;
+        color: #ffffe9;
+        border-bottom: solid 1px #ffffe9;
+        margin-bottom: 1rem;
+        font-family: sfpro;
+        font-size: 20px;
+    }
+}
+
+.maintext {
+
+    &.maintext h1 {
+        color: #ffffe9;
+        font-family: lineseedregular;
+        font-weight: 400;
+        letter-spacing: -0.7px;
+        margin-bottom: 1.5rem;
+        font-size: 5dvh;
+    }
+
+    &.maintext hr {
+        width: 100px;
+        border: solid 2px #fff;
+        margin-bottom: 2rem;
+    }
+
+    .maintextSlideXpos {
+        /* HeaderCard */
+        position: relative;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+        gap: 10px;
+        width: 100%;
+        margin: auto;
+        justify-content: start !important;
+    }
+
+    .maintextslidecon {
+        height: 38dvh;
+        width: 85%;
+        color: #fff;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        overflow: hidden;
+        background-color: #0f0f0f;
+        border-radius: 15px;
+        border: solid 1px #222;
+        position: relative;
+    }
+
+    .maintextslidecon p {
+        font-size: 2dvh;
+        padding: 2.25dvh;
+        opacity: 60%;
+        font-family: lineseedregular;
+        font-weight: 400;
+    }
+
+    .bottomTextcontent {
+        position: absolute;
+        bottom: 0;
+        height: 60px;
+        background-color: #0c0c0c;
+        width: 100%;
+
+        &.bottomTextcontent ion-icon {
+            color: #fff;
+            font-size: 2.5dvh;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 2.25dvh;
+        }
+    }
+}
