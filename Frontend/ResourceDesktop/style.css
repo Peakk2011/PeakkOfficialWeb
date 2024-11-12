@@ -204,7 +204,7 @@ nav {
 }
 
 .Navbar {
-    height: 55px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -512,6 +512,7 @@ body.dark-theme .navbarbot {
         justify-content: space-between;
         height: 50px;
         width: 170px;
+        position: relative;
 
         &.navsoccon li a {
             display: block;
@@ -1474,10 +1475,6 @@ body.dark-theme .AllpcText span {
 
     body .CardIntrotext p {
         font-size: 16px !important;
-    }
-
-    .Navbar {
-        height: 65px;
     }
 
     .navsoc {
