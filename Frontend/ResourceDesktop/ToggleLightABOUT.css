@@ -1,0 +1,163 @@
+body.light-mode {
+    background-color: #fffff9 !important;
+}
+
+body.light-mode .headertext {
+    color: #000;
+}
+
+body.light-mode #spantextfontch {
+    color: #000;
+}
+
+body.light-mode .headertext h1 {
+    color: #000 !important;
+}
+
+body.light-mode .headertext strong {
+    color: #000 !important;
+}
+
+body.light-mode .NavText h1 {
+    color: #000 !important;
+}
+
+body.light-mode .NavText svg {
+    filter: brightness(0%);
+}
+
+body.light-mode .ripple-button {
+    background-color: #000;
+    color: #fff;
+    box-shadow: #888 0px 0px 30px;
+    -webkit-text-stroke-width: 0.1px;
+}
+
+body.light-mode .ripple-button strong {
+    -webkit-text-stroke-width: 0.1px;
+}
+
+body.light-mode .headertext a {
+    background-color: #fff;
+    border: solid 1.5px #eee;
+}
+
+body.light-mode .sim img {
+    filter: contrast(150%);
+    mix-blend-mode: difference;
+}
+
+body.light-mode main {
+    background-color: #fdfdf3;
+}
+
+body.light-mode .email.expand {
+    background-color: #fff;
+    outline: solid 1px #eee;
+}
+
+body.light-mode .bottom {
+    background-color: #fff;
+}
+
+body.light-mode #HeaderInstagramicons {
+    color: #000;
+}
+
+body.light-mode #HeaderFacebookicons {
+    color: #000;
+}
+
+body.light-mode .link a {
+    color: #000;
+    -webkit-text-stroke-width: 0.3px;
+}
+
+body.light-mode .name-large {
+    color: #000;
+}
+
+body.light-mode .x {
+    color: #000;
+}
+
+body.light-mode .line1 {
+    background-color: #000;
+}
+
+body.light-mode .line2 {
+    background-color: #000;
+}
+
+body.light-mode #Iconheader {
+    color: #000;
+}
+
+body.light-mode .maintext h1 {
+    color: #000;
+}
+
+body.light-mode .maintext hr {
+    border: solid 2px #000;
+}
+
+body.light-mode .row:hover {
+    background-color: #f8f8ef;
+}
+
+body.light-mode .DotsActive {
+    background-color: #000;
+}
+
+body.light-mode .DotsActiveOLD {
+    background-color: #000;
+}
+
+body.light-mode .dots li a {
+    background-color: #000;
+}
+
+body.light-mode .maintextslidecon {
+    background-color: #fff;
+    border: solid 1px #eee;
+    color: #000;
+}
+
+body.light-mode .maintextslidecon p {
+    opacity: 100%;
+}
+
+body.light-mode .bottomTextcontent {
+    background-color: #f8f8ef;
+    border-top: solid 1px #eee;
+}
+
+body.light-mode .bottomTextcontent ion-icon {
+    color: #000 !important;
+}
+
+body.light-mode .Aboutcontent h1 {
+    color: #000 !important;
+}
+
+body.light-mode .Aboutcontent p {
+    color: #000 !important;
+    opacity: 100% !important;
+    -webkit-text-stroke-width: 0.1px;
+}
+
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */
+/* body.light-mode */

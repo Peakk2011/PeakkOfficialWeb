@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-874">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peakkofficial - About</title>
     <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="ToggleLightABOUT.css">
     <link rel="stylesheet" href="Default.css">
     <link rel="stylesheet" href="Font.css">
     <link rel="stylesheet" href="cursor.css">
@@ -72,7 +74,7 @@
             </div>
 
             <div class="NavThemeSwap">
-                <li><a href="#" id="LinkHighlight"><ion-icon
+                <li><a href="javascript:void(0)" id="theme-switcher" class="ripple-button"><ion-icon
                             name="brush-sharp"></ion-icon><strong>เ</strong>ปลียนธีม</a></li>
             </div>
 
@@ -87,7 +89,7 @@
                 <h1><span>เกี</span>ยว<span>กั</span>บพวก<span
                         id="spantextfontch">เ</span>รา<br><strong>@Peakkofficial</strong></h1>
                 <br>
-                <a href="#">ดูเพิ่มเติม</a>
+                <a id="ScrollEventToAbout">รายละเอียด</a>
                 <br>
             </div>
 
@@ -96,7 +98,7 @@
             </div>
 
             <div class="bottomCtninfo">
-                <a href="#">@Peakkofficial</a>
+                <a href="javascript:void(0)">@Peakkofficial</a>
 
                 <div class="Ctn">
                     <ion-icon name="bag-handle-sharp"></ion-icon>
@@ -106,127 +108,141 @@
         </div>
     </header>
 
-    <main>
+    <section>
 
-        <div class="mainSection">
+        <main>
 
-            <div class="maincontent">
-                <div class="maintext">
-                    <div class="maintextHeader">
-                        <ion-icon name="person-sharp" id="Iconheader"></ion-icon>
-                        <!-- <a href="#">@Peakkofficial</a> -->
+            <div class="mainSection" id="ApplyPageAboutFirst">
 
-                        <div class="email" onclick="rippleSuggess()" id="Email">
-                            <!-- First Side -->
-                            <div class="from">
-                                <div class="from-contents">
-                                    <div class="avatar me"></div>
-                                    <div class="name">@Peakkofficial</div>
+                <div class="maincontent">
+                    <div class="maintext">
+                        <div class="maintextHeader">
+                            <ion-icon name="person-sharp" id="Iconheader"></ion-icon>
+                            <!-- <a href="#">@Peakkofficial</a> -->
+
+                            <div class="email" onclick="rippleSuggess()" id="Email">
+                                <!-- First Side -->
+                                <div class="from">
+                                    <div class="from-contents">
+                                        <div class="avatarcon">
+                                            <div class="avatar me"></div>
+                                        </div>
+                                        <div class="name">@Peakkofficial</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- Tops Side -->
-                            <div class="to">
-                                <div class="to-contents">
-                                    <div class="top">
-                                        <!-- Title class top -->
-                                        <!-- <div class="avatar-large me"></div> -->
-                                        <div class="name-large">Peakkofficial</div>
-                                        <div class="x-touch" onclick="CloseRipple()">
-                                            <div class="x">
-                                                <div class="line1"></div>
-                                                <div class="line2"></div>
+                                <!-- Tops Side -->
+                                <div class="to">
+                                    <div class="to-contents">
+                                        <div class="top">
+                                            <!-- Title class top -->
+                                            <!-- <div class="avatar-large me"></div> -->
+                                            <div class="name-large">Peakkofficial</div>
+                                            <div class="x-touch" onclick="CloseRipple()">
+                                                <div class="x">
+                                                    <div class="line1"></div>
+                                                    <div class="line2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="row">
+                                                <!-- Media Box #1 -->
+                                                <ion-icon name="logo-instagram" id="HeaderInstagramicons"
+                                                    aria-hidden="true"></ion-icon>
+                                                <div class="link"><a
+                                                        href="https://www.instagram.com/peakkofficial/">@Peakkofficial</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <ion-icon name="logo-facebook" id="HeaderFacebookicons"
+                                                    aria-hidden="true"></ion-icon>
+                                                <div class="link"><a
+                                                        href="https://www.facebook.com/profile.php?id=61558910602827">@Peakkofficial</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="bottom">
-                                        <div class="row">
-                                            <!-- Media Box #1 -->
-                                            <ion-icon name="logo-instagram" id="HeaderInstagramicons"
-                                                aria-hidden="true"></ion-icon>
-                                            <div class="link"><a
-                                                    href="https://twitter.com/mikaelainalem">@Peakkofficial</a>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <ion-icon name="logo-facebook" id="HeaderFacebookicons"
-                                                aria-hidden="true"></ion-icon>
-                                            <div class="link"><a
-                                                    href="https://medium.com/@mikael_ainalem">@Peakkofficial</a></div>
-                                        </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <h1>เกียวกับ<br>พีคออฟฟิเชียล</h1>
+                        <hr>
+                        <div class="maintextSlideXpos">
+                            <div class="maintextslidecon">
+                                <p>รายระเอียดสําหรับการ<br>รับทําเว็บไซต์และอื่นๆ<br>สําหรับ peakkofficial</p>
+
+                                <div class="bottomText">
+                                    <div class="bottomTextcontent">
+                                        <ion-icon name="bag-handle-sharp"></ion-icon>
                                     </div>
                                 </div>
+
                             </div>
-                        </div>
+                            <div class="maintextslidecon">
+                                <p>สวัสดีครับผม พีค หรือชื่อ<br>ในทางการคือ peakkofficial<br>(พีคออฟฟิเชียล)
+                                    ผมรับทํา<br>เว็บไซต์ในราคาที่เข้าถึงได้ง่าย<br>แล้วดีไซน์เป็นมิตรในทุกเว็บไซต์</p>
 
-                    </div>
-                    <h1>เกียวกับ<br>พีคออฟฟิเชียล</h1>
-                    <hr>
-                    <div class="maintextSlideXpos">
-                        <div class="maintextslidecon">
-                            <p>รายระเอียดสําหรับการ<br>รับทําเว็บไซต์และอื่นๆ<br>สําหรับ peakkofficial</p>
-
-                            <div class="bottomText">
-                                <div class="bottomTextcontent">
-                                    <ion-icon name="bag-handle-sharp"></ion-icon>
+                                <div class="bottomText">
+                                    <div class="bottomTextcontent">
+                                        <ion-icon name="bag-handle-sharp"></ion-icon>
+                                    </div>
                                 </div>
+
                             </div>
+                            <div class="maintextslidecon">
+                                <p>ทางพวกเรานั้นมีทีมงานในการดูแลคุณลูกค้าทุกคนเป็นอย่างดีแล้วหากคุณลูกค้าต้องการติดต่อสอบถามพวกเราก็มีทีมงานที่ตอบรับตอบคําถามตามที่คุณลูกค้าสงสัยครับ
+                                </p>
 
-                        </div>
-                        <div class="maintextslidecon">
-                            <p>สวัสดีครับผม พีค หรือชื่อ<br>ในทางการคือ peakkofficial<br>(พีคออฟฟิเชียล)
-                                ผมรับทํา<br>เว็บไซต์ในราคาที่เข้าถึงได้ง่าย<br>แล้วดีไซน์เป็นมิตรในทุกเว็บไซต์</p>
-
-                            <div class="bottomText">
-                                <div class="bottomTextcontent">
-                                    <ion-icon name="bag-handle-sharp"></ion-icon>
+                                <div class="bottomText">
+                                    <div class="bottomTextcontent">
+                                        <ion-icon name="bag-handle-sharp"></ion-icon>
+                                    </div>
                                 </div>
+
                             </div>
+                            <div class="maintextslidecon">
+                                <p>แล้วในราคาการทําเว็บหรืออื่นๆจะมีราคา 3
+                                    ระดับราคานั้นบางช่วงเวลาอาจจะมีโปรโมชั่นและราคาพิเศษกับลูกค้าทุกคนด้วยครับ</p>
 
-                        </div>
-                        <div class="maintextslidecon">
-                            <p>ทางพวกเรานั้นมีทีมงานในการดูแลคุณลูกค้าทุกคนเป็นอย่างดีแล้วหากคุณลูกค้าต้องการติดต่อสอบถามพวกเราก็มีทีมงานที่ตอบรับตอบคําถามตามที่คุณลูกค้าสงสัยครับ
-                            </p>
-
-                            <div class="bottomText">
-                                <div class="bottomTextcontent">
-                                    <ion-icon name="bag-handle-sharp"></ion-icon>
+                                <div class="bottomText">
+                                    <div class="bottomTextcontent">
+                                        <ion-icon name="bag-handle-sharp"></ion-icon>
+                                    </div>
                                 </div>
+
                             </div>
-
-                        </div>
-                        <div class="maintextslidecon">
-                            <p>แล้วในราคาการทําเว็บหรืออื่นๆจะมีราคา 3
-                                ระดับราคานั้นบางช่วงเวลาอาจจะมีโปรโมชั่นและราคาพิเศษกับลูกค้าทุกคนด้วยครับ</p>
-
-                            <div class="bottomText">
-                                <div class="bottomTextcontent">
-                                    <ion-icon name="bag-handle-sharp"></ion-icon>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="ScrollAbout2">
-            <div class="Aboutcontent">
-                <h1>รายระเอียด<br>พีคออฟฟิเชียล</h1>
-                <p>
-                    สวัสดีครับพวกเรา Peakkofficial ครับต้อนรับและยินดีที่ได้รู้จักลูกค้าทุกท่านครับ
-                    พวกเรารับทําเว็บไซต์,รับออกแบบเว็บไซต์ด้วยราคาเริ่มต้นราคา 399฿
-                    ครับโดยพวกเรานั้นจะมีโปรโมชั่นลดราคากับราคาพิเศษหากคุณลูกค้าจ้างเราทําเว็บไซต์ในช่วงนี้คุณลูกค้าจะได้ราคาพิเศษในแต่ล่ะโปรโมชั่นครับ
-                    ครับโดยทางเรามีหลายราคาการทําเว็บให้เลือกโดยจะมี 3 ราคาหลักๆของพวกเราโดยมีราคาดังนี้ 399฿,599฿,999฿
-                    โดยหากคุณลูกค้าอยากรู้ว่าราคาที่ได้กล่าวมานี้คุณลูกค้าสามารถไปดูรายระเอียดโพสต์จาก @peakkofficial
-                    และสอบถามหากคุณลูกค้าสงสัยรายระเอียดการรับทําเว็บของพวกเราโดยติดต่อที่ @mew.peakkteamsub
-                    ครับหากทางเรามีความผิดพลาดในการชี้แจงหรือทําเว็บไซต์ให้ไม่ครบองค์ประกอบทางเราขออภัยในเรื่องที่ได้กล่าวมาด้วยครับ
-                </p>
+            <div class="ScrollAbout2" id="ApplyPageAbout">
+                <div class="Aboutcontent">
+                    <h1>รายระเอียด<br>พีคออฟฟิเชียล</h1>
+                    <p>
+                        สวัสดีครับพวกเรา Peakkofficial ครับต้อนรับและยินดีที่ได้รู้จักลูกค้าทุกท่านครับ
+                        พวกเรารับทําเว็บไซต์,รับออกแบบเว็บไซต์ด้วยราคาเริ่มต้นราคา 399฿
+                        ครับโดยพวกเรานั้นจะมีโปรโมชั่นลดราคากับราคาพิเศษหากคุณลูกค้าจ้างเราทําเว็บไซต์ในช่วงนี้คุณลูกค้าจะได้ราคาพิเศษในแต่ล่ะโปรโมชั่นครับ
+                        ครับโดยทางเรามีหลายราคาการทําเว็บให้เลือกโดยจะมี 3 ราคาหลักๆของพวกเราโดยมีราคาดังนี้
+                        399฿,599฿,999฿
+                        โดยหากคุณลูกค้าอยากรู้ว่าราคาที่ได้กล่าวมานี้คุณลูกค้าสามารถไปดูรายระเอียดโพสต์จาก
+                        @peakkofficial
+                        และสอบถามหากคุณลูกค้าสงสัยรายระเอียดการรับทําเว็บของพวกเราโดยติดต่อที่ @mew.peakkteamsub
+                        ครับหากทางเรามีความผิดพลาดในการชี้แจงหรือทําเว็บไซต์ให้ไม่ครบองค์ประกอบทางเราขออภัยในเรื่องที่ได้กล่าวมาด้วยครับ
+                    </p>
+                </div>
             </div>
+
+        </main>
+
+        <div class="dots">
+            <li><a href="#ApplyPageAboutFirst" class="DotsActive" id="DotsAFActiveE"></a></li>
+            <li><a href="#ApplyPageAbout" id="DotsBeforeActiveE"></a></li>
         </div>
 
-    </main>
+    </section>
 
 
     <script src="AboutControl.js"></script>
