@@ -1,3 +1,7 @@
+* {
+    scroll-behavior: smooth;
+}
+
 nav {
     width: 100%;
     position: fixed;
@@ -216,7 +220,7 @@ header {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    height: 100vh;
+    height: 100dvh;
 }
 
 .sim img {
@@ -674,7 +678,7 @@ span.ripple {
     }
 
     .maintextslidecon p {
-        font-size: 2dvh;
+        font-size: 2.075dvh;
         padding: 2.25dvh;
         opacity: 60%;
         font-family: lineseedregular;
@@ -747,7 +751,7 @@ span.ripple {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    bottom: 35px;
+    bottom: 15px;
 
     li a {
         width: 15px;

@@ -41,7 +41,7 @@
 
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 380px) {
 
     .headertext {
         font-size: 2.4dvh;
@@ -61,10 +61,6 @@
     .headertext strong {
         font-size: 5dvh;
     }
-
-}
-
-@media screen and (max-width: 380px) {
 
     .Ctn {
         display: none;
