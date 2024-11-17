@@ -185,9 +185,81 @@ body.light-mode .cardInsText a {
     box-shadow: 0px 5px 20px #999,
                 0px 10px 30px #ccc;
 }
-/* body.light-mode */
-/* body.light-mode */
-/* body.light-mode */
+
+body.light-mode .PriceCon {
+    background-color: #fdfdf3;
+    border-top: solid 1px #eee;
+}
+
+body.light-mode .PriceText ion-icon {
+    color: #000 !important;
+}
+
+body.light-mode .PriceText h1 {
+    color: #000 !important;
+}
+
+body.light-mode .PriceText hr {
+    border: solid 2px #000 !important;
+}
+
+body.light-mode .PriceCardcon {
+    background-color: #fff !important;
+    border: solid 1px #eee !important;
+}
+
+body.light-mode .PriceSell {
+    background-color: #f8f8ef !important;
+    border-top: solid 1px #eee !important;
+}
+
+body.light-mode .PriceCardcon a {
+    background-color: #000 !important;
+    color: #fff !important;
+    box-shadow: 0px 5px 20px #b4b4b4,
+    0px 10px 30px #eee;
+    -webkit-text-stroke-width: 0px !important;
+}
+
+body.light-mode .PriceCardcon p {
+    color: #000;
+    opacity: 100% !important;
+}
+
+body.light-mode .PriceCardcon h1 {
+    color: #000;
+}
+
+body.light-mode .promo {
+    background-color: #fffff9;
+    border-top: solid 1px #eee;
+}
+
+body.light-mode #textoutline {
+    -webkit-text-stroke-color: #eaeaea;
+}
+
+body.light-mode .promotext h1 {
+    color: #000 !important;
+}
+
+body.light-mode .promotext hr {
+    border: solid 2px #000 !important;
+}
+
+body.light-mode .promotext ion-icon {
+    color: #000 !important;
+}
+
+body.light-mode #piepie {
+    content: url(./Image/Promotion/PiepieLogoLight.png) !important;
+    opacity: 100%;
+}
+
+body.light-mode .Promotion img {
+    content: url(./Image/Promotion/SalmonLogoLight.png) !important;
+    opacity: 100% !important;
+}
 /* body.light-mode */
 /* body.light-mode */
 /* body.light-mode */
