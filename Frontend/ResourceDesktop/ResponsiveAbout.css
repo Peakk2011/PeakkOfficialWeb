@@ -63,9 +63,9 @@
     }
 
     .headertext a {
-        width: 22.5dvh !important;
-        height: 5.5dvh !important;
-        font-size: 2.65dvh !important;
+        width: 42dvw !important;
+        height: 10dvw !important;
+        font-size: 5dvw !important;
     }
 
 }
@@ -111,9 +111,32 @@
     }
 
     .headertext a {
-        height: 5dvh;
-        width: 20dvh;
-        font-size: 2.5dvh;
+        height: 11.5dvw !important;
+        width: 47.5dvw !important;
+        font-size: 6dvw !important;
+    }
+
+}
+
+@media screen and (max-width: 290px) {
+
+    .headertext {
+        font-size: 2dvh;
+        width: 100%;
+        letter-spacing: 0px;
+        top: 50%;
+    }
+
+    #spantextfontch {
+        font-size: 4dvh;
+    }
+
+    .headertext h1 {
+        letter-spacing: -0.1dvh !important;
+    }
+
+    .headertext strong {
+        font-size: 4.5dvh;
     }
 
 }

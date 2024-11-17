@@ -2,6 +2,10 @@ body.light-mode {
     background-color: #fffff9 !important;
 }
 
+body.light-mode header {
+    border-bottom: solid 1px #eee;
+}
+
 body.light-mode .headertext {
     color: #000;
 }
@@ -146,11 +150,41 @@ body.light-mode .Aboutcontent p {
     -webkit-text-stroke-width: 0.1px;
 }
 
-/* body.light-mode */
-/* body.light-mode */
-/* body.light-mode */
-/* body.light-mode */
-/* body.light-mode */
+body.light-mode .CardCon {
+    background-color: #fffff9;
+    border-top: solid 1px #eee;
+}
+
+body.light-mode .CardPeakkofficial {
+    background-color: #fff;
+    outline: solid 1px #eee;
+}
+
+body.light-mode .cardInsimg img {
+    outline: solid 1px #eee !important;
+    content: url(./Image/INSTAGRAMimgLight.png) !important;
+    filter: brightness(115%);
+}
+
+body.light-mode .cardInsText h1 {
+    color: #000 !important;
+}
+
+body.light-mode .cardInsText p {
+    color: #000 !important;
+    opacity: 100% !important;
+}
+
+body.light-mode .cardInsText hr {
+    border: solid 1px #ccc !important;
+}
+
+body.light-mode .cardInsText a {
+    color: #fff !important;
+    background-color: #000 !important;
+    box-shadow: 0px 5px 20px #999,
+                0px 10px 30px #ccc;
+}
 /* body.light-mode */
 /* body.light-mode */
 /* body.light-mode */
