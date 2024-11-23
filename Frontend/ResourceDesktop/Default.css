@@ -9,7 +9,7 @@
 /* 2. Remove default margin */
 * {
     margin: 0;
-    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s all;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.35s all;
     user-select: none;
     -webkit-user-select: none;
     scroll-behavior: smooth;

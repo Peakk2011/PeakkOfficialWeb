@@ -88,3 +88,32 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(section => {
   observer.observe(section);
 });
+
+const mediaQuery = window.matchMedia('(max-width: 450px)');
+
+mediaQuery.addEventListener("change", (event) => {
+  if (mediaQuery.matches) {
+    window.location.reload();
+  } else {
+    window.location.href = 'index.html'
+  }
+});
+
+// for landscape
+
+const mql = window.matchMedia("(orientation:landscape)");
+mql.addEventListener("change", (event) => {
+  if (event.matches) {
+    window.location.href = 'index.html'
+  } else {
+    
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (mediaQuery.matches) {
+    
+  } else {
+    window.location.href = 'index.html'
+  }
+});

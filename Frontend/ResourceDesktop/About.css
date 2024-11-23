@@ -1,5 +1,5 @@
 * {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 
 nav {
@@ -60,7 +60,7 @@ html {
     max-width: 80%;
     margin: 0 auto;
     position: relative;
-    height: 65px;
+    height: 72.5px;
 
     .NavText {
         display: flex;
@@ -347,7 +347,7 @@ main {
 }
 
 .mainSection {
-    height: 100dvh;
+    height: 900px;
     width: 100dvw;
     scroll-snap-align: start;
 }
@@ -670,8 +670,8 @@ span.ripple {
     }
 
     .maintextslidecon {
-        height: 34dvh;
-        width: 80%;
+        height: 300px;
+        width: 230px;
         color: #fff;
         /* scroll-snap-align: start; */
         flex-shrink: 0;
@@ -683,7 +683,7 @@ span.ripple {
     }
 
     .maintextslidecon p {
-        font-size: 2.075dvh;
+        font-size: clamp(16px, 1.25vw, 19px);
         padding: 2.25dvh;
         opacity: 60%;
         font-family: lineseedregular;
@@ -756,7 +756,7 @@ span.ripple {
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
-    bottom: 15px;
+    bottom: 80px;
 
     li a {
         width: 15px;
@@ -793,7 +793,7 @@ span.ripple {
 }
 
 .CardCon {
-    height: 100dvh;
+    height: 900px;
     width: 100dvw;
     background-color: #060606;
     position: relative;
@@ -856,7 +856,7 @@ span.ripple {
             padding: 0.5rem 1rem;
             border-radius: 12px;
             font-size: clamp(1rem, 1vw, 1.1rem);
-            font-family: sfpro;
+            font-family: lineseedregular;
             letter-spacing: 0.2px;
 
             &:hover {
@@ -869,7 +869,7 @@ span.ripple {
 
 
 .PriceCon {
-    height: 100dvh;
+    height: 925px;
     width: 100%;
     background-color: #090909;
     position: relative;
@@ -917,8 +917,8 @@ span.ripple {
         justify-content: start !important;
 
         .PriceCardcon {
-            height: 34dvh;
-            width: 80%;
+            height: 300px;
+            width: 230px;
             flex-shrink: 0;
             overflow: hidden;
             position: relative;
@@ -983,7 +983,7 @@ span.ripple {
 }
 
 .promo {
-    height: 100dvh;
+    height: 925px;
     width: 100%;
     position: relative;
     background-color: #000;
@@ -1042,12 +1042,88 @@ span.ripple {
 
 #textoutline {
     position: absolute;
-    left: 50%;
+    left: 50%; 
     top: 50%;
     transform: translate(-50%,-50%);
-    font-size: 4.5dvh;
+    font-size: 2.5rem;
     -webkit-text-stroke-width: 1px;
     color: transparent;
     -webkit-text-stroke-color: #222;
     letter-spacing: -1px;
+}
+
+.mew {
+    height: 900px;
+    width: 100%;
+    position: relative;
+    background-color: #090909;
+
+    .mewcontent {
+
+        min-width: 80%;
+        max-width: 80%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+
+        .mewtext ion-icon {
+            color: #ffffe9;
+            font-size: 62.5px;
+            margin-bottom: 1rem;
+        }
+
+        .mewtext h1 {
+            color: #ffffe9;
+            font-family: lineseedregular;
+            font-weight: 400;
+            letter-spacing: -0.7px;
+            margin-bottom: 1.5rem;
+            font-size: 4.75dvh;
+        }
+
+        .mewtext strong {
+            font-family: sfpro;
+            font-weight: 500;
+            font-size: 5dvh;
+        }
+
+        .mewtext hr {
+            width: 100px;
+            border: solid 2px #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .mewtext a {
+            color: #fff;
+            display: block;
+            width: fit-content;
+            margin-bottom: 1rem;
+            padding: 0.35rem 0.8rem;
+            background-color: #0f0f0f;
+            outline: solid 1px #222;
+            border-radius: 4px;
+            font-size: 16.5px;
+            letter-spacing: 0.1px;
+            font-family: sfpro;
+            opacity: 50%;
+        }
+
+        .mewtext p {
+            color: #fff;
+            opacity: 60%;
+            font-family: lineseedregular;
+            font-size: 2dvh;
+            margin-bottom: 1rem;
+        }
+
+    }
+}
+
+#Mewbtn2 {
+    font-family: thonburi;
+    margin-top: 2.25rem;
+    opacity: 100%;
+    padding: 0.45rem 1.25rem;
+    border-radius: 50px;
 }

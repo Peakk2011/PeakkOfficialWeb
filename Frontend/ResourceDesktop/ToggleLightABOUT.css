@@ -260,9 +260,46 @@ body.light-mode .Promotion img {
     content: url(./Image/Promotion/SalmonLogoLight.png) !important;
     opacity: 100% !important;
 }
-/* body.light-mode */
-/* body.light-mode */
-/* body.light-mode */
+
+body.light-mode .mew {
+    background-color: #fdfdf3;
+    border-top: solid 1px #eee;
+}
+
+body.light-mode .mewtext ion-icon {
+    color: #000 !important;
+}
+
+body.light-mode .mewtext h1 {
+    color: #000 !important;
+}
+
+body.light-mode .mewtext hr {
+    color: #000 !important;
+}
+
+body.light-mode .mewtext p {
+    color: #000 !important;
+    opacity: 100% !important;
+}
+
+body.light-mode .mewtext a {
+    opacity: 100% !important;
+    outline: solid 1px #eee !important;
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+body.light-mode #Mewbtn2 {
+    outline: none !important;
+    background-color: #000 !important;
+    color: #fff !important;
+    box-shadow: 0px 5px 20px #999, 0px 10px 30px #ccc;
+}
+    
+body.light-mode .mewtext hr {
+    border: solid 1px #000 !important;
+}
 /* body.light-mode */
 /* body.light-mode */
 /* body.light-mode */
