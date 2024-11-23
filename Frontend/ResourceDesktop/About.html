@@ -20,13 +20,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <!-- Data aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
 
     <!-- New navbar -->
 
-    <nav>
+    <script>
+        AOS.init();
+    </script>
+
+    <nav data-aos="fade-down">
 
         <div class="NavCon">
 
@@ -86,10 +93,11 @@
         <div class="headercon">
 
             <div class="headertext">
-                <h1><span>เกี</span>ยว<span>กั</span>บพวก<span
+                <h1 data-aos="fade-up" data-aos-delay="150" data-aos-offset="300" data-aos-duration="500">
+                    <span>เกี</span>ยว<span>กั</span>บพวก<span
                         id="spantextfontch">เ</span>รา<br><strong>@Peakkofficial</strong></h1>
                 <br>
-                <a id="ScrollEventToAbout">รายละเอียด</a>
+                <a id="ScrollEventToAbout" data-aos="fade-up" data-aos-duration="500">รายละเอียด</a>
                 <br>
             </div>
 
@@ -112,15 +120,17 @@
 
         <main>
 
-            <div class="mainSection" id="ApplyPageAboutFirst">
+            <div class="mainSection" id="ApplyPageAboutFirst" data-aos="fade">
 
                 <div class="maincontent">
                     <div class="maintext">
                         <div class="maintextHeader">
-                            <ion-icon name="person-sharp" id="Iconheader"></ion-icon>
+                            <ion-icon name="person-sharp" id="Iconheader" data-aos="fade"
+                                data-aos-delay="100"></ion-icon>
                             <!-- <a href="#">@Peakkofficial</a> -->
 
-                            <div class="email" onclick="rippleSuggess()" id="Email">
+                            <div class="email" onclick="rippleSuggess()" id="Email" data-aos="fade"
+                                data-aos-delay="150">
                                 <!-- First Side -->
                                 <div class="from">
                                     <div class="from-contents">
@@ -166,10 +176,11 @@
                             </div>
 
                         </div>
-                        <h1>เกียวกับ<br>พีคออฟฟิเชียล</h1>
+                        <h1 data-aos="fade-down" data-aos-offset="300" data-aos-duration="500">เกียวกับ<br>พีคออฟฟิเชียล
+                        </h1>
                         <hr>
                         <div class="maintextSlideXpos">
-                            <div class="maintextslidecon">
+                            <div class="maintextslidecon" data-aos="fade-right" data-aos-duration="500">
                                 <p>รายระเอียดสําหรับการ<br>รับทําเว็บไซต์และอื่นๆ<br>สําหรับ peakkofficial</p>
 
                                 <div class="bottomText">
@@ -179,7 +190,8 @@
                                 </div>
 
                             </div>
-                            <div class="maintextslidecon">
+                            <div class="maintextslidecon" data-aos="fade-right" data-aos-duration="500"
+                                data-aos-delay="150" data-aos-offset="150">
                                 <p>สวัสดีครับผม พีค หรือชื่อ<br>ในทางการคือ peakkofficial<br>(พีคออฟฟิเชียล)
                                     ผมรับทํา<br>เว็บไซต์ในราคาที่เข้าถึงได้ง่าย<br>แล้วดีไซน์เป็นมิตรในทุกเว็บไซต์</p>
 
@@ -190,7 +202,8 @@
                                 </div>
 
                             </div>
-                            <div class="maintextslidecon">
+                            <div class="maintextslidecon" data-aos="fade-right" data-aos-duration="500"
+                                data-aos-delay="300" data-aos-offset="150">
                                 <p>ทางพวกเรานั้นมีทีมงานในการดูแลคุณลูกค้าทุกคนเป็นอย่างดีแล้วหากคุณลูกค้าต้องการติดต่อสอบถามพวกเราก็มีทีมงานที่ตอบรับตอบคําถามตามที่คุณลูกค้าสงสัยครับ
                                 </p>
 
@@ -220,8 +233,8 @@
 
             <div class="ScrollAbout2" id="ApplyPageAbout">
                 <div class="Aboutcontent">
-                    <h1>รายระเอียด<br>พีคออฟฟิเชียล</h1>
-                    <p>
+                    <h1 data-aos="fade" data-aos-delay="125">รายระเอียด<br>พีคออฟฟิเชียล</h1>
+                    <p data-aos="fade" data-aos-delay="325">
                         สวัสดีครับพวกเรา Peakkofficial ครับต้อนรับและยินดีที่ได้รู้จักลูกค้าทุกท่านครับ
                         พวกเรารับทําเว็บไซต์,รับออกแบบเว็บไซต์ด้วยราคาเริ่มต้นราคา 399฿
                         ครับโดยพวกเรานั้นจะมีโปรโมชั่นลดราคากับราคาพิเศษหากคุณลูกค้าจ้างเราทําเว็บไซต์ในช่วงนี้คุณลูกค้าจะได้ราคาพิเศษในแต่ล่ะโปรโมชั่นครับ
@@ -244,10 +257,10 @@
 
     </section>
 
-    <div class="CardCon">
+    <div class="CardCon" data-aos="flip-right">
         <div class="CardPeakkofficial">
 
-            <div class="cardIns">
+            <div class="cardIns" data-aos-delay="150" data-aos-anchor-placement="top-center" data-aos-duration="800">
                 <div class="cardInsimg">
                     <img src="./Image/INSTAGRAMimg.png" alt="">
                 </div>
@@ -265,26 +278,28 @@
     <div class="PriceCon">
         <div class="PriceAbout">
             <div class="PriceText">
-                <ion-icon name="cart-sharp"></ion-icon>
-                <h1>ราคาเว็บไซต์<br>ของพวกเรา</h1>
-                <hr>
+                <ion-icon name="cart-sharp" data-aos="fade"></ion-icon>
+                <h1 data-aos="fade-down" data-aos-delay="150" data-aos-offset="300" data-aos-duration="500">ราคาเว็บไซต์<br>ของพวกเรา</h1>
+                <hr data-aos="fade">
             </div>
             <div class="PriceCard">
-                <div class="PriceCardcon">
+                <div class="PriceCardcon" data-aos="fade-right" data-aos-duration="500" data-aos-offset="150">
                     <p>ราคาเริ่มต้น<ion-icon name="checkbox-sharp"></ion-icon></p>
                     <h1>399฿</h1>
                     <div class="PriceSell">
                         <a href="https://www.instagram.com/direct/t/17848578972196808">ติดต่อจ้างงาน</a>
                     </div>
                 </div>
-                <div class="PriceCardcon">
+                <div class="PriceCardcon" data-aos="fade-right" data-aos-duration="500"
+                data-aos-delay="150" data-aos-offset="150">
                     <p>ราคาแนะนํา<ion-icon name="bookmark-sharp"></ion-icon></p>
                     <h1>599฿</h1>
                     <div class="PriceSell">
                         <a href="https://www.instagram.com/direct/t/17848578972196808">ติดต่อจ้างงาน</a>
                     </div>
                 </div>
-                <div class="PriceCardcon">
+                <div class="PriceCardcon" data-aos="fade-right" data-aos-duration="500"
+                data-aos-delay="300" data-aos-offset="300">
                     <p>ราคาพรีเมียม<ion-icon name="star-sharp"></ion-icon></p>
                     <h1>999฿</h1>
                     <div class="PriceSell">
@@ -296,30 +311,33 @@
     </div>
 
     <div class="promo">
-        <h1 id="textoutline">PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION</h1>
+        <h1 id="textoutline" data-aos="fade" data-aos-duration="1000">
+            PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION<br>PROMOTION
+        </h1>
         <div class="promocon">
             <div class="promotext">
-                <ion-icon name="gift-sharp"></ion-icon>
-                <h1>โปรโมชั่นทั้งหมด<br><strong>@peakkofficial</strong></h1>
-                <hr>
+                <ion-icon name="gift-sharp" data-aos="fade"></ion-icon>
+                <h1 data-aos="fade" data-aos-duration="600">โปรโมชั่นทั้งหมด<br><strong>@peakkofficial</strong></h1>
+                <hr data-aos="fade" data-aos-duration="800">
             </div>
-            <div class="Promotion">
+            <div class="Promotion" data-aos="fade" data-aos-duration="500">
                 <img src="Image/Promotion/SalmonSans.png" alt="">
                 <img src="Image/Promotion/PiepieLogo.png" id="piepie" alt="">
             </div>
         </div>
     </div>
 
-    <div class="mew">
+    <div class="mew" data-aos-duration="500" data-aos="fade">
         <div class="mewcontent">
             <div class="mewtext">
-                <ion-icon name="build-sharp"></ion-icon>
-                <a href="https://www.instagram.com/mew.peakkteamsub/">@mew.peakkteamsub</a>
-                <h1>ทีมงานของ<br><strong>@peakkofficial</strong></h1>
-                <hr>
-                <p>จาก @mew.peakkteamsub</p>
-                <p>@peakkofficial พวกเราขอฝากเนื้อฝากตัวเพื่อเขาไปอยู่ในอ้อมอกอ้อมใจลูกค้าทุกคนนะครับ รับคำติชมของทุกท่านครับ</p>
-                <a href="https://www.instagram.com/mew.peakkteamsub/" id="Mewbtn2">ไปยัง @mew.peakkteamsub</a>
+                <ion-icon name="build-sharp" data-aos="fade"></ion-icon>
+                <a href="https://www.instagram.com/mew.peakkteamsub/" data-aos="fade">@mew.peakkteamsub</a>
+                <h1 data-aos="fade" data-aos-delay="50">ทีมงานของ<br><strong>@peakkofficial</strong></h1>
+                <hr data-aos="fade" data-aos-delay="100">
+                <p data-aos="fade" data-aos-delay="150">จาก @mew.peakkteamsub</p>
+                <p data-aos="fade" data-aos-delay="200">@peakkofficial พวกเราขอฝากเนื้อฝากตัวเพื่อเขาไปอยู่ในอ้อมอกอ้อมใจลูกค้าทุกคนนะครับ
+                    รับคำติชมของทุกท่านครับ</p>
+                <a href="https://www.instagram.com/mew.peakkteamsub/" id="Mewbtn2" data-aos="fade" data-aos-delay="250">ไปยัง @mew.peakkteamsub</a>
             </div>
         </div>
     </div>
