@@ -2,8 +2,11 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Peakkofficial - All Post</title>
     <link rel="stylesheet" href="AllPeakkofficialPost.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,44 +15,23 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
+    <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
+        <swiper-slide><img src="./InstagramPost/AF47stroy.png" alt=""></swiper-slide>
+        <swiper-slide><img src="./InstagramPost/WebPromo80s.png" alt=""></swiper-slide>
+        <swiper-slide><img src="./InstagramPost/NewWeb.jpg" alt=""></swiper-slide>
+        <!-- <swiper-slide><img src="./InstagramPost/Wedo.jpg" alt=""></swiper-slide> -->
+        <!-- <swiper-slide><img src="./InstagramPost/NoteOf.jpg" alt=""></swiper-slide> -->
+        <!-- <swiper-slide><img src="./InstagramPost/Fixb.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="./InstagramPost/EFLpie.jpg" alt=""></swiper-slide> -->
+        <swiper-slide><img src="./InstagramPost/MewLong.png" alt=""></swiper-slide>
+    </swiper-container>
 
-    <div class="bodyslider">
-
-        <h1>สตอรี่ของพวกเรา</h1>
-
-        <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-            <img class="image"
-                src="./InstagramPost/AF47stroy.png"
-                draggable="false" alt="" />
-            <img class="image"
-                src="./InstagramPost/WebPromo80s.png"
-                draggable="false" alt="" />
-            <img class="image"
-                src="./InstagramPost/NewWeb.jpg"
-                draggable="false" alt="" />
-            <img class="image"
-                src="./InstagramPost/Wedo.jpg"
-                draggable="false" alt="" />
-            <img class="image"
-                src="./InstagramPost/NoteOf.jpg"
-                draggable="false" alt="" />
-            <img class="image"
-                src="./InstagramPost/MewLong.png"
-                draggable="false" alt="" />
-            <img class="image"
-                src="./InstagramPost/EFLpie.jpg"
-                draggable="false" alt="" />
-            <img class="image"
-                src="./InstagramPost/Fixb.jpg"
-                draggable="false" alt="" />
-        </div>
-
-    </div>
-
-    <script src="AllPeakkofficialPost.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 
 </html>

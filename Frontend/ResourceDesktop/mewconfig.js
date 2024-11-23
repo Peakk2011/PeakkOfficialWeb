@@ -1,7 +1,18 @@
 document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
+  e.preventDefault();
 });
 
+// var navbar = document.querySelector('#NavbarContent');
+var navbar = document.querySelector('nav');
+
+window.onscroll = function () {
+  // pageYOffset or scrollY
+  if (window.pageYOffset > 0) {
+    navbar.classList.add('scrolled')
+  } else {
+    navbar.classList.remove('scrolled')
+  }
+}
 // Sidebar toggle
 
 const iconsRes = document.getElementById("iconsRes");

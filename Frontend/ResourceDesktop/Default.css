@@ -33,6 +33,26 @@ html {
     background-color: #080808;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: var(--NavbarColor);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--NavbarColor);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--SecColor);
+    opacity: 70%;
+}
+
 /* 5. Improve media defaults */
 img,
 picture,

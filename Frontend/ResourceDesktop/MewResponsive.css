@@ -42,7 +42,7 @@ body.dark-theme .iconsRes {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 90px;
+        width: fit-content;
         height: 50px;
 
         &.iconsRes ion-icon {
@@ -217,4 +217,118 @@ body.dark-theme .sidebarcon li a:active {
 
 body.dark-theme #backgroundblur {
     background-color: rgba(255, 255, 233, 0.650);
+}
+
+
+@media only screen and (max-width: 2000px) {
+
+    .cardimage img {
+        width: 290px !important;
+    }
+
+    body.dark-theme .cardimage img {
+        width: 290px !important;
+    }
+
+    .cardtext h1 {
+        font-size: 32px !important;
+    }
+
+    body.dark-theme .cardtext h1 {
+        font-size: 32px !important;
+    }
+
+    .card {
+        gap: 25px !important;
+    }
+
+    body.dark-theme .card {
+        gap: 25px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1480px) {
+
+    .cardimage img {
+        width: 260px !important;
+    }
+
+    body.dark-theme .cardimage img {
+        width: 260px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+    .OffenCon {
+        max-width: 80% !important;
+    }
+
+    .cardimage img {
+        width: 240px !important;
+    }
+
+    body.dark-theme .cardimage img {
+        width: 240px !important;
+    }
+
+    .cardtext h1 {
+        font-size: 28px !important;
+    }
+
+    body.dark-theme .cardtext h1 {
+        font-size: 28px !important;
+    }
+
+    .card {
+        gap: 15px !important;
+    }
+
+    body.dark-theme .card {
+        gap: 15px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .card {
+        position: relative;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+    }
+
+    .cardcon {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+    }
+
+    .cardimage img {
+        margin-left: 0.5rem;
+    }
+
+    .cardtext h1 {
+        margin-left: 0.5rem;
+        font-size: 24px !important;
+    }
+
+    body.dark-theme .cardtext h1 {
+        font-size: 24px !important;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .Offen {
+        height: 950px;
+    }
+
+    .OffenCon {
+        margin-top: 0rem !important;
+    }
+
 }
