@@ -332,3 +332,155 @@ body.dark-theme #backgroundblur {
     }
 
 }
+
+/* card content */
+
+@media only screen and (max-width: 1280px) {
+
+    .aboutwrapper {
+        max-width: 80% !important;
+    }
+
+    .aboutcardcontent {
+        width: 305px !important;
+        /* box-shadow: none !important; */
+    }
+
+}
+
+@media only screen and (max-width: 1140px) {
+
+    .aboutcardwrapper {
+        position: relative;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+        gap: 15px;
+    }
+
+    .aboutcardcontent {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        box-shadow: none !important;
+    }
+
+}
+
+@media only screen and (max-width: 795px) {
+
+    .abouttextcontent {
+        display: block !important;
+    }
+
+    .abouttext {
+        margin-bottom: 2.5rem;
+    }
+
+    .aboutinfor h1 {
+        display: flex !important;
+        width: fit-content;
+    }
+
+    .abouttext h1 {
+        font-size: 54px !important;
+    }
+
+    .abouttext p {
+        font-size: 18px !important;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+    .aboutcardcontent {
+        width: 80% !important;
+        height: 400px !important;
+    }
+
+    .aboutcontext h1 {
+        font-size: 30px !important;
+    }
+
+    .aboutcontext p {
+        /* font-size: 11.5px !important; */
+        font-size: 3.5vw !important;
+    }
+
+    .about {
+        height: 100vh;
+        min-height: 870px !important;
+    }
+
+    .aboutwrapper {
+        height: 100vh !important;
+        min-height: 870px !important;
+    }
+
+    .abouttextcontent {
+        padding-top: 7.5rem !important;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    .aboutinfor h1 {
+        letter-spacing: -0.3px !important;
+        font-size: 14px !important;
+    }
+
+    .aboutinfor p {
+        margin-left: 0.2rem !important;
+        font-size: 14px !important;
+    }
+
+    .aboutcardcontent {
+        width: 100% !important;
+    }
+
+    .aboutcontext p {
+        font-size: 4vw !important;
+    }
+
+    .abouttext p {
+        font-size: 3.5dvh !important;
+    }
+
+}
+
+/* text fix bug */
+
+@media only screen and (max-width: 550px) {
+
+    .servicetext h1:before {
+        font-size: 8vw !important;
+        width: 100%;
+        letter-spacing: -1.25px !important;
+        text-align: center !important;
+    }
+
+    .servicetext h1 {
+        margin-top: 8.5rem;
+    }
+
+    .service {
+        height: 100vh !important;
+        min-height: 800px;
+    }
+
+    .servicewrapper {
+        height: 100vh !important;
+        position: relative;
+        min-height: 800px;
+        align-items: normal !important;
+    }
+
+    .serviceimg img {
+        bottom: 100px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}

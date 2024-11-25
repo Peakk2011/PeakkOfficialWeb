@@ -158,10 +158,12 @@ header {
     width: 100%;
     background-color: #000;
     position: relative;
+    max-height: 1440px;
 
     video {
         pointer-events: none;
         position: absolute;
+        max-height: 1440px;
     }
 
     .headercontent {
@@ -197,9 +199,11 @@ header {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-20px);
     }
+
     100% {
         transform: translate(0px);
     }
@@ -210,6 +214,8 @@ header {
     height: 1200px;
     width: 100%;
     border-bottom: solid 1px #222;
+    border-top: solid 1px #222;
+    background-color: #040404;
 
     .OffenCon {
         margin: 0 auto;
@@ -268,16 +274,199 @@ header {
                         letter-spacing: -1px;
                         margin-top: 2.5rem;
                         line-height: 1.4;
-                        font-size: 36px;
+                        font-size: 26px;
                     }
 
                     &.cardtext p {
-                        font-size: 20px;
+                        font-family: lineseedregular;
                     }
                 }
 
             }
         }
 
+    }
+}
+
+.about {
+    height: 1080px;
+    width: 100%;
+    background: url(./Image/Present/BgPeakkofficial.png) no-repeat;
+    background-position: right;
+    background-size: cover;
+    background-attachment: fixed;
+    border-bottom: solid 1px #222;
+
+    .aboutwrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        height: 1080px;
+
+        .abouttextcontent {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            padding-top: 12rem;
+            position: relative;
+        }
+
+        .abouttext h1 {
+            font-family: lineseedregular;
+            font-weight: 400;
+            font-size: 62px;
+            line-height: 1.5;
+            letter-spacing: -1px;
+        }
+
+        .abouttext p {
+            font-size: 20.5px;
+            font-family: thonburi;
+        }
+
+        .aboutinfor {
+            position: relative;
+        }
+
+        .aboutinfor h1 {
+            font-family: lineseedregular;
+            font-weight: 400;
+            letter-spacing: -1px;
+            font-size: 18px;
+            padding: 0.5rem 1.25rem;
+            background-color: #0f0f0f;
+            border: solid 1px #222;
+            border-radius: 6px;
+            cursor: not-allowed;
+            display: flex;
+            line-height: 1.5;
+        }
+
+        .aboutinfor p {
+            font-family: thonburi !important;
+            margin-left: 0.5rem;
+            font-size: 18px;
+        }
+
+
+    }
+
+    .aboutcard {
+
+        .aboutcardwrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .aboutcardcontent {
+                width: 350px;
+                height: 500px;
+                background-color: #0f0f0f;
+                border: solid 1px #222;
+                border-radius: 12px;
+                position: relative;
+                box-shadow: 12px 12px 0px #0f0f0f;
+            }
+
+            .aboutcontext {
+                padding: 1rem 1.5rem;
+
+                &.aboutcontext h1 {
+                    font-family: lineseedregular;
+                    font-weight: 400;
+                    letter-spacing: -1.2px;
+                    font-size: 34px;
+                    line-height: 1.8;
+                    margin-bottom: 0.5rem;
+                    margin-top: 0.5rem;
+                    color: #ffffE9;
+                }
+
+                &.aboutcontext hr {
+                    border: solid 1px #444;
+                    width: 70px;
+                    margin-bottom: 1.65rem;
+                }
+
+                &.aboutcontext p {
+                    opacity: 40%;
+                    font-size: 14px;
+                    font-family: thonburi;
+                    line-height: 1.65;
+                }
+            }
+
+            .aboutconbottombtn {
+                position: absolute;
+                background-color: #080808;
+                width: 100%;
+                bottom: 0;
+                padding: 1.5rem 1.5rem;
+                border-radius: 0px 0px 14px 14px;
+
+                &.aboutconbottombtn a {
+                    padding: 0.3rem 1.25rem;
+                    background-color: #fdfdf3;
+                    color: #000;
+                    -webkit-text-stroke-width: 0.3px;
+                    border-radius: 50px;
+                    font-family: lineseedregular;
+                    letter-spacing: -0.25px;
+
+                    &:hover {
+                        filter: brightness(70%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.service {
+    height: 1080px;
+    width: 100%;
+    border-bottom: solid 1px #222;
+    background-color: #040404;
+    position: relative;
+
+    .servicewrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1080px;
+        .servicetext {  
+
+            &.servicetext h1 {
+                color: #fff;
+                font-weight: 400;
+                letter-spacing: -1px;
+                text-align: center;
+                position: relative;
+                z-index: 4;
+                font-family: "Pacifico", cursive;
+                color: #222;
+                font-size: clamp(1rem, 2.5263rem + 8.4211vw, 7.5rem);
+
+                &::before {
+                    letter-spacing: -1px;
+                    font-family: lineseedregular;
+                    font-size: clamp(2rem, 1.0951rem + 1.7277vw, 2.65rem);
+                    color: #fff;
+                    z-index: 0;
+                    position: absolute;
+                    content: "บริการรับแก้บัคเว็บไซต์";
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .serviceimg img {
+            width: 100%;
+            pointer-events: none;
+        }
     }
 }
