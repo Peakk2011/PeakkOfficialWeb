@@ -166,6 +166,15 @@ header {
         max-height: 1440px;
     }
 
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 300px;
+        display: none;
+    }
+
     .headercontent {
 
         .headertext {
