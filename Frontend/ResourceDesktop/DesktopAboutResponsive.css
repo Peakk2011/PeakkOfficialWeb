@@ -1,0 +1,243 @@
+.iconsRes {
+    color: #ffffe9;
+    display: none;
+}
+
+#GoToHireAnim {
+    display: none;
+}
+
+#DesktopHire {
+    display: block;
+}
+
+#GoToinstaAnim {
+    display: none;
+}
+
+body.dark-theme .iconsRes {
+    color: #000;
+}
+
+@media only screen and (max-width: 1280px) {
+    * {
+        cursor: default;
+    }
+
+    .cursor--large {
+        display: none;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .Navbar {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .iconsRes {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: fit-content;
+        height: 50px;
+
+        &.iconsRes ion-icon {
+            width: 40px;
+            height: 19px;
+        }
+    }
+
+    .navbarlinks {
+        display: none;
+    }
+
+    .Navbar {
+        max-width: 75%;
+    }
+
+    .headerTextMain h1 {
+        font-size: 250px !important;
+        letter-spacing: -10px !important;
+    }
+
+    .headerTextMain strong {
+        font-size: 250px !important;
+    }
+
+    .headerText p {
+        font-size: 50px !important;
+    }
+
+    #GoToHireAnim {
+        display: block;
+    }
+
+    #DesktopHire {
+        display: none;
+    }
+
+    #DesktopIG {
+        display: none !important;
+    }
+
+    #GoToinstaAnim {
+        display: block;
+    }
+
+}
+
+
+.sidebar {
+    width: 250px;
+    height: 100dvh;
+    background-color: #0a0a0a;
+    border-right: 1px #222 solid;
+    position: fixed;
+    z-index: 12;
+    transform: translateX(-300px);
+    transition: cubic-bezier(0.23, 1, 0.320, 1) 1.25s;
+}
+
+.sidebarElement {
+    opacity: 0;
+    transform: translateX(-80px);
+    filter: blur(5px);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    height: 100dvh;
+}
+
+body.dark-theme .sidebar {
+    background-color: #fffff1;
+    border-right: none;
+}
+
+.sidebartitile {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    max-width: 220px;
+    margin: 0 auto;
+
+    &.sidebartitile svg {
+        width: 13px;
+        margin-left: 0.5rem;
+    }
+
+    &.sidebartitile h1 {
+        color: #ffffe9;
+        font-weight: 500;
+        font-family: lineseedregular;
+        font-size: 19.5px;
+        transform: translate(5px, 1px);
+        letter-spacing: -0.8px;
+    }
+}
+
+body.dark-theme .sidebartitile h1 {
+    color: #000;
+}
+
+body.dark-theme .sidebartitile svg {
+    width: 13px;
+    filter: brightness(0%);
+    margin-left: 0.5rem;
+}
+
+.sidebarcon {
+    max-width: 220px;
+    margin: 0 auto;
+    padding-top: 1rem;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+}
+
+
+.sidebarcon li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 210px;
+    margin: 0 auto;
+    padding: 0rem 1rem;
+    font-family: lineseedregular;
+    height: 42px;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-theme .sidebarcon li a {
+    color: #000;
+}
+
+.sidebarcon ion-icon {
+    margin-right: 0.5rem;
+}
+
+.sidebarcon li a:active {
+    background-color: #ffffe9;
+    color: #000;
+    border-radius: 5px;
+}
+
+#sidebarhigh {
+    color: #000;
+    background-color: #ffffe9;
+    border-radius: 5px;
+}
+
+body.dark-theme #sidebarhigh {
+    background-color: #000;
+    color: #ffffe9;
+}
+
+body.dark-theme .sidebarcon li a:active {
+    background-color: #000;
+    color: #ffffe9;
+}
+
+#backgroundblur {
+    position: fixed;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(10, 10, 10, 0.811);
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    z-index: 10;
+    /* transform: translateX(-100%); */
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.85s;
+    opacity: 0;
+    display: none;
+}
+
+body.dark-theme #backgroundblur {
+    background-color: rgba(255, 255, 233, 0.650);
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .headertext {
+        display: none !important;
+    }
+
+    .headerimage svg {
+        margin-top: 0rem !important;
+        width: 450px !important;
+    }
+
+}
+
+@media only screen and (max-width: 565px) {
+
+    .headerimage svg {
+        transform: rotate(90deg);
+        height: 300px !important;
+        width: 300px !important;
+    }
+
+}
