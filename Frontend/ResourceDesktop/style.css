@@ -116,7 +116,7 @@ header {
     position: relative;
     width: 100%;
     height: 100dvh;
-    /* background-color: #000; */
+    background-color: #040404;
 
     .headercon {
         left: 50%;
@@ -187,10 +187,9 @@ header {
 nav {
     position: fixed;
     width: 100%;
-    /* border-bottom: solid 1px #2a2a2a; */
-    background-color: rgba(8, 8, 8, 0.810);
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
     z-index: 10;
     animation: fadeDown 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
     animation-delay: 0.9s;
@@ -468,9 +467,9 @@ body.dark-theme .navbarbot {
     position: fixed;
     width: 100%;
     height: 130px;
-    background-color: rgba(8, 8, 8, 0.860);
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
     bottom: 0;
     z-index: 5;
     /* border-top: solid 1px #222; */
@@ -565,7 +564,7 @@ body.dark-theme .Expain {
     width: 100%;
     border-bottom: solid 1px #222;
     border-top: solid 1px #222;
-    background-color: #121212;
+    background-color: #0d0d0d;
 
     .Exp {
 
@@ -960,7 +959,9 @@ body.dark-theme .CardIntroImage img {
 }
 
 body.dark-theme .PriceTagRec {
-    background-color: #fdfff3;
+    background-color: #fffff9;
+    border-top: #f1f1f1 solid 1px;
+    border-bottom: #f1f1f1 solid 1px;
 }
 
 body.dark-theme #First {
@@ -1514,4 +1515,84 @@ body.dark-theme .AllpcText span {
     transform: translate(-50%, -50%);
     z-index: 10;
     transition: 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Sortmew */
+
+.sortbymew {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    background-color: #060606;
+
+    .sortmewwrapper {
+        margin: 0 auto;
+        max-width: 1100px;
+    }
+
+    .sortmewimage svg {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    #Sortmewlight {
+        display: none;
+    }
+
+    .sortmewtext h1 {
+        font-family: lineseedregular;
+        font-weight: 400;
+        color: #ffffe9;
+        font-size: 40px;
+        letter-spacing: -1.5px;
+        text-align: center;
+    }
+
+    .sortmewtextlinks {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    .sortmewtext a {
+        font-family: lineseedregular;
+        color: #000;
+        background-color: #ffffE9;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 42.5px;
+        font-size: 18px;
+    }
+}
+
+body.dark-theme .sortbymew {
+    background-color: #fffff9;
+    border-bottom: solid 1px #f1f1f1;
+    border-top: solid 1px #f1f1f1;
+}
+
+body.dark-theme #Sortmewlight {
+    display: block;
+    filter: drop-shadow(10px 10px 0px #000);
+}
+
+body.dark-theme #SortmewDark {
+    display: none;
+}
+
+#mainlightsortmewwin {
+    stroke-width: 1px;
+    stroke: #0000003b;
+}
+
+body.dark-theme .sortmewtext h1 {
+    color: #000;
+}
+
+body.dark-theme .sortmewtext a {
+    color: #ffffE9;
+    background-color: #000;
 }

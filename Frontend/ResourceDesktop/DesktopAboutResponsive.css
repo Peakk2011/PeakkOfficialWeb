@@ -241,3 +241,141 @@ body.dark-theme #backgroundblur {
     }
 
 }
+
+/* first introduce card */
+
+@media only screen and (max-width: 1280px) {
+
+    .mainwrapper {
+        min-width: 80% !important;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .maincontent {
+        flex-direction: column;
+    }
+
+    main {
+        height: 100vh !important;
+        max-height: 1200px;
+        min-height: 900px !important;
+    }
+
+}
+
+
+/* card responsive */
+
+@media only screen and (max-width: 2000px) {
+
+    .cardimage img {
+        width: 290px !important;
+    }
+
+    body.dark-theme .cardimage img {
+        width: 290px !important;
+    }
+
+    .cardtext h1 {
+        font-size: 32px !important;
+    }
+
+    body.dark-theme .cardtext h1 {
+        font-size: 32px !important;
+    }
+
+    .card {
+        gap: 25px !important;
+    }
+
+    body.dark-theme .card {
+        gap: 25px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1480px) {
+
+    .cardimage img {
+        width: 260px !important;
+    }
+
+    body.dark-theme .cardimage img {
+        width: 260px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+    .OffenCon {
+        max-width: 80% !important;
+    }
+
+    .cardimage img {
+        width: 240px !important;
+    }
+
+    body.dark-theme .cardimage img {
+        width: 240px !important;
+    }
+
+    .cardtext h1 {
+        font-size: 28px !important;
+    }
+
+    body.dark-theme .cardtext h1 {
+        font-size: 28px !important;
+    }
+
+    .card {
+        gap: 15px !important;
+    }
+
+    body.dark-theme .card {
+        gap: 15px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .card {
+        position: relative;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+    }
+
+    .cardcon {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+    }
+
+    .cardimage img {
+        margin-left: 0.5rem;
+    }
+
+    .cardtext h1 {
+        margin-left: 0.5rem;
+        font-size: 24px !important;
+    }
+
+    body.dark-theme .cardtext h1 {
+        font-size: 24px !important;
+    }
+
+    .Offen {
+        height: 100vh;
+        min-height: 1050px;
+        max-height: 1100px;
+    }
+
+    .OffenCon {
+        padding-top: 10rem !important;
+    }
+
+}
