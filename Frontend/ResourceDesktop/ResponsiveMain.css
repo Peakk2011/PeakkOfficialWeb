@@ -79,7 +79,7 @@ body.dark-theme .iconsRes {
     #DesktopHire {
         display: none;
     }
-    
+
     #DesktopIG {
         display: none !important;
     }
@@ -412,7 +412,7 @@ body.dark-theme #backgroundblur {
     .ExpTit h4 {
         margin-top: 4rem;
         text-align: left !important;
-        font-size: 17px  !important;
+        font-size: 17px !important;
     }
 
     .ExpTit h1 {
@@ -643,6 +643,207 @@ body.dark-theme #backgroundblur {
 
     .PriceTagRecCardContent::before {
         display: none;
+    }
+
+}
+
+
+/* card content */
+
+@media only screen and (max-width: 1280px) {
+
+    .aboutwrapper {
+        max-width: 80% !important;
+    }
+
+    .aboutcardcontent {
+        width: 305px !important;
+        /* box-shadow: none !important; */
+    }
+
+}
+
+@media only screen and (max-width: 1140px) {
+
+    .aboutcardwrapper {
+        position: relative;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+        gap: 15px;
+    }
+
+    .aboutcardcontent {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        box-shadow: none !important;
+    }
+
+}
+
+@media only screen and (max-width: 795px) {
+
+    .abouttextcontent {
+        display: block !important;
+    }
+
+    .abouttext {
+        margin-bottom: 2.5rem;
+    }
+
+    .aboutinfor h1 {
+        display: flex !important;
+        width: fit-content;
+    }
+
+    .abouttext h1 {
+        font-size: 54px !important;
+    }
+
+    .abouttext p {
+        font-size: 21.25px !important;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+    .aboutcardcontent {
+        width: 80% !important;
+        height: 400px !important;
+    }
+
+    .aboutcontext h1 {
+        font-size: 30px !important;
+    }
+
+    .aboutcontext p {
+        /* font-size: 11.5px !important; */
+        font-size: 3.125vw !important;
+    }
+
+    .about {
+        height: 100vh;
+        min-height: 870px !important;
+    }
+
+    .aboutwrapper {
+        height: 100vh !important;
+        min-height: 870px !important;
+    }
+
+    .abouttextcontent {
+        padding-top: 7.5rem !important;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    .aboutinfor h1 {
+        letter-spacing: -0.3px !important;
+        font-size: 14px !important;
+    }
+
+    .aboutinfor p {
+        margin-left: 0.2rem !important;
+        font-size: 14px !important;
+    }
+
+    .aboutcardcontent {
+        width: 100% !important;
+    }
+
+    .aboutcontext p {
+        font-size: 3.65vw !important;
+    }
+
+    .abouttext p {
+        font-size: 20px !important;
+    }
+
+}
+
+/* MewLastintro */
+
+@media only screen and (max-width: 795px) {
+
+    .intromew svg {
+        width: 350px !important;
+    }
+
+    .intromewcontenttext h1 {
+        font-size: 32px !important;
+        top: 250px !important;
+    }
+
+    .intromewcontenttext a {
+        top: 360px !important;
+    }
+
+    .introducemew {
+        height: 570px !important;
+        min-height: 570px;
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
+
+    .intromew svg {
+        width: 260px !important;
+    }
+
+    .intromewcontenttext h1 {
+        font-size: 24px !important;
+    }
+
+    .intromewcontenttext a {
+        top: 325px !important;
+    }
+
+}
+
+@media only screen and (max-width: 405px) {
+
+    .intromewcontenttext h1 {
+        min-width: max-content;
+    }
+
+    .intromew {
+        width: 100%;
+    }
+
+    .sortmewimage svg {
+        margin-top: 7rem !important;
+        margin-bottom: 3rem !important;
+        height: fit-content !important;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    .intromew svg {
+        width: 60% !important;
+    }
+
+    .sortbymew {
+        height: 570px !important;
+        min-height: 570px;
+    }
+
+    .sortmewtext h1 {
+        font-size: 32px !important;
+    }
+
+    .intromewcontenttext h1 {
+        font-size: 20px !important;
+        top: 235px !important;
+    }
+
+    .intromewcontenttext a {
+        top: 305px !important;
     }
 
 }

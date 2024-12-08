@@ -118,3 +118,8 @@
     font-family: Sov;
     src: url(./Font/SOV_VIMAMSA.TTF);
 }
+
+@font-face {
+    font-family: Thanamas;
+    src: url(./font/SOV_Thanamas.ttf);
+}

@@ -90,35 +90,6 @@ ResThemeswic2.addEventListener("click", function () {
   localStorage.setItem("theme", theme);
 });
 
-// auto theme
-
-const colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
-  
-const setColorScheme = e => {
-  if (e.matches) {
-    // Dark
-    document.body.classList.toggle("dark-theme");
-
-    let theme = "light";
-    if (document.body.classList.contains("dark-theme")) {
-      theme = "dark";
-    }
-    localStorage.setItem("theme", theme);
-  } else {
-    // Light page darkmode = light mode
-    document.body.classList.toggle("dark-theme");
-
-    let theme = "light";
-    if (document.body.classList.contains("dark-theme")) {
-      theme = "dark";
-    }
-    localStorage.setItem("theme", theme);
-  }
-}
-  
-setColorScheme(colorSchemeQueryList);
-colorSchemeQueryList.addEventListener('change', setColorScheme);
-
 // Sidebar toggle
 
 const iconsRes = document.getElementById("iconsRes");
@@ -325,6 +296,23 @@ document.getElementById("sortmewbtn").addEventListener('mouseenter', () => {
   });
 });
 document.getElementById("sortmewbtn").addEventListener('mouseleave', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 1,
+  });
+});
+
+document.getElementById("intromewbtn").addEventListener('mouseenter', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 5,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 0,
+  });
+});
+document.getElementById("intromewbtn").addEventListener('mouseleave', () => {
   gsap.to(cursorInner, 0.15, {
     scale: 1,
   });

@@ -65,8 +65,7 @@ body.dark-theme .headerTextMain h1 {
 /* Dark thene != light mode */
 
 body.dark-theme nav {
-    background-color: #FFFFF9;
-    border-bottom: solid 0px #222;
+    background-color: rgba(255, 255, 249, 0.900);
 }
 
 body.dark-theme .NavLogo h1 {
@@ -1521,9 +1520,9 @@ body.dark-theme .AllpcText span {
 
 .sortbymew {
     width: 100%;
-    height: 800px;
+    height: 750px;
     position: relative;
-    background-color: #060606;
+    background-color: #080808;
 
     .sortmewwrapper {
         margin: 0 auto;
@@ -1595,4 +1594,198 @@ body.dark-theme .sortmewtext h1 {
 body.dark-theme .sortmewtext a {
     color: #ffffE9;
     background-color: #000;
+}
+
+.introducemew {
+    width: 100%;
+    height: 620px;
+    background-color: #080808;
+    border-bottom: solid 1px #222;
+
+    .intromewcontent {
+        margin: 0 auto;
+        max-width: 1100px;
+        position: relative;
+    }
+
+    .intromewcontenttext {
+        position: relative;
+    }
+
+    .intromewcontenttext h1 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,50%);
+        top: 280px;
+        color: #ffffE9;
+        font-family: Thanamas;
+        font-weight: 400;
+        font-size: 36px;
+    }
+
+    .intromewcontenttext a {
+        font-family: lineseedregular;
+        color: #000;
+        background-color: #ffffE9;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 42.5px;
+        font-size: 18px;
+        /*  */
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,50%);
+        top: 400px;
+    }
+
+    .intromew {
+
+        &.intromew svg {
+            width: 500px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+}
+
+
+.about {
+    height: 1080px;
+    width: 100%;
+    background-color: #060606;
+    border-bottom: solid 1px #222;
+    border-top: solid 1px #222;
+
+    .aboutwrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        height: 1080px;
+
+        .abouttextcontent {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            padding-top: 12rem;
+            position: relative;
+        }
+
+        .abouttext h1 {
+            font-family: lineseedregular;
+            font-weight: 400;
+            font-size: 62px;
+            line-height: 1.5;
+            letter-spacing: -1px;
+            color: #ffffE9;
+        }
+
+        .abouttext p {
+            font-size: 24.5px;
+            font-family: lineseedregular;
+            letter-spacing: -0.5px;
+        }
+
+        .aboutinfor {
+            position: relative;
+        }
+
+        .aboutinfor h1 {
+            font-family: lineseedregular;
+            font-weight: 400;
+            letter-spacing: -1px;
+            font-size: 18px;
+            padding: 0.5rem 1.25rem;
+            background-color: #0f0f0f;
+            border: solid 1px #222;
+            border-radius: 6px;
+            cursor: not-allowed;
+            display: flex;
+            line-height: 1.5;
+            color: #ffffE9;
+        }
+
+        .aboutinfor p {
+            font-family: thonburi !important;
+            margin-left: 0.5rem;
+            font-size: 18px;
+        }
+
+
+    }
+
+    .aboutcard {
+
+        .aboutcardwrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .aboutcardcontent {
+                width: 350px;
+                height: 500px;
+                background-color: #0f0f0f;
+                border: solid 1px #222;
+                border-radius: 12px;
+                position: relative;
+                box-shadow: 12px 12px 0px #0f0f0f;
+            }
+
+            .aboutcontext {
+                padding: 1rem 1.5rem;
+
+                &.aboutcontext h1 {
+                    font-family: lineseedregular;
+                    font-weight: 400;
+                    letter-spacing: -1.2px;
+                    font-size: 34px;
+                    line-height: 1.8;
+                    margin-bottom: 0.5rem;
+                    margin-top: 0.5rem;
+                    color: #ffffE9;
+                }
+
+                &.aboutcontext hr {
+                    border: solid 1px #444;
+                    width: 70px;
+                    margin-bottom: 1.65rem;
+                }
+
+                &.aboutcontext p {
+                    opacity: 40%;
+                    font-size: 14px;
+                    font-family: thonburi;
+                    line-height: 1.65;
+                    color: #fff;
+                }
+            }
+
+            .aboutconbottombtn {
+                position: absolute;
+                background-color: #080808;
+                width: 100%;
+                bottom: 0;
+                padding: 1.5rem 1.5rem;
+                border-radius: 0px 0px 14px 14px;
+
+                &.aboutconbottombtn a {
+                    padding: 0.3rem 1.25rem;
+                    background-color: #fdfdf3;
+                    color: #000;
+                    -webkit-text-stroke-width: 0.3px;
+                    border-radius: 50px;
+                    font-family: lineseedregular;
+                    letter-spacing: -0.25px;
+
+                    &:hover {
+                        filter: brightness(70%);
+                    }
+                }
+            }
+        }
+    }
 }
