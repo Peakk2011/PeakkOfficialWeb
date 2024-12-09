@@ -340,6 +340,25 @@ WeDoLinks.forEach(WeDoLinks => {
   });
 });
 
+document.querySelectorAll(".aboutconbottombtn > a").forEach(WeDoLinks => {
+  WeDoLinks.addEventListener('mouseenter', () => {
+    gsap.to(cursorInner, 0.15, {
+      scale: 5,
+    });
+    gsap.to(cursorOuter, 0.2, {
+      scale: 0,
+    });
+  });
+  WeDoLinks.addEventListener('mouseleave', () => {
+    gsap.to(cursorInner, 0.15, {
+      scale: 1,
+    });
+    gsap.to(cursorOuter, 0.2, {
+      scale: 1,
+    });
+  });
+});
+
 function CloseOverlayoff() {
   overlayPrice.style.opacity = "0";
   setTimeout(() => {

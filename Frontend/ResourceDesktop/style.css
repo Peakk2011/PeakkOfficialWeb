@@ -1553,6 +1553,7 @@ body.dark-theme .AllpcText span {
         justify-content: center;
         margin-top: 2rem;
     }
+
     .sortmewtext a {
         font-family: lineseedregular;
         color: #000;
@@ -1615,7 +1616,7 @@ body.dark-theme .sortmewtext a {
     .intromewcontenttext h1 {
         position: absolute;
         left: 50%;
-        transform: translate(-50%,50%);
+        transform: translate(-50%, 50%);
         top: 280px;
         color: #ffffE9;
         font-family: Thanamas;
@@ -1637,7 +1638,7 @@ body.dark-theme .sortmewtext a {
         /*  */
         position: absolute;
         left: 50%;
-        transform: translate(-50%,50%);
+        transform: translate(-50%, 50%);
         top: 400px;
     }
 
@@ -1770,11 +1771,11 @@ body.dark-theme .sortmewtext a {
                 width: 100%;
                 bottom: 0;
                 padding: 1.5rem 1.5rem;
-                border-radius: 0px 0px 14px 14px;
+                border-radius: 0px 0px 10px 10px;
 
                 &.aboutconbottombtn a {
-                    padding: 0.3rem 1.25rem;
-                    background-color: #fdfdf3;
+                    padding: 0.35rem 1.25rem;
+                    background-color: #ffffE9;
                     color: #000;
                     -webkit-text-stroke-width: 0.3px;
                     border-radius: 50px;
@@ -1789,3 +1790,70 @@ body.dark-theme .sortmewtext a {
         }
     }
 }
+
+body.dark-theme .about {
+    background-color: #fdfdf3;
+    border-bottom: solid 1px #f1f1f1;
+    border-top: solid 1px #f1f1f1;
+}
+
+body.dark-theme .introducemew {
+    background-color: #fffff9;
+}
+
+body.dark-theme .abouttext h1 {
+    color: #000 !important;
+}
+
+body.dark-theme .aboutinfor h1 {
+    background-color: transparent !important;
+    color: #000 !important;
+    border: solid 1px #000 !important;
+}
+
+body.dark-theme .aboutcardcontent {
+    background-color: #fdfdf3 !important;
+}
+
+body.dark-theme .aboutcontext h1 {
+    color: #000 !important;
+}
+
+body.dark-theme .aboutcontext hr {
+    border: solid 1px #000;
+}
+
+body.dark-theme .aboutcontext p {
+    color: #000 !important;
+    opacity: 80% !important;
+}
+
+body.dark-theme .aboutconbottombtn {
+    background-color: #fdfdf0 !important;
+    border-top: solid 1px #000;
+}
+
+body.dark-theme .aboutconbottombtn a {
+    color: #ffffE9 !important;
+    background-color: #000 !important;
+    -webkit-text-stroke-width: 0px !important;
+}
+
+body.dark-theme .intromew svg path {
+    fill: #000;
+}
+
+body.dark-theme .intromewcontenttext h1 {
+    color: #000 !important;
+}
+
+body.dark-theme .intromewcontenttext a {
+    background-color: #000 !important;
+    color: #ffffe9 !important;
+}
+
+body.dark-theme {}
+
+body.dark-theme {}
+
+body.dark-theme {}

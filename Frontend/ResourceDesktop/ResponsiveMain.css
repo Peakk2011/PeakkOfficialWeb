@@ -576,7 +576,7 @@ body.dark-theme #backgroundblur {
     }
 
     .Allprice {
-        height: 1750px;
+        height: 1670px;
     }
 
     .AllPCon {
@@ -634,6 +634,22 @@ body.dark-theme #backgroundblur {
     .PriceTagRecText p {
         font-size: 13.5px !important;
     }
+}
+
+@media only screen and (max-width: 340px) {
+
+    .PriceTagRecCard {
+        width: 300px !important;
+    }
+
+    .PriceTagRecButton button {
+        width: 220px !important;
+    }
+
+    .PriceTagRecButton a {
+        width: 220px !important;
+    }
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -844,6 +860,20 @@ body.dark-theme #backgroundblur {
 
     .intromewcontenttext a {
         top: 305px !important;
+    }
+
+}
+
+/* cut text title when 360px */
+
+@media screen and (max-width: 360px) {
+
+    .NavLogo h1 {
+        display: none;
+    }
+
+    .ResThemeswic2 {
+        opacity: 0;
     }
 
 }
