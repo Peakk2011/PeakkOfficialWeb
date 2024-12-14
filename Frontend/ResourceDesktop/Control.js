@@ -287,6 +287,23 @@ LinkksPrice.addEventListener('mouseleave', () => {
   });
 });
 
+document.getElementById('infoabout').addEventListener('mouseenter', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 8,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 0,
+  });
+});
+document.getElementById('infoabout').addEventListener('mouseleave', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 1,
+  });
+});
+
 document.getElementById("sortmewbtn").addEventListener('mouseenter', () => {
   gsap.to(cursorInner, 0.15, {
     scale: 5,

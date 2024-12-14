@@ -376,7 +376,7 @@ function handleMediaQueryChange(e) {
     if (e.matches) {
         // The viewport is at least 768 pixels wide
         console.log('Desktop Peakkofficial');
-        document.getElementById("TextChenge").innerHTML = "ได้รับเว็บไซต์ที่มี design ที่ทันสมัยตัวอย่างเช่นในรูปนี้";
+        document.getElementById("TextChenge").innerHTML = "เว็บที่พวกเรารับทํานั้นที่ทันสมัยและทําเพื่อคุณ";
     } else {
         // The viewport is less than 768 pixels wide
         document.getElementById("TextChenge").innerHTML = "เว็บที่พวกเรารับทํานั้นที่ทันสมัยและทําเพื่อคุณ";

@@ -52,14 +52,15 @@ nav {
     height: 55px;
 
     &.NavLogo svg {
-        width: 13px;
+        width: 50px;
+        display: none;
     }
 
     &.NavLogo h1 {
-        font-size: 19.5px;
-        letter-spacing: -0.8px;
-        /* font-family: Inter; */
-        font-family: "LineSeedRegular", sans-serif;
+        font-size: 20.5px;
+        letter-spacing: -0.4px;
+        font-family: sfpro;
+        /* font-family: "LineSeedRegular", sans-serif; */
         color: #ffffe9;
         font-weight: 500;
         transform: translate(5px, 1px);

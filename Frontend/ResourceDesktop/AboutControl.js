@@ -95,7 +95,7 @@ mediaQuery.addEventListener("change", (event) => {
   if (mediaQuery.matches) {
     window.location.reload();
   } else {
-    window.location.href = 'index.html'
+    window.location.href = 'DesktopAbout.html'
   }
 });
 
@@ -104,7 +104,7 @@ mediaQuery.addEventListener("change", (event) => {
 const mql = window.matchMedia("(orientation:landscape)");
 mql.addEventListener("change", (event) => {
   if (event.matches) {
-    window.location.href = 'index.html'
+    window.location.href = 'DesktopAbout.html'
   } else {
     
   }
@@ -114,6 +114,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (mediaQuery.matches) {
     
   } else {
-    window.location.href = 'index.html'
+    window.location.href = 'DesktopAbout.html'
   }
 });

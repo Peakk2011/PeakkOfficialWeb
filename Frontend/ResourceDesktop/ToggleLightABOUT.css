@@ -42,8 +42,10 @@ body.light-mode .ripple-button strong {
 }
 
 body.light-mode .headertext a {
-    background-color: #fff;
-    border: solid 1.5px #eee;
+    background-color: #000;
+    color: #fff;
+    border: solid 1.5px none;
+    box-shadow: #8f8f8f 0px 0px 30px;
 }
 
 body.light-mode .sim img {
@@ -58,6 +60,7 @@ body.light-mode main {
 body.light-mode .email.expand {
     background-color: #fff;
     outline: solid 1px #eee;
+    box-shadow: none;
 }
 
 body.light-mode .bottom {

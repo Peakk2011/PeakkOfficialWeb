@@ -720,6 +720,25 @@ body.dark-theme #backgroundblur {
         font-size: 21.25px !important;
     }
 
+    .aboutbg {
+        display: block !important;
+        left: 60%;
+    }
+
+}
+
+@media only screen and (max-width: 530px) {
+
+    .aboutbg {
+        left: 10%;
+        top: 130px !important;
+    }
+
+    .aboutbg ion-icon {
+        color: #ffffe9 !important;
+        font-size: 50px !important;
+    }
+
 }
 
 @media only screen and (max-width: 425px) {
@@ -727,6 +746,7 @@ body.dark-theme #backgroundblur {
     .aboutcardcontent {
         width: 80% !important;
         height: 400px !important;
+        min-height: 400px !important;
     }
 
     .aboutcontext h1 {
@@ -752,9 +772,13 @@ body.dark-theme #backgroundblur {
         padding-top: 7.5rem !important;
     }
 
+    .aboutbg {
+        display: none !important;
+    }
+
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 375px) {
 
     .aboutinfor h1 {
         letter-spacing: -0.3px !important;
@@ -874,6 +898,24 @@ body.dark-theme #backgroundblur {
 
     .ResThemeswic2 {
         opacity: 0;
+    }
+
+}
+
+/* footer */
+
+@media only screen and (max-width: 485px) {
+
+    .footerlink {
+        max-width: 320px !important;
+    }
+
+    .footerlink li a {
+        font-size: 14px !important;
+    }
+
+    .footertext h1 {
+        font-size: 20px !important;
     }
 
 }

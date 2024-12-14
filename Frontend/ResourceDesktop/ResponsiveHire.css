@@ -159,7 +159,7 @@ body.dark-theme .iconsRes {
     }
 
     .Strtext li a {
-        font-size: 20px !important;
+        font-size: 18px !important;
         height: 45px !important;
     }
 
@@ -532,4 +532,18 @@ body.dark-theme #backgroundblur {
     .ResThemeswic2 {
         display: none;
     } */
+}
+
+/* cut text title when 360px */
+
+@media screen and (max-width: 360px) {
+
+    .NavLogo h1 {
+        display: none;
+    }
+
+    .ResThemeswic2 {
+        opacity: 0;
+    }
+
 }

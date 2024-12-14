@@ -1073,6 +1073,8 @@ body.dark-theme .PriceTagRecText a {
     .PriceTagRecCard {
         width: 450px;
         height: 800px;
+        min-height: 850px;
+        max-height: 850px;
         background-color: #0a0a0a;
         border: solid 1px #222;
         border-radius: 12px;
@@ -1599,7 +1601,7 @@ body.dark-theme .sortmewtext a {
 
 .introducemew {
     width: 100%;
-    height: 620px;
+    height: 570px;
     background-color: #080808;
     border-bottom: solid 1px #222;
 
@@ -1661,6 +1663,18 @@ body.dark-theme .sortmewtext a {
     background-color: #060606;
     border-bottom: solid 1px #222;
     border-top: solid 1px #222;
+    position: relative;
+
+    .aboutbg {
+        display: none;
+        top: 180px;
+        position: absolute;
+    }
+
+    .aboutbg ion-icon {
+        font-size: 200px;
+        color: #181818;
+    }
 
     .aboutwrapper {
         max-width: 1100px;
@@ -1728,6 +1742,7 @@ body.dark-theme .sortmewtext a {
 
             .aboutcardcontent {
                 width: 350px;
+                min-height: 500px;
                 height: 500px;
                 background-color: #0f0f0f;
                 border: solid 1px #222;
@@ -1781,10 +1796,6 @@ body.dark-theme .sortmewtext a {
                     border-radius: 50px;
                     font-family: lineseedregular;
                     letter-spacing: -0.25px;
-
-                    &:hover {
-                        filter: brightness(70%);
-                    }
                 }
             }
         }
@@ -1812,7 +1823,7 @@ body.dark-theme .aboutinfor h1 {
 }
 
 body.dark-theme .aboutcardcontent {
-    background-color: #fdfdf3 !important;
+    background-color: #fff !important;
 }
 
 body.dark-theme .aboutcontext h1 {
@@ -1829,7 +1840,7 @@ body.dark-theme .aboutcontext p {
 }
 
 body.dark-theme .aboutconbottombtn {
-    background-color: #fdfdf0 !important;
+    background-color: #f8f8ef !important;
     border-top: solid 1px #000;
 }
 
@@ -1852,8 +1863,59 @@ body.dark-theme .intromewcontenttext a {
     color: #ffffe9 !important;
 }
 
-body.dark-theme {}
+body.dark-theme .introducemew {
+    border-bottom: solid 1px #f1f1f1;
+}
 
-body.dark-theme {}
+body.dark-theme .footertext h1 {
+    color: #000;
+}
 
-body.dark-theme {}
+body.dark-theme .footerlink li a {
+    color: #000;
+    opacity: 100%;
+}
+
+body.dark-theme #footerhigh {
+    background-color: #000;
+    color: #fff;
+}
+
+footer {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .footerlink {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 360px;
+        margin: auto;
+    }
+
+    .footerlink li a {
+        color: #fff;
+        opacity: 40%;
+        font-family: lineseedregular;
+        font-size: 16px;
+    }
+
+    .footertext h1 {
+        margin-top: 2rem;
+        font-family: lineseedregular;
+        color: #fff;
+        font-size: 26px;
+    }
+
+}
+
+#footerhigh {
+    opacity: 100%;
+    padding: 0.3rem 1rem;
+    color: #000;
+    background-color: #ffffe9;
+    border-radius: 50px;
+}

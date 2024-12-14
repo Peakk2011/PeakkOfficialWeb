@@ -268,13 +268,13 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #121212;
-        border: solid 1px #222;
+        background-color: #ffffe9;
+        box-shadow: 0px 2px 10px 2px #303030;
         height: 5dvh;
         width: 20dvh;
         font-size: 2.5dvh;
         border-radius: 10dvh;
-        color: #414141;
+        color: #000;
         margin: 0 auto;
     }
 }
@@ -602,7 +602,7 @@ main {
     max-width: 300px;
     outline: 1px solid #222;
     margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .expand .from {

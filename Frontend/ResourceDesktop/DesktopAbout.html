@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Peakkofficial - About หน้าแรก</title>
     <link rel="stylesheet" href="cursor.css">
     <link rel="stylesheet" href="Custom.css">
     <link rel="stylesheet" href="Font.css">
@@ -61,7 +61,7 @@
                 <li><a href="index.html">ภาพรวม</a></li>
                 <li><a href="Hire.html">จ้างงาน</a></li>
                 <li><a href="javascript:void(0)" id="HighlightNavbar">เกียวกับ</a></li>
-                <li><a href="javascript:void(0)" class="ResThemeswic">เปลียนธีม</a></li>
+                <li><a href="javascript:void(0)" class="themeswic">เปลียนธีม</a></li>
                 <!-- <li><a href="#">โปรโมชั้น</a></li> -->
                 <li><a href="javascript:void(0)" id="TextSecContach">ติดต่อพวกเรา</a></li>
             </div>
@@ -153,7 +153,7 @@
                     </svg>
                 </div>
                 <div class="headerscroll">
-                    <h1>เลือนลงเพื่อเนื้อหา</h1>
+                    <h1>เลื่อนลงเพื่อเนื้อหาถัดไป</h1>
                     <hr>
                 </div>
             </div>
@@ -238,6 +238,109 @@
 
         </div>
     </div>
+
+    <footer>
+
+        <div class="footercontent">
+
+            <div class="footerlink">
+                <li><a href="index.html">ภาพรวม</a></li>
+                <li><a href="Hire.html">จ้างงาน</a></li>
+                <li><a href="javascript:void(0)" id="footerhigh">เกียวกับ</a></li>
+                <li><a href="mew.html">เกียวกับ (mew)</a></li>
+            </div>
+
+            <div class="footertext">
+                <h1>© 2024 เว็บไซต์ของพีคออฟฟิเชียล</h1>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <style>
+
+        body.dark-theme footer {
+            background-color: #fdfdf3;
+            border-top: solid 1px #f1f1f1;
+        }
+
+        body.dark-theme .introducemew {
+            border-bottom: solid 1px #f1f1f1;
+        }
+
+        body.dark-theme .footertext h1 {
+            color: #000;
+        }
+
+        body.dark-theme .footerlink li a {
+            color: #000;
+            opacity: 100%;
+        }
+
+        body.dark-theme #footerhigh {
+            background-color: #000;
+            color: #fff;
+        }
+
+        footer {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: solid 1px #222;
+
+            .footerlink {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 360px;
+                margin: auto;
+            }
+
+            .footerlink li a {
+                color: #fff;
+                opacity: 40%;
+                font-family: lineseedregular;
+                font-size: 16px;
+            }
+
+            .footertext h1 {
+                margin-top: 2rem;
+                font-family: lineseedregular;
+                color: #fff;
+                font-size: 26px;
+            }
+
+        }
+
+        #footerhigh {
+            opacity: 100%;
+            padding: 0.3rem 1rem;
+            color: #000;
+            background-color: #ffffe9;
+            border-radius: 50px;
+        }
+
+        /* footer */
+
+        @media only screen and (max-width: 485px) {
+
+            .footerlink {
+                max-width: 320px !important;
+            }
+
+            .footerlink li a {
+                font-size: 14px !important;
+            }
+
+            .footertext h1 {
+                font-size: 20px !important;
+            }
+
+        }
+    </style>
 
     <script src="DesktopAbout.js"></script>
 </body>
