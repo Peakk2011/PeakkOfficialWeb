@@ -20,9 +20,46 @@
 
 // Theme switcher
 
-const btn = document.querySelector(".btn-toggle");
-const ResThemeswic = document.querySelector(".ResThemeswic");
-const ResThemeswic2 = document.querySelector(".ResThemeswic2");
+document.addEventListener("DOMContentLoaded", () => {
+
+  const btn = document.querySelector(".btn-toggle");
+  const ResThemeswic = document.querySelector(".ResThemeswic");
+  const ResThemeswic2 = document.querySelector(".ResThemeswic2");
+
+  // theme toggle
+
+  btn.addEventListener("click", function () {
+    document.body.classList.toggle("dark-theme");
+
+    let theme = "light";
+    if (document.body.classList.contains("dark-theme")) {
+      theme = "dark";
+    }
+    localStorage.setItem("theme", theme);
+  });
+
+  ResThemeswic.addEventListener("click", function () {
+    document.body.classList.toggle("dark-theme");
+
+    let theme = "light";
+    if (document.body.classList.contains("dark-theme")) {
+      theme = "dark";
+    }
+    localStorage.setItem("theme", theme);
+  });
+
+  ResThemeswic2.addEventListener("click", function () {
+    document.body.classList.toggle("dark-theme");
+
+    let theme = "light";
+    if (document.body.classList.contains("dark-theme")) {
+      theme = "dark";
+    }
+    localStorage.setItem("theme", theme);
+  });
+
+
+});
 
 // other
 const PriceReveal = document.getElementById("PriceReveal");
@@ -57,38 +94,6 @@ const currentTheme = localStorage.getItem("theme");
 if (currentTheme == "dark") {
   document.body.classList.add("dark-theme");
 }
-
-// theme toggle
-
-btn.addEventListener("click", function () {
-  document.body.classList.toggle("dark-theme");
-
-  let theme = "light";
-  if (document.body.classList.contains("dark-theme")) {
-    theme = "dark";
-  }
-  localStorage.setItem("theme", theme);
-});
-
-ResThemeswic.addEventListener("click", function () {
-  document.body.classList.toggle("dark-theme");
-
-  let theme = "light";
-  if (document.body.classList.contains("dark-theme")) {
-    theme = "dark";
-  }
-  localStorage.setItem("theme", theme);
-});
-
-ResThemeswic2.addEventListener("click", function () {
-  document.body.classList.toggle("dark-theme");
-
-  let theme = "light";
-  if (document.body.classList.contains("dark-theme")) {
-    theme = "dark";
-  }
-  localStorage.setItem("theme", theme);
-});
 
 // Sidebar toggle
 

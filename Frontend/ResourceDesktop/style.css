@@ -1774,7 +1774,8 @@ body.dark-theme .sortmewtext a {
                 &.aboutcontext p {
                     opacity: 40%;
                     font-size: 14px;
-                    font-family: thonburi;
+                    /* font-family: thonburi; */
+                    font-family: lineseedregular;
                     line-height: 1.65;
                     color: #fff;
                 }

@@ -604,8 +604,7 @@ body.dark-theme .Offentext p {
 }
 
 body.dark-theme .cardimage img {
-    /* content: url('./Image/Present/1Light.png') !important; */
-    filter: invert(100%);
+    content: url('Image/Present/Aboutus/AboutpageLight.png') !important;
     /* default */
     width: 340px !important;
     margin-top: 2.58rem !important;
@@ -615,13 +614,13 @@ body.dark-theme .cardimage img {
 }
 
 body.dark-theme #Im2 {
-    /* content: url(./Image/Present/2Light.png) !important; */
+    content: url(./Image/Present/Aboutus/Aboutpage2Light.png) !important;
 }
 
 body.dark-theme #Im3 {
-    /* content: url(./Image/Present/3Light.png) !important; */
+    content: url(./Image/Present/Aboutus/Aboutpage3Light.png) !important;
 }
 
 body.dark-theme #Im4 {
-    /* content: url(./Image/Present/4Light.png) !important; */
+    content: url(./Image/Present/Aboutus/Aboutpage4Light.png) !important;
 }
