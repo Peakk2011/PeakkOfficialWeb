@@ -31,25 +31,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Ripple theme effect
 
+// document.addEventListener('DOMContentLoaded', function () {
+//   const themeSwitcher = document.getElementById('theme-switcher');
+//   const currentTheme = localStorage.getItem('theme') || 'dark-mode';
+//   document.body.classList.add(currentTheme);
+
+//   themeSwitcher.addEventListener('click', function (event) {
+
+//     if (document.body.classList.contains('dark-mode')) {
+//       document.body.classList.remove('dark-mode');
+//       document.body.classList.add('light-mode');
+//       localStorage.setItem('theme', 'light-mode');
+//     }
+//     else {
+//       document.body.classList.remove('light-mode');
+//       document.body.classList.add('dark-mode');
+//       localStorage.setItem('theme', 'dark-mode');
+//     }
+
+//   });
+// });
+
 document.addEventListener('DOMContentLoaded', function () {
   const themeSwitcher = document.getElementById('theme-switcher');
 
   // ตั้งค่าเริ่มต้นสำหรับธีมจาก localStorage
   const currentTheme = localStorage.getItem('theme') || 'dark-mode';
   document.body.classList.add(currentTheme);
-  themeSwitcher.addEventListener('click', function (event) {
-
+  
+  themeSwitcher.addEventListener('click', function () {
     if (document.body.classList.contains('dark-mode')) {
       document.body.classList.remove('dark-mode');
       document.body.classList.add('light-mode');
       localStorage.setItem('theme', 'light-mode');
-    }
-    else {
+    } else {
       document.body.classList.remove('light-mode');
       document.body.classList.add('dark-mode');
       localStorage.setItem('theme', 'dark-mode');
     }
-
   });
 });
 

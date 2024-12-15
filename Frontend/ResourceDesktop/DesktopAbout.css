@@ -170,7 +170,7 @@ nav {
 }
 
 .Navbar {
-    height: 65px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -207,7 +207,7 @@ nav {
 .navbarlinks {
     display: flex;
     align-items: center;
-    gap: 22.5px;
+    gap: 19.5px;
     height: 55px;
     width: 100%;
     justify-content: end;
@@ -464,10 +464,6 @@ main {
         display: flex;
         margin-bottom: 1.5rem;
         justify-content: center;
-
-        &:hover {
-            filter: brightness(75%);
-        }
     }
 
     .maintextlinksdes {

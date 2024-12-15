@@ -57,6 +57,7 @@ body.dark-theme .iconsRes {
 
     .Navbar {
         max-width: 75%;
+        height: 65px;
     }
 
     .headerTextMain h1 {
@@ -88,8 +89,25 @@ body.dark-theme .iconsRes {
         display: block;
     }
 
+    .NavLogo h1 {
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%) !important;
+    }
+
 }
 
+@media only screen and (max-width: 500px) {
+    .Navbar {
+        height: 65px;
+    }
+
+    .NavLogo h1 {
+        left: 0%;
+        position: static;
+        transform: translate(8.5px, 1px) !important;
+    }
+}
 
 .sidebar {
     width: 250px;

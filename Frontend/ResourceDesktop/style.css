@@ -50,11 +50,12 @@ body.dark-theme header {
 
 body.dark-theme .area {
     background-color: #FFFFF9;
+    opacity: 70%;
 }
 
 body.dark-theme .circles li {
-    background: linear-gradient(#00000087, #00000087);
-    filter: blur(70px);
+    background: linear-gradient(#000000, #000000);
+    filter: blur(90px);
     /* display: none; */
 }
 
@@ -132,15 +133,15 @@ header {
                 /* color: #ffffE9; */
                 font-family: LineSeedRegular;
                 /* font-family: Meltie; */
-                font-weight: 300;
-                letter-spacing: -2.25px;
+                font-weight: 600;
+                letter-spacing: -1.25px;
                 font-size: 45px;
                 margin-bottom: 1.5rem;
                 line-height: 1.5;
                 /* border-bottom: solid 1px #FFFFE9; */
                 display: block;
                 text-align: center;
-                background: -webkit-linear-gradient(345deg, #82d6c4, #ffffE9);
+                background: -webkit-linear-gradient(345deg, #a9faf3, #ffffff);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
@@ -158,6 +159,10 @@ header {
                     /* font-family: "Inter Tight", sans-serif; */
                     line-height: 0.65;
                     letter-spacing: -5px;
+                    /*  */
+                    background: -webkit-linear-gradient(345deg, #8dece4, #fffffd);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
 
                 &.headerTextMain strong {
@@ -167,7 +172,7 @@ header {
                     /* font-family: "Pixelify Sans", sans-serif; */
                     font-family: Silkscreen;
                     font-size: 250px;
-                    background: -webkit-linear-gradient(345deg, #82d6c4, #ffffE9);
+                    background: -webkit-linear-gradient(345deg, #9be4de, #d3fff4);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     letter-spacing: -5px;
@@ -176,6 +181,13 @@ header {
 
         }
     }
+}
+
+body.dark-theme .headerTextMain h1 {
+    background: -webkit-linear-gradient(345deg, #000, #000) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text;
 }
 
 :where(li, a) {
@@ -187,8 +199,8 @@ nav {
     position: fixed;
     width: 100%;
     background-color: transparent;
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
     z-index: 10;
     animation: fadeDown 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
     animation-delay: 0.9s;
@@ -202,7 +214,7 @@ nav {
 }
 
 .Navbar {
-    height: 65px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -235,7 +247,7 @@ nav {
 .navbarlinks {
     display: flex;
     align-items: center;
-    gap: 22.5px;
+    gap: 19.5px;
     height: 55px;
     width: 100%;
     justify-content: end;
@@ -323,8 +335,7 @@ body.dark-theme .navbarlinks li a:hover {
     background-color: #060606;
     width: 100%;
     height: 100vh;
-    opacity: 20%;
-
+    opacity: 60%;
 }
 
 .circles {
@@ -342,8 +353,9 @@ body.dark-theme .navbarlinks li a:hover {
     list-style: none;
     width: 80px;
     height: 80px;
-    background: linear-gradient(#414141, #414141);
+    background: linear-gradient(#fff, #fff);
     animation: animate 25s linear infinite;
+    filter: blur(120px);
     bottom: -150px;
 
 }
@@ -524,13 +536,6 @@ body.dark-theme .navbarbot {
             transition: 0.4s;
         }
 
-        &.navsoccon li a:hover,
-        .navsoccon ion-icon {
-            background-color: #ffffE9;
-            color: #000;
-            border-radius: 70px;
-        }
-
         &.navsoccon ion-icon {
             transform: translateY(3px);
         }
@@ -548,6 +553,8 @@ body.dark-theme .navbarbot {
     top: 50%;
     transform: translate(50%, 2.5rem);
     mix-blend-mode: difference;
+    /* new ui hide it */
+    display: none;
 }
 
 /* Expain */
@@ -1503,19 +1510,6 @@ body.dark-theme .AllpcText span {
     .ResThemeswic2 {
         display: none;
     } */
-}
-
-/* Open links anim */
-
-#FrameHireSidebar {
-    display: none;
-    opacity: 0;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    transition: 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 /* Sortmew */

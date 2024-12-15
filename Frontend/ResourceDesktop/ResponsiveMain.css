@@ -57,15 +57,16 @@ body.dark-theme .iconsRes {
 
     .Navbar {
         max-width: 75%;
+        height: 65px;
     }
 
     .headerTextMain h1 {
-        font-size: 250px !important;
-        letter-spacing: -10px !important;
+        font-size: 200px !important;
+        letter-spacing: 4px !important;
     }
 
     .headerTextMain strong {
-        font-size: 250px !important;
+        font-size: 200px !important;
     }
 
     .headerText p {
@@ -88,6 +89,12 @@ body.dark-theme .iconsRes {
         display: block;
     }
 
+    .NavLogo h1 {
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%) !important;
+    }
+
 }
 
 @media only screen and (max-width: 700px) {
@@ -107,7 +114,7 @@ body.dark-theme .iconsRes {
     }
 
     .area {
-        display: none;
+        opacity: 40% !important;
     }
 }
 
@@ -130,8 +137,22 @@ body.dark-theme .iconsRes {
     }
 
     .area {
-        display: none;
+        opacity: 40% !important;
     }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .NavLogo h1 {
+        left: 0%;
+        position: static;
+        transform: translate(8.5px,1px) !important;
+    }
+
+    .area {
+        opacity: 20% !important;
+    }
+
 }
 
 @media only screen and (max-width: 340px) {

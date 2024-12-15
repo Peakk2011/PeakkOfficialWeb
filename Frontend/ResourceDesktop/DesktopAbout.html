@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="DesktopAboutResponsive.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <!-- Data aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -22,6 +25,9 @@
     <script>
         AOS.init();
     </script>
+
+    <div class="cursor cursor--large"></div>
+    <div class="cursor cursor--small"></div>
 
     <!-- #include <navbar.h> -->
 
@@ -109,8 +115,8 @@
                 </li>
                 <li><a href="javascript:void(0)" id="SidebarHireOpen"><ion-icon
                             name="cash-outline"></ion-icon>จ้างงาน</a></li>
-                <li><a href="javascript:void(0)" id="sidebarhigh"><ion-icon name="person-outline"></ion-icon>เกียวกับ
-                        (หน้าแรก)</a></li>
+                <li><a href="javascript:void(0)" id="sidebarhigh"><ion-icon
+                            name="person-outline"></ion-icon>เกียวกับ</a></li>
                 <li><a href="Mew.html"><ion-icon name="person-outline"></ion-icon>เกียวกับ
                         (mew)</a></li>
                 <!-- <li><a href="javascript:void(0)" class="btn-toggle"><ion-icon
@@ -171,7 +177,7 @@
                     </div>
                     <div class="maintextlinksdes">
                         <div class="maintextlinks">
-                            <a href="#"><span id="#EnglishCharlink">instagram</span> ของพวกเรา</a>
+                            <a href="#" id="maintextlinkbutton"><span id="#EnglishCharlink">instagram</span> ของพวกเรา</a>
                         </div>
                         <p>สําหรับการอัพเดทต่างๆของพวกเรา<br>และการลดราคากับโปรโมชั่นใหม่ของพวกเรา</p>
                     </div>
@@ -259,7 +265,6 @@
     </footer>
 
     <style>
-
         body.dark-theme footer {
             background-color: #fdfdf3;
             border-top: solid 1px #f1f1f1;

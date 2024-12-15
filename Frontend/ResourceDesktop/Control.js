@@ -527,32 +527,6 @@ GoToinstaAnim.addEventListener("click", () => {
 
 })
 
-function OpenWinHire() {
-  window.open("hire.html", "_parent");
-}
-
-// FrameHireSidebar
-
-SidebarHireOpen.addEventListener("click", () => {
-
-  contentIndex.style.opacity = "20%"
-  contentIndex.style.filter = "blur(5px)"
-  FrameHireSidebar.style.display = "block"
-
-  CloseSidebar()
-
-  setTimeout(() => {
-    contentIndex.style.opacity = "100%"
-    contentIndex.style.filter = "blur(0px)"
-    setTimeout(() => {
-
-      FrameHireSidebar.style.opacity = "1"
-
-    }, 100);
-  }, 300);
-
-
-})
 
 // if success load hire del to index if open index reversed
 
