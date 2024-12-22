@@ -18,9 +18,48 @@
   });
 })()
 
-// Theme switcher
-
 document.addEventListener("DOMContentLoaded", () => {
+  // dynamic navbar color change
+
+  var MainNavbar = document.getElementById("MainNavbar");
+
+  function DefaultScroll() {
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200) {
+      MainNavbar.style.backdropFilter = "blur(60px)";
+      MainNavbar.style.webkitBackdropFilter = "blur(60px)";
+    } else {
+      MainNavbar.style.backdropFilter = "blur(0px)";
+      MainNavbar.style.webkitBackdropFilter = "blur(0px)";
+    }
+  }
+
+  window.onscroll = function () {
+    const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    const styles = [
+      { limit: 3400, background: "rgb(8, 8, 8, 0.6)" },
+      { limit: 2800, background: "rgb(6, 6, 6, 0.5)" },
+      { limit: 1900, background: "rgb(8, 8, 8, 0.4)" },
+      { limit: 1200, background: "rgb(13, 13, 13)" },
+      { limit: 200, background: "transparent", callback: DefaultScroll }
+    ];
+
+    for (const style of styles) {
+      if (scrollTop >= style.limit) {
+        MainNavbar.style.background = style.background;
+        MainNavbar.style.backdropFilter = "blur(60px)";
+        MainNavbar.style.webkitBackdropFilter = "blur(60px)";
+        if (style.callback) style.callback();
+        return;
+      }
+    }
+
+    MainNavbar.style.background = "transparent";
+    MainNavbar.style.backdropFilter = "blur(0px)";
+    MainNavbar.style.webkitBackdropFilter = "blur(0px)";
+  };
+
+  // Theme switcher
+
 
   const btn = document.querySelector(".btn-toggle");
   const ResThemeswic = document.querySelector(".ResThemeswic");
@@ -34,8 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let theme = "light";
     if (document.body.classList.contains("dark-theme")) {
       theme = "dark";
+      // console.log("dark mode is active");
+    } else {
+      console.log("dark mode is active");
     }
+
     localStorage.setItem("theme", theme);
+
+    applyNavbarStyles(theme);
   });
 
   ResThemeswic.addEventListener("click", function () {
@@ -46,6 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
       theme = "dark";
     }
     localStorage.setItem("theme", theme);
+
+    applyNavbarStyles(theme);
   });
 
   ResThemeswic2.addEventListener("click", function () {
@@ -54,10 +101,62 @@ document.addEventListener("DOMContentLoaded", () => {
     let theme = "light";
     if (document.body.classList.contains("dark-theme")) {
       theme = "dark";
+      // console.log("dark mode is active");
+    } else {
+      console.log("dark mode is active");
     }
+
     localStorage.setItem("theme", theme);
+
+    applyNavbarStyles(theme);
   });
 
+  function applyNavbarStyles(theme) {
+    window.onscroll = function () {
+      const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+      const darkStyles = [
+        { limit: 7800, background: "rgb(253, 253, 243, 0.855)" },
+        { limit: 7150, background: "rgb(255, 255, 249, 0.855)" },
+        { limit: 5500, background: "rgb(253, 253, 243, 0.855)" },
+        { limit: 3450, background: "rgb(255, 255, 249, 0.855)" },
+        { limit: 1200, background: "rgb(253, 253, 243, 0.855)" },
+        { limit: 200, background: "transparent", callback: DefaultScroll }
+
+        // Dynamic cta button hover sticky
+
+
+      ];
+      const lightStyles = [
+        { limit: 3400, background: "rgb(8, 8, 8, 0.6)" },
+        { limit: 2800, background: "rgb(6, 6, 6, 0.5)" },
+        { limit: 1900, background: "rgb(8, 8, 8, 0.4)" },
+        { limit: 1200, background: "rgb(13, 13, 13)" },
+        { limit: 200, background: "transparent", callback: DefaultScroll }
+      ];
+
+      const styles = theme === "dark" ? darkStyles : lightStyles;
+
+      for (const style of styles) {
+        if (scrollTop >= style.limit) {
+          MainNavbar.style.background = style.background;
+          MainNavbar.style.backdropFilter = "blur(60px)";
+          MainNavbar.style.webkitBackdropFilter = "blur(60px)";
+          if (style.callback) style.callback();
+          return;
+        }
+      }
+
+      MainNavbar.style.background = "transparent";
+      MainNavbar.style.backdropFilter = "blur(0px)";
+      MainNavbar.style.webkitBackdropFilter = "blur(0px)";
+    };
+
+    // Trigger the scroll event to apply styles immediately
+    window.onscroll();
+  }
+
+  const theme = localStorage.getItem("theme") || "light";
+  applyNavbarStyles(theme);
 
 });
 
@@ -471,77 +570,111 @@ function mouseMove(e) {
 
 const GoToHireAnimExp = document.getElementById("GoToHireAnim");
 const FrameHire = document.getElementById("FrameHire");
-
-// add listener
-
 const GoToinstaAnim = document.getElementById("GoToinstaAnim");
+const ExpainLinkOverlay = document.getElementById("ExpainLinkOverlay");  // Assuming this is an existing element
 
-GoToHireAnimExp.addEventListener("click", () => {
-  GoToHireAnimExp.style.color = "transparent";
-  GoToHireAnimExp.style.borderRadius = "0px";
+// Function to handle animation and transition
+function handleClick(element, displayFrame, openLink) {
+  element.style.color = "transparent";
+  element.style.borderRadius = "0px";
   ExpainLinkOverlay.style.zIndex = "100";
 
-  setTimeout(() => {
-    GoToHireAnimExp.style.padding = "6.5rem 1.5rem"
-    GoToHireAnimExp.style.transform = "scale(300%)"
-    setTimeout(() => {
-      GoToHireAnimExp.style.padding = "10rem 1.5rem"
-    }, 50);
-  }, 20);
+  // CSS transitions for smooth scaling
+  element.style.transition = "transform 0.6s ease, padding 0.6s ease, color 0.3s ease";
 
-  setTimeout(() => {
-    FrameHire.style.display = "block"
-    // GoToHireAnimExp.style.opacity = "0";
-    setTimeout(() => {
-      FrameHire.style.width = "100%"
-      FrameHire.style.height = "100%"
+  // Detect device type and apply appropriate scaling
+  let scaleFactor = window.innerWidth <= 768 ? 3 : 2; // Example scale factors for mobile and tablet
 
+  // Scale to appropriate size for device
+  setTimeout(() => {
+    element.style.transform = `scale(${scaleFactor})`;
+    setTimeout(() => {
+      // Set final padding to cover full screen based on device
+      element.style.padding = window.innerWidth <= 768 ? "50vh 50vw" : "100vh 100vw";
+    }, 150); // Delay for scaling completion
+
+  }, 30); // Initial delay to start scaling
+
+  if (displayFrame) {
+    setTimeout(() => {
+      FrameHire.style.display = "block";
+      FrameHire.style.transition = "opacity 0.6s ease, width 0.6s ease, height 0.6s ease";
       setTimeout(() => {
-        FrameHire.style.opacity = "1"
-      }, 300);
-
-    }, 5);
-  }, 50);
-
-
-})
-
-GoToinstaAnim.addEventListener("click", () => {
-  GoToinstaAnim.style.color = "transparent";
-  GoToinstaAnim.style.borderRadius = "0px";
-  ExpainLinkOverlay.style.zIndex = "100";
-
-  setTimeout(() => {
-    GoToinstaAnim.style.padding = "8.5rem 1.5rem"
-    GoToinstaAnim.style.transform = "scale(400%)"
-    setTimeout(() => {
-      GoToinstaAnim.style.padding = "10rem 1.5rem"
-    }, 50);
-  }, 20);
-
-  function PkOpenInstagram() {
-    window.open("https://www.instagram.com/peakkofficial/", "_parent");
+        FrameHire.style.width = "100%";
+        FrameHire.style.height = "100%";
+        setTimeout(() => {
+          FrameHire.style.opacity = "1";
+        }, 90); // Delay for height scaling completion
+      }, 60);
+    }, 300); // Delay for element scaling
   }
 
-  PkOpenInstagram();
-
-})
-
-
-// if success load hire del to index if open index reversed
-
-function CloseSidebar() {
-  // backgroundblur.style.transform = "translateX(-100%)";
-  SidebarNew.style.transform = "translateX(-300px)"
-  backgroundblur.style.opacity = "0";
-
-  setTimeout(() => {
-    SidebarIns.style.transform = "translateX(-50px)";
-    SidebarIns.style.opacity = "0";
-    SidebarIns.style.filter = "blur(5px)";
-
+  if (openLink) {
     setTimeout(() => {
-      backgroundblur.style.display = "none";
-    }, 400);
-  }, 30);
+      window.open(openLink, "_parent");
+    }, 200); // Delay for smooth transition and scaling completion
+  }
 }
+
+// Add event listeners
+GoToHireAnimExp.addEventListener("click", () => handleClick(GoToHireAnimExp, true));
+GoToinstaAnim.addEventListener("click", () => handleClick(GoToinstaAnim, false, "https://www.instagram.com/peakkofficial/"));
+
+
+// Dynamic cta button hover sticky
+
+const cursorEvents = (EventsCta) => {
+  EventsCta.addEventListener('mouseenter', () => {
+    gsap.to(cursorInner, 0.15, { scale: 7 });
+    gsap.to(cursorOuter, 0.2, { scale: 0 });
+  });
+
+  EventsCta.addEventListener('mouseleave', () => {
+    gsap.to(cursorInner, 0.15, { scale: 1 });
+    gsap.to(cursorOuter, 0.2, { scale: 1 });
+  });
+};
+
+['ctatext', 'ctabutton'].forEach(id => cursorEvents(document.getElementById(id)));
+
+const setupButton = (button) => {
+  let rect, ctr;
+
+  const updateButtonMetrics = () => {
+    rect = button.getBoundingClientRect();
+    ctr = { x: rect.left + (rect.width / 2), y: rect.top + (rect.height / 2) };
+  };
+
+  updateButtonMetrics();
+  window.addEventListener('resize', updateButtonMetrics);
+
+  button.addEventListener('mouseenter', function (e) {
+    let delta_x = (e.clientX - ctr.x) * 5 / rect.width;
+    let delta_y = (e.clientY - ctr.y) * 5 / rect.height;
+    this.setAttribute('style', `transition: all 50ms ease-out; transform: translate(${delta_x}px, ${delta_y}px);`);
+  });
+
+  button.addEventListener('mousemove', function (e) {
+    let delta_x = (e.clientX - ctr.x) * 5 / rect.width;
+    let delta_y = (e.clientY - ctr.y) * 5 / rect.height;
+    this.setAttribute('style', `transition: all 50ms ease-out; transform: translate(${delta_x}px, ${delta_y}px);`);
+  });
+
+  button.addEventListener('mousedown', function (e) {
+    let delta_x = (e.clientX - ctr.x) * 5 / rect.width;
+    let delta_y = (e.clientY - ctr.y) * 5 / rect.height;
+    this.setAttribute('style', `transition: all 50ms ease-out; transform: translate(${delta_x}px, ${delta_y}px);`);
+  });
+
+  button.addEventListener('mouseup', function (e) {
+    let delta_x = (e.clientX - ctr.x) * 5 / rect.width;
+    let delta_y = (e.clientY - ctr.y) * 5 / rect.height;
+    this.setAttribute('style', `transition: all 50ms ease-out; transform: translate(${delta_x}px, ${delta_y}px);`);
+  });
+
+  button.addEventListener('mouseleave', function (e) {
+    this.removeAttribute('style');
+  });
+};
+
+['ctabutton', 'ctatext'].forEach(id => setupButton(document.getElementById(id)));
