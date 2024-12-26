@@ -1,0 +1,108 @@
+.iconsRes {
+    color: #ffffe9;
+    display: none;
+}
+
+#GoToHireAnim {
+    display: none;
+}
+
+#DesktopHire {
+    display: block;
+}
+
+#GoToinstaAnim {
+    display: none;
+}
+
+body.dark-theme .iconsRes {
+    color: #000;
+}
+
+@media only screen and (max-width: 1280px) {
+    * {
+        cursor: default;
+    }
+
+    .cursor--large {
+        display: none;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .Navbar {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .iconsRes {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90px;
+        height: 50px;
+
+        &.iconsRes ion-icon {
+            width: 40px;
+            height: 19px;
+        }
+    }
+
+    .navbarlinks {
+        display: none;
+    }
+
+    .Navbar {
+        max-width: 75%;
+        height: 65px;
+    }
+
+    .headerTextMain h1 {
+        font-size: 200px !important;
+        letter-spacing: 4px !important;
+    }
+
+    .headerTextMain strong {
+        font-size: 200px !important;
+    }
+
+    .headerText p {
+        font-size: 50px !important;
+    }
+
+    #GoToHireAnim {
+        display: block;
+    }
+
+    #DesktopHire {
+        display: none;
+    }
+
+    #DesktopIG {
+        display: none !important;
+    }
+
+    #GoToinstaAnim {
+        display: block;
+    }
+
+    .NavLogo h1 {
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%) !important;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .NavLogo h1 {
+        left: 0%;
+        position: static;
+        transform: translate(8.5px, 1px) !important;
+    }
+
+}

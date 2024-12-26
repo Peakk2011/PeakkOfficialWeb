@@ -88,21 +88,34 @@ function handleMouseLeave(e) {
 
 // use Loading
 
+document.getElementById("backgroundblur").style.opacity = 1;
+document.getElementById("backgroundblur").style.display = "block";
+
 const ClassLoading = document.getElementById("Loading");
 const TransparentLogo = document.getElementById("TransparentLogo");
 
 setTimeout(() => {
 
-	ClassLoading.style.opacity = "50%";
+	TransparentLogo.style.opacity = 0;
+	TransparentLogo.style.transition = "0.3s";
 
 	setTimeout(() => {
-		// ClassLoading.style.filter = "blur(80px)";
-		ClassLoading.style.opacity = "0%";
-		// ClassLoading.style.scale = "1000%";
+		// ClassLoading.style.opacity = 0;
+		ClassLoading.style.transform = "translateY(-100%)";
+	}, 350);
 
+	setTimeout(() => {
+		document.getElementById("backgroundblur").style.opacity = 0;
+		document.getElementById("backgroundblur").style.transition = "1s";
 		setTimeout(() => {
-			ClassLoading.style.display = "none";
-		}, 500);
-	}, 10); 
+			document.getElementById("backgroundblur").style.display = "none";
+			document.getElementById("backgroundblur").style.transition = "0.3s";
+		}, 600);
+	}, 1000);
+
+	setTimeout(() => {
+		TransparentLogo.style.display = "none";
+		ClassLoading.style.display = "none";
+	}, 1300);
 
 }, 1420);

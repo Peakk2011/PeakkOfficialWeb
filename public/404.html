@@ -25,8 +25,25 @@
 <body>
 
   <iframe src="https://peakk2011.github.io/PeakkOfficialWeb/Frontend/ResourceDesktop/Error/Error.html" frameborder="0"
-    style="border: none; width: 100%; height: 100dvh;"></iframe>
+    style="border: none; width: 100%; height: 100dvh;" id="Errorframe"></iframe>
 
+  <iframe src="https://peakk2011.github.io/PeakkOfficialWeb/Frontend/ResourceDesktop/index.html" frameborder="0"
+    style="border: none; width: 100%; height: 100dvh; display: none;" id="FrameMain"></iframe>
+
+  <script>
+
+    const Errorframe = document.getElementById('Errorframe');
+    const FrameMain = document.getElementById('FrameMain');
+
+    document.addEventListener('domcontentloaded', () => {
+      function RedirectMain() {
+        FrameMain.style.display = 'block';
+        Errorframe.style.display = 'none';
+      }
+      RedirectMain();
+    })
+  </script>
+    
 </body>
 
 </html>

@@ -22,6 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // dynamic navbar color change
 
   var MainNavbar = document.getElementById("MainNavbar");
+  var callinaction = document.getElementById("callinaction");
+
+  MainNavbar.style.transform = "translatey(-100px)";
+  callinaction.style.transform = "translatey(150px)";
+
+  setTimeout(() => {
+    MainNavbar.style.transform = "translatey(0px)";
+    callinaction.style.transform = "translatey(0px)";
+  }, 3000);
 
   function DefaultScroll() {
     if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200) {
@@ -59,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Theme switcher
-
 
   const btn = document.querySelector(".btn-toggle");
   const ResThemeswic = document.querySelector(".ResThemeswic");
@@ -232,7 +240,6 @@ backgroundblur.addEventListener("click", () => {
 
 const Navlink = document.querySelectorAll(".navbarlinks > li > a");
 const PriceLinks = document.querySelectorAll(".PriceBenefit li a");
-const NavlinkBottom = document.querySelectorAll(".navsoc > .navsoccon > li > a");
 const PriceBtnLink = document.querySelectorAll(".PriceTagRecButton a")
 const PeakkofficialExpainText = document.getElementById("PeakkofficialExpainText");
 const WeDoLinks = document.querySelectorAll(".WeDoLinks > li a");
@@ -487,26 +494,6 @@ function CloseOverlayoff() {
   }, 300);
 }
 
-// Add a click event listener to each one
-NavlinkBottom.forEach(NavlinkBottom => {
-  NavlinkBottom.addEventListener('mouseenter', () => {
-    gsap.to(cursorInner, 0.15, {
-      scale: 5,
-    });
-    gsap.to(cursorOuter, 0.2, {
-      scale: 0,
-    });
-  });
-  NavlinkBottom.addEventListener('mouseleave', () => {
-    gsap.to(cursorInner, 0.15, {
-      scale: 1,
-    });
-    gsap.to(cursorOuter, 0.2, {
-      scale: 1,
-    });
-  });
-});
-
 function OpenExpOverlay() {
   document.getElementById("ExpainLinkOverlay").style.display = "block";
   setTimeout(() => {
@@ -678,3 +665,9 @@ const setupButton = (button) => {
 };
 
 ['ctabutton', 'ctatext'].forEach(id => setupButton(document.getElementById(id)));
+
+const CircleHeader = document.getElementById("CircleHeader");
+
+setTimeout(() => {
+  CircleHeader.style.opacity = "20%";
+}, 2500);
