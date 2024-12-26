@@ -19,13 +19,136 @@
 
     body {
       overflow: hidden;
+      background-color: #0f0f0f;
+    }
+    
+    #Frame {
+      border: none;
+      width: 1920px;
+      height: 1080px;
+      max-width: 100%;
+      max-height: 100vh;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 16px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #FrameBlur {
+      border: none;
+      width: 2208px; /* ขนาดใหญ่กว่า 15% */
+      height: 1242px; /* ขนาดใหญ่กว่า 15% */
+      max-width: 100%;
+      max-height: 100vh;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      opacity: 80%;
+      transform: translate(-50%, -50%);
+      filter: blur(500px); /* ทำให้เบลอ */
+      z-index: -1; /* ให้อยู่ด้านล่าง */
+      transition: all 0.3s ease-in-out;
     }
   </style>
 </head>
 
 <body>
-  <iframe src="https://peakk2011.github.io/PeakkOfficialWeb/Frontend/ResourceDesktop/index.html" frameborder="0"
-    style="border: none; width: 100%; height: 100vh;"></iframe>
+  <iframe src="https://peakk2011.github.io/PeakkOfficialWeb/Frontend/ResourceDesktop/index.html" frameborder="0" id="Frame"></iframe>
+  <iframe src="https://peakk2011.github.io/PeakkOfficialWeb/Frontend/ResourceDesktop/index.html" frameborder="0" id="FrameBlur"></iframe>
+
+  <script>
+    function logScreenSize() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const frame = document.getElementById('Frame');
+      const frameBlur = document.getElementById('FrameBlur');
+      const cinematicLighting = document.getElementById('cinematicLighting');
+
+      if (frame && frameBlur) {
+        if (width === 1920 && height === 1080) {
+          console.log('User is using a screen size of 1920x1080');
+          frame.style.width = '1920px';
+          frame.style.height = '1080px';
+          frame.style.borderRadius = '0';
+          frameBlur.style.width = '2208px'; 
+          frameBlur.style.height = '1242px';
+          frameBlur.style.borderRadius = '0';
+          cinematicLighting.style.display = 'none';
+        } else if (width === 1920 && height === 959) {
+          console.log('User is using a screen size of 1920x1080');
+          frame.style.width = '1920px';
+          frame.style.height = '1080px';
+          frame.style.borderRadius = '0';
+          frameBlur.style.width = '2208px'; 
+          frameBlur.style.height = '1242px';
+          frameBlur.style.borderRadius = '0';
+          cinematicLighting.style.display = 'none';
+        } else if (width === 2560 && height === 1319) {
+          console.log('User is using a screen size of 2560x1319');
+          frame.style.width = '100%';
+          frame.style.height = '100vh';
+          frame.style.borderRadius = '0';
+          frameBlur.style.width = '100%';
+          frameBlur.style.height = '100vh';
+          frameBlur.style.borderRadius = '0';
+          cinematicLighting.style.display = 'none';
+        } else if (width > 2560 || height > 1440) {
+          console.log(`Screen size greater than 2560x1440: ${width}x${height}`);
+          frame.style.width = '2560px';
+          frame.style.height = '1440px';
+          frame.style.borderRadius = '14px';
+          frameBlur.style.width = '2944px'; 
+          frameBlur.style.height = '1656px';
+          frameBlur.style.borderRadius = '14px';
+          cinematicLighting.style.display = 'block';
+        } else if (width <= 2560 && height <= 1440) {
+          console.log(`Screen size less than or equal to 2560x1440: ${width}x${height}`);
+          frame.style.width = '100%';
+          frame.style.height = '100vh';
+          frame.style.borderRadius = '0px';
+          frameBlur.style.width = '100%';
+          frameBlur.style.height = '100vh';
+          frameBlur.style.borderRadius = '14px';
+          cinematicLighting.style.display = 'none';
+        } else if (width < 1920 || height < 1080) {
+          console.log(`Current screen size: ${width}x${height}`);
+          frame.style.width = '100%';
+          frame.style.height = '100%';
+          frame.style.borderRadius = '14px';
+          frameBlur.style.width = '100%';
+          frameBlur.style.height = '100%';
+          frameBlur.style.borderRadius = '14px';
+          cinematicLighting.style.display = 'none';
+        } else {
+          frame.style.width = '1920px';
+          frame.style.height = '1080px';
+          frame.style.borderRadius = '14px';
+          frameBlur.style.width = '2208px'; 
+          frameBlur.style.height = '1242px';
+          frameBlur.style.borderRadius = '14px';
+          cinematicLighting.style.display = 'none';
+        }
+      } else {
+        console.error('Cannot find the iframe with id "Frame" or "FrameBlur"');
+      }
+    }
+
+    window.addEventListener('resize', logScreenSize);
+    logScreenSize(); // Initial call to log current size
+
+    // Sync scrolling of both iframes
+    document.getElementById('Frame').addEventListener('load', function() {
+      const frameWindow = this.contentWindow;
+      const frameBlurWindow = document.getElementById('FrameBlur').contentWindow;
+      
+      frameWindow.addEventListener('scroll', function() {
+        const scrollTop = frameWindow.document.documentElement.scrollTop || frameWindow.document.body.scrollTop;
+        frameBlurWindow.scrollTo(0, scrollTop);
+      });
+    });
+  </script>
 </body>
 
 </html>
