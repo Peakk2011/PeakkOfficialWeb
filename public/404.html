@@ -1,49 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cannot find path!</title>
+    <meta charset="UTF-8">
+    <title>Peakkofficial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peakkofficial">
+    <meta name="keywords" content="Peakkofficial">
+    <meta name="author" content="Peakkofficial">
+    <link rel="icon" href="./Frontend/ResourceDesktop/images/favicon.ico" type="image/x-icon">
 
-  <style>
-    *,
-    *::after,
-    *::before {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      overflow: hidden;
-    }
-  </style>
+    <script type="text/javascript">
+        function redirect() {
+            window.location.href = "../Frontend/ResourceDesktop/index.html";
+        }
+        redirect(); // เรียกฟังก์ชัน redirect ทันทีเมื่อโหลดหน้าเว็บ
+    </script>
 
 </head>
-
 <body>
-
-  <iframe src="https://peakk2011.github.io/PeakkOfficialWeb/Frontend/ResourceDesktop/Error/Error.html" frameborder="0"
-    style="border: none; width: 100%; height: 100dvh;" id="Errorframe"></iframe>
-
-  <iframe src="https://peakk2011.github.io/PeakkOfficialWeb/Frontend/ResourceDesktop/index.html" frameborder="0"
-    style="border: none; width: 100%; height: 100dvh; display: none;" id="FrameMain"></iframe>
-
-  <script>
-
-    const Errorframe = document.getElementById('Errorframe');
-    const FrameMain = document.getElementById('FrameMain');
-
-    document.addEventListener('domcontentloaded', () => {
-      function RedirectMain() {
-        FrameMain.style.display = 'block';
-        Errorframe.style.display = 'none';
-      }
-      RedirectMain();
-    })
-  </script>
-    
+    <style>body { background-color: #0c0c0c; }</style>
 </body>
-
 </html>
