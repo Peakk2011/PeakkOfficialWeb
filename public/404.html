@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <title>Peakkofficial</title>
@@ -8,16 +9,21 @@
     <meta name="keywords" content="Peakkofficial">
     <meta name="author" content="Peakkofficial">
     <link rel="icon" href="../Frontend/ResourceDesktop/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #0c0c0c;
+        }
+    </style>
 
     <script type="text/javascript">
         function redirect() {
             window.location.href = "../Frontend/ResourceDesktop/index.html";
         }
-        redirect(); // เรียกฟังก์ชัน redirect ทันทีเมื่อโหลดหน้าเว็บ
+        document.addEventListener("DOMContentLoaded", redirect); // เรียกฟังก์ชัน redirect เมื่อหน้าเว็บโหลดเสร็จ
     </script>
-
-</head>
-<body>
-    <style>body { background-color: #0c0c0c; }</style>
 </body>
+
 </html>
