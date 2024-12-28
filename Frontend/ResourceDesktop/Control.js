@@ -606,66 +606,6 @@ function handleClick(element, displayFrame, openLink) {
 // Add event listeners
 GoToHireAnimExp.addEventListener("click", () => handleClick(GoToHireAnimExp, true));
 GoToinstaAnim.addEventListener("click", () => handleClick(GoToinstaAnim, false, "https://www.instagram.com/peakkofficial/"));
-
-
-// Dynamic cta button hover sticky
-
-const cursorEvents = (EventsCta) => {
-  EventsCta.addEventListener('mouseenter', () => {
-    gsap.to(cursorInner, 0.15, { scale: 7 });
-    gsap.to(cursorOuter, 0.2, { scale: 0 });
-  });
-
-  EventsCta.addEventListener('mouseleave', () => {
-    gsap.to(cursorInner, 0.15, { scale: 1 });
-    gsap.to(cursorOuter, 0.2, { scale: 1 });
-  });
-};
-
-['ctatext', 'ctabutton'].forEach(id => cursorEvents(document.getElementById(id)));
-
-const setupButton = (button) => {
-  let rect, ctr;
-
-  const updateButtonMetrics = () => {
-    rect = button.getBoundingClientRect();
-    ctr = { x: rect.left + (rect.width / 2), y: rect.top + (rect.height / 2) };
-  };
-
-  updateButtonMetrics();
-  window.addEventListener('resize', updateButtonMetrics);
-
-  button.addEventListener('mouseenter', function (e) {
-    let delta_x = (e.clientX - ctr.x) * 5 / rect.width;
-    let delta_y = (e.clientY - ctr.y) * 5 / rect.height;
-    this.setAttribute('style', `transition: all 50ms ease-out; transform: translate(${delta_x}px, ${delta_y}px);`);
-  });
-
-  button.addEventListener('mousemove', function (e) {
-    let delta_x = (e.clientX - ctr.x) * 5 / rect.width;
-    let delta_y = (e.clientY - ctr.y) * 5 / rect.height;
-    this.setAttribute('style', `transition: all 50ms ease-out; transform: translate(${delta_x}px, ${delta_y}px);`);
-  });
-
-  button.addEventListener('mousedown', function (e) {
-    let delta_x = (e.clientX - ctr.x) * 5 / rect.width;
-    let delta_y = (e.clientY - ctr.y) * 5 / rect.height;
-    this.setAttribute('style', `transition: all 50ms ease-out; transform: translate(${delta_x}px, ${delta_y}px);`);
-  });
-
-  button.addEventListener('mouseup', function (e) {
-    let delta_x = (e.clientX - ctr.x) * 5 / rect.width;
-    let delta_y = (e.clientY - ctr.y) * 5 / rect.height;
-    this.setAttribute('style', `transition: all 50ms ease-out; transform: translate(${delta_x}px, ${delta_y}px);`);
-  });
-
-  button.addEventListener('mouseleave', function (e) {
-    this.removeAttribute('style');
-  });
-};
-
-['ctabutton', 'ctatext'].forEach(id => setupButton(document.getElementById(id)));
-
 const CircleHeader = document.getElementById("CircleHeader");
 
 setTimeout(() => {
