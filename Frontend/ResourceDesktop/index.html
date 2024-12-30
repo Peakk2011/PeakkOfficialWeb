@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="localtheme.css">
     <link rel="icon" type="image/x-icon" href="../ResourceDesktop/Image/Present/Newlogo.svg">
     <meta name="viewport"
-        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        content="initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <title>Peakkofficial - Home</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="initialize.css"> -->
     <link rel="stylesheet" href="./Custom.css">
     <link rel="stylesheet" href="./Font.css">
     <link rel="stylesheet" href="./loading.css">
@@ -23,8 +24,8 @@
     <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <!-- Data aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <meta name="description" content="Peakkofficial">
     <meta name="keywords" content="Peakkofficial">
     <meta name="author" content="Peakkofficial">
@@ -134,7 +135,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <h1>พีคออฟฟิเชียล</h1>
+                    <h1 id="Navbartexth1">พีคออฟฟิเชียล</h1>
                 </div>
                 <div class="navbarlinks">
                     <li><a href="javascript:void(0)" id="HighlightNavbar">ภาพรวม</a></li>
@@ -323,7 +324,7 @@
 
         <div class="callinaction" id="callinaction">
             <div class="callinactionwrapper">
-                <div class="callinactioncon">
+                <div class="callinactioncon" id="callinactioncon">
                     <li class="ctatext" id="ctatext">
                         <a href="https://www.instagram.com/peakkofficial" id="Ctatextcontent">ดูข้อมูลเพิ่มเติม</a>
                     </li>
@@ -709,7 +710,7 @@
 
         <div class="footercontent">
 
-            <div class="footerlink">
+            <div class="footerlink" id="footerlink">
                 <li><a href="javascript:void(0)" id="footerhigh">ภาพรวม</a></li>
                 <li><a href="Hire.html">จ้างงาน</a></li>
                 <li><a href="About.html">เกียวกับ</a></li>
@@ -808,6 +809,7 @@
 </script>
 
 <script src="Control.js" defer></script>
+<!-- <script src="initialize.js" defer></script> -->
 <!-- <script src="default.js"></script> -->
 <script src="Falut.js" defer></script>
 <script src="../../eel.js" defer></script>

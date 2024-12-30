@@ -449,6 +449,40 @@ document.getElementById("intromewbtn").addEventListener('mouseleave', () => {
   });
 });
 
+document.getElementById("callinactioncon").addEventListener('mouseenter', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 5,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 0,
+  });
+});
+document.getElementById("callinactioncon").addEventListener('mouseleave', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 1,
+  });
+});
+
+document.getElementById("footerlink").addEventListener('mouseenter', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 5,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 0,
+  });
+});
+document.getElementById("footerlink").addEventListener('mouseleave', () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+  });
+  gsap.to(cursorOuter, 0.2, {
+    scale: 1,
+  });
+});
+
 WeDoLinks.forEach(WeDoLinks => {
   WeDoLinks.addEventListener('mouseenter', () => {
     gsap.to(cursorInner, 0.15, {
@@ -611,3 +645,74 @@ const CircleHeader = document.getElementById("CircleHeader");
 setTimeout(() => {
   CircleHeader.style.opacity = "20%";
 }, 2500);
+
+// 200 1200 3450 5500 7150
+
+// const textnavbar = document.getElementById("Navbartexth1");
+
+// window.addEventListener("scroll", () => {
+//   // ตรวจสอบความกว้างของหน้าจอว่ามากกว่า 1000px หรือไม่
+//   if (window.innerWidth <= 1000) return;
+
+//   const scrollY = window.scrollY;
+
+//   let newContent = "พีคออฟฟิเชียล";
+
+//   if (scrollY >= 6500) newContent = "โปรโมชั่นของพวกเรา";
+//   else if (scrollY >= 5780) newContent = "อยากได้เว็บที่ดีที่สุด";
+//   else if (scrollY >= 4700) newContent = "ราคาเว็บทั้งหมด";
+//   else if (scrollY >= 3450) newContent = "ราคาเว็บไซต์";
+//   else if (scrollY >= 2850) newContent = "พวกเราคือใคร";
+//   else if (scrollY >= 1845) newContent = "สิ่งที่จะทําเสนอ";
+//   else if (scrollY >= 1200) newContent = "จากคนที่รับทําเว็บ";
+
+//   if (textnavbar.textContent !== newContent) {
+//     textnavbar.textContent = newContent;
+//   }
+// });
+
+const textnavbar = document.getElementById("Navbartexth1");
+
+const updateNavbarText = () => {
+  const scrollY = window.scrollY;
+  const windowWidth = window.innerWidth;
+
+  let newContent = "พีคออฟฟิเชียล";
+
+  if (windowWidth > 1000) {
+    newContent = "พีคออฟฟิเชียล";
+    if (scrollY >= 6500) newContent = "โปรโมชั่นของพวกเรา";
+    else if (scrollY >= 5780) newContent = "อยากได้เว็บที่ดีที่สุด";
+    else if (scrollY >= 4700) newContent = "ราคาเว็บทั้งหมด";
+    else if (scrollY >= 3450) newContent = "ราคาเว็บไซต์";
+    else if (scrollY >= 2850) newContent = "พวกเราคือใคร";
+    else if (scrollY >= 1845) newContent = "สิ่งที่จะทําเสนอ";
+    else if (scrollY >= 1200) newContent = "จากคนที่รับทําเว็บ";
+  } else {
+    if (scrollY >= 8000) newContent = "โปรโมชั่นของของเรา";
+    else if (scrollY >= 7100) newContent = "อยากได้เว็บที่ดีที่สุด";
+    else if (scrollY >= 5380) newContent = "ราคาเว็บทั้งหมด";
+    else if (scrollY >= 3400) newContent = "ราคาเว็บไซต์";
+    else if (scrollY >= 2500) newContent = "พวกเราคือใคร";
+    else if (scrollY >= 1425) newContent = "สิ่งที่จะทําเสนอ";
+    else if (scrollY >= 900) newContent = "จากคนที่รับทําเว็บ";
+  }
+
+  if (textnavbar.textContent !== newContent) {
+    textnavbar.textContent = newContent;
+  }
+};
+
+const debounce = (func, wait) => {
+  let timeout;
+  return function () {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, arguments), wait);
+  };
+};
+
+const debouncedUpdate = debounce(updateNavbarText, 0);
+
+window.addEventListener("scroll", () => {
+  requestAnimationFrame(debouncedUpdate);
+});
