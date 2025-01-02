@@ -7,7 +7,7 @@
 
 .Loading {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgb(253, 253, 243);
     /* Other */
     position: fixed;
@@ -49,7 +49,7 @@
 
     .Loading {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: rgb(4, 4, 4);
         /* Other */
         position: fixed;

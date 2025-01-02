@@ -26,10 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   MainNavbar.style.transform = "translatey(-100px)";
   callinaction.style.transform = "translatey(150px)";
+  MainNavbar.style.opacity = "0";
+  callinaction.style.opacity = "0";
 
   setTimeout(() => {
     MainNavbar.style.transform = "translatey(0px)";
     callinaction.style.transform = "translatey(0px)";
+    MainNavbar.style.opacity = "1";
+    callinaction.style.opacity = "1";
   }, 3000);
 
   function DefaultScroll() {

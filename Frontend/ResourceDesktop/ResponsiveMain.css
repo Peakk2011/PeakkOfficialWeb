@@ -1,3 +1,11 @@
+@media screen and (max-height:500px) and (orientation:landscape) {
+
+    * {
+        display: none;
+    }
+   
+}
+
 .iconsRes {
     color: #ffffe9;
     display: none;
@@ -920,12 +928,21 @@ body.dark-theme #backgroundblur {
 
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 430px) {
 
     .callinaction {
         background-color: transparent;
         backdrop-filter: blur(3px);
         -webkit-backdrop-filter: blur(3px);
+        scale: 0.85;
+    }
+
+}
+
+@media only screen and (max-width: 380px) {
+
+    .callinaction {
+        scale: 0.8;
     }
 
 }

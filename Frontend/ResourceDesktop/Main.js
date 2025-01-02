@@ -1,109 +1,88 @@
-// Theme switcher
-
-const btn = document.querySelector(".btn-toggle");
-const ResThemeswic = document.querySelector(".ResThemeswic");
-const ResThemeswic2 = document.querySelector(".ResThemeswic2");
-
-// theme toggle
-
-btn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-theme");
-
-    let theme = "light";
-    if (document.body.classList.contains("dark-theme")) {
-        theme = "dark";
-        // console.log("dark mode is active");
-    } else {
-        console.log("dark mode is active");
-    }
-
-    localStorage.setItem("theme", theme);
-
-    applyNavbarStyles(theme);
-});
-
-ResThemeswic.addEventListener("click", function () {
-    document.body.classList.toggle("dark-theme");
-
-    let theme = "light";
-    if (document.body.classList.contains("dark-theme")) {
-        theme = "dark";
-    }
-    localStorage.setItem("theme", theme);
-
-    applyNavbarStyles(theme);
-});
-
-ResThemeswic2.addEventListener("click", function () {
-    document.body.classList.toggle("dark-theme");
-
-    let theme = "light";
-    if (document.body.classList.contains("dark-theme")) {
-        theme = "dark";
-        // console.log("dark mode is active");
-    } else {
-        console.log("dark mode is active");
-    }
-
-    localStorage.setItem("theme", theme);
-
-    applyNavbarStyles(theme);
-});
-
-// Sidebar toggle
-
-const iconsRes = document.getElementById("iconsRes");
-const SidebarNew = document.getElementById("SidebarNew");
-const backgroundblur = document.getElementById("backgroundblur");
-const SidebarIns = document.getElementById("SidebarCon");
-
-iconsRes.addEventListener("click", () => {
-  backgroundblur.style.display = "block";
-  SidebarNew.style.transform = "translateX(0px)";
-  setTimeout(() => {
-    SidebarIns.style.transform = "translateX(0px)";
-    SidebarIns.style.opacity = "1";
-    SidebarIns.style.filter = "blur(0px)";
-  }, 650);
-  setTimeout(() => {
-    backgroundblur.style.opacity = "1";
-  }, 100);
-})
-
-backgroundblur.addEventListener("click", () => {
-  // backgroundblur.style.transform = "translateX(-100%)";
-  SidebarNew.style.transform = "translateX(-300px)"
-  backgroundblur.style.opacity = "0";
-
-  setTimeout(() => {
-    SidebarIns.style.transform = "translateX(-50px)";
-    SidebarIns.style.opacity = "0";
-    SidebarIns.style.filter = "blur(5px)";
-
-    setTimeout(() => {
-      backgroundblur.style.display = "none";
-    }, 400);
-  }, 30);
-})
-
-const Navlink = document.querySelectorAll(".navbarlinks > li > a");
-
-// Add a click event listener to each one
-Navlink.forEach(Navlink => {
-    Navlink.addEventListener('mouseenter', () => {
-      gsap.to(cursorInner, 0.15, {
-        scale: 5,
-      });
-      gsap.to(cursorOuter, 0.2, {
-        scale: 0,
-      });
-    });
-    Navlink.addEventListener('mouseleave', () => {
-      gsap.to(cursorInner, 0.15, {
-        scale: 1,
-      });
-      gsap.to(cursorOuter, 0.2, {
-        scale: 1,
-      });
-    });
+// Hover effects
+const gsapHoverEffect = (element, scaleIn, scaleOut) => {
+  element.addEventListener('mouseenter', () => {
+    gsap.to(cursorInner, 0.15, { scale: scaleIn });
+    gsap.to(cursorOuter, 0.2, { scale: 0 });
   });
+  element.addEventListener('mouseleave', () => {
+    gsap.to(cursorInner, 0.15, { scale: scaleOut });
+    gsap.to(cursorOuter, 0.2, { scale: 1 });
+  });
+};
+
+const addHoverEffects = () => {
+  document.querySelectorAll(".navbarlinks > li > a").forEach(link => gsapHoverEffect(link, 5, 1));
+  gsapHoverEffect(document.getElementById("Pkidbutton"), 5, 1);
+  gsapHoverEffect(document.getElementById("Ytpeakkofficial"), 0, 1);
+  gsapHoverEffect(document.getElementById("Navbarlinkshover"), 0, 1);
+};
+
+addHoverEffects();
+
+// Sidebartoggle
+
+const backgroundBlur = document.getElementById("backgroundblur");
+const headerSidebar = document.getElementById("Headersidebar");
+let isAnimating = false;
+
+function toggleDisplay() {
+    if (isAnimating) return;
+    isAnimating = true;
+    
+    const isVisible = headerSidebar.style.transform === "translateX(0px)";
+    if (isVisible) {
+        headerSidebar.style.transition = "transform 500ms cubic-bezier(0.4, 0.0, 0.2, 1)";
+        headerSidebar.style.transform = "translateX(-300px)";
+        setTimeout(() => {
+            backgroundBlur.style.transition = "transform 750ms cubic-bezier(0.4, 0.0, 0.2, 1)";
+            requestAnimationFrame(() => {
+                backgroundBlur.style.transform = "translateX(-100vw)";
+            });
+            setTimeout(() => {
+                backgroundBlur.style.display = "none";
+                backgroundBlur.style.opacity = 0;
+                isAnimating = false;
+            }, 750);
+        }, 500); // Delay before hiding backgroundBlur
+    } else {
+        backgroundBlur.style.display = "block";
+        backgroundBlur.style.transition = "transform 750ms cubic-bezier(0.4, 0.0, 0.2, 1)";
+        requestAnimationFrame(() => {
+            backgroundBlur.style.transform = "translateX(0)";
+            backgroundBlur.style.opacity = 1;
+        });
+        setTimeout(() => {
+            headerSidebar.style.transition = "transform 500ms cubic-bezier(0.4, 0.0, 0.2, 1)";
+            headerSidebar.style.transform = "translateX(0px)";
+            isAnimating = false;
+        }, 750); // Delay to ensure backgroundBlur reaches 100% before showing headerSidebar
+    }
+}
+
+HamburEvents.addEventListener("click", () => {
+    toggleDisplay();
+    backgroundBlur.addEventListener("click", toggleDisplay, { once: true });
+});
+
+
+// Sidebar hover click effect
+
+document.querySelectorAll('.hdsbcnlk li a').forEach(function (element) {
+  element.addEventListener('click', function (event) {
+    event.stopPropagation();
+    if (this.classList.contains('clicked')) {
+      this.classList.remove('clicked');
+    } else {
+      document.querySelectorAll('.hdsbcnlk li a').forEach(function (el) {
+        el.classList.remove('clicked');
+      });
+      this.classList.add('clicked');
+    }
+  });
+});
+
+document.addEventListener('click', function () {
+  document.querySelectorAll('.hdsbcnlk li a').forEach(function (el) {
+    el.classList.remove('clicked');
+  });
+});
