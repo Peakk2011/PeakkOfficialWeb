@@ -15,6 +15,8 @@ body {
     pointer-events: none;
     z-index: 50;
     transition: none;
+    -webkit-transition: none; /* Safari */
+    -moz-transition: none; /* Firefox */
 }
 
 .cursor--large {
@@ -79,6 +81,8 @@ nav {
 @keyframes fadeDown {
     0% {
         transform: translateY(-100px);
+        -webkit-transform: translateY(-100px); /* Safari */
+        -moz-transform: translateY(-100px); /* Firefox */
         filter: blur(10px);
     }
 }
@@ -171,6 +175,8 @@ nav {
         position: absolute;
         background: #ffffe9;
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s; /* Safari */
+        -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s; /* Firefox */
         width: 0;
     }
 
@@ -195,12 +201,16 @@ body.dark-theme .navbarlinks li a:after {
     position: absolute;
     background: #000;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s; /* Safari */
+    -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s; /* Firefox */
     width: 0;
 }
 
 body.dark-theme .navbarlinks li a:hover {
     color: #000;
     cursor: pointer;
+    -webkit-cursor: pointer; /* Safari */
+    -moz-cursor: pointer; /* Firefox */
 }
 
 #TextSecContach {
@@ -425,7 +435,7 @@ header {
 
         &.links li a {
             color: #444;
-            font-family: lineseedregular;
+            font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             height: 55px;
             display: flex;
             /* define center of links */
@@ -622,4 +632,152 @@ header {
 
 body.dark-theme #backgroundblur {
     background-color: rgba(255, 255, 233, 0.650);
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 1165px;
+    border: solid 1px #222;
+
+    .secwhyweb {
+        display: flex;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+.secwhywbimg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.secwhywbimg svg {
+    max-width: 45vw;
+    width: 750px;
+    min-width: 650px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.secwhywebtext {
+
+
+    &.secwhywebtext span {
+        padding: 0.35rem 1rem;
+        color: #ffffE9;
+        letter-spacing: 0px;
+        font-size: 16px;
+        background-color: #242424;
+        display: block;
+        width: fit-content;
+        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+        border-radius: 50px;
+        border: solid 1px #343434;
+        margin-top: 6rem;
+    }
+
+    &.secwhywebtext h1 {
+        color: rgb(255, 255, 255);
+        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+        font-size: 46.5px;
+        line-height: 1.4;
+        margin-top: 1.5rem;
+        font-weight: 500;
+        letter-spacing: -1.1px;
+    }
+
+    &.secwhywebtext h1 strong {
+        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+        font-weight: 800;
+        color: #ffffE9;
+        border-bottom: solid 2px currentColor;
+    }
+
+    &.secwhywebtext p {
+        color: #fff;
+        opacity: 0.5;
+        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+        font-size: 16px;
+        margin-top: 1.4rem;
+        line-height: 1.7;
+        letter-spacing: -0.3px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.secwhywebabcon {
+    margin-top: 4.5rem;
+}
+
+.secwhywebabtext {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 2rem;
+
+    .secwybxticon ion-icon {
+        font-size: 28px;
+        color: #ffffe9;
+    }
+
+    .secwhywebabtextcon {
+
+        &.secwhywebabtextcon h1,p {
+            color: #ffffe9;
+            font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+            line-height: 1.8;
+            letter-spacing: -0.3px;
+        }
+        
+        &.secwhywebabtextcon h1 {
+            font-size: 22px;
+            margin-bottom: 0.5rem;
+        }
+        
+        &.secwhywebabtextcon p {
+            color: #fff;
+            opacity: 0.45;
+            margin-bottom: 1.25rem;
+        }
+
+        &.secwhywebabtextcon a {
+            color: #000;
+            font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+            margin-top: 0.75rem;
+            display: block;
+            width: fit-content;
+            padding: 0.3rem 1.25rem;
+            background-color: #ffffE9;
+            border-radius: 50px;
+        }
+
+    }
+
+}
+
+.whyweb {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.whywebimg {
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    transition: none;
+}
+
+.whywebimg img {
+    width: 100%;
+    z-index: 1;
+    transition: none;
 }

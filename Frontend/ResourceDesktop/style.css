@@ -9,6 +9,8 @@
     box-sizing: border-box;
     margin: 0;
     transition: all 0.5s;
+    -webkit-transition: all 0.5s; /* Safari */
+    -moz-transition: all 0.5s; /* Firefox */
     /* cursor: none; */
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
@@ -27,6 +29,8 @@
     pointer-events: none;
     z-index: 50;
     transition: none;
+    -webkit-transition: none; /* Safari */
+    -moz-transition: none; /* Firefox */
 }
 
 .cursor--large {
@@ -299,12 +303,16 @@ body.dark-theme .circles li {
 
     0% {
         transform: translateY(0) rotate(0deg);
+        -webkit-transform: translateY(0) rotate(0deg); /* Safari */
+        -moz-transform: translateY(0) rotate(0deg); /* Firefox */
         opacity: 1;
         border-radius: 0;
     }
 
     100% {
         transform: translateY(-1600px) rotate(720deg);
+        -webkit-transform: translateY(-1600px) rotate(720deg); /* Safari */
+        -moz-transform: translateY(-1600px) rotate(720deg); /* Firefox */
         opacity: 0.9;
         border-radius: 5%;
     }
@@ -400,6 +408,8 @@ nav {
         position: absolute;
         background: #ffffe9;
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s; /* Safari */
+        -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s; /* Firefox */
         width: 0;
     }
 
@@ -411,6 +421,8 @@ nav {
     &.navbarlinks li a:hover {
         color: #ffffe9;
         cursor: pointer;
+        -webkit-cursor: pointer; /* Safari */
+        -moz-cursor: pointer; /* Firefox */
     }
 }
 
@@ -424,12 +436,16 @@ body.dark-theme .navbarlinks li a:after {
     position: absolute;
     background: #000;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s; /* Safari */
+    -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s; /* Firefox */
     width: 0;
 }
 
 body.dark-theme .navbarlinks li a:hover {
     color: #000;
     cursor: pointer;
+    -webkit-cursor: pointer; /* Safari */
+    -moz-cursor: pointer; /* Firefox */
 }
 
 #TextSecContach {

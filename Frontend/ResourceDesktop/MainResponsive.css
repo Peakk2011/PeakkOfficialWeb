@@ -128,3 +128,50 @@ body.dark-theme .iconsRes {
     }
 
 }
+
+/* Main section */
+
+@media (max-width: 1460px) {
+
+    .secwhyweb {
+        max-width: 100% !important;
+        padding: 0rem 2rem;
+    }
+
+}
+
+@media (max-width: 1105px) {
+
+    .secwhywbimg svg {
+        min-width: 320px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .secwhywbimg svg {
+        display: none;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .secwhywebtext h1 {
+        font-size: 10vw !important;
+    }
+
+    .secwhywebtext p {
+        font-size: 3.7vw !important;
+    }
+
+    .secwhywebabtextcon p {
+        font-size: 3.22vw;
+    }
+
+    section {
+        height: 1080px;
+    }
+
+}
