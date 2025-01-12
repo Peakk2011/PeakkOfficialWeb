@@ -15,8 +15,10 @@ body {
     pointer-events: none;
     z-index: 50;
     transition: none;
-    -webkit-transition: none; /* Safari */
-    -moz-transition: none; /* Firefox */
+    -webkit-transition: none;
+    /* Safari */
+    -moz-transition: none;
+    /* Firefox */
 }
 
 .cursor--large {
@@ -81,8 +83,10 @@ nav {
 @keyframes fadeDown {
     0% {
         transform: translateY(-100px);
-        -webkit-transform: translateY(-100px); /* Safari */
-        -moz-transform: translateY(-100px); /* Firefox */
+        -webkit-transform: translateY(-100px);
+        /* Safari */
+        -moz-transform: translateY(-100px);
+        /* Firefox */
         filter: blur(10px);
     }
 }
@@ -175,8 +179,10 @@ nav {
         position: absolute;
         background: #ffffe9;
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s; /* Safari */
-        -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s; /* Firefox */
+        -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        /* Safari */
+        -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        /* Firefox */
         width: 0;
     }
 
@@ -201,16 +207,20 @@ body.dark-theme .navbarlinks li a:after {
     position: absolute;
     background: #000;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s; /* Safari */
-    -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s; /* Firefox */
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    /* Safari */
+    -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    /* Firefox */
     width: 0;
 }
 
 body.dark-theme .navbarlinks li a:hover {
     color: #000;
     cursor: pointer;
-    -webkit-cursor: pointer; /* Safari */
-    -moz-cursor: pointer; /* Firefox */
+    -webkit-cursor: pointer;
+    /* Safari */
+    -moz-cursor: pointer;
+    /* Firefox */
 }
 
 #TextSecContach {
@@ -452,12 +462,13 @@ header {
             height: 2px;
             left: 50%;
             position: absolute;
-            background: #ccc;
+            background: #ffffe9;
             transition: width 0.3s ease 0s, left 0.3s ease 0s;
             width: 0;
         }
 
-        &.links li a:hover:after {
+        &.links li a:hover:after,
+        &.links li a.highlight:after {
             width: 100%;
             left: 0;
         }
@@ -465,6 +476,10 @@ header {
         &.links li a:hover {
             color: #ccc;
             cursor: pointer;
+        }
+
+        &.links li a.highlight {
+            color: #ffffe9;
         }
 
     }
@@ -549,7 +564,7 @@ header {
 
     .hdcntlt ion-icon {
         font-size: 23.5px;
-        transform: translate(1px,0px);
+        transform: translate(1px, 0px);
         color: #ffffe9;
     }
 
@@ -726,18 +741,19 @@ section {
 
     .secwhywebabtextcon {
 
-        &.secwhywebabtextcon h1,p {
+        &.secwhywebabtextcon h1,
+        p {
             color: #ffffe9;
             font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             line-height: 1.8;
             letter-spacing: -0.3px;
         }
-        
+
         &.secwhywebabtextcon h1 {
             font-size: 22px;
             margin-bottom: 0.5rem;
         }
-        
+
         &.secwhywebabtextcon p {
             color: #fff;
             opacity: 0.45;
@@ -759,25 +775,134 @@ section {
 
 }
 
-.whyweb {
-    height: 100vh;
+.detailsWeb {
+    height: 1440px;
     width: 100%;
     position: relative;
     overflow: hidden;
+
+    .DeWbcon {
+        max-width: 1100px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .DeWbtxt h1 {
+        color: #ffffe9;
+        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+        font-size: 46.5px;
+        line-height: 1.4;
+        font-weight: 500;
+        letter-spacing: -1.1px;
+    }
+
+    .DeWbtxt p {
+        color: #fff;
+        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+        font-size: 20px;
+        margin-top: 1.25rem;
+        letter-spacing: -0.3px;
+        opacity: 30%;
+    }
+
+    .DoWbimg {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        &.DoWbimg img {
+            width: 420px;
+            margin-top: 2.60rem;
+            object-fit: cover;
+            border-radius: 40px !important;
+            pointer-events: none;
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    .DeWbDes p {
+        color: #fff;
+        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+        font-size: 20px;
+        margin-top: 1.25rem;
+        opacity: 30%;
+    }
+
+    .DeWbDes a {
+        padding: 0.5rem 1.25rem;
+        background-color: #ffffE9;
+        color: #000;
+        border-radius: 25px;
+        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+        display: inline-block;
+        margin-top: 2.25rem;
+    }
+
+    #mbDeWbDes {
+        display: none;
+    }
 }
 
-.whywebimg {
-    object-fit: cover;
+.whyweb {
+    height: 1080px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #111010;
+    border-top: solid 1px #222;
+}
+
+.whywebcon {
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 1;
-    transition: none;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: auto;
+
+    .whywebtxt h1 {
+        color: #fff;
+        font-weight: 400;
+        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+        letter-spacing: -0.5px;
+        font-size: 42px;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .whywebtxt strong {
+        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+        font-weight: 800;
+        color: #ffffe9;
+        border-bottom: solid 2px currentColor;
+    }
 }
 
 .whywebimg img {
-    width: 100%;
+    width: 1000px;
     z-index: 1;
     transition: none;
+}
+
+.whywebimgmb svg {
+    display: none;
+    border-radius: 20px;
+}
+
+.whywebbtn {
+    text-align: center;
+}
+
+.whywebbtn a {
+    color: #000;
+    background-color: #ffffe9;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+    display: inline-block;
+    margin-top: 2.25rem;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -61,6 +61,14 @@ nav {
     z-index: 10;
 }
 
+.scrolled {
+    border-bottom: solid 1px #161616;
+}
+
+body.dark-theme .scrolled {
+    border-bottom: solid 1px #f1f1f1;
+}
+
 .Navbar {
     height: 60px;
     display: flex;
@@ -83,7 +91,7 @@ nav {
 
     &.NavLogo h1 {
         font-size: 19.5px;
-        letter-spacing: -0.8px;
+        letter-spacing: -0.4px;
         /* font-family: Inter; */
         font-family: "LineSeedRegular", sans-serif;
         color: #ffffe9;
@@ -188,11 +196,11 @@ body.dark-theme header {
 
 header {
     background-color: #070707;
-    height: 1000px;
+    height: 1080px;
     width: 100dvw;
     position: relative;
     z-index: 3;
-    border-bottom: solid 1px #161717;
+    border-bottom: solid 1px #222;
 }
 
 .headerNavbartop {
@@ -845,95 +853,55 @@ body.dark-theme .StrImage img {
     border: solid 1px #000;
 }
 
-/* New navbar */
-/* NewbottonNav */
-
-body.dark-theme .navsoc {
-    background-color: rgba(255, 255, 249, 0.800);
-    border: solid 1px #000;
-}
-
-body.dark-theme .navsoccon li a {
-    color: #000 !important;
-}
-
-body.dark-theme .navsoc::after {
-    background-color: #000;
-    mix-blend-mode: difference;
-}
-
-body.dark-theme .navbarbot {
-    background-color: rgba(255, 255, 249, 0.870);
-}
-
-.navbarbot {
-    display: none;
-    position: fixed;
+.cta {
+    position: absolute;
+    min-width: auto;
     width: 100%;
-    height: 130px;
-    background-color: rgba(8, 8, 8, 0.860);
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
-    bottom: 0;
-    z-index: 5;
-    /* border-top: solid 1px #222; */
-}
+    bottom: 12.5px;
 
-.navsoc {
-    position: fixed;
-    bottom: 35px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    background-color: #0a0a0a;
-    border: solid 1px #222;
-    margin: 0 auto;
-    border-radius: 50px;
-    transition: 0.4s all;
-    z-index: 5;
-
-    .navsoccon {
-        margin: 0 auto;
+    .ctacon {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        width: 180px;
         height: 50px;
-        width: 170px;
+        margin: 0 auto;
+        background-color: #0f0f0f;
+        border-radius: 50px;
+        border: solid 1px #222;
+    }
 
-        &.navsoccon li a {
-            display: block;
-            width: 50px;
-            text-align: center;
+    .definectalinks {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 180px;
+
+        &.definectalinks ion-icon {
             color: #ffffE9;
-            font-family: "inter tight";
-            font-size: 22px;
-            height: 50px;
-            line-height: 50px;
-            transition: 0.4s;
-        }
-
-        &.navsoccon li a:hover,
-        .navsoccon ion-icon {
-            background-color: #ffffE9;
-            color: #000;
-            border-radius: 70px;
-        }
-
-        &.navsoccon ion-icon {
+            font-size: 22.5px;
             transform: translateY(3px);
         }
     }
 }
 
-.navsoc::after {
-    content: "";
-    position: absolute;
-    background-color: #ffffE9;
-    width: 100px;
-    height: 4px;
-    border-radius: 20px;
-    bottom: 0;
-    top: 50%;
-    transform: translate(50%, 2.5rem);
-    mix-blend-mode: difference;
+.definectatext p {
+    color: #363636;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 16px;
+    font-family: "lineseedregular", sans-serif;
+}
+
+body.dark-theme .definectalinks ion-icon {
+    color: #000 !important;
+}
+
+body.dark-theme .ctacon {
+    background-color: transparent;
+    border: solid 1px #e3e3e3;
+}
+
+body.dark-theme .definectatext p {
+    color: #adadad;
 }

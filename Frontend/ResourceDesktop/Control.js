@@ -720,3 +720,23 @@ const debouncedUpdate = debounce(updateNavbarText, 0);
 window.addEventListener("scroll", () => {
   requestAnimationFrame(debouncedUpdate);
 });
+
+let overlaycontent = document.getElementById('Pkofficialoverlay');
+
+function FunctionOverlayHandle() {
+  overlaycontent.style.backgroundColor = "rgba(0, 0, 0)";
+  overlaycontent.style.transform = "translateY(0)";
+  setTimeout(() => {
+    overlaycontent.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+  }, 600);
+}
+
+function FunctionOverlayHandleClose() {
+  overlaycontent.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+  overlaycontent.style.transition = "1s";
+  overlaycontent.style.transform = "translateY(-100vh)";
+  setTimeout(() => {
+    overlaycontent.style.backgroundColor = "rgba(0, 0, 0)";
+    overlaycontent.style.transition = "0.85s";
+  }, 600);
+}

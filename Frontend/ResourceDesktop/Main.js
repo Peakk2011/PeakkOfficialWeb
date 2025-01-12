@@ -64,70 +64,53 @@ HamburEvents.addEventListener("click", () => {
   backgroundBlur.addEventListener("click", toggleDisplay, { once: true });
 });
 
-// Sidebar hover click effect
+// Cache DOM elements
+const links = document.querySelectorAll('.links li a');
+const navbar = document.getElementById('Highlightheader');
+const sidebarLinks = document.querySelectorAll('.hdsbcnlk li a');
 
-document.querySelectorAll('.hdsbcnlk li a').forEach(function (element) {
-  element.addEventListener('click', function (event) {
+// Sidebar hover click effect
+sidebarLinks.forEach(element => {
+  element.addEventListener('click', event => {
     event.stopPropagation();
-    if (this.classList.contains('clicked')) {
-      this.classList.remove('clicked');
-    } else {
-      document.querySelectorAll('.hdsbcnlk li a').forEach(function (el) {
-        el.classList.remove('clicked');
-      });
-      this.classList.add('clicked');
-    }
+    sidebarLinks.forEach(el => el.classList.remove('clicked'));
+    element.classList.toggle('clicked');
   });
 });
 
-document.addEventListener('click', function () {
-  document.querySelectorAll('.hdsbcnlk li a').forEach(function (el) {
-    el.classList.remove('clicked');
-  });
+document.addEventListener('click', () => {
+  sidebarLinks.forEach(el => el.classList.remove('clicked'));
+});
+
+// Close sidebar and background blur when link is clicked
+sidebarLinks.forEach(element => {
+  element.addEventListener('click', toggleDisplay);
 });
 
 // Change header text on scroll
+const updateNavbar = () => {
+  navbar.textContent = window.scrollY >= window.innerHeight ? 'มีเว็บไซต์เพื่ออะไร' : 'หน้าแรก 2025';
+};
 
-window.addEventListener('scroll', function () {
-  let navbar = document.getElementById('Highlightheader');
+// Check header large screen
+const updateNavbarLargeScreen = () => {
+  document.querySelector('.highlight')?.classList.remove('highlight');
   if (window.scrollY >= window.innerHeight) {
-    navbar.textContent = 'มีเว็บไซต์เพื่ออะไร';
+    links[1]?.classList.add('highlight');
+    setDefaultNavbarProperties();
   } else {
-    navbar.textContent = 'หน้าแรก 2025';
+    Object.assign(navbar.style, { color: '#ffffe9', borderBottom: "solid 2px #ffffe9" });
   }
-});
+};
 
-// Close sidebar and backgroundblur when link is clicked
-document.querySelectorAll('.hdsbcnlk li a').forEach(function (element) {
-  element.addEventListener('click', function () {
-    toggleDisplay();
-  });
-});
+const setDefaultNavbarProperties = () => {
+  Object.assign(navbar.style, { color: '#444', borderBottom: "none" });
+};
 
-// Scale image when scroll
-window.addEventListener('scroll', function () {
-  const image = document.getElementById('Imagetoscale');
-  const section = document.getElementById('whyweb');
+// Handle scroll and resize events
+const handleScroll = () => window.innerWidth < 1460 ? updateNavbar() : updateNavbarLargeScreen();
 
-  if (image && section) {
-    const sectionTop = section.getBoundingClientRect().top;
-    const sectionHeight = section.offsetHeight;
-    const windowHeight = window.innerHeight;
-
-    // Calculate the scale factor based on scroll position
-    const initialScale = 2; // Initial scale value when image is full screen
-    const minScale = 1; // Minimum scale value
-    let scaleFactor = initialScale;
-
-    if (sectionTop < windowHeight && sectionTop + sectionHeight > 0) {
-      const scrollPosition = windowHeight - sectionTop;
-      scaleFactor = initialScale - ((scrollPosition / sectionHeight) * (initialScale - minScale));
-      if (scaleFactor < minScale) {
-        scaleFactor = minScale; // Limit to minimum scale
-      }
-    }
-
-    // Set the transform property to scale the image
-    image.style.transform = `scale(${scaleFactor})`;
-  }
-});
+// Initial check when the page loads
+handleScroll();
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('resize', handleScroll);
