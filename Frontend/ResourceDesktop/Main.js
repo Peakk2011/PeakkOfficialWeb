@@ -94,9 +94,18 @@ const updateNavbar = () => {
 
 // Check header large screen
 const updateNavbarLargeScreen = () => {
-  document.querySelector('.highlight')?.classList.remove('highlight');
-  if (window.scrollY >= window.innerHeight) {
-    links[1]?.classList.add('highlight');
+  const highlightClass = 'highlight';
+  document.querySelectorAll(`.${highlightClass}`).forEach(el => el.classList.remove(highlightClass));
+
+  const targetSection = document.getElementById('whyweb');
+  const navbarHeight = document.querySelector('nav').offsetHeight;
+
+  if (targetSection && window.scrollY >= targetSection.offsetTop - navbarHeight) {
+    // Assuming links[2] corresponds to the target section link
+    links[2]?.classList.add(highlightClass);
+    setDefaultNavbarProperties();
+  } else if (window.scrollY >= window.innerHeight) {
+    links[1]?.classList.add(highlightClass);
     setDefaultNavbarProperties();
   } else {
     Object.assign(navbar.style, { color: '#ffffe9', borderBottom: "solid 2px #ffffe9" });
@@ -104,7 +113,7 @@ const updateNavbarLargeScreen = () => {
 };
 
 const setDefaultNavbarProperties = () => {
-  Object.assign(navbar.style, { color: '#444', borderBottom: "none" });
+  Object.assign(navbar.style, { color: '#616161', borderBottom: "none" });
 };
 
 // Handle scroll and resize events

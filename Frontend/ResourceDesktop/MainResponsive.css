@@ -25,6 +25,18 @@ body.dark-theme .iconsRes {
     .cursor {
         display: none;
     }
+
+    /* add navbar */
+
+    .Navbar {
+        max-width: 100% !important;
+        padding: 2.5rem 2rem;
+    }
+
+    .NavLogo svg {
+        width: 122.5px !important;
+    }
+
 }
 
 @media (max-width: 1000px) {
@@ -204,6 +216,7 @@ body.dark-theme .iconsRes {
         width: 300px !important;
         margin-top: 3rem !important;
         margin-bottom: 3rem !important;
+        scroll-snap-align: start;
     }
 
 }
