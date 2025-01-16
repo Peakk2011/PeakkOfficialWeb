@@ -70,7 +70,7 @@ nav {
 .navbarlinks {
     display: flex;
     align-items: center;
-    gap: 22.5px;
+    gap: 16.5px;
     height: 55px;
     width: 100%;
     justify-content: end;
@@ -78,7 +78,7 @@ nav {
     &.navbarlinks li a {
         padding: 1.1rem 0rem;
         color: #cecece;
-        font-size: 14.5px;
+        font-size: 13.5px;
         position: relative;
         transition: all 0.25s;
         /* font-family: "Inter Tight", sans-serif; */

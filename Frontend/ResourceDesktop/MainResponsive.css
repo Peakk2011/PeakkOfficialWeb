@@ -183,7 +183,8 @@ body.dark-theme .iconsRes {
     }
 
     section {
-        height: 1080px;
+        height: 1100px;
+        min-height: 1100px;
     }
 
 }
@@ -198,18 +199,23 @@ body.dark-theme .iconsRes {
 
 }
 
-@media (max-width: 965px) {
-
-    .DeWbcon {
-        max-width: 100% !important;
-        padding: 0rem 2rem;
-    }
+@media (max-width: 1920px) {
 
     .DoWbimg {
         position: relative !important;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         overscroll-behavior-x: contain;
+        overflow-x: scroll;
+    }
+
+}
+
+@media (max-width: 1460px) {
+
+    .DeWbcon {
+        max-width: 100% !important;
+        padding: 0rem 2rem;
     }
 
     .DoWbimg img {

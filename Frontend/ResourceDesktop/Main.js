@@ -123,3 +123,81 @@ const handleScroll = () => window.innerWidth < 1460 ? updateNavbar() : updateNav
 handleScroll();
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('resize', handleScroll);
+
+// Image hover && drag to scroll
+
+const container = document.querySelector('.DoWbimg');
+
+let startY;
+let startX;
+let scrollLeft;
+let scrollTop;
+let isDown = false;
+
+container.addEventListener('mousedown', mouseIsDown);
+container.addEventListener('mouseup', mouseUp);
+container.addEventListener('mouseleave', mouseLeave);
+container.addEventListener('mousemove', mouseMove);
+
+function mouseIsDown(e) {
+  isDown = true;
+  startY = e.pageY - container.offsetTop;
+  startX = e.pageX - container.offsetLeft;
+  scrollLeft = container.scrollLeft;
+  scrollTop = container.scrollTop;
+}
+
+function mouseUp() {
+  isDown = false;
+}
+
+function mouseLeave() {
+  isDown = false;
+}
+
+function mouseMove(e) {
+  if (!isDown) return; // ถ้าไม่ได้กดเมาส์ค้างไว้ ให้หยุดการทำงาน
+  e.preventDefault();
+
+  // Move vertically
+  const y = e.pageY - container.offsetTop;
+  const walkY = y - startY;
+  container.scrollTop = scrollTop - walkY;
+
+  // Move Horizontally
+  const x = e.pageX - container.offsetLeft;
+  const walkX = x - startX;
+  container.scrollLeft = scrollLeft - walkX;
+}
+
+let ImagesHover = document.querySelectorAll('.DoWbImagecon');
+
+const imghover = (event) => {
+  if (window.innerWidth >= 1460) {
+    event.target.style.outline = "solid 2px #343434";
+    gsap.to(cursorInner, 0.15, {
+      scale: 0,
+    });
+    gsap.to(cursorOuter, 0.2, {
+      scale: 0,
+    });
+  }
+};
+
+const Exitimghover = (event) => {
+  if (window.innerWidth >= 1460) {
+    event.target.style.outline = "solid 0px #242424";
+    gsap.to(cursorInner, 0.15, {
+      scale: 1,
+    });
+    gsap.to(cursorOuter, 0.2, {
+      scale: 1,
+    });
+  }
+};
+
+// Add Event Listener to each image
+ImagesHover.forEach(image => {
+  image.addEventListener('mouseenter', imghover);
+  image.addEventListener('mouseleave', Exitimghover);
+});
