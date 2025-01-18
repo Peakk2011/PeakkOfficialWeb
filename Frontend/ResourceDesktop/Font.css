@@ -85,6 +85,16 @@
 }
 
 @font-face {
+    font-family: FCiconic;
+    src: url(./Font/FC\ Iconic\ Regular.otf);
+}
+
+@font-face {
+    font-family: FCiconicBold;
+    src: url(./Font/FC\ Iconic\ Bold.ttf);
+}
+
+@font-face {
     font-family: Haerins;
     src: url(./Font/Haerins.otf);
 }

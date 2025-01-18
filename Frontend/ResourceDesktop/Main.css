@@ -408,15 +408,50 @@ header {
     }
 }
 
+.overlayheadernav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 2rem);
+    width: 500px;
+    height: fit-content;
+    z-index: 11;
+    opacity: 0;
+    transition: cubic-bezier(0.4, 0.0, 0.2, 1) 200ms;
+
+    .ovhdnvtext {
+
+        &.ovhdnvtext h1 {
+            font-size: 2vw;
+            color: #ffffe9;
+            font-family: "FCiconic", "Tnter Tight", "sans-serif";
+            margin-bottom: 1.25rem;
+            text-align: center;
+        }
+    }
+
+    .ovhdnvdesiption p {
+        color: #ffff;
+        opacity: 40%;
+        font-weight: 400;
+        line-height: 1.4;
+        font-size: 14px;
+        font-family: "Inter Tight", "lineseedregular", "sans-serif";
+        text-align: center;
+    }
+}
+
 .headernav {
-    background-color: rgba(6, 6, 6, 0.7);
+    /* background-color: rgba(6, 6, 6, 0.7);
     backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px); */
+    background-color: rgba(6, 6, 6, 0.7);
     position: sticky;
     width: 100%;
     height: 55px;
     top: 0;
     z-index: 10;
+    transition: cubic-bezier(0.4, 0.0, 0.2, 1) 220ms all;
 
     .headernavcon {
         display: flex;
@@ -435,7 +470,10 @@ header {
     .headernavwrapper {
         /* adjust postion */
         position: relative;
-        background-color: #060606;
+        background-color: rgba(6, 6, 6, 0.7);
+        backdrop-filter: blur(60px);
+        -webkit-backdrop-filter: blur(60px);
+        z-index: 11;
     }
 
     .links {

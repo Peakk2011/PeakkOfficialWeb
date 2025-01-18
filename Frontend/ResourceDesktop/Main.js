@@ -108,31 +108,31 @@ document.addEventListener('keydown', ({ key }) => {
 let isDragging = false, initialX;
 
 const startDragging = (e) => {
-    if (e.type === 'mousedown' ? e.clientX <= window.innerWidth * 0.25 : e.touches[0].clientX <= window.innerWidth * 0.25) {
-        isDragging = true;
-        initialX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
-        headerSidebar.style.transition = 'none';
-        document.addEventListener(e.type === 'mousedown' ? 'mousemove' : 'touchmove', dragging);
-        document.addEventListener(e.type === 'mousedown' ? 'mouseup' : 'touchend', stopDragging);
-    }
+  if (e.type === 'mousedown' ? e.clientX <= window.innerWidth * 0.25 : e.touches[0].clientX <= window.innerWidth * 0.25) {
+    isDragging = true;
+    initialX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+    headerSidebar.style.transition = 'none';
+    document.addEventListener(e.type === 'mousedown' ? 'mousemove' : 'touchmove', dragging);
+    document.addEventListener(e.type === 'mousedown' ? 'mouseup' : 'touchend', stopDragging);
+  }
 };
 
 const dragging = (e) => {
-    if (!isDragging) return;
-    const currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
-    const width = Math.min(250, Math.max(0, currentX - initialX));
-    headerSidebar.style.transform = `translateX(${width - 250}px)`;
+  if (!isDragging) return;
+  const currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+  const width = Math.min(250, Math.max(0, currentX - initialX));
+  headerSidebar.style.transform = `translateX(${width - 250}px)`;
 };
 
 const stopDragging = (e) => {
-    if (!isDragging) return;
-    isDragging = false;
-    const currentX = e.type === 'mouseup' ? e.clientX : e.changedTouches[0].clientX;
-    const width = currentX - initialX;
-    headerSidebar.style.transition = 'transform 550ms cubic-bezier(0.4, 0.0, 0.2, 1)';
-    headerSidebar.style.transform = width < 125 ? 'translateX(-100%)' : 'translateX(0)';
-    document.removeEventListener(e.type === 'mouseup' ? 'mousemove' : 'touchmove', dragging);
-    document.removeEventListener(e.type === 'mouseup' ? 'mouseup' : 'touchend', stopDragging);
+  if (!isDragging) return;
+  isDragging = false;
+  const currentX = e.type === 'mouseup' ? e.clientX : e.changedTouches[0].clientX;
+  const width = currentX - initialX;
+  headerSidebar.style.transition = 'transform 550ms cubic-bezier(0.4, 0.0, 0.2, 1)';
+  headerSidebar.style.transform = width < 125 ? 'translateX(-100%)' : 'translateX(0)';
+  document.removeEventListener(e.type === 'mouseup' ? 'mousemove' : 'touchmove', dragging);
+  document.removeEventListener(e.type === 'mouseup' ? 'mouseup' : 'touchend', stopDragging);
 };
 
 headerSidebar.addEventListener('mousedown', (e) => e.stopPropagation());
@@ -172,25 +172,58 @@ const updateNavbar = () => {
 const updateNavbarLargeScreen = () => {
   const highlightClass = 'highlight';
   document.querySelectorAll(`.${highlightClass}`).forEach(el => el.classList.remove(highlightClass));
+  let headernav = document.getElementById("headernav");
+  let overlayheadernav = document.getElementById("overlayheadernav");
 
   const targetSection = document.getElementById('whyweb');
-  const navbarHeight = document.querySelector('nav').offsetHeight;
+  const anotherSection = document.getElementById('detailsWeb'); // id ของส่วนอื่นที่คุณต้องการตรวจสอบ
+  const navbarHeight = document.querySelector('.headernav').offsetHeight;
 
-  if (targetSection && window.scrollY >= targetSection.offsetTop - navbarHeight) {
-    // Assuming links[2] corresponds to the target section link
+  const setNavbarProperties = (height, overlayOpacity, overlayTransform) => {
+    headernav.style.height = height;
+    overlayheadernav.style.opacity = overlayOpacity;
+    overlayheadernav.style.transform = overlayTransform;
+  }
+
+  // ตรวจสอบการเลื่อนเข้าสู่พื้นที่ที่ต้องการ
+  const isInTargetSection = () => {
+    return window.scrollY >= targetSection.offsetTop - navbarHeight && window.scrollY < anotherSection.offsetTop - navbarHeight;
+  }
+
+  if (targetSection && isInTargetSection()) {
     links[2]?.classList.add(highlightClass);
     setDefaultNavbarProperties();
+    setNavbarProperties("55px", "0", "translate(-50%, 2rem)");
+
+  } else if (anotherSection && window.scrollY >= anotherSection.offsetTop - navbarHeight) {
+    links[1]?.classList.add(highlightClass);
+    setDefaultNavbarProperties();
+
+    setNavbarProperties("300px", "1", "translate(-50%, 7rem)");
+
+    // ตรวจสอบว่าไม่ได้อยู่ในสถานะหายไปก่อนตั้ง timeout
+    if (!overlayheadernav.classList.contains('hide')) {
+      setTimeout(() => {
+        setNavbarProperties("55px", "0", "translate(-50%, 2rem)");
+        overlayheadernav.classList.add('hide'); // เพิ่มคลาส hide เพื่อป้องกันการตั้งค่าใหม่โดยไม่ได้ตั้งใจ
+      }, 3000);
+    }
+
   } else if (window.scrollY >= window.innerHeight) {
     links[1]?.classList.add(highlightClass);
     setDefaultNavbarProperties();
+    setNavbarProperties("55px", "0", "translate(-50%, 2rem)");
+    overlayheadernav.classList.remove('hide'); // ลบคลาส hide เมื่อออกจากพื้นที่
   } else {
     Object.assign(navbar.style, { color: '#ffffe9', borderBottom: "solid 2px #ffffe9" });
+    overlayheadernav.classList.remove('hide'); // ลบคลาส hide เมื่อออกจากพื้นที่
   }
 };
 
 const setDefaultNavbarProperties = () => {
   Object.assign(navbar.style, { color: '#616161', borderBottom: "none" });
 };
+
 
 // Handle scroll and resize events
 const handleScroll = () => window.innerWidth < 1460 ? updateNavbar() : updateNavbarLargeScreen();
