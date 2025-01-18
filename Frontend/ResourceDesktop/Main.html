@@ -33,6 +33,10 @@
 
 <body>
 
+    <script>
+        AOS.init();
+    </script>
+
     <div class="cursor cursor--large"></div>
     <div class="cursor cursor--small"></div>
 
@@ -117,7 +121,7 @@
                         d="M93 563.332L41 197.166H117.05L144.35 485.37H146.3L210 197.166H284.75L348.45 485.37H349.75L377.7 197.166H453.75L401.75 563.332H309.45L248.35 287.909H246.4L185.3 563.332H93Z"
                         fill="#FFFFE9" />
                 </svg>
-                <ion-icon name="close-outline"></ion-icon>
+                <ion-icon name="close-outline" id="SidebarClose"></ion-icon>
             </div>
             <div class="hdsbcnlk">
                 <li><a href="#">หน้าแรก 2025<ion-icon name="open-outline"></ion-icon></a></li>
@@ -132,6 +136,8 @@
     <div id="backgroundblur"></div>
 
     <div id="contentIndex">
+
+        <!-- <div id="ScrollableSidebar" style="width: 280px; height: 100vh; position: fixed; left: 0; display: block; z-index: 11;"></div> -->
 
         <nav id="MainNavbar">
             <div class="Navbar">
@@ -416,11 +422,27 @@
             <div class="DeWbcon">
                 <div class="DeWbWrapper">
                     <div class="DeWbtxt">
-                        <h1>ตัวอย่างการปรับ<br>แต่งเว็บไซต์</h1>
-                        <p>เป็นแค่ตัวอย่างเว็บไซต์โดยใช้ HTML,CSS<br>โดยเลือนซ้ายเพื่อดูรูปถัดไป</p>
+                        <div class="DeWbtxtconten">
+                            <h1>ตัวอย่างการปรับ<br>แต่งเว็บไซต์</h1>
+                            <p>เป็นแค่ตัวอย่างเว็บไซต์โดยใช้ HTML,CSS<br>โดยเลือนซ้ายเพื่อดูรูปถัดไป</p>
+                        </div>
+                        <div id="responsivetext">
+                            <div class="restextdw">
+                                <div id="Backward">
+                                    <a href="#Port1">
+                                        <ion-icon name="chevron-back-sharp"></ion-icon>
+                                    </a>
+                                </div>
+                                <div id="Forward">
+                                    <a href="#Port4">
+                                        <ion-icon name="chevron-forward-sharp"></ion-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="DoWbimg">
-                        <div class="DoWbImagecon">
+                        <div class="DoWbImagecon" id="Port1">
                             <img src="./Image/Port1.png" alt="" draggable="false">
                         </div>
                         <div class="DoWbImagecon">
@@ -429,7 +451,7 @@
                         <div class="DoWbImagecon">
                             <img src="./Image/Port3.png" alt="" draggable="false">
                         </div>
-                        <div class="DoWbImagecon">
+                        <div class="DoWbImagecon" id="Port4">
                             <img src="./Image/Port4.png" alt="" draggable="false">
                         </div>
                     </div>
@@ -440,6 +462,16 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div id="backgroundElements">
+            <svg width="2560" height="225" viewBox="0 0 2560 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="2560" height="225" fill="#0A0A0A" />
+                <rect y="135" width="640" height="90" fill="#070707" />
+                <rect x="640" y="105" width="640" height="120" fill="#070707" />
+                <rect x="1280" y="70" width="640" height="155" fill="#070707" />
+                <rect x="1920" y="25" width="640" height="200" fill="#070707" />
+            </svg>
         </div>
 
         <div class="whyweb" id="whyweb">

@@ -64,6 +64,82 @@ HamburEvents.addEventListener("click", () => {
   backgroundBlur.addEventListener("click", toggleDisplay, { once: true });
 });
 
+const SidebarClose = document.getElementById("SidebarClose");
+SidebarClose.addEventListener("click", SidebarCloseFunc);
+
+function SidebarCloseFunc() {
+  headerSidebar.style.transition = "transform 600ms cubic-bezier(0.4, 0.0, 0.2, 1)";
+  headerSidebar.style.transform = "translateX(-300px)";
+  setTimeout(() => {
+    backgroundBlur.style.transition = "transform 750ms cubic-bezier(0.4, 0.0, 0.2, 1)";
+    requestAnimationFrame(() => {
+      backgroundBlur.style.transform = "translateX(-100vw)";
+    });
+    setTimeout(() => {
+      backgroundBlur.style.display = "none";
+      backgroundBlur.style.opacity = 0;
+      isAnimating = false;
+    }, 750);
+  }, 500);
+}
+
+// Toggle with keys
+
+document.addEventListener('keydown', ({ key }) => {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  const isOpen = headerSidebar.style.transform === "translateX(0px)";
+  const transitions = "transform 350ms cubic-bezier(0.4, 0.0, 0.2, 1)";
+
+  if (key === "c" && !isOpen) {
+    headerSidebar.style.transition = transitions;
+    headerSidebar.style.transform = "translateX(0)";
+  } else if ((key === "Escape" || key === "Backspace") && isOpen) {
+    headerSidebar.style.transition = transitions;
+    headerSidebar.style.transform = "translateX(-300px)";
+  }
+
+  setTimeout(() => isAnimating = false, 150);
+});
+
+// Dragable sidebar
+
+let isDragging = false, initialX;
+
+const startDragging = (e) => {
+    if (e.type === 'mousedown' ? e.clientX <= window.innerWidth * 0.25 : e.touches[0].clientX <= window.innerWidth * 0.25) {
+        isDragging = true;
+        initialX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+        headerSidebar.style.transition = 'none';
+        document.addEventListener(e.type === 'mousedown' ? 'mousemove' : 'touchmove', dragging);
+        document.addEventListener(e.type === 'mousedown' ? 'mouseup' : 'touchend', stopDragging);
+    }
+};
+
+const dragging = (e) => {
+    if (!isDragging) return;
+    const currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+    const width = Math.min(250, Math.max(0, currentX - initialX));
+    headerSidebar.style.transform = `translateX(${width - 250}px)`;
+};
+
+const stopDragging = (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+    const currentX = e.type === 'mouseup' ? e.clientX : e.changedTouches[0].clientX;
+    const width = currentX - initialX;
+    headerSidebar.style.transition = 'transform 550ms cubic-bezier(0.4, 0.0, 0.2, 1)';
+    headerSidebar.style.transform = width < 125 ? 'translateX(-100%)' : 'translateX(0)';
+    document.removeEventListener(e.type === 'mouseup' ? 'mousemove' : 'touchmove', dragging);
+    document.removeEventListener(e.type === 'mouseup' ? 'mouseup' : 'touchend', stopDragging);
+};
+
+headerSidebar.addEventListener('mousedown', (e) => e.stopPropagation());
+headerSidebar.addEventListener('touchstart', (e) => e.stopPropagation());
+document.addEventListener('mousedown', startDragging);
+document.addEventListener('touchstart', startDragging);
+
 // Cache DOM elements
 const links = document.querySelectorAll('.links li a');
 const navbar = document.getElementById('Highlightheader');
@@ -171,6 +247,8 @@ function mouseMove(e) {
 }
 
 let ImagesHover = document.querySelectorAll('.DoWbImagecon');
+ImagesHover[0].style.transform = "translateX(5px)"
+ImagesHover[3].style.transform = "translateX(-5px)"
 
 const imghover = (event) => {
   if (window.innerWidth >= 1460) {
@@ -201,3 +279,14 @@ ImagesHover.forEach(image => {
   image.addEventListener('mouseenter', imghover);
   image.addEventListener('mouseleave', Exitimghover);
 });
+
+MainNavbar.style.transform = "translatey(-100px)";
+MainNavbar.style.opacity = "0";
+// 6504.65771484375
+
+setTimeout(() => {
+
+  MainNavbar.style.transform = "translatey(0px)";
+  MainNavbar.style.opacity = "1";
+
+}, 3100);

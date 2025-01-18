@@ -548,13 +548,18 @@ header {
     height: 100vh;
     position: fixed;
     z-index: 12;
-    background-color: #141414;
+    background-color: rgba(10, 10, 10, 0.811);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     transform: translateX(-300px);
     transition: cubic-bezier(0.4, 0.0, 0.2, 1) 700ms all;
+    border-right: solid 1px #222;
 
     .headersidebarcon {
         max-width: 230px;
         margin: 0 auto;
+        position: relative;
+        height: 100vh;
     }
 
     .hdcntlt {
@@ -590,6 +595,9 @@ header {
 
     .hdsbcnlk {
         gap: 19.5px;
+        position: absolute;
+        min-width: 100%;
+        bottom: 60px;
 
         &.hdsbcnlk li a {
             color: #fff;
@@ -785,6 +793,14 @@ section {
 
 }
 
+#backgroundElements svg {
+    transform: translateY(4px);
+    width: 100vw;
+    display: block;
+    height: auto;
+    transition: none;
+}
+
 .detailsWeb {
     height: 1080px;
     width: 100%;
@@ -799,6 +815,12 @@ section {
         top: 50%;
         transform: translate(-50%, -50%); */
         margin-top: 5.5rem;
+    }
+
+    .DeWbtxt {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .DeWbtxt h1 {
@@ -857,8 +879,53 @@ section {
     }
 }
 
+#responsivetext {
+    --disable: none;
+    display: var(--disable);
+
+    .restextdw {
+        width: fit-content;
+        height: 50px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #222;
+
+        #Backward {
+            position: relative;
+            width: 50px;
+            height: 50px;
+
+            &#Backward ion-icon {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+
+        #Forward {
+            position: relative;
+            width: 50px;
+            height: 50px;
+
+            &#Forward ion-icon {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
 .whyweb {
-    height: 1080px;
+    height: 940px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -876,17 +943,20 @@ section {
         color: #fff;
         font-weight: 400;
         font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
-        letter-spacing: -0.5px;
         font-size: 42px;
         text-align: center;
         margin-bottom: 3rem;
     }
 
     .whywebtxt strong {
-        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
-        font-weight: 800;
-        color: #ffffe9;
-        border-bottom: solid 2px currentColor;
+        font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
+        font-weight: 500;
+        letter-spacing: -1.5px;
+        color: #000;
+        border-radius: 8px;
+        padding: 0.2rem 0.8rem;
+        margin: 0rem 0.5rem;
+        background-color: #ffffe9;
     }
 }
 

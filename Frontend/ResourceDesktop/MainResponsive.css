@@ -26,17 +26,6 @@ body.dark-theme .iconsRes {
         display: none;
     }
 
-    /* add navbar */
-
-    .Navbar {
-        max-width: 100% !important;
-        padding: 2.5rem 2rem;
-    }
-
-    .NavLogo svg {
-        width: 122.5px !important;
-    }
-
 }
 
 @media (max-width: 1000px) {
@@ -113,6 +102,17 @@ body.dark-theme .iconsRes {
 
     .hamcon ion-icon {
         display: block !important;
+    }
+
+    /* add navbar */
+
+    .Navbar {
+        max-width: 100% !important;
+        padding: 2.5rem 2rem;
+    }
+
+    .NavLogo svg {
+        width: 122.5px !important;
     }
 
 }
@@ -209,6 +209,15 @@ body.dark-theme .iconsRes {
         overflow-x: scroll;
     }
 
+    #responsivetext {
+        display: block;
+    }
+
+    .DoWbimg {
+        justify-content: space-between;
+        gap: 18px !important;
+    }
+
 }
 
 @media (max-width: 1460px) {
@@ -252,7 +261,26 @@ body.dark-theme .iconsRes {
 @media (max-width: 450px) {
 
     .whywebtxt h1 {
-        font-size: 8vw !important;
+        font-size: 7vw !important;
+    }
+
+    .whywebtxt strong {
+        margin: 0rem 0.2rem !important;
+        padding: 0.1rem 0.5rem !important;
+        letter-spacing: -1.25px !important;
+    }
+    
+    .DeWbtxt {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+    
+    #responsivetext {
+        margin-top: 2rem;
+    }
+
+    .DoWbImagecon {
+        margin-top: 0px;
     }
 
 }
