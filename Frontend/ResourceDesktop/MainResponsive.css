@@ -115,6 +115,18 @@ body.dark-theme .iconsRes {
         width: 122.5px !important;
     }
 
+    .detailsWeb {
+        height: 1080px;
+    }
+
+}
+
+@media (max-width: 720px) {
+
+    #SvgWebPortAbsoulte {
+        display: none !important;
+    }
+
 }
 
 @media (max-width: 1280px) {
@@ -258,6 +270,30 @@ body.dark-theme .iconsRes {
 
 }
 
+/* Bob anim header */
+
+@media (max-width: 1200px) {
+    .bouncing-blobs-glass {
+        backdrop-filter: blur(120px);
+        -webkit-backdrop-filter: blur(120px);
+    }
+}
+
+@media (max-width: 500px) {
+    .bouncing-blob {
+        width: 60vw;
+    }
+
+    .bouncing-blob--white {
+        width: 30vw;
+    }
+
+    .bouncing-blobs-glass {
+        backdrop-filter: blur(90px);
+        -webkit-backdrop-filter: blur(90px);
+    }
+}
+
 @media (max-width: 450px) {
 
     .whywebtxt h1 {
@@ -269,12 +305,12 @@ body.dark-theme .iconsRes {
         padding: 0.1rem 0.5rem !important;
         letter-spacing: -1.25px !important;
     }
-    
+
     .DeWbtxt {
         flex-direction: column;
         align-items: stretch !important;
     }
-    
+
     #responsivetext {
         margin-top: 2rem;
     }
@@ -307,4 +343,86 @@ body.dark-theme .iconsRes {
         width: 100%;
     }
 
+}
+
+@media (max-width: 360px) {
+
+    #Ytpeakkofficial svg {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 1460px) {
+
+    .trySelfcon {
+        max-width: 100% !important;
+        padding: 0rem 2rem;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    .trySelftxt p {
+        font-size: 18.5px !important;
+    }
+
+    .trySelfsvg img {
+        width: 420px !important;
+    }
+
+}
+
+@media (max-width: 775px) {
+
+    .trySelfcon {
+        flex-direction: column;
+        align-items: stretch !important;
+        height: 800px;
+        position: relative;
+    }
+
+    .trySelftxt p {
+        margin-top: 4.5rem;
+    }
+
+    .trySelfsvg img {
+        position: absolute;
+        top: 62.5%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .trySelfsvg img {
+        left: 50% !important;
+        top: 70%;
+    }
+
+    .trySelftxt p {
+        margin-top: 5.5rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+ 
+    .trySelfsvg img {
+        width: 85vw !important;
+        transition: none;
+    }
+
+    .trySelftxt p {
+        margin-top: 6rem;
+        font-size: 16px !important;
+    }
+
+    .trySelfcon {
+        height: 725px;
+    }
+    
 }

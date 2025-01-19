@@ -172,58 +172,25 @@ const updateNavbar = () => {
 const updateNavbarLargeScreen = () => {
   const highlightClass = 'highlight';
   document.querySelectorAll(`.${highlightClass}`).forEach(el => el.classList.remove(highlightClass));
-  let headernav = document.getElementById("headernav");
-  let overlayheadernav = document.getElementById("overlayheadernav");
 
   const targetSection = document.getElementById('whyweb');
-  const anotherSection = document.getElementById('detailsWeb'); // id ของส่วนอื่นที่คุณต้องการตรวจสอบ
-  const navbarHeight = document.querySelector('.headernav').offsetHeight;
+  const navbarHeight = document.querySelector('nav').offsetHeight;
 
-  const setNavbarProperties = (height, overlayOpacity, overlayTransform) => {
-    headernav.style.height = height;
-    overlayheadernav.style.opacity = overlayOpacity;
-    overlayheadernav.style.transform = overlayTransform;
-  }
-
-  // ตรวจสอบการเลื่อนเข้าสู่พื้นที่ที่ต้องการ
-  const isInTargetSection = () => {
-    return window.scrollY >= targetSection.offsetTop - navbarHeight && window.scrollY < anotherSection.offsetTop - navbarHeight;
-  }
-
-  if (targetSection && isInTargetSection()) {
+  if (targetSection && window.scrollY >= targetSection.offsetTop - navbarHeight) {
+    // Assuming links[2] corresponds to the target section link
     links[2]?.classList.add(highlightClass);
     setDefaultNavbarProperties();
-    setNavbarProperties("55px", "0", "translate(-50%, 2rem)");
-
-  } else if (anotherSection && window.scrollY >= anotherSection.offsetTop - navbarHeight) {
-    links[1]?.classList.add(highlightClass);
-    setDefaultNavbarProperties();
-
-    setNavbarProperties("300px", "1", "translate(-50%, 7rem)");
-
-    // ตรวจสอบว่าไม่ได้อยู่ในสถานะหายไปก่อนตั้ง timeout
-    if (!overlayheadernav.classList.contains('hide')) {
-      setTimeout(() => {
-        setNavbarProperties("55px", "0", "translate(-50%, 2rem)");
-        overlayheadernav.classList.add('hide'); // เพิ่มคลาส hide เพื่อป้องกันการตั้งค่าใหม่โดยไม่ได้ตั้งใจ
-      }, 3000);
-    }
-
   } else if (window.scrollY >= window.innerHeight) {
     links[1]?.classList.add(highlightClass);
     setDefaultNavbarProperties();
-    setNavbarProperties("55px", "0", "translate(-50%, 2rem)");
-    overlayheadernav.classList.remove('hide'); // ลบคลาส hide เมื่อออกจากพื้นที่
   } else {
     Object.assign(navbar.style, { color: '#ffffe9', borderBottom: "solid 2px #ffffe9" });
-    overlayheadernav.classList.remove('hide'); // ลบคลาส hide เมื่อออกจากพื้นที่
   }
 };
 
 const setDefaultNavbarProperties = () => {
   Object.assign(navbar.style, { color: '#616161', borderBottom: "none" });
 };
-
 
 // Handle scroll and resize events
 const handleScroll = () => window.innerWidth < 1460 ? updateNavbar() : updateNavbarLargeScreen();
@@ -313,13 +280,76 @@ ImagesHover.forEach(image => {
   image.addEventListener('mouseleave', Exitimghover);
 });
 
+const setOpacity = (id, opacity) => document.getElementById(id).style.opacity = opacity;
+const updateText = (texts, delays, callback) => {
+  let index = 0;
+  const nextText = () => {
+    if (index < texts.length) {
+      document.getElementById("TextAnimationGlitch").innerHTML = texts[index];
+      setTimeout(nextText, delays[index++]);
+    } else if (callback) callback();
+  };
+  nextText();
+};
+
 MainNavbar.style.transform = "translatey(-100px)";
 MainNavbar.style.opacity = "0";
-// 6504.65771484375
+["headernav", "Pkidbutton", "Pkofficialsvg"].forEach(id => setOpacity(id, "0"));
+document.body.style.overflow = "hidden";
 
 setTimeout(() => {
+  updateText(["รับทํา", "เว็บไซต์", "ติดต่อ", "พวกเรา", "ได้ครับ", ""], [500, 500, 500, 500, 500, 300], () => {
+    document.body.style.overflow = "auto";
+    setTimeout(() => setOpacity("Pkofficialsvg", "1"), 1000);
+  });
+}, 3600);
 
+setTimeout(() => {
   MainNavbar.style.transform = "translatey(0px)";
   MainNavbar.style.opacity = "1";
+  ["headernav", "Pkidbutton"].forEach(id => setOpacity(id, "1"));
+}, 8800);
 
-}, 3100);
+// Animation Header bob
+
+const MIN_SPEED = 1.5, MAX_SPEED = 2.5;
+
+class Blob {
+  constructor(el) {
+    const { width: size } = el.getBoundingClientRect();
+    this.el = el;
+    this.size = size;
+    this.x = this.randomPos(window.innerWidth - size);
+    this.y = this.randomPos(window.innerHeight - size);
+    this.vx = this.randomSpeed();
+    this.vy = this.randomSpeed();
+    el.style.top = `${this.y}px`;
+    el.style.left = `${this.x}px`;
+  }
+
+  randomPos(max) { return Math.random() * max; }
+  randomSpeed() { return Math.random() * (MAX_SPEED - MIN_SPEED) + MIN_SPEED * (Math.random() > 0.5 ? 1 : -1); }
+
+  update() {
+    this.x = this.reflect(this.x, window.innerWidth);
+    this.y = this.reflect(this.y, window.innerHeight);
+  }
+
+  reflect(coord, maxSize) {
+    coord += this.vx;
+    if (coord >= maxSize - this.size || coord <= 0) this.vx *= -1;
+    return coord;
+  }
+
+  move() {
+    this.el.style.transform = `translate(${this.x}px, ${this.y}px)`;
+  }
+}
+
+const initBlobs = () => {
+  const blobs = [...document.querySelectorAll('.bouncing-blob')].map(el => new Blob(el));
+  const update = () => (blobs.forEach(blob => (blob.update(), blob.move())), requestAnimationFrame(update));
+  requestAnimationFrame(update);
+};
+
+initBlobs();
