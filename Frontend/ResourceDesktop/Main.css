@@ -1091,7 +1091,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 625px;
+    height: 750px;
 
     .trySelftxt {
 
@@ -1115,4 +1115,34 @@ section {
         display: block;
     }
 
+}
+
+.allinone {
+    overflow: hidden;
+
+    .allcon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto;
+        height: 750px;
+    }
+
+    .allimage svg {
+        width: 420px;
+        height: auto;
+        display: block;
+    }
+
+    .alltext {
+
+        &.alltext p {
+            color: #ffffe9;
+            font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+            font-size: 22.5px;
+            line-height: 1.55;
+            letter-spacing: -0.25px;
+        }
+    }
 }

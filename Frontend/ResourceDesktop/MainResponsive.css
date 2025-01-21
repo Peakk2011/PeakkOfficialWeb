@@ -350,12 +350,17 @@ body.dark-theme .iconsRes {
     #Ytpeakkofficial svg {
         display: none;
     }
-    
+
 }
 
 @media (max-width: 1460px) {
 
     .trySelfcon {
+        max-width: 100% !important;
+        padding: 0rem 2rem;
+    }
+
+    .allcon {
         max-width: 100% !important;
         padding: 0rem 2rem;
     }
@@ -370,6 +375,14 @@ body.dark-theme .iconsRes {
 
     .trySelfsvg img {
         width: 420px !important;
+    }
+
+    .allimage svg {
+        width: 360px !important;
+    }
+
+    .alltext p {
+        font-size: 18.5px !important;
     }
 
 }
@@ -394,6 +407,17 @@ body.dark-theme .iconsRes {
         transform: translate(-50%, -50%);
     }
 
+    .allcon {
+        flex-direction: column;
+        align-items: stretch !important;
+        height: 300px !important;
+        margin-top: 12rem !important;
+    }
+
+    .allinone {
+        height: 700px;
+    }
+
 }
 
 @media (max-width: 560px) {
@@ -410,7 +434,7 @@ body.dark-theme .iconsRes {
 }
 
 @media (max-width: 450px) {
- 
+
     .trySelfsvg img {
         width: 85vw !important;
         transition: none;
@@ -423,6 +447,18 @@ body.dark-theme .iconsRes {
 
     .trySelfcon {
         height: 725px;
+    }
+
+    .allimage svg {
+        width: 70vw !important;
+    }
+
+    .alltext p {
+        font-size: 16px !important;
+    }
+
+    .allcon {
+        height: 260px !important;
     }
     
 }
