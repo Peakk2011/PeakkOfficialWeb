@@ -10,7 +10,7 @@
  
  .glitch {
     position: relative;
-    font-size: 3vw;
+    font-size: 2.25vw;
     line-height: 1.2;
     color: #fdfdf3;
     animation: shift 4s ease-in-out infinite alternate;

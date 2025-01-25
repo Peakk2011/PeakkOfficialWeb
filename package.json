@@ -4,6 +4,7 @@
   "main": "Main.js",
   "dependencies": {
     "express": "^4.21.1",
+    "firebase": "^11.2.0",
     "mysql": "^2.18.1",
     "vanilla-tilt": "^1.8.1"
   },

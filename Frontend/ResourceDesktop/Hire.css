@@ -353,9 +353,9 @@ body.dark-theme .FurText ion-icon {
     &.FurText h1 {
         color: #FFFFE9;
         /* font-family: Meltie; */
-        font-family: lineseedregular;
+        font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
         line-height: 1.2;
-        letter-spacing: -1.7px;
+        letter-spacing: -1.1px;
         font-size: 38px;
         margin-top: 1.5rem;
         margin-bottom: 2.5rem;
@@ -416,11 +416,12 @@ body.dark-theme .FurCardText p {
     &.FurCardText h1 {
         color: #ffffe9;
         /* font-family: Meltie; */
-        font-family: lineseedregular;
+        font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
         text-align: center;
         margin-top: 1.5rem;
-        font-size: 30px;
-        letter-spacing: -1px;
+        font-size: 26px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
     }
 
     &.FurCardText ion-icon {
@@ -515,13 +516,14 @@ body.dark-theme .AppDesipCon p {
 
     &.AppDesipCon h1 {
         /* font-family: Meltie; */
-        font-family: lineseedregular;
+        font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
         color: #ffffe9;
         font-size: 38px;
         width: 300px;
-        line-height: 1.4;
+        line-height: 1.5;
         margin-top: 2.5rem;
-        letter-spacing: -1.3px;
+        letter-spacing: -1.1px;
+        font-weight: 500;
     }
 
     &.AppDesipCon ion-icon {
@@ -564,7 +566,6 @@ body.dark-theme .AllPriceTitile p {
 .AllPrice {
     height: 1440px;
     width: 100%;
-    border-bottom: solid 1px #222;
     background-color: #070707;
 
     .AllPriceTitile {
@@ -572,7 +573,7 @@ body.dark-theme .AllPriceTitile p {
 
         &.AllPriceTitile h1 {
             color: #ffffe9;
-            font-family: lineseedregular;
+            font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
             letter-spacing: -1.8px;
             font-size: 48px;
             padding-top: 1.5rem;
@@ -619,10 +620,12 @@ body.dark-theme .tag:before {
     position: relative;
     color: #fff;
     font-weight: 300;
-    font-family: 'lineseedregular', sans-serif;
+    font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
     letter-spacing: -0.6px;
     font-size: 22px;
-    line-height: 38px;
+    line-height: 36px;
+    /* fixed new fonts */
+    font-weight: 300;
 
     margin-top: 2.5rem;
 
@@ -725,11 +728,11 @@ body.dark-theme .AllPCon {
         padding: 1rem 2.25rem;
 
         &.AllpcText h1 {
-            font-family: lineseedregular;
+            font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
             color: #ffffE9;
             font-weight: 400;
             letter-spacing: -1.5px;
-            font-size: 40px;
+            font-size: 36px;
             margin-top: 1rem;
         }
 
@@ -781,7 +784,8 @@ body.dark-theme .Started {
 .Started {
     position: relative;
     width: 100%;
-    min-height: 800px;
+    min-height: 900px;
+    background-color: #0a0a0a;
 }
 
 .StrCon {
@@ -806,13 +810,13 @@ body.dark-theme .Strtext li a {
     &.Strtext h1 {
         color: #ffffe9;
         /* font-family: Meltie; */
-        font-family: lineseedregular;
+        font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
         font-size: 46px;
         line-height: 1.5;
         text-align: center;
         letter-spacing: -2.5px;
         margin-bottom: 1.85rem;
-        margin-top: 4rem;
+        margin-top: 8rem;
     }
 
     &.Strtext li a {
@@ -842,7 +846,7 @@ body.dark-theme .Strtext li a {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 110px;
+        bottom: 30px;
     }
 }
 

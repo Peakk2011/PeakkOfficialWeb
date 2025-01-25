@@ -787,7 +787,8 @@ section {
 
     &.secwhywebtext h1 {
         color: rgb(255, 255, 255);
-        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+        /* font-family: "Inter Tight", "LineSeedRegular", "sans-serif"; */
+        font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
         font-size: 38px;
         line-height: 1.4;
         margin-top: 1.5rem;
@@ -896,7 +897,8 @@ section {
 
     .DeWbtxt h1 {
         color: #ffffe9;
-        font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+        /* font-family: "Inter Tight", "LineSeedRegular", "sans-serif"; */
+        font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
         font-size: 38px;
         line-height: 1.4;
         font-weight: 500;
@@ -1101,10 +1103,11 @@ section {
         } */
 
         &.trySelftxt p {
-            color: #ffffe9;
+            color: #fff;
+            opacity: 35%;
             font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             font-size: 22.5px;
-            line-height: 1.55;
+            line-height: 1.6;
             letter-spacing: -0.25px;
         }
     }
@@ -1138,11 +1141,150 @@ section {
     .alltext {
 
         &.alltext p {
-            color: #ffffe9;
+            color: #fff;
+            opacity: 35%;
+            text-align: right;
             font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             font-size: 22.5px;
-            line-height: 1.55;
+            line-height: 1.6;
             letter-spacing: -0.25px;
         }
     }
+}
+
+
+.howweb {
+    position: relative;
+    width: 100%;
+    background-color: #070707;
+    overflow: hidden;
+
+    .howwebwrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: auto;
+        height: 1500px;
+    }
+
+    .howwebimage {
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%, -50%);
+
+        &.howwebimage img {
+            width: 90vw;
+            max-width: 1300px;
+            min-width: 600px;
+            height: auto;
+        }
+    }
+
+    .howwebtext {
+        position: absolute;
+        min-width: 1100px;
+        max-width: 1100px;
+        height: 700px;
+        left: 50%;
+        top: 85%;
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &.howwebtext h1 {
+            color: #ffffe9;
+            /* font-family: "Inter Tight", "LineSeedRegular", "sans-serif"; */
+            font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
+            font-size: 38px;
+            line-height: 1.8;
+            font-weight: 500;
+            letter-spacing: -1.1px;
+        }
+
+        &.howwebtext strong {
+            font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
+            font-weight: 800;
+            color: #000;
+            line-height: 1.6;
+            background-color: #ffffe9;
+            padding: 0rem 0.8rem;
+            display: inline-block;
+            transform: translateY(0px);
+            border-radius: 8px;
+        }
+
+        &.howwebtext p {
+            font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+            font-size: 20px;
+            letter-spacing: -0.3px;
+            text-align: right;
+            font-weight: 400;
+            color: #fff;
+            opacity: 35%;
+            line-height: 1.6;
+        }
+    }
+}
+
+.ctacontact {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-color: #0a0a0a;
+
+    .ctacontactcontent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto;
+        height: 150px;
+    }
+}
+
+.ctablock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#instagramcta,
+#facebookcta,
+#tiktokcta,
+#youtubecta {
+    background-color: #ffffE9;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    width: fit-content;
+    border-radius: 60px;
+    justify-content: center;
+    margin: 0.5rem;
+    text-decoration: none;
+}
+
+#instagramcta ion-icon,
+#facebookcta ion-icon,
+#tiktokcta ion-icon,
+#youtubecta ion-icon {
+    font-size: 16px;
+    transform: translateY(-1px);
+    color: #000;
+}
+
+#instagramcta h1,
+#facebookcta h1,
+#tiktokcta h1,
+#youtubecta h1 {
+    font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+    font-size: 16px;
+    margin-left: 0.5rem;
+    color: #000;
+    font-weight: 400;
+    -webkit-text-stroke-width: 0.3px;
 }
