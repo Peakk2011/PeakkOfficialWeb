@@ -353,3 +353,188 @@ const initBlobs = () => {
 };
 
 initBlobs();
+
+// Cta 
+
+document.addEventListener('DOMContentLoaded', function () {
+  const ctabtn = document.getElementById("ctabtn");
+  const ctabtnContent = document.getElementById("ctabtncontent");
+  const detailscontact = document.getElementById("detailscontact");
+  const CtaTextContent = document.getElementById("CtaTextContent");
+  const Ctaclasslinksigtoggles = document.getElementById("classlinksigtoggles");
+
+  const disable = () => {
+    ctabtn.disabled = true;
+    Object.assign(ctabtn.style, { opacity: '0' });
+    console.log('Disabled');
+  }
+
+  const enable = () => {
+    ctabtn.disabled = false;
+    Object.assign(ctabtn.style, { opacity: '1' });
+    console.log('Enabled');
+  }
+
+  // enableDetailsContact
+
+  const enableDetailsContact = () => {
+    detailscontact.disableDetailsContact = false;
+    Object.assign(detailscontact.style, { opacity: '1' });
+    console.log('Using Details Contact');
+  }
+
+  const disableDetailsContact = () => {
+    detailscontact.disableDetailsContact = true;
+    Object.assign(detailscontact.style, { opacity: '0' });
+    console.log('Disabled Details Contact');
+  }
+
+  let hasRun = false;
+
+  // pragma <once> for 2 functions below
+  // use for initialization
+
+  const UsingDetailscta = () => {
+    if (!hasRun) {
+      setTimeout(enableDetailsContact, 200);
+      disableDetailsContact();
+      hasRun = true;
+    }
+  }
+
+  const usingctn = () => {
+    if (!hasRun) {
+      setTimeout(enable, 200);
+      disable();
+      hasRun = true;
+    }
+  }
+
+  // initialize cta button detailscontact
+
+  const initializeDetailsContact = () => {
+    detailscontact.classList.remove("uninitializeDetailsContact");
+    detailscontact.classList.add("initializedetailscontact");
+  }
+
+  const uninitializedDetailsContact = () => {
+    detailscontact.classList.add("uninitializeDetailsContact");
+    detailscontact.classList.remove("initializedetailscontact");
+  }
+
+  // initialize cta button
+
+  const initialize = () => {
+    ctabtn.style.transition = "cubic-bezier(0.4, 0.0, 0.2, 1) 600ms all";
+    ctabtn.classList.add('styleCtabtninitialize', 'styleCtabtnAnimateFlow');
+
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        ctabtn.classList.add('styleCtabtnAnimateFlowBACKDEF');
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            ctabtn.classList.add('styleCtabtnWidth');
+            setTimeout(() => {
+              ctabtnContent.style.transition = "opacity 300ms";
+              ctabtnContent.style.opacity = 1;
+            }, 100);
+          });
+        });
+      }, 400);
+    });
+
+  }
+
+  const uninitialized = () => {
+    ctabtn.classList.remove('styleCtabtninitialize', 'styleCtabtnAnimateFlow', 'styleCtabtnAnimateFlowBACKDEF', 'styleCtabtnWidth');
+    ctabtn.style.transition = "cubic-bezier(0.4, 0.0, 1, 1) 400ms all";
+    ctabtnContent.style.transition = "opacity 300ms";
+    ctabtnContent.style.opacity = 0;
+    hasRun = false;
+  }
+
+  // Scroll events
+
+  window.addEventListener('scroll', function () {
+    const scrollTop = window.scrollY;
+
+    // DEFINE FUNC
+    const ResultsUninitialized = () => {
+      uninitialized();
+      uninitializedDetailsContact();
+      ctabtn.style.opacity = 0;
+    }
+
+    const Resultsinitialized = () => {
+      usingctn();
+      ctabtn.style.opacity = 1;
+      initialize();
+      UsingDetailscta();
+      initializeDetailsContact();
+    }
+
+    function DEFINEscrollfirst() {
+      if (scrollTop >= 200) {
+        // pass
+        Resultsinitialized();
+        console.log('Sectionmain');
+      } else if (scrollTop < 200) {
+        ResultsUninitialized();
+      } else {
+        ResultsUninitialized();
+      }
+    }
+
+    DEFINEscrollfirst();
+
+    const UsingCtaStyle = () => {
+      ctabtn.classList.add('styleCtabtnWidth');
+      this.document.querySelector('.styleCtabtnWidth').style.width = "230px";
+      CtaTextContent.innerHTML = "ตัวอย่างเว็บไซต์เพิ่มเติม";
+      ctabtn.style.transform = "translateX(-60%)";
+      // Toggle class ig cta
+      setTimeout(() => {
+        Ctaclasslinksigtoggles.style.opacity = 1;
+        Ctaclasslinksigtoggles.classList.add('initializeclasslinksigtoggles');
+      }, 500);
+    }
+
+    const DisableCtaStyle = () => {
+      this.document.querySelector('.styleCtabtnWidth').style.width = "180px";
+      CtaTextContent.innerHTML = "ดูเพิ่มเติมได้ใน";
+      ctabtn.style.transform = "translateX(-50%)";
+      // igctabtn
+      Ctaclasslinksigtoggles.classList.remove('initializeclasslinksigtoggles');
+      Ctaclasslinksigtoggles.style.opacity = 0;
+    }
+
+    if (scrollTop >= 1200) {
+      console.log('DeWbcon');
+      // operation 2 here
+      UsingCtaStyle();
+      uninitializedDetailsContact();
+    } else {
+      DEFINEscrollfirst();
+      DisableCtaStyle();
+    }
+
+    const elementId = 'bg';
+    const targetElement = document.getElementById(elementId);
+    const elementTop = targetElement.getBoundingClientRect().top + window.scrollY;
+    const elementHeight = targetElement.offsetHeight;
+
+    if (scrollTop >= elementTop - window.innerHeight + (elementHeight / 4)) {
+      initialize();
+    } else {
+      uninitialized();
+    }
+
+    const bgElement = document.getElementById('bg');
+    const bgElementTop = bgElement.getBoundingClientRect().top + window.scrollY;
+    const bgElementHeight = bgElement.offsetHeight;
+
+    if (scrollTop >= bgElementTop + bgElementHeight) {
+      console.log('whyweb');
+    }
+  });
+});

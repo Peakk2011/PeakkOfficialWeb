@@ -1,0 +1,176 @@
+:root {
+    --ctacolor: rgba(15, 15, 15, 0.731);
+    --bordercolor: #222;
+}
+
+.ctabtn {
+    position: fixed;
+    bottom: 30px;
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px rgb(27, 27, 27);
+    left: 50%;
+    background-color: var(--ctacolor);
+    border: solid 1px var(--bordercolor);
+    width: 60px;
+    height: 45px;
+    z-index: 5;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    transition: cubic-bezier(0.4, 0.0, 0.2, 1) 400ms all;
+    /* defaultset */
+    transform: translate(-50%, 60px);
+    opacity: 0;
+}
+
+.styleCtabtninitialize {
+    transform: translate(-50%, 0px);
+    opacity: 1;
+}
+
+.styleCtabtnAnimateFlow {
+    transform: translate(-50%, -25px);
+}
+
+.styleCtabtnAnimateFlowBACKDEF {
+    transform: translate(-50%, 0px);
+}
+
+.styleCtabtnWidth {
+    width: 180px;
+}
+
+#ctabtncontent {
+    position: relative;
+    opacity: 0;
+    transition: cubic-bezier(0.4, 0.0, 0.2, 1) 150ms all;
+    height: 45px;
+}
+
+.ctabtntext h1 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    line-height: 1.2;
+    font-size: 1.15rem;
+    min-width: max-content;
+    color: #ffffe9;
+    font-weight: 400;
+    font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+}
+
+.detailscontact {
+    width: 280px;
+    height: fit-content;
+    background-color: var(--ctacolor);
+    border: solid 1px var(--bordercolor);
+    box-shadow: 0px 0px 40px rgb(22, 22, 22);
+    border-radius: 16px;
+    position: fixed;
+    bottom: 105px;
+    left: 50%;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    transition: cubic-bezier(0.4, 0.0, 0.2, 1) 400ms all;
+    /* display: none; */
+    /* initialize */
+    transform: translate(-50%, 40px);
+    opacity: 0;
+    z-index: 5;
+
+    .decon {
+        width: 100%;
+        border-top: solid 1px var(--bordercolor);
+        /* border-bottom: solid 1px var(--bordercolor); */
+        display: flex;
+        align-items: center;
+        height: 50px;
+
+        &:hover {
+            background-color: #1c1c1c;
+        }
+    }
+
+    .decon div {
+        padding: 0rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .decon div p,
+    .decon div ion-icon {
+        color: #ffffe9;
+        font-family: "Manrope", "LineSeedRegular", "sans-serif";
+    }
+}
+
+.initializedetailscontact {
+    animation: initializeDetailsContact 550ms cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+    animation-delay: 800ms;
+}
+
+@keyframes initializeDetailsContact {
+
+    0% {
+        transform: translate(-50%, 20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, 0px);
+        opacity: 1;
+    }
+
+}
+
+.uninitializeDetailsContact {
+    animation: uninitializeDetailsContact 550ms cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+@keyframes uninitializeDetailsContact {
+
+    0% {
+        transform: translate(-50%, 0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, 40px);
+        opacity: 0;
+    }
+
+}
+
+.classlinksigtoggles {
+    position: fixed;
+    z-index: 5;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    transition: cubic-bezier(0.4, 0.0, 0.2, 1) 500ms all;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: var(--ctacolor);
+    border: solid 1px var(--bordercolor);
+    left: 50%;
+    transform: translateX(95%);
+    left: 50%;
+    bottom: 30px;
+    opacity: 0;
+
+    &.classlinksigtoggles ion-icon {
+        color: #ffffe9;
+        font-size: 1.25rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-47%,-52.245%);
+    }
+}
+
+.initializeclasslinksigtoggles {
+    opacity: 1;
+    transform: translateX(220%);
+}
