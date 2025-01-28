@@ -280,35 +280,35 @@ ImagesHover.forEach(image => {
   image.addEventListener('mouseleave', Exitimghover);
 });
 
-// const setOpacity = (id, opacity) => document.getElementById(id).style.opacity = opacity;
-// const updateText = (texts, delays, callback) => {
-//   let index = 0;
-//   const nextText = () => {
-//     if (index < texts.length) {
-//       document.getElementById("TextAnimationGlitch").innerHTML = texts[index];
-//       setTimeout(nextText, delays[index++]);
-//     } else if (callback) callback();
-//   };
-//   nextText();
-// };
+const setOpacity = (id, opacity) => document.getElementById(id).style.opacity = opacity;
+const updateText = (texts, delays, callback) => {
+  let index = 0;
+  const nextText = () => {
+    if (index < texts.length) {
+      document.getElementById("TextAnimationGlitch").innerHTML = texts[index];
+      setTimeout(nextText, delays[index++]);
+    } else if (callback) callback();
+  };
+  nextText();
+};
 
-// MainNavbar.style.transform = "translatey(-100px)";
-// MainNavbar.style.opacity = "0";
-// ["headernav", "Pkidbutton", "Pkofficialsvg"].forEach(id => setOpacity(id, "0"));
-// document.body.style.overflow = "hidden";
+MainNavbar.style.transform = "translatey(-100px)";
+MainNavbar.style.opacity = "0";
+["headernav", "Pkidbutton", "Pkofficialsvg"].forEach(id => setOpacity(id, "0"));
+document.body.style.overflow = "hidden";
 
-// setTimeout(() => {
-//   updateText(["รับทํา", "เว็บไซต์", "ติดต่อ", "พวกเรา", "ได้ครับ", ""], [500, 500, 500, 500, 500, 300], () => {
-//     document.body.style.overflow = "auto";
-//     setTimeout(() => setOpacity("Pkofficialsvg", "1"), 1000);
-//   });
-// }, 3600);
+setTimeout(() => {
+  updateText(["รับทํา", "เว็บไซต์", "ติดต่อ", "พวกเรา", "ได้ครับ", ""], [500, 500, 500, 500, 500, 300], () => {
+    document.body.style.overflow = "auto";
+    setTimeout(() => setOpacity("Pkofficialsvg", "1"), 1000);
+  });
+}, 3600);
 
-// setTimeout(() => {
-//   MainNavbar.style.transform = "translatey(0px)";
-//   MainNavbar.style.opacity = "1";
-//   ["headernav", "Pkidbutton"].forEach(id => setOpacity(id, "1"));
-// }, 8800);
+setTimeout(() => {
+  MainNavbar.style.transform = "translatey(0px)";
+  MainNavbar.style.opacity = "1";
+  ["headernav", "Pkidbutton"].forEach(id => setOpacity(id, "1"));
+}, 8800);
 
 // Animation Header bob
 
