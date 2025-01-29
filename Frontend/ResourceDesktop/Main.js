@@ -298,7 +298,7 @@ MainNavbar.style.opacity = "0";
 document.body.style.overflow = "hidden";
 
 setTimeout(() => {
-  updateText(["รับทํา", "เว็บไซต์", "ติดต่อ", "พวกเรา", "ได้ครับ", ""], [500, 500, 500, 500, 500, 300], () => {
+  updateText(["รับทํา", "เว็บไซต์", "ติดต่อ", "พวกเรา", "ได้ครับ", ""], [250, 250, 250, 250, 250, 320], () => {
     document.body.style.overflow = "auto";
     setTimeout(() => setOpacity("Pkofficialsvg", "1"), 1000);
   });
@@ -308,7 +308,34 @@ setTimeout(() => {
   MainNavbar.style.transform = "translatey(0px)";
   MainNavbar.style.opacity = "1";
   ["headernav", "Pkidbutton"].forEach(id => setOpacity(id, "1"));
-}, 8800);
+}, 7000);
+
+const zoomElement = document.querySelector("#Pkofficialsvg");
+let zoom = 1;
+const ZOOM_SPEED = 1;
+const minZoom = 1; // ขนาดเริ่มต้นเมื่อไม่ซูม
+const maxZoom = window.innerWidth / zoomElement.clientWidth - 3.9; // ขนาดสูงสุด ลดลงเล็กน้อย
+
+document.addEventListener("wheel", function (e) {
+
+  if ((zoom >= maxZoom && e.deltaY > 0) || (zoom <= minZoom && e.deltaY < 0)) {
+    window.removeEventListener("wheel", arguments.callee);
+  } else {
+    e.preventDefault(); // หยุดการเลื่อนหน้าเว็บขณะที่ซูม
+    if (e.deltaY > 0) {
+      zoom = Math.min(zoom + ZOOM_SPEED, maxZoom);
+    } else {
+      zoom = Math.max(zoom - ZOOM_SPEED, minZoom);
+    }
+    zoomElement.style.transform = `scale(${zoom})`;
+
+    // เลื่อนหน้าเว็บกลับไปยังตำแหน่งเดิมหลังจากซูม
+    window.scrollTo({
+      top: window.scrollY,
+      behavior: 'auto'
+    });
+  }
+}, { passive: false });
 
 // Animation Header bob
 
@@ -357,6 +384,7 @@ initBlobs();
 // Cta 
 
 document.addEventListener('DOMContentLoaded', function () {
+
   const ctabtn = document.getElementById("ctabtn");
   const ctabtnContent = document.getElementById("ctabtncontent");
   const detailscontact = document.getElementById("detailscontact");
@@ -366,13 +394,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const disable = () => {
     ctabtn.disabled = true;
     Object.assign(ctabtn.style, { opacity: '0' });
-    console.log('Disabled');
   }
 
   const enable = () => {
     ctabtn.disabled = false;
     Object.assign(ctabtn.style, { opacity: '1' });
-    console.log('Enabled');
   }
 
   // enableDetailsContact
@@ -380,13 +406,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const enableDetailsContact = () => {
     detailscontact.disableDetailsContact = false;
     Object.assign(detailscontact.style, { opacity: '1' });
-    console.log('Using Details Contact');
   }
 
   const disableDetailsContact = () => {
     detailscontact.disableDetailsContact = true;
     Object.assign(detailscontact.style, { opacity: '0' });
-    console.log('Disabled Details Contact');
   }
 
   let hasRun = false;
@@ -455,7 +479,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Scroll events
 
-  window.addEventListener('scroll', function () {
+  const HandleScrollEvents = () => {
     const scrollTop = window.scrollY;
 
     // DEFINE FUNC
@@ -477,7 +501,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (scrollTop >= 200) {
         // pass
         Resultsinitialized();
-        console.log('Sectionmain');
       } else if (scrollTop < 200) {
         ResultsUninitialized();
       } else {
@@ -487,20 +510,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     DEFINEscrollfirst();
 
+    // ctastyle
+
     const UsingCtaStyle = () => {
       ctabtn.classList.add('styleCtabtnWidth');
-      this.document.querySelector('.styleCtabtnWidth').style.width = "230px";
+      document.querySelectorAll('.styleCtabtnWidth').forEach(widthChenge => {
+        widthChenge.style.width = "230px";
+      });
       CtaTextContent.innerHTML = "ตัวอย่างเว็บไซต์เพิ่มเติม";
       ctabtn.style.transform = "translateX(-60%)";
       // Toggle class ig cta
-      setTimeout(() => {
-        Ctaclasslinksigtoggles.style.opacity = 1;
-        Ctaclasslinksigtoggles.classList.add('initializeclasslinksigtoggles');
-      }, 500);
+      Ctaclasslinksigtoggles.style.opacity = 1;
+      Ctaclasslinksigtoggles.classList.add('initializeclasslinksigtoggles');
     }
 
     const DisableCtaStyle = () => {
-      this.document.querySelector('.styleCtabtnWidth').style.width = "180px";
+      document.querySelectorAll('.styleCtabtnWidth').forEach(widthChenge => {
+        widthChenge.style.width = "180px";
+      });
       CtaTextContent.innerHTML = "ดูเพิ่มเติมได้ใน";
       ctabtn.style.transform = "translateX(-50%)";
       // igctabtn
@@ -509,7 +536,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (scrollTop >= 1200) {
-      console.log('DeWbcon');
       // operation 2 here
       UsingCtaStyle();
       uninitializedDetailsContact();
@@ -518,7 +544,7 @@ document.addEventListener('DOMContentLoaded', function () {
       DisableCtaStyle();
     }
 
-    const elementId = 'bg';
+    const elementId = 'whyweb';
     const targetElement = document.getElementById(elementId);
     const elementTop = targetElement.getBoundingClientRect().top + window.scrollY;
     const elementHeight = targetElement.offsetHeight;
@@ -529,12 +555,27 @@ document.addEventListener('DOMContentLoaded', function () {
       uninitialized();
     }
 
-    const bgElement = document.getElementById('bg');
+    const bgElement = document.getElementById('whyweb');
     const bgElementTop = bgElement.getBoundingClientRect().top + window.scrollY;
     const bgElementHeight = bgElement.offsetHeight;
 
+    // whyweb section
     if (scrollTop >= bgElementTop + bgElementHeight) {
-      console.log('whyweb');
+      DEFINEscrollfirst();
+      DisableCtaStyle();
+      uninitializedDetailsContact();
+      CtaTextContent.innerHTML = "เลื่อนลงเพื่อดูรายละเอียด";
+      // adjust width
+      document.querySelectorAll('.styleCtabtnWidth').forEach(widthChenge => {
+        widthChenge.style.width = "230px";
+      });
+    } else {
+
     }
-  });
+
+  }
+
+  window.addEventListener('scroll', HandleScrollEvents);
+  window.addEventListener('touchmove', HandleScrollEvents);
+
 });
