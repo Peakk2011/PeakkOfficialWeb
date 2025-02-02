@@ -183,7 +183,7 @@ body.dark-theme .iconsRes {
 @media (max-width: 450px) {
 
     .secwhywebtext h1 {
-        font-size: 10vw !important;
+        font-size: 10.85vw !important;
     }
 
     .secwhywebtext p {
@@ -297,7 +297,7 @@ body.dark-theme .iconsRes {
 @media (max-width: 450px) {
 
     .whywebtxt h1 {
-        font-size: 7vw !important;
+        font-size: 8vw !important;
     }
 
     .whywebtxt strong {
@@ -328,7 +328,7 @@ body.dark-theme .iconsRes {
     }
 
     .DeWbtxt h1 {
-        font-size: 10vw !important;
+        font-size: 11.85vw !important;
     }
 
     .DeWbtxt p {
@@ -482,6 +482,14 @@ body.dark-theme .iconsRes {
 
     .howwebtext p {
         font-size: 16px !important;
+    }
+
+    .trySelfcon {
+        height: 500px;
+    }
+
+    .allcon {
+        height: 400px;
     }
 
 }
@@ -659,7 +667,148 @@ body.dark-theme .iconsRes {
     }
 
     .allcon {
-        height: 500px !important;
+        height: 300px !important;
+    }
+
+}
+
+@media (max-height: 960px) {
+
+    #Pkofficialsvg {
+        width: 85.75vw !important;
+    }
+
+}
+
+/* Hiredetail */
+
+@media (max-width: 1460px) {
+
+    .hiredetailscontent {
+        max-width: 100% !important;
+        padding: 0rem 2rem;
+    }
+
+}
+
+@media (max-width: 920px) {
+
+    .hiredetailsimage svg {
+        width: 300px !important;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .hiredetailsimage svg {
+        width: 250px !important;
+    }
+
+
+    .hiredetailstext h1 {
+        font-size: 38px !important;
+    }
+
+
+    .hiredetailstext p {
+        font-size: 12px !important;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .hiredetailscontent {
+        flex-direction: column;
+        align-items: stretch !important;
+        height: 980px !important;
+        padding: 0rem 2rem;
+        position: relative;
+    }
+
+    .hiredetailstext h1 {
+        margin-top: 3rem;
+    }
+
+    .hiredetails {
+        height: 1180px;
+    }
+
+    .hiredetailsimage svg {
+        position: absolute;
+        left: 50%;
+        bottom: -30px;
+    }
+
+}
+
+@media (max-width: 540px) {
+
+    .hiredetailsimage svg {
+        transform: translateX(-70%);
+    }
+
+    .hiredetailsimage hr {
+        display: block !important;
+        bottom: -30px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hiredetailsimage svg {
+        transform: translateX(0%);
+        left: 40px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .hiredetailsimage svg {
+        width: 215.25px !important;
+        bottom: -35px;
+    }
+
+    .hiredetailsimage hr {
+        bottom: -35px;
+        height: 390px !important;
+    }
+
+    .hiredetailstext h1 {
+        font-size: 13.25vw !important;
+    }
+
+    .hiredetailstext p {
+        font-size: 3.55vw !important;
+    }
+
+}
+
+@media (max-width: 345px) {
+
+    .hiredetailstextlin {
+        gap: 10px !important;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .hiredetailstextlin {
+        gap: 0px !important;
+        flex-direction: column;
+        align-items: end !important;
+    }
+
+    .hiredetailstext a {
+        margin-bottom: 0.5rem;
+    }
+
+    .hiredetailsimage svg {
+        left: 20px;
     }
 
 }

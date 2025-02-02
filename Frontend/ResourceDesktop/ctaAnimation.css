@@ -57,6 +57,7 @@
     color: #ffffe9;
     font-weight: 400;
     font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+    transition: none;
 }
 
 .detailscontact {
@@ -139,6 +140,7 @@
     100% {
         transform: translate(-50%, 40px);
         opacity: 0;
+        display: none;
     }
 
 }

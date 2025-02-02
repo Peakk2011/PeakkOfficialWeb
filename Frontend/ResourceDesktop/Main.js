@@ -10,14 +10,19 @@ const gsapHoverEffect = (element, scaleIn, scaleOut) => {
   });
 };
 
-const addHoverEffects = () => {
-  document.querySelectorAll(".navbarlinks > li > a").forEach(link => gsapHoverEffect(link, 5, 1));
-  gsapHoverEffect(document.getElementById("Pkidbutton"), 5, 1);
-  gsapHoverEffect(document.getElementById("Ytpeakkofficial"), 0, 1);
-  gsapHoverEffect(document.getElementById("Navbarlinkshover"), 0, 1);
-};
-
-addHoverEffects();
+document.querySelectorAll([
+  ".navbarlinks > li > a",
+  "#Pkidbutton",
+  "#secwhywebabtextcon",
+  "#ctabtncontent",
+  "#classlinksigtoggles",
+  "#DoWbDesLinks",
+  "#whywebbtn",
+  "#ctablock",
+  "#hiredetailstextlin",
+  "#Ytpeakkofficial",
+  "#Navbarlinkshover"
+].join(',')).forEach(link => gsapHoverEffect(link, link.id === "Ytpeakkofficial" || link.id === "Navbarlinkshover" ? 0 : 5, 1));
 
 // Sidebartoggle
 
@@ -91,13 +96,11 @@ document.addEventListener('keydown', ({ key }) => {
 
   const isOpen = headerSidebar.style.transform === "translateX(0px)";
   const transitions = "transform 350ms cubic-bezier(0.4, 0.0, 0.2, 1)";
+  const transformValue = (key === "c" && !isOpen) ? "translateX(0)" : ((key === "Escape" || key === "Backspace") && isOpen) ? "translateX(-300px)" : null;
 
-  if (key === "c" && !isOpen) {
+  if (transformValue !== null) {
     headerSidebar.style.transition = transitions;
-    headerSidebar.style.transform = "translateX(0)";
-  } else if ((key === "Escape" || key === "Backspace") && isOpen) {
-    headerSidebar.style.transition = transitions;
-    headerSidebar.style.transform = "translateX(-300px)";
+    headerSidebar.style.transform = transformValue;
   }
 
   setTimeout(() => isAnimating = false, 150);
@@ -174,10 +177,13 @@ const updateNavbarLargeScreen = () => {
   document.querySelectorAll(`.${highlightClass}`).forEach(el => el.classList.remove(highlightClass));
 
   const targetSection = document.getElementById('whyweb');
+  const hireDetailsSection = document.getElementById('hiredetails');
   const navbarHeight = document.querySelector('nav').offsetHeight;
 
-  if (targetSection && window.scrollY >= targetSection.offsetTop - navbarHeight) {
-    // Assuming links[2] corresponds to the target section link
+  if (hireDetailsSection && window.scrollY >= hireDetailsSection.offsetTop - navbarHeight) {
+    links[3]?.classList.add(highlightClass);
+    console.log("Scrolled to hireDetailsSection");
+  } else if (targetSection && window.scrollY >= targetSection.offsetTop - navbarHeight) {
     links[2]?.classList.add(highlightClass);
     setDefaultNavbarProperties();
   } else if (window.scrollY >= window.innerHeight) {
@@ -280,6 +286,8 @@ ImagesHover.forEach(image => {
   image.addEventListener('mouseleave', Exitimghover);
 });
 
+// Loading screen
+
 const setOpacity = (id, opacity) => document.getElementById(id).style.opacity = opacity;
 const updateText = (texts, delays, callback) => {
   let index = 0;
@@ -309,6 +317,8 @@ setTimeout(() => {
   MainNavbar.style.opacity = "1";
   ["headernav", "Pkidbutton"].forEach(id => setOpacity(id, "1"));
 }, 7000);
+
+// Zoom element on scroll
 
 const zoomElement = document.querySelector("#Pkofficialsvg");
 let zoom = 1;
@@ -579,3 +589,35 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('touchmove', HandleScrollEvents);
 
 });
+
+const hiredetailstextspan = document.getElementById("hiredetailstextspan");
+
+const spanHover = () => {
+  hiredetailstextspan.style.width = "275px";
+  setTimeout(() => {
+    hiredetailstextspan.innerHTML = "ราคาเว็บไซต์มีดังนี้ 399฿ 599฿ 999฿";
+  }, 350);
+}
+
+const UnspanHover = () => {
+  hiredetailstextspan.style.width = "152px";
+  hiredetailstextspan.innerHTML = "399฿ 599฿ 999฿";
+}
+
+hiredetailstextspan.addEventListener('mouseover', spanHover);
+hiredetailstextspan.addEventListener('mouseout', UnspanHover);
+hiredetailstextspan.addEventListener('mouseleave', UnspanHover);
+
+const Define900 = window.matchMedia('(max-width: 900px)');
+
+function DefineWidth900func(event) {
+  if (event.matches) {
+    hiredetailstextspan.removeEventListener('mouseover', spanHover);
+    
+  } else {
+    hiredetailstextspan.addEventListener('mouseover', spanHover);
+  }
+}
+
+DefineWidth900func(Define900);
+Define900.addEventListener('change', DefineWidth900func);
