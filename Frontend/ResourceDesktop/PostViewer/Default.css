@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 :root {
     --Reset: border-box 0;
     --CardWidth: 320px;
@@ -72,7 +74,7 @@ html,body {
 .profiletext h1 {
     color: #ffffe9;
     font-size: 16px;
-    font-family: "Inter Tight", "sans-serif";
+    font-family: 'DM Sans';
     font-weight: 400;
     letter-spacing: -0.5px;
     margin-right: 0.75rem;
@@ -145,7 +147,7 @@ html,body {
 
 .showallcontent a {
     color: #fff;
-    font-size: 32px;
+    font-size: 25px;
     display: block;
     text-align: right;
 }
@@ -191,6 +193,12 @@ html,body {
 
     #Source {
         position: absolute;
+        font-size: 14px;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .showallcontent a ion-icon {
+        transform: translateY(2px);
     }
 
     .cardbutton {

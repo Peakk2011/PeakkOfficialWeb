@@ -676,6 +676,8 @@ body.dark-theme .iconsRes {
 
     #Pkofficialsvg {
         width: 85.75vw !important;
+        max-width: 480px !important;
+        min-width: 320px !important;
     }
 
 }

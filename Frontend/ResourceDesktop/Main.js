@@ -21,7 +21,8 @@ document.querySelectorAll([
   "#ctablock",
   "#hiredetailstextlin",
   "#Ytpeakkofficial",
-  "#Navbarlinkshover"
+  "#Navbarlinkshover",
+  "#ThemeSwitcher"
 ].join(',')).forEach(link => gsapHoverEffect(link, link.id === "Ytpeakkofficial" || link.id === "Navbarlinkshover" ? 0 : 5, 1));
 
 // Sidebartoggle
@@ -621,3 +622,43 @@ function DefineWidth900func(event) {
 
 DefineWidth900func(Define900);
 Define900.addEventListener('change', DefineWidth900func);
+
+// Theme Switcher
+
+const pressedButtonSelector = '[data-theme][aria-pressed="true"]';
+const defaultTheme = 'Default';
+
+const applyTheme = (theme) => {
+  const target = document.querySelector(`[data-theme="${theme}"]`);
+  document.documentElement.setAttribute("data-selected-theme", theme);
+  document.querySelector(pressedButtonSelector).setAttribute('aria-pressed', 'false');
+  target.setAttribute('aria-pressed', 'true');
+};
+
+const handleThemeSelection = (event) => {
+  const target = event.target;
+  const isPressed = target.getAttribute('aria-pressed');
+  const theme = target.getAttribute('data-theme');        
+  
+  if(isPressed !== "true") {
+    applyTheme(theme);
+    localStorage.setItem('selected-theme', theme);
+  }
+}
+
+const setInitialTheme = () => {
+  const savedTheme = localStorage.getItem('selected-theme');
+  if(savedTheme && savedTheme !== defaultTheme) {
+    applyTheme(savedTheme);
+  }
+};
+
+setInitialTheme();
+
+const themeSwitcher = document.querySelector('#ThemeSwitcher');
+const ThemeSwitcherButtons = themeSwitcher.querySelectorAll('.themeClickable');
+
+ThemeSwitcherButtons.forEach((button) => {
+   button.addEventListener('click', handleThemeSelection);
+});
+
