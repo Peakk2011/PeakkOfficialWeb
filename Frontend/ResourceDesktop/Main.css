@@ -24,55 +24,209 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     /* cursor: none !important;  */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
 }
 
+html.todesktop .header {
+    -webkit-app-region: drag;
+}
 
+html.todesktop .header .nav {
+    -webkit-app-region: no-drag;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: var(--NavbarColor);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--NavbarColor);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--SecColor);
+    opacity: 70%;
+}
+
+.cursor {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 101;
+    mix-blend-mode: difference;
+    transition: none;
+}
+
+.cursor--large {
+    --size: 40px;
+    border: 3px solid #ffffe9;
+}
+
+.cursor--small {
+    --size: 20px;
+    background: #ffffe9;
+    transform: translate(-50%, -50%);
+}
 
 :root,
 [data-selected-theme="Default"] {
     --color-background: #080808;
-    --SidebarColor: #0a0a0a;
+    --SidebarColor: rgba(10, 10, 10, 0.811);
     --ColorUnderSidebarColor: #000;
+    /* MoreSidebarOption */
+    --SidebarBackgroundBlur: rgba(10, 10, 10, 0.811);
+    --SidebarTextTitleColor: #ffffe9;
+    --BorderSidebar: solid 1px #262626;
+    --SidebarLinksColor: #959595;
+    /* MainColor */
     --ColorMain: #fff;
     --ColorHighlightSidebar: #ffffe9;
     --bordersolid: #222;
+    /* WebElement */
+    --headerColor: #070707;
+    --StrokePeakkofficial2025Color: #ffffe9;
+    --FillPeakkofficial2025Color: #ffffe9;
+    --ColorUnderHIGHLIGHT: #000;
+    /* HeaderAnimate */
+    --DEFINEblobblue: #162332;
+    --DEFINEblobwhite: #070707;
+    --DEFINEblobpurple: #212132;
+    --DEFINEblobpink: #ffb1ed50;
+    /* NavbarColor */
+    --DEFINEnavbarColor: #ffffe9;
+    /* HeadernavbarLinks */
+    --UsingDefaultNavbarColor: rgba(6, 6, 6, 0.7);
+    --HighlightNavbarColor: #ffffe9;
 }
 
 [data-selected-theme="DefaultLight"] {
     --color-background: #fff;
     --SidebarColor: #fcfcf3;
     --ColorUnderSidebarColor: #ffffe9;
+    /* MoreSidebarOption */
+    --SidebarBackgroundBlur: rgba(253, 253, 243, 0.660);
+    --SidebarTextTitleColor: #000;
+    --BorderSidebar: solid 1px #000;
+    --SidebarLinksColor: #000;
     --ColorMain: #000;
     --ColorHighlightSidebar: #000;
     --bordersolid: #e9e9e9;
+    /* WebElement */
+    --headerColor: #fffff9;
+    --StrokePeakkofficial2025Color: #000;
+    --FillPeakkofficial2025Color: #000;
+    --ColorUnderHIGHLIGHT: #ffffe9;
+    /* HeaderAnimate */
+    --DEFINEblobblue: #4783c7;
+    --DEFINEblobwhite: #fff;
+    --DEFINEblobpurple: #8c8ff1;
+    --DEFINEblobpink: #e289cd50;
+    /* NavbarColor */
+    --DEFINEnavbarColor: #000;
+    /* HeadernavbarLinks */
+    --UsingDefaultNavbarColor: rgba(253, 253, 243, 0.845);
+    --HighlightNavbarColor: #000;
 }
 
 [data-selected-theme="LightPink"] {
-    --color-background: rgba(255,250,248);
-    --SidebarColor: rgba(247,238,236); 
-    --ColorUnderSidebarColor: rgba(253,255,255);
+    --color-background: rgb(255, 241, 241);
+    --SidebarColor: rgba(247, 238, 236);
+    --ColorUnderSidebarColor: rgba(253, 255, 255);
+    /* MoreSidebarOption */
+    --SidebarBackgroundBlur: rgba(247, 238, 236, 0.775);
+    --SidebarTextTitleColor: #000;
+    --BorderSidebar: solid 1px #000;
+    --SidebarLinksColor: #000;
     --ColorMain: #000;
-    --ColorHighlightSidebar: rgba(103,73,70);
+    --ColorHighlightSidebar: rgba(247, 238, 236);
     --bordersolid: rgb(245, 232, 229);
+    /* WebElement */
+    --headerColor: rgb(255, 244, 244);
+    --StrokePeakkofficial2025Color: #3e2e31;
+    --FillPeakkofficial2025Color: #3e2e31;
+    --ColorUnderHIGHLIGHT: #000;
+    /* HeaderAnimate */
+    --DEFINEblobblue: #4783c7;
+    --DEFINEblobwhite: #fff;
+    --DEFINEblobpurple: #8c8ff1;
+    --DEFINEblobpink: #e289cd50;
+    /* NavbarColor */
+    --DEFINEnavbarColor: #3e2e31;
+    /* HeadernavbarLinks */
+    --UsingDefaultNavbarColor: rgb(255, 244, 244);
+    --HighlightNavbarColor: #000;
 }
 
 [data-selected-theme="LightLamonLight"] {
-    --color-background: rgba(252,250,241);
-    --SidebarColor: rgba(247,245,236);
+    --color-background: rgba(252, 250, 241);
+    --SidebarColor: rgba(247, 245, 236);
     --ColorUnderSidebarColor: #222;
+    /* MoreSidebarOption */
+    --SidebarBackgroundBlur: rgba(252, 250, 241, 0.775);
+    --SidebarTextTitleColor: #000;
+    --BorderSidebar: solid 1px #37372d;
+    --SidebarLinksColor: #37372d;
     --ColorMain: #000;
-    --ColorHighlightSidebar: rgba(232,232,197);
+    --ColorHighlightSidebar: rgba(232, 232, 197);
     --bordersolid: rgb(232, 230, 219);
+    /* WebElement */
+    --headerColor: rgba(252, 250, 241);
+    --StrokePeakkofficial2025Color: rgb(55, 55, 45);
+    --FillPeakkofficial2025Color: rgb(55, 55, 45);
+    --ColorUnderHIGHLIGHT: #000;
+    /* HeaderAnimate */
+    --DEFINEblobblue: transparent;
+    --DEFINEblobwhite: transparent;
+    --DEFINEblobpurple: transparent;
+    --DEFINEblobpink: transparent;
+    /* NavbarColor */
+    --DEFINEnavbarColor: #000;
+    /* HeadernavbarLinks */
+    --UsingDefaultNavbarColor: rgb(252, 250, 241);
+    --HighlightNavbarColor: rgb(8, 8, 6);
 }
 
 [data-selected-theme="PurpleDark"] {
-    --color-background: rgba(20,19,20);
+    --color-background: rgba(20, 19, 20);
     /* HIGHLIGHTmaincolor 15,14,15 */
-    --SidebarColor: rgba(28,27,29);
-    --ColorUnderSidebarColor: rgba(247,217,254);
-    --ColorHighlightSidebar: rgba(82,61,88);
-    --ColorMain: rgba(230,225,227);
+    --SidebarColor: rgba(15,14,15);
+    --ColorUnderSidebarColor: rgba(247, 217, 254);
+    /* MoreSidebarOption */
+    --SidebarBackgroundBlur: rgba(28, 27, 29);
+    --SidebarTextTitleColor: rgba(247, 217, 254);
+    --BorderSidebar: solid 1px rgba(230, 225, 227, 0.200);
+    --SidebarLinksColor: rgba(230, 225, 227, 0.705);
+    
+    --ColorHighlightSidebar: rgba(82, 61, 88);
+    --ColorMain: rgba(230, 225, 227);
     --bordersolid: rgb(46, 40, 47);
+    /* WebElement */
+    --headerColor: rgba(15, 14, 15);
+    --StrokePeakkofficial2025Color: rgba(230, 225, 227);
+    --FillPeakkofficial2025Color: rgba(230, 225, 227);
+    --ColorUnderHIGHLIGHT: rgba(247, 217, 254);
+    /* HeaderAnimate */
+    --DEFINEblobblue: transparent;
+    --DEFINEblobwhite: transparent;
+    --DEFINEblobpurple: transparent;
+    --DEFINEblobpink: transparent;
+    /* NavbarColor */
+    --DEFINEnavbarColor: rgba(230, 225, 227);
+    /* HeadernavbarLinks */
+    --UsingDefaultNavbarColor: rgb(15, 14, 15);
+    --HighlightNavbarColor: rgba(247, 217, 254);
 }
 
 ::selection {
@@ -82,7 +236,7 @@ body {
 .theme {
     position: relative;
     overflow: hidden;
-    width: 165px;
+    width: 150px;
     background-color: var(--SidebarColor);
     outline: solid 2px var(--bordersolid);
     border-radius: 50px;
@@ -95,8 +249,8 @@ body {
     padding: 0.65rem 0.8rem;
 
     .themeClickable {
-        width: 24px;
-        height: 24px;
+        width: 22px;
+        height: 22px;
         background-color: #ffffe9;
         outline: solid 2px var(--bordersolid);
         border-radius: 100px;
@@ -116,15 +270,15 @@ body {
 }
 
 #LightPinkColor {
-    background-color: rgba(247,238,236);
+    background-color: rgba(247, 238, 236);
 }
 
 #LightLamonLightColor {
-    background-color: rgba(232,232,197);
+    background-color: rgba(232, 232, 197);
 }
 
 #PurpleDarkColor {
-    background-color: rgba(28,27,29);   
+    background-color: rgba(28, 27, 29);
 }
 
 .cursor {
@@ -141,17 +295,6 @@ body {
     /* Safari */
     -moz-transition: none;
     /* Firefox */
-}
-
-.cursor--large {
-    --size: 40px;
-    border: 3px solid currentColor;
-}
-
-.cursor--small {
-    --size: 20px;
-    background: currentColor;
-    transform: translate(-50%, -50%);
 }
 
 body.dark-theme {
@@ -250,7 +393,9 @@ nav {
     }
 }
 
-
+.NavLogo svg path {
+    fill: var(--DEFINEnavbarColor);
+}
 
 #Slash {
     margin: 0rem 0.5rem;
@@ -486,6 +631,14 @@ body.dark-theme .sidebarcon li a:active {
     margin: 0 auto;
 }
 
+#PkofficialStrokepath {
+    fill: var(--StrokePeakkofficial2025Color);
+}
+
+#PkofficialFillpath {
+    fill: var(--FillPeakkofficial2025Color);
+}
+
 .bouncing-blob {
     width: 32vw;
     aspect-ratio: 1;
@@ -501,21 +654,21 @@ body.dark-theme .sidebarcon li a:active {
 }
 
 .bouncing-blob--blue {
-    background: #162332;
+    background: var(--DEFINEblobblue);
 }
 
 .bouncing-blob--white {
-    background: #070707;
+    background: var(--DEFINEblobwhite);
     z-index: 2;
     width: 15vw;
 }
 
 .bouncing-blob--purple {
-    background: #212132;
+    background: var(--DEFINEblobpurple);
 }
 
 .bouncing-blob--pink {
-    background: #ffb1ed50;
+    background: var(--DEFINEblobpink);
 }
 
 .bouncing-blobs-container {
@@ -552,7 +705,7 @@ body.dark-theme .sidebarcon li a:active {
 header {
     position: relative;
     width: 100%;
-    background-color: #070707;
+    background-color: var(--headerColor);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -600,7 +753,7 @@ header {
 }
 
 .headernav {
-    background-color: rgba(6, 6, 6, 0.7);
+    background-color: var(--UsingDefaultNavbarColor);
     /* background-color: transparent; */
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
@@ -627,7 +780,7 @@ header {
     .headernavwrapper {
         /* adjust postion */
         position: relative;
-        background-color: #060606;
+        background-color: var(--UsingDefaultNavbarColor);
     }
 
     .links {
@@ -636,7 +789,7 @@ header {
         gap: 19.5px;
 
         &.links li a {
-            color: #616161;
+            color: #424242;
             font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             height: 55px;
             display: flex;
@@ -655,7 +808,7 @@ header {
             height: 2px;
             left: 50%;
             position: absolute;
-            background: #ffffe9;
+            background: var(--HighlightNavbarColor);
             transition: width 0.3s ease 0s, left 0.3s ease 0s;
             width: 0;
         }
@@ -672,7 +825,7 @@ header {
         }
 
         &.links li a.highlight {
-            color: #ffffe9;
+            color: var(--HighlightNavbarColor);
         }
 
     }
@@ -691,7 +844,7 @@ header {
             top: 50%;
             transform: translate(-50%, -50%);
             font-size: 19.5px;
-            color: #ffffe9;
+            color: var(--HighlightNavbarColor);
             margin: 0 auto;
             /* display: block; */
             display: none;
@@ -707,8 +860,8 @@ header {
 }
 
 #Highlightheader {
-    border-bottom: solid 2px #ffffe9;
-    color: #ffffe9;
+    border-bottom: solid 2px var(--HighlightNavbarColor);
+    color: var(--HighlightNavbarColor);
 }
 
 #Highlightheader::after {
@@ -716,8 +869,7 @@ header {
 }
 
 #Pkidbutton {
-    background-color: #ffffe9;
-    color: #000;
+    background-color: var(--ColorHighlightSidebar);
     padding: 0.45rem 1rem;
     width: fit-content;
     border-radius: 50px;
@@ -728,7 +880,7 @@ header {
     transition: cubic-bezier(0.1, 0.9, 0.2, 1) 1s all;
 
     &#Pkidbutton a {
-        color: #000;
+        color: var(--ColorUnderHIGHLIGHT) !important;
         font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
     }
 }
@@ -740,7 +892,7 @@ header {
     height: 100vh;
     position: fixed;
     z-index: 12;
-    background-color: rgba(10, 10, 10, 0.811);
+    background-color: var(--SidebarColor);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     transform: translateX(-300px);
@@ -763,7 +915,7 @@ header {
     .hdcntlt ion-icon {
         font-size: 23.5px;
         transform: translate(1px, 0px);
-        color: #ffffe9;
+        color: var(--SidebarTextTitleColor);
     }
 
     /* .hdcntlt h1 {
@@ -784,6 +936,10 @@ header {
         transform: translateY(-2.5px);
     }
 
+    .hdcntlt svg path {
+        fill: var(--SidebarTextTitleColor);
+    }
+
     .hdsbcnlk {
         gap: 19.5px;
         position: absolute;
@@ -791,8 +947,7 @@ header {
         bottom: 60px;
 
         &.hdsbcnlk li a {
-            color: #fff;
-            opacity: 45%;
+            color: var(--SidebarLinksColor);
             font-family: lineseedregular;
             font-size: 15.25px;
             display: flex;
@@ -800,7 +955,7 @@ header {
             gap: 19.5px;
             width: 100%;
             position: relative;
-            border-bottom: solid 1px #262626;
+            border-bottom: var(--BorderSidebar);
             justify-content: space-between;
             cursor: pointer;
             height: 55px;
@@ -844,7 +999,7 @@ header {
     position: fixed;
     width: 100%;
     height: 100dvh;
-    background-color: rgba(10, 10, 10, 0.811);
+    background-color: var(--SidebarBackgroundBlur);
     -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
     z-index: 11;
@@ -852,10 +1007,6 @@ header {
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.85s;
     opacity: 0;
     display: none;
-}
-
-body.dark-theme #backgroundblur {
-    background-color: rgba(255, 255, 233, 0.650);
 }
 
 section {
@@ -1442,7 +1593,7 @@ section {
         }
 
         &.hiredetailstext p {
-            font-family: "Inter Tight", "LineSeedRegular", "sans-serif";    
+            font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             color: #fff;
             opacity: 35%;
             margin-bottom: 1.5rem;
@@ -1455,7 +1606,8 @@ section {
             gap: 22.5px;
         }
 
-        &.hiredetailstext a,span {
+        &.hiredetailstext a,
+        span {
             margin-top: 0.5rem;
         }
 
@@ -1488,7 +1640,7 @@ section {
 
     .hiredetailsimage {
         position: relative;
-        
+
         &.hiredetailsimage hr {
             width: 1px;
             height: 460px;

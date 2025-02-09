@@ -183,7 +183,6 @@ const updateNavbarLargeScreen = () => {
 
   if (hireDetailsSection && window.scrollY >= hireDetailsSection.offsetTop - navbarHeight) {
     links[3]?.classList.add(highlightClass);
-    console.log("Scrolled to hireDetailsSection");
   } else if (targetSection && window.scrollY >= targetSection.offsetTop - navbarHeight) {
     links[2]?.classList.add(highlightClass);
     setDefaultNavbarProperties();
@@ -191,12 +190,12 @@ const updateNavbarLargeScreen = () => {
     links[1]?.classList.add(highlightClass);
     setDefaultNavbarProperties();
   } else {
-    Object.assign(navbar.style, { color: '#ffffe9', borderBottom: "solid 2px #ffffe9" });
+    Object.assign(navbar.style, { color: 'var(--HighlightNavbarColor)', borderBottom: "var(--HighlightNavbarColor) solid 2px" });
   }
 };
 
 const setDefaultNavbarProperties = () => {
-  Object.assign(navbar.style, { color: '#616161', borderBottom: "none" });
+  Object.assign(navbar.style, { color: '#424242', borderBottom: "none" });
 };
 
 // Handle scroll and resize events
