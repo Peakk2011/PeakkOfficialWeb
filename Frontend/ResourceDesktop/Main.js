@@ -613,7 +613,7 @@ const Define900 = window.matchMedia('(max-width: 900px)');
 function DefineWidth900func(event) {
   if (event.matches) {
     hiredetailstextspan.removeEventListener('mouseover', spanHover);
-    
+
   } else {
     hiredetailstextspan.addEventListener('mouseover', spanHover);
   }
@@ -630,34 +630,78 @@ const defaultTheme = 'Default';
 const applyTheme = (theme) => {
   const target = document.querySelector(`[data-theme="${theme}"]`);
   document.documentElement.setAttribute("data-selected-theme", theme);
-  document.querySelector(pressedButtonSelector).setAttribute('aria-pressed', 'false');
+
+  // Check if there is an already pressed button and set 'aria-pressed' to 'false'
+  const previouslyPressedButton = document.querySelector(pressedButtonSelector);
+  if (previouslyPressedButton) {
+    previouslyPressedButton.setAttribute('aria-pressed', 'false');
+  }
+
   target.setAttribute('aria-pressed', 'true');
 };
 
 const handleThemeSelection = (event) => {
-  const target = event.target;
+  let target = event.target;
+
+  // Ensure the target is the ThemeBox itself
+  while (target && !target.classList.contains('ThemeBox')) {
+    target = target.parentElement;
+  }
+
+  if (!target) {
+    console.log('No valid target found.');
+    return;
+  }
+
   const isPressed = target.getAttribute('aria-pressed');
-  const theme = target.getAttribute('data-theme');        
-  
-  if(isPressed !== "true") {
+  const theme = target.getAttribute('data-theme');
+
+  console.log(`Theme clicked: ${theme}, Is pressed: ${isPressed}`);
+
+  if (isPressed !== "true") {
     applyTheme(theme);
     localStorage.setItem('selected-theme', theme);
+    console.log(`Theme applied: ${theme}`);
+  } else {
+    console.log(`Theme already applied: ${theme}`);
   }
 }
 
 const setInitialTheme = () => {
   const savedTheme = localStorage.getItem('selected-theme');
-  if(savedTheme && savedTheme !== defaultTheme) {
+  if (savedTheme && savedTheme !== defaultTheme) {
     applyTheme(savedTheme);
+    console.log(`Initial theme set: ${savedTheme}`);
   }
 };
 
 setInitialTheme();
 
-const themeSwitcher = document.querySelector('#ThemeSwitcher');
-const ThemeSwitcherButtons = themeSwitcher.querySelectorAll('.themeClickable');
+const themeSwitcher = document.querySelector('.PickTheme');
+const usingButtonThemeBoxContent = themeSwitcher.querySelectorAll('.ThemeBox');
 
-ThemeSwitcherButtons.forEach((button) => {
-   button.addEventListener('click', handleThemeSelection);
+usingButtonThemeBoxContent.forEach((button) => {
+  button.addEventListener('click', handleThemeSelection);
 });
 
+const containerHover = document.getElementById("containerHover");
+const PickThemeContainer = document.getElementById("PickThemeContainer");
+const ButtonThemeToggle = document.getElementById("ButtonThemeToggle");
+
+const usingThemeContainer = () => {
+  PickThemeContainer.style.transform = "translateY(0px)";
+}
+
+const disableThemeContainer = () => {
+  PickThemeContainer.style.transform = "translateY(-580px)";
+}
+
+containerHover.addEventListener("mouseenter", usingThemeContainer);
+containerHover.addEventListener("mouseleave", disableThemeContainer);
+PickThemeContainer.addEventListener("mouseleave", disableThemeContainer);
+PickThemeContainer.addEventListener("mouseenter", usingThemeContainer);
+containerHover.addEventListener("touchstart", usingThemeContainer);
+containerHover.addEventListener("touchcancel", disableThemeContainer);
+PickThemeContainer.addEventListener("touchcancel", disableThemeContainer);
+PickThemeContainer.addEventListener("touchstart", usingThemeContainer);
+ButtonThemeToggle.addEventListener("click", usingThemeContainer);

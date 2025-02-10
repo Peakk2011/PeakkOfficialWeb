@@ -14,7 +14,7 @@ body {
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: SEGOE UI VARIABLE;
+    font-family: "inter tight", "LineSeedRegular", "Manrope", "sans-serif";
     transition: cubic-bezier(0.19, 1, 0.22, 1) 0.75s all;
     user-select: none;
     -webkit-user-select: none;
@@ -82,6 +82,7 @@ html.todesktop .header .nav {
 
 :root,
 [data-selected-theme="Default"] {
+    --DEFINEThemeSwitcherCONTENTtext: #000;
     --color-background: #080808;
     --SidebarColor: rgba(10, 10, 10, 0.811);
     --ColorUnderSidebarColor: #000;
@@ -112,6 +113,7 @@ html.todesktop .header .nav {
 }
 
 [data-selected-theme="DefaultLight"] {
+    --DEFINEThemeSwitcherCONTENTtext: #ffffe9;
     --color-background: #fff;
     --SidebarColor: #fcfcf3;
     --ColorUnderSidebarColor: #ffffe9;
@@ -141,6 +143,7 @@ html.todesktop .header .nav {
 }
 
 [data-selected-theme="LightPink"] {
+    --DEFINEThemeSwitcherCONTENTtext: #000;
     --color-background: rgb(255, 241, 241);
     --SidebarColor: rgba(247, 238, 236);
     --ColorUnderSidebarColor: rgba(253, 255, 255);
@@ -170,6 +173,7 @@ html.todesktop .header .nav {
 }
 
 [data-selected-theme="LightLamonLight"] {
+    --DEFINEThemeSwitcherCONTENTtext: #000;
     --color-background: rgba(252, 250, 241);
     --SidebarColor: rgba(247, 245, 236);
     --ColorUnderSidebarColor: #222;
@@ -199,16 +203,17 @@ html.todesktop .header .nav {
 }
 
 [data-selected-theme="PurpleDark"] {
+    --DEFINEThemeSwitcherCONTENTtext: rgba(247, 217, 254);
     --color-background: rgba(20, 19, 20);
     /* HIGHLIGHTmaincolor 15,14,15 */
-    --SidebarColor: rgba(15,14,15);
+    --SidebarColor: rgba(15, 14, 15);
     --ColorUnderSidebarColor: rgba(247, 217, 254);
     /* MoreSidebarOption */
     --SidebarBackgroundBlur: rgba(28, 27, 29);
     --SidebarTextTitleColor: rgba(247, 217, 254);
     --BorderSidebar: solid 1px rgba(230, 225, 227, 0.200);
     --SidebarLinksColor: rgba(230, 225, 227, 0.705);
-    
+
     --ColorHighlightSidebar: rgba(82, 61, 88);
     --ColorMain: rgba(230, 225, 227);
     --bordersolid: rgb(46, 40, 47);
@@ -233,52 +238,234 @@ html.todesktop .header .nav {
     background-color: var(--SidebarColor);
 }
 
-.theme {
-    position: relative;
-    overflow: hidden;
-    width: 150px;
-    background-color: var(--SidebarColor);
-    outline: solid 2px var(--bordersolid);
-    border-radius: 50px;
+#containerHover {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    height: 35px;
+    width: 100%;
 }
 
-.themecontent {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.65rem 0.8rem;
+.PickThemeContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 270px;
+    background-color: var(--SidebarColor);
+    border-bottom: var(--bordersolid);
+    z-index: 2;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    transform: translateY(-580px);
+    transition: all 0.55s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 15;
 
-    .themeClickable {
-        width: 22px;
-        height: 22px;
-        background-color: #ffffe9;
-        outline: solid 2px var(--bordersolid);
-        border-radius: 100px;
-
-        &:hover {
-            filter: brightness(70%);
-        }
+    .PickContent {
+        max-width: 1100px;
+        margin: 0 auto;
     }
 }
 
-#DefaultColor {
-    background-color: #121212;
+.ThemeContenttitletext {
+    padding: 0.4rem 1rem;
+    background-color: var(--ColorHighlightSidebar);
+    outline: solid 3px var(--bordersolid);
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#DefaultLightColor {
-    background-color: #ffffc2;
+.PickContent h1 {
+    color: var(--DEFINEThemeSwitcherCONTENTtext);
+    font-size: 18px;
+    font-weight: 500;
 }
 
-#LightPinkColor {
+#definethemeicons {
+    color: var(--DEFINEThemeSwitcherCONTENTtext);
+    font-size: 18px;
+    transform: translateY(-0.5px);
+    margin-right: 0.5rem;
+}
+
+.PickTheme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ThemeBox {
+    width: 200px;
+    height: 100px;
+    background-color: var(--color-background);
+    outline: solid 3px var(--bordersolid);
+    /* Bg as theme color */
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative;
+
+    &:hover {
+        scale: 110%;
+        cursor: pointer;
+    }
+}
+
+.ThemeBox p {
+    font-size: 18.5px;
+    color: var(--ColorMain);
+    user-select: none;
+}
+
+.themePreviewWrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 18px;
+
+    .ThemePreview {
+        width: 28px;
+        height: 28px;
+        border-radius: 100px;
+        outline: solid 3px var(--bordersolid);
+    }
+}
+
+.ThemeContentTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.ThemeContentTitle ion-icon {
+        color: var(--ColorMain);
+        font-size: 28px;
+        transform: translateY(8px);
+    }
+}
+
+#FilterDefaultColor1 {
+    background-color: #000;
+}
+
+#FilterDefaultColor2 {
+    background-color: #ffffe9;
+}
+
+#FilterDefaultColor3 {
+    background-color: #ffffc8;
+}
+
+#FilterDefaultLightColor1 {
+    background-color: #fff;
+}
+
+#FilterDefaultLightColor2 {
+    background-color: #fdfdf3;
+}
+
+#FilterDefaultLightColor3 {
+    background-color: #ffffc8;
+}
+
+#FilterLightPinkColor2 {
+    background-color: rgba(255, 250, 248);
+}
+
+#FilterLightPinkColor3 {
     background-color: rgba(247, 238, 236);
 }
 
-#LightLamonLightColor {
+#FilterLightPinkColor1 {
+    background-color: rgba(103, 73, 70);
+}
+
+#FilterLamonColor1 {
     background-color: rgba(232, 232, 197);
 }
 
-#PurpleDarkColor {
-    background-color: rgba(28, 27, 29);
+#FilterLamonColor2 {
+    background-color: rgba(247, 245, 236);
+}
+
+#FilterLamonColor3 {
+    background-color: rgb(248, 253, 228);
+}
+
+#FilterPurpleDarkColor1 {
+    background-color: rgba(82, 61, 88);
+}
+
+#FilterPurpleDarkColor2 {
+    background-color: rgb(222, 200, 231);
+}
+
+#FilterPurpleDarkColor3 {
+    background-color: rgba(20, 19, 20);
+}
+
+#ButtonThemeToggle {
+    width: 165.5px;
+    cursor: pointer;
+}
+
+#DEFINEtextthemeswit {
+    color: var(--ColorMain);
+    font-family: "inter tight", "LineSeedRegular", "Manrope", "sans-serif";
+    display: none;
+}
+
+.gradient-border {
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    border-radius: 0px;
+    background: linear-gradient(90deg, rgba(66, 100, 108, 1) 0%, rgba(147, 191, 167, 1) 35%, rgba(255, 157, 157, 1) 70%, rgba(212, 207, 253, 1) 100%);
+    background-size: 600% 600%;
+    animation: gradientAnimation 5s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-box {
+    width: 100%;
+    filter: blur(60px);
+    height: 25px;
+    background: linear-gradient(90deg, rgba(66, 100, 108, 1) 0%, rgba(147, 191, 167, 1) 35%, rgba(255, 157, 157, 1) 70%, rgba(212, 207, 253, 1) 100%);
+    background-size: 600% 600%;
+    animation: boxGradientAnimation 5s linear infinite, boxGrowEffect 5s ease-in-out infinite;
+    left: 0;
+    bottom: 0px;
+    position: fixed;
+}
+
+@keyframes boxGradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cursor {

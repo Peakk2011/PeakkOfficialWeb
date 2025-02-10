@@ -219,15 +219,12 @@ body.dark-theme .iconsRes {
         scroll-snap-type: x mandatory;
         overscroll-behavior-x: contain;
         overflow-x: scroll;
+        justify-content: space-between;
+        gap: 18px !important;
     }
 
     #responsivetext {
         display: block;
-    }
-
-    .DoWbimg {
-        justify-content: space-between;
-        gap: 18px !important;
     }
 
 }
@@ -811,6 +808,89 @@ body.dark-theme .iconsRes {
 
     .hiredetailsimage svg {
         left: 20px;
+    }
+
+}
+
+/* Define ThemeContent */
+
+@media (max-width: 1460px) {
+
+    .PickThemeContainer {
+        max-width: 100% !important;
+        padding: 0rem 2rem;
+    }
+
+    .PickContent {
+        max-width: 100% !important;
+    }
+
+    .PickTheme {
+        position: relative !important;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+        overflow-x: scroll;
+        justify-content: start;
+        gap: 18px;
+    }
+
+    .ThemeBox {
+        min-width: 300px;
+        width: 300px;
+        scroll-snap-align: start;
+        margin: 3px;
+        outline: none;
+        border: solid 3px var(--bordersolid);
+        border-radius: 12px;
+
+        &:hover {
+            filter: brightness(75%);
+            scale: 100%;
+        }
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .PickTheme {
+        gap: 7px;
+        margin-bottom: 1.25rem;
+    }
+
+    .ThemeBox {
+        width: 250px;
+        min-width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 65px;
+    }
+
+    .themePreviewWrapper {
+        position: static;
+    }
+
+    .PickThemeContainer {
+        height: 230px;
+    }
+
+    #DEFINEtextthemeswit {
+        display: block;
+    }
+
+    .PickContent h1 {
+        margin: 0;
+        font-size: 14.5px;
+    }
+
+    .ThemeContentTitle {
+        height: 90px;
+    }
+    
+    .ThemeContentTitle ion-icon {
+        transform: translateY(4px) !important;
     }
 
 }
