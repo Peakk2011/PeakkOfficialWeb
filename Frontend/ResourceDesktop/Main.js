@@ -169,7 +169,25 @@ sidebarLinks.forEach(element => {
 
 // Change header text on scroll
 const updateNavbar = () => {
-  navbar.textContent = window.scrollY >= window.innerHeight ? 'มีเว็บไซต์เพื่ออะไร' : 'หน้าแรก 2025';
+  const Sectionmain = document.getElementById('Sectionmain');
+  const SectionmainTop = Sectionmain.offsetTop;
+  const SectionmainBottom = SectionmainTop + Sectionmain.offsetHeight;
+
+  const whyweb = document.getElementById('whyweb');
+  const whywebTop = whyweb.offsetTop;
+  const whywebBottom = whywebTop + whyweb.offsetHeight;
+
+  if (window.scrollY >= whywebBottom) {
+    navbar.textContent = 'จะมีเว็บไซต์ได้ยังไง';
+  } else if (window.scrollY >= whywebTop) {
+    navbar.textContent = 'จะมีเว็บไซต์ได้ยังไง';
+  } else if (window.scrollY >= SectionmainBottom) {
+    navbar.textContent = 'มีเว็บไซต์เพื่ออะไร';
+  } else if (window.scrollY >= SectionmainTop) {
+    navbar.textContent = 'มีเว็บไซต์เพื่ออะไร';
+  } else {
+    navbar.textContent = 'หน้าแรก 2025';
+  }
 };
 
 // Check header large screen
@@ -318,34 +336,75 @@ setTimeout(() => {
   ["headernav", "Pkidbutton"].forEach(id => setOpacity(id, "1"));
 }, 7000);
 
-// Zoom element on scroll
+// Mouse interactive
 
-const zoomElement = document.querySelector("#Pkofficialsvg");
-let zoom = 1;
-const ZOOM_SPEED = 1;
-const minZoom = 1; // ขนาดเริ่มต้นเมื่อไม่ซูม
-const maxZoom = window.innerWidth / zoomElement.clientWidth - 3.9; // ขนาดสูงสุด ลดลงเล็กน้อย
-
-document.addEventListener("wheel", function (e) {
-
-  if ((zoom >= maxZoom && e.deltaY > 0) || (zoom <= minZoom && e.deltaY < 0)) {
-    window.removeEventListener("wheel", arguments.callee);
-  } else {
-    e.preventDefault(); // หยุดการเลื่อนหน้าเว็บขณะที่ซูม
-    if (e.deltaY > 0) {
-      zoom = Math.min(zoom + ZOOM_SPEED, maxZoom);
-    } else {
-      zoom = Math.max(zoom - ZOOM_SPEED, minZoom);
-    }
-    zoomElement.style.transform = `scale(${zoom})`;
-
-    // เลื่อนหน้าเว็บกลับไปยังตำแหน่งเดิมหลังจากซูม
-    window.scrollTo({
-      top: window.scrollY,
-      behavior: 'auto'
-    });
+function UsingMouseMov() {
+  // Check if the screen width is less than 1200px
+  if (window.innerWidth < 1200) {
+    return; // Exit the function if the screen width is less than 1200px
   }
-}, { passive: false });
+
+  setTimeout(() => {
+    const element = document.querySelector('.officialsvg');
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    // ค่าความเร็วและความลื่นไหล
+    const smoothness = 0.25;
+    const maxRotation = 7;
+    const maxTilt = 7;
+
+    function updatePosition(e) {
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      targetX = (e.clientX - centerX) * 0.2;
+      targetY = (e.clientY - centerY) * 0.2;
+    }
+
+    function animate() {
+      // คำนวณการเคลื่อนที่แบบลื่นไหล
+      currentX += (targetX - currentX) * smoothness;
+      currentY += (targetY - currentY) * smoothness;
+
+      // คำนวณการหมุนและเอียง
+      const rotateZ = (currentX / (window.innerWidth * 0.2)) * maxRotation;
+      const rotateX = -(currentY / (window.innerHeight * 0.2)) * maxTilt;
+
+      // ใช้การแปลงรูปแบบ
+      element.style.transform = `
+          translate(-50%, -50%) 
+          translate(${currentX}px, ${currentY}px)
+          rotateZ(${rotateZ}deg) 
+          rotateX(${rotateX}deg)
+      `;
+
+      requestAnimationFrame(animate);
+    }
+
+    // ตั้งค่าการติดตามเมาส์
+    document.addEventListener('mousemove', updatePosition);
+    animate();
+
+    // ปรับตำแหน่งกลางเมื่อหน้าต่างเปลี่ยนขนาด
+    window.addEventListener('resize', () => {
+      currentX = 0;
+      currentY = 0;
+      element.style.transform = `translate(-50%, -50%)`;
+    });
+
+  }, 8000);
+}
+
+function UsingFuncMouseMov() {
+  if (window.innerWidth >= 1200) {
+    UsingMouseMov();
+  }
+}
+
+window.onload = UsingFuncMouseMov;
+window.onresize = UsingFuncMouseMov;
 
 // Animation Header bob
 
@@ -400,6 +459,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const detailscontact = document.getElementById("detailscontact");
   const CtaTextContent = document.getElementById("CtaTextContent");
   const Ctaclasslinksigtoggles = document.getElementById("classlinksigtoggles");
+
+  Ctaclasslinksigtoggles.addEventListener("click", () => {
+    window.open("https://www.instagram.com/peakkofficial/", "_top");
+  })
 
   const disable = () => {
     ctabtn.disabled = true;
@@ -623,7 +686,7 @@ DefineWidth900func(Define900);
 Define900.addEventListener('change', DefineWidth900func);
 
 // Theme Switcher
-
+let ObjectUsingCloseThemebtn = document.getElementById("ObjectUsingCloseThemebtn");
 const pressedButtonSelector = '[data-theme][aria-pressed="true"]';
 const defaultTheme = 'Default';
 
@@ -679,29 +742,88 @@ setInitialTheme();
 
 const themeSwitcher = document.querySelector('.PickTheme');
 const usingButtonThemeBoxContent = themeSwitcher.querySelectorAll('.ThemeBox');
+const backgroundblurfortheme = document.getElementById("backgroundblurfortheme");
 
 usingButtonThemeBoxContent.forEach((button) => {
   button.addEventListener('click', handleThemeSelection);
 });
 
+function UsingBackgroudBlur() {
+  backgroundblurfortheme.style.transform = "translateY(-100vh)";
+  backgroundblurfortheme.style.display = "block";
+  setTimeout(() => {
+    backgroundblurfortheme.style.transform = "translateY(0vh)";
+    backgroundblurfortheme.style.opacity = "1";
+  }, 5);
+}
+
+function DisableBGBLUR() {
+  backgroundblurfortheme.style.transform = "translateY(-100vh)";
+  setTimeout(() => {
+    backgroundblurfortheme.style.opacity = "0";
+    setTimeout(() => {
+      backgroundblurfortheme.style.display = "none";
+    }, 300);
+  }, 250);
+}
+
 const containerHover = document.getElementById("containerHover");
 const PickThemeContainer = document.getElementById("PickThemeContainer");
 const ButtonThemeToggle = document.getElementById("ButtonThemeToggle");
+const usingSBThemeSwitcher = document.getElementById('usingSBThemeSwitcher');
 
 const usingThemeContainer = () => {
   PickThemeContainer.style.transform = "translateY(0px)";
+  UsingBackgroudBlur();
 }
 
 const disableThemeContainer = () => {
-  PickThemeContainer.style.transform = "translateY(-580px)";
+  PickThemeContainer.style.transform = "translateY(-320px)";
+  DisableBGBLUR();
+}
+
+// DEFINE mobile using theme switcher
+
+const MBDEFINEusingTheme = () => {
+  PickThemeContainer.style.transform = "translateY(0px)";
+}
+
+const MBDEFINEdisabledtheme = () => {
+  PickThemeContainer.style.transform = "translateY(-320px)";
+  DisableBGBLUR();
 }
 
 containerHover.addEventListener("mouseenter", usingThemeContainer);
 containerHover.addEventListener("mouseleave", disableThemeContainer);
 PickThemeContainer.addEventListener("mouseleave", disableThemeContainer);
 PickThemeContainer.addEventListener("mouseenter", usingThemeContainer);
+ButtonThemeToggle.addEventListener("click", usingThemeContainer);
+
+usingSBThemeSwitcher.addEventListener("click", usingThemeContainer);
+
 containerHover.addEventListener("touchstart", usingThemeContainer);
 containerHover.addEventListener("touchcancel", disableThemeContainer);
 PickThemeContainer.addEventListener("touchcancel", disableThemeContainer);
 PickThemeContainer.addEventListener("touchstart", usingThemeContainer);
-ButtonThemeToggle.addEventListener("click", usingThemeContainer);
+// Define mq mobile ui
+
+function checkScreenWidth() {
+  var screenWidth = window.innerWidth;
+
+  if (screenWidth < 600) {
+    ButtonThemeToggle.addEventListener("click", MBDEFINEusingTheme);
+
+    usingSBThemeSwitcher.addEventListener("click", MBDEFINEusingTheme);
+    ObjectUsingCloseThemebtn.addEventListener("click", MBDEFINEdisabledtheme);
+    // -> เลือนขวาเพื่อหาธีมที่ชอบและใช่สําหรับคุณ
+    document.getElementById("DEFINEtextthemeswit").innerHTML = "-> เลือนขวาเพื่อหาธีมที่ชอบและใช่สําหรับคุณ";
+  } else {
+    ObjectUsingCloseThemebtn.addEventListener("click", disableThemeContainer);
+    // Add text theme for desiption
+    document.getElementById("DEFINEtextthemeswit").innerHTML = "-> กด Shift ค้างแล้ว Scroll เมาส์จะเป็นการเลือนเนื้อหาที่มองไม่เห็น";
+  }
+
+}
+
+checkScreenWidth();
+window.addEventListener('resize', checkScreenWidth);

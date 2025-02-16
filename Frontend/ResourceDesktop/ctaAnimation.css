@@ -1,13 +1,39 @@
-:root {
+:root,
+[data-selected-theme="Default"] {
     --ctacolor: rgba(15, 15, 15, 0.731);
     --bordercolor: #222;
+    --ColorUnderCta: #ffffe9;
 }
+
+[data-selected-theme="DefaultLight"] {
+    --ctacolor: #ffffe9;
+    --bordercolor: #f1f1f1;
+    --ColorUnderCta: #000;
+}
+
+[data-selected-theme="LightPink"] {
+    --ctacolor: #fff4f4;
+    --bordercolor: #f1f1f1;
+    --ColorUnderCta: #3e2e31;
+}
+
+[data-selected-theme="LightLamonLight"] {
+    --ctacolor: #fcfaf1;
+    --bordercolor: #f1f1f1;
+    --ColorUnderCta: #37372d;
+}
+
+[data-selected-theme="PurpleDark"] {
+    --ctacolor: rgb(15, 14, 15);
+    --bordercolor: #222;
+    --ColorUnderCta: #e6e1e3;
+}
+
 
 .ctabtn {
     position: fixed;
     bottom: 30px;
     border-radius: 50px;
-    box-shadow: 0px 0px 10px rgb(27, 27, 27);
     left: 50%;
     background-color: var(--ctacolor);
     border: solid 1px var(--bordercolor);
@@ -54,21 +80,20 @@
     line-height: 1.2;
     font-size: 1.15rem;
     min-width: max-content;
-    color: #ffffe9;
+    color: var(--ColorUnderCta);
     font-weight: 400;
-    font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+    font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
     transition: none;
 }
 
 .detailscontact {
-    width: 280px;
+    width: 150px;
     height: fit-content;
     background-color: var(--ctacolor);
     border: solid 1px var(--bordercolor);
-    box-shadow: 0px 0px 40px rgb(22, 22, 22);
-    border-radius: 16px;
+    border-radius: 100px;
     position: fixed;
-    bottom: 105px;
+    bottom: 87.725px;
     left: 50%;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
@@ -79,32 +104,20 @@
     opacity: 0;
     z-index: 5;
 
-    .decon {
-        width: 100%;
-        border-top: solid 1px var(--bordercolor);
-        /* border-bottom: solid 1px var(--bordercolor); */
+    .Detilcon {
         display: flex;
         align-items: center;
-        height: 50px;
-
-        &:hover {
-            background-color: #1c1c1c;
-        }
-    }
-
-    .decon div {
-        padding: 0rem 1.5rem;
-        display: flex;
         justify-content: space-between;
-        align-items: center;
-        width: 100%;
+        padding: 0rem 1.25rem;
+        height: 50px;
     }
 
-    .decon div p,
-    .decon div ion-icon {
-        color: #ffffe9;
-        font-family: "Manrope", "LineSeedRegular", "sans-serif";
+    .Detilcon a {
+        color: var(--ColorUnderCta);
+        font-size: 20px;
+        transform: translateY(2px);
     }
+
 }
 
 .initializedetailscontact {
@@ -151,7 +164,6 @@
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     transition: cubic-bezier(0.4, 0.0, 0.2, 1) 500ms all;
-    box-shadow: 0px 0px 10px rgb(27, 27, 27);
     height: 45px;
     width: 45px;
     border-radius: 50%;
@@ -164,12 +176,12 @@
     opacity: 0;
 
     &.classlinksigtoggles ion-icon {
-        color: #ffffe9;
+        color: var(--ColorUnderCta);
         font-size: 1.25rem;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-47%,-52.245%);
+        transform: translate(-47%, -52.245%);
     }
 }
 
