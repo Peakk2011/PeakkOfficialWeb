@@ -167,6 +167,56 @@ sidebarLinks.forEach(element => {
   element.addEventListener('click', toggleDisplay);
 });
 
+// Animation Header bob
+
+const BlobContent = document.getElementById("bouncing-blobs");
+const MIN_SPEED = 1.5, MAX_SPEED = 2.5;
+
+class Blob {
+  constructor(el) {
+    const { width: size } = el.getBoundingClientRect();
+    this.el = el;
+    this.size = size;
+    this.x = this.randomPos(window.innerWidth - size);
+    this.y = this.randomPos(window.innerHeight - size);
+    this.vx = this.randomSpeed();
+    this.vy = this.randomSpeed();
+    el.style.top = `${this.y}px`;
+    el.style.left = `${this.x}px`;
+  }
+
+  randomPos(max) { return Math.random() * max; }
+  randomSpeed() { return Math.random() * (MAX_SPEED - MIN_SPEED) + MIN_SPEED * (Math.random() > 0.5 ? 1 : -1); }
+
+  update() {
+    this.x = this.reflect(this.x, window.innerWidth);
+    this.y = this.reflect(this.y, window.innerHeight);
+  }
+
+  reflect(coord, maxSize) {
+    coord += this.vx;
+    if (coord >= maxSize - this.size || coord <= 0) this.vx *= -1;
+    return coord;
+  }
+
+  move() {
+    this.el.style.transform = `translate(${this.x}px, ${this.y}px)`;
+  }
+}
+
+const initBlobs = () => {
+  const blobs = [...document.querySelectorAll('.bouncing-blob')].map(el => new Blob(el));
+  const update = () => (blobs.forEach(blob => (blob.update(), blob.move())), requestAnimationFrame(update));
+  requestAnimationFrame(update);
+};
+
+initBlobs();
+
+// Adjust Header Text on scroll backgrund
+
+BlobContent.style.opacity = "0";
+BlobContent.style.transition = "cubic-bezier(0.4, 0.0, 0.2, 1) 600ms all";
+
 // Change header text on scroll
 const updateNavbar = () => {
   const Sectionmain = document.getElementById('Sectionmain');
@@ -189,6 +239,10 @@ const updateNavbar = () => {
     navbar.textContent = 'หน้าแรก 2025';
   }
 };
+
+setTimeout(() => {
+  BlobContent.style.opacity = "1";
+}, 6000);
 
 // Check header large screen
 const updateNavbarLargeScreen = () => {
@@ -398,57 +452,13 @@ function UsingMouseMov() {
 }
 
 function UsingFuncMouseMov() {
-  if (window.innerWidth >= 1200) {
+  if (window.innerWidth >= 1465) {
     UsingMouseMov();
   }
 }
 
 window.onload = UsingFuncMouseMov;
 window.onresize = UsingFuncMouseMov;
-
-// Animation Header bob
-
-const MIN_SPEED = 1.5, MAX_SPEED = 2.5;
-
-class Blob {
-  constructor(el) {
-    const { width: size } = el.getBoundingClientRect();
-    this.el = el;
-    this.size = size;
-    this.x = this.randomPos(window.innerWidth - size);
-    this.y = this.randomPos(window.innerHeight - size);
-    this.vx = this.randomSpeed();
-    this.vy = this.randomSpeed();
-    el.style.top = `${this.y}px`;
-    el.style.left = `${this.x}px`;
-  }
-
-  randomPos(max) { return Math.random() * max; }
-  randomSpeed() { return Math.random() * (MAX_SPEED - MIN_SPEED) + MIN_SPEED * (Math.random() > 0.5 ? 1 : -1); }
-
-  update() {
-    this.x = this.reflect(this.x, window.innerWidth);
-    this.y = this.reflect(this.y, window.innerHeight);
-  }
-
-  reflect(coord, maxSize) {
-    coord += this.vx;
-    if (coord >= maxSize - this.size || coord <= 0) this.vx *= -1;
-    return coord;
-  }
-
-  move() {
-    this.el.style.transform = `translate(${this.x}px, ${this.y}px)`;
-  }
-}
-
-const initBlobs = () => {
-  const blobs = [...document.querySelectorAll('.bouncing-blob')].map(el => new Blob(el));
-  const update = () => (blobs.forEach(blob => (blob.update(), blob.move())), requestAnimationFrame(update));
-  requestAnimationFrame(update);
-};
-
-initBlobs();
 
 // Cta 
 

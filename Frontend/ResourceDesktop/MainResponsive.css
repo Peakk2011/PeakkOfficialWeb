@@ -166,7 +166,7 @@ body.dark-theme .iconsRes {
 
 @media (max-width: 1105px) {
 
-    .secwhywbimg svg {
+    .secwhywbimg img {
         min-width: 320px;
     }
 
@@ -174,7 +174,7 @@ body.dark-theme .iconsRes {
 
 @media (max-width: 750px) {
 
-    .secwhywbimg svg {
+    .secwhywbimg img {
         display: none;
     }
 

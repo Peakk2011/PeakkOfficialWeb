@@ -83,7 +83,7 @@ html.todesktop .header .nav {
 :root,
 [data-selected-theme="Default"] {
     --DEFINEThemeSwitcherCONTENTtext: #000;
-    --color-background: #080808;
+    --color-background: #0a0a0a;
     --SidebarColor: rgba(10, 10, 10, 0.811);
     --ColorUnderSidebarColor: #000;
     /* MoreSidebarOption */
@@ -96,7 +96,7 @@ html.todesktop .header .nav {
     --ColorHighlightSidebar: #ffffe9;
     --bordersolid: #222;
     /* WebElement */
-    --headerColor: #070707;
+    --headerColor: #000;
     --StrokePeakkofficial2025Color: #ffffe9;
     --FillPeakkofficial2025Color: #ffffe9;
     --ColorUnderHIGHLIGHT: #000;
@@ -116,7 +116,7 @@ html.todesktop .header .nav {
     --BtnWhyweb: #ffffe9;
     --BtntextWhyweb: #000;
     --IconAndTextcolor: #ffffe9;
-    --PtextColor: #8a8a8a;
+    --PtextColor: #aeaeae;
 }
 
 [data-selected-theme="DefaultLight"] {
@@ -559,7 +559,7 @@ nav {
     height: 55px;
 
     &.NavLogo svg {
-        width: 130px;
+        width: 128.25px;
         height: auto;
         display: block;
     }
@@ -844,6 +844,7 @@ body.dark-theme .sidebarcon li a:active {
     transform-origin: left top;
     opacity: 50%;
     filter: saturate(50%) contrast(110%);
+    background-attachment: fixed;
 }
 
 .bouncing-blob--blue {
@@ -904,6 +905,7 @@ header {
     justify-content: center;
     overflow: hidden;
     z-index: 1;
+    background-attachment: fixed;
 
     .headercon {
         display: flex;
@@ -982,7 +984,7 @@ header {
         gap: 19.5px;
 
         &.links li a {
-            color: #424242;
+            color: #636363;
             font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             height: 55px;
             display: flex;
@@ -1063,7 +1065,7 @@ header {
 
 #Pkidbutton {
     background-color: var(--ColorHighlightSidebar);
-    padding: 0.45rem 1rem;
+    padding: 0.55rem 1.15rem;
     width: fit-content;
     border-radius: 50px;
     font-size: 14.5px;
@@ -1239,10 +1241,10 @@ section {
     bottom: 0;
 }
 
-.secwhywbimg svg {
-    max-width: 45vw;
-    width: 750px;
-    min-width: 650px;
+.secwhywbimg img {
+    max-width: 36vw;
+    width: 670px;
+    min-width: 635px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -1296,13 +1298,13 @@ section {
 }
 
 .secwhywebabtextcon a {
-    padding: 0.5rem 1rem;
+    padding: 0.55rem 1.15rem;
     display: inline-block;
     background-color: var(--BtnWhyweb);
     color: var(--BtntextWhyweb);
     font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
     border-radius: 25px;
-    transform: translateY(20px);
+    transform: translateY(55px);
 }
 
 .secwhywebabcon {
@@ -1338,7 +1340,7 @@ section {
         &.secwhywebabtextcon p {
             color: var(--PtextColor);
             font-size: 12px;
-            margin-bottom: 1.25rem;
+            font-weight: 700;
         }
 
     }
@@ -1388,7 +1390,7 @@ section {
     .DeWbtxt p {
         color: #fff;
         font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
-        font-size: 14px;
+        font-size: 16px;
         margin-top: 1.25rem;
         letter-spacing: -0.3px;
         opacity: 30%;
@@ -1415,7 +1417,7 @@ section {
         left: 30%;
         top: 50%;
         transform: translate(-50%, -50%);
-        opacity: 5%;
+        opacity: 3%;
         width: 1000px;
         height: auto;
         display: block;
@@ -1425,13 +1427,13 @@ section {
     .DeWbDes p {
         color: #fff;
         font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
-        font-size: 14px;
+        font-size: 16px;
         margin-top: 1.25rem;
         opacity: 30%;
     }
 
     .DeWbDes a {
-        padding: 0.5rem 1.25rem;
+        padding: 0.55rem 1.25rem;
         background-color: #ffffE9;
         color: #000;
         border-radius: 25px;
@@ -1530,6 +1532,7 @@ section {
     width: 1000px;
     z-index: 1;
     transition: none;
+    filter: contrast(0.95);
 }
 
 .whywebimgmb svg {
@@ -1552,7 +1555,7 @@ section {
 .whywebbtn a {
     color: #000;
     background-color: #ffffe9;
-    padding: 0.5rem 1.2rem;
+    padding: 0.55rem 1.2rem;
     border-radius: 50px;
     font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
     display: inline-block;
@@ -1583,8 +1586,7 @@ section {
         } */
 
         &.trySelftxt p {
-            color: #fff;
-            opacity: 35%;
+            color: #767676;
             font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             font-size: 22.5px;
             line-height: 1.6;
@@ -1621,8 +1623,7 @@ section {
     .alltext {
 
         &.alltext p {
-            color: #fff;
-            opacity: 35%;
+            color: #767676;
             text-align: right;
             font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             font-size: 22.5px;
@@ -1703,8 +1704,7 @@ section {
             letter-spacing: -0.3px;
             text-align: right;
             font-weight: 400;
-            color: #fff;
-            opacity: 35%;
+            color: #767676;
             line-height: 1.6;
         }
     }
@@ -1740,7 +1740,7 @@ section {
     background-color: #ffffE9;
     display: flex;
     align-items: center;
-    padding: 0.5rem 1.5rem;
+    padding: 0.55rem 1.5rem;
     width: fit-content;
     border-radius: 60px;
     justify-content: center;
@@ -1823,7 +1823,7 @@ section {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 40px;
+            height: 45px;
             width: 100px;
             background-color: #ffffe9;
             color: #000;
@@ -1834,7 +1834,7 @@ section {
         &.hiredetailstext span {
             font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             width: 152px;
-            height: 42px;
+            height: 47px;
             display: flex;
             align-items: center;
             padding-left: 1rem;

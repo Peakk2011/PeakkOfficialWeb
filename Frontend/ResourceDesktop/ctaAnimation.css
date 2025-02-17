@@ -32,13 +32,13 @@
 
 .ctabtn {
     position: fixed;
-    bottom: 30px;
+    bottom: 35px;
     border-radius: 50px;
     left: 50%;
     background-color: var(--ctacolor);
     border: solid 1px var(--bordercolor);
     width: 60px;
-    height: 45px;
+    height: 50px;
     z-index: 5;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
@@ -69,7 +69,7 @@
     position: relative;
     opacity: 0;
     transition: cubic-bezier(0.4, 0.0, 0.2, 1) 150ms all;
-    height: 45px;
+    height: 50px;
 }
 
 .ctabtntext h1 {
@@ -77,23 +77,23 @@
     top: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    line-height: 1.2;
+    line-height: 1.5;
     font-size: 1.15rem;
     min-width: max-content;
     color: var(--ColorUnderCta);
     font-weight: 400;
-    font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
+    font-family: "Inter Tight", "MisansRegular", "IBM Plex Sans Thai", "sans-serif";
     transition: none;
 }
 
 .detailscontact {
-    width: 150px;
+    width: 180px;
     height: fit-content;
     background-color: var(--ctacolor);
     border: solid 1px var(--bordercolor);
     border-radius: 100px;
     position: fixed;
-    bottom: 87.725px;
+    bottom: 105.75px;
     left: 50%;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
@@ -108,7 +108,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0rem 1.25rem;
+        padding: 0rem 1.75rem;
         height: 50px;
     }
 
@@ -164,15 +164,15 @@
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     transition: cubic-bezier(0.4, 0.0, 0.2, 1) 500ms all;
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     background-color: var(--ctacolor);
     border: solid 1px var(--bordercolor);
     left: 50%;
     transform: translateX(95%);
     left: 50%;
-    bottom: 30px;
+    bottom: 35px;
     opacity: 0;
 
     &.classlinksigtoggles ion-icon {

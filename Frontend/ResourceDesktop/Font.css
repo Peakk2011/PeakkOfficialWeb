@@ -85,6 +85,11 @@
 }
 
 @font-face {
+    font-family: MisansRegular;
+    src: url(./Font/MiSansThai.otf);
+}
+
+@font-face {
     font-family: FCiconic;
     src: url(./Font/FC\ Iconic\ Regular.otf);
 }
