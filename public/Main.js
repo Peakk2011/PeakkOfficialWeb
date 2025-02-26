@@ -1,3 +1,5 @@
+"use strict";
+
 // Hover effects
 const gsapHoverEffect = (element, scaleIn, scaleOut) => {
   element.addEventListener('mouseenter', () => {
@@ -696,6 +698,7 @@ DefineWidth900func(Define900);
 Define900.addEventListener('change', DefineWidth900func);
 
 // Theme Switcher
+let CurrentTheme = document.getElementById("CurrentTheme");
 let ObjectUsingCloseThemebtn = document.getElementById("ObjectUsingCloseThemebtn");
 const pressedButtonSelector = '[data-theme][aria-pressed="true"]';
 const defaultTheme = 'Default';
@@ -716,7 +719,6 @@ const applyTheme = (theme) => {
 const handleThemeSelection = (event) => {
   let target = event.target;
 
-  // Ensure the target is the ThemeBox itself
   while (target && !target.classList.contains('ThemeBox')) {
     target = target.parentElement;
   }
@@ -734,9 +736,12 @@ const handleThemeSelection = (event) => {
   if (isPressed !== "true") {
     applyTheme(theme);
     localStorage.setItem('selected-theme', theme);
+    HandleThemeContent(); // Add this line to update content when theme changes
+    CurrentTheme.innerHTML = `เปลียนธีมเป็น: ${theme}`; // Update innerHTML when theme changes
     console.log(`Theme applied: ${theme}`);
   } else {
     console.log(`Theme already applied: ${theme}`);
+    CurrentTheme.innerHTML = `ธีมถูกนำไปใช้แล้ว: ${theme}`; // Update innerHTML when theme is already applied
   }
 }
 
@@ -744,11 +749,31 @@ const setInitialTheme = () => {
   const savedTheme = localStorage.getItem('selected-theme');
   if (savedTheme && savedTheme !== defaultTheme) {
     applyTheme(savedTheme);
+    CurrentTheme.innerHTML = `ธีมเริ่มต้นตั้งไว้ที่: ${savedTheme}`; // Update innerHTML on initial theme set
     console.log(`Initial theme set: ${savedTheme}`);
   }
 };
 
 setInitialTheme();
+
+const PostSvg = document.getElementById("secwhywbimg");
+
+const HandleThemeContent = () => {
+  const selectedTheme = document.documentElement.getAttribute("data-selected-theme");
+  if (selectedTheme === "Default") {
+    PostSvg.src="./Image/SvgMainbrowserdark.svg";
+  } else if (selectedTheme === "DefaultLight") {
+    PostSvg.src="./Image/SvgMainbrowserLight.svg";
+  } else if (selectedTheme === "LightPink") {
+    PostSvg.src="./Image/SvgMainbrowserLight.svg";
+  } else if (selectedTheme === "LightLamonLight") {
+    PostSvg.src="./Image/SvgMainbrowserLight.svg";
+  } else if (selectedTheme === "PurpleDark") {
+    PostSvg.src="./Image/SvgMainbrowserdark.svg";
+  }
+}
+
+HandleThemeContent();
 
 const themeSwitcher = document.querySelector('.PickTheme');
 const usingButtonThemeBoxContent = themeSwitcher.querySelectorAll('.ThemeBox');

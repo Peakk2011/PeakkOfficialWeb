@@ -6,7 +6,7 @@
 }
 
 [data-selected-theme="DefaultLight"] {
-    --ctacolor: #ffffe9;
+    --ctacolor: #fdfdf3;
     --bordercolor: #f1f1f1;
     --ColorUnderCta: #000;
 }

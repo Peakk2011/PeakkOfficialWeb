@@ -373,23 +373,23 @@ html.todesktop .header .nav {
 }
 
 #FilterDefaultColor2 {
-    background-color: #ffffe9;
+    background-color: #1B1B1B;
 }
 
 #FilterDefaultColor3 {
-    background-color: #ffffc8;
+    background-color: #323232;
 }
 
 #FilterDefaultLightColor1 {
-    background-color: #fff;
+    background-color: #ffffe9;
 }
 
 #FilterDefaultLightColor2 {
-    background-color: #fdfdf3;
+    background-color: #ffffd1;
 }
 
 #FilterDefaultLightColor3 {
-    background-color: #ffffc8;
+    background-color: #f5eec1;
 }
 
 #FilterLightPinkColor2 {
@@ -463,6 +463,116 @@ html.todesktop .header .nav {
     100% {
         background-position: 0% 50%;
     }
+}
+
+.mobileThemeSwitcher {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    z-index: 12;
+    background-color: var(--SidebarColor);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: cubic-bezier(0.4, 0.0, 0.2, 1)700ms all;
+}
+
+.Mbtmsw {
+    max-width: 230px;
+    margin: 0 auto;
+    position: relative;
+    height: 100vh;
+}
+
+.MbthswLogo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.25rem 0px;
+}
+
+.MbthswLogo h1 {
+    color: var(--SidebarTextTitleColor);
+    font-size: 19.5px;
+    font-family: "Inter Tight", "MisansRegular", "IBM Plex Sans Thai", "sans-serif";
+    font-weight: 600;
+}
+
+.MbthswLogo ion-icon {
+    font-size: 23.5px;
+    transform: translate(1px, 0px);
+    color: var(--SidebarTextTitleColor);
+}
+
+.Mbthswlinks {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.MbThswlinksCon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.MbThswlinksCon {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--bordersolid);
+    padding: 0.7rem 0rem;
+    margin-bottom: 1rem;
+}
+
+.MbThswlinksCon p {
+    color: var(--ColorMain);
+}
+
+.MbThswlinksCon svg {
+    width: 60px;
+    display: block;
+    height: auto;
+}
+
+#FirstPv {
+    width: 60px;
+    display: block;
+    height: auto;
+}
+
+#LastPv {
+    width: 60px;
+    display: block;
+    height: auto;
+}
+
+.Mbthswtext {
+    margin-top: 2rem;
+}
+
+.Mbthswtext h1 {
+    color: var(--ColorMain);
+    font-size: 16.5px;
+    font-family: "Inter Tight", "LineSeedRegular", "Manrope", "sans-serif";
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+    padding: 0.55rem 0rem;
+    border-radius: 50px;
+    background-color: var(--color-background);
+    outline: solid 3px var(--bordersolid);
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: not-allowed;
+}
+
+.Mbthswlinks {
+    display: block;
 }
 
 .cursor {
@@ -1251,7 +1361,6 @@ section {
 }
 
 .secwhywebtext {
-
 
     &.secwhywebtext span {
         padding: 0.35rem 1rem;
