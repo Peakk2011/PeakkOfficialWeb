@@ -1,7 +1,6 @@
 {
   "name": "peakk",
   "version": "1.0.0",
-  "main": "Main.js",
   "dependencies": {
     "express": "^4.21.1",
     "firebase": "^11.3.1",
