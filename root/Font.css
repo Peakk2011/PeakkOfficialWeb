@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: Segoe Ui Variable;
+    src: url(./Font/SEGUIVAR.TTF);
+}
+@font-face {
+    font-family: Helvetica;
+    src: url(Font/HelveticaNeue-Medium.otf);
+}
+
+@font-face {
+    font-family: HandWrit;
+    src: url(./Font/Happines-BF660ad806f05ce.otf);
+}
+
+@font-face {
+    font-family: madimione;
+    src: url(important/madimi-font-1712479665-0/madimione-regular.otf);
+}
+
+@font-face {
+    font-family: Potato;
+    src: url(important/protofo-font-family-1712480080-0/protofo-regular.otf);
+}
+
+
+@font-face {
+    font-family: PotatoBold;
+    src: url(important/protofo-font-family-1712480080-0/protofo-bold.otf);
+}
+
+@font-face {
+    font-family: SFPRO;
+    src: url(./Font/SFPRODISPLAYREGULAR.OTF);
+}
+
+@font-face {
+    font-family: SFPROMed;
+    src: url(./Font/SFPRODISPLAYMEDIUM.OTF);
+}
+
+@font-face {
+    font-family: SFPROBold;
+    src: url(./Font/SFPRODISPLAYBOLD.OTF);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./Font/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url(./Font/Roboto-Bold.ttf);
+}
+
+/* Thai font */
+
+@font-face {
+    font-family: LineSeedThin;
+    src: url(./Font/LINESeedSansTH_Th.ttf);
+}
+
+@font-face {
+    font-family: LineSeedRegular;
+    src: url(./Font/LINESeedSansTH_Rg.ttf);
+}
+@font-face {
+    font-family: LineSeedBOLD;
+    src: url(./Font/LINESEEDSANSTH.TTF);
+}
+
+@font-face {
+    font-family: MiSANS;
+    src: url(./Font/MiSansThai-Semibold.otf);
+}
+
+@font-face {
+    font-family: MisansRegular;
+    src: url(./Font/MiSansThai.otf);
+}
+
+@font-face {
+    font-family: FCiconic;
+    src: url(./Font/FC\ Iconic\ Regular.otf);
+}
+
+@font-face {
+    font-family: FCiconicBold;
+    src: url(./Font/FC\ Iconic\ Bold.ttf);
+}
+
+@font-face {
+    font-family: Haerins;
+    src: url(./Font/Haerins.otf);
+}
+
+/* MADIMI FOR THAI LANGUAGE */
+
+@font-face {
+    font-family: Arabica;
+    src: url(./Font/Arabica.otf);
+}
+
+@font-face {
+    font-family: Thonburi;
+    src: url(./Font/SFThonburi-Regular.ttf);
+}
+
+@font-face {
+    font-family: ThonburiBOLD;
+    src: url(./Font/SFThonburi-Bold.ttf);
+}
+
+@font-face {
+    font-family: ThonburiSEMIBOLD;
+    src: url(./Font/SFThonburi-Semibold.ttf);
+}
+
+@font-face {
+    font-family: Meltie;
+    src: url(./Font/Meltie-Regular.ttf);
+}
+
+@font-face {
+    font-family: Sov;
+    src: url(./Font/SOV_VIMAMSA.TTF);
+}
+
+@font-face {
+    font-family: Thanamas;
+    src: url(./Font/SOV_Thanamas.ttf);
+}

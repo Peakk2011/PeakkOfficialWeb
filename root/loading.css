@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+.Loading {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-background);
+    /* Other */
+    position: fixed;
+    z-index: 100;
+    transition: 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+
+    .loadingImage {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        &.loadingImage svg path {
+            /* animation: AnimLoading 3.2s cubic-bezier(0.65, 0.05, 0.36, 1); */
+            animation: AnimLoading 1.5s cubic-bezier(0.65, 0.05, 0.36, 1) forwards;
+            fill: transparent;
+            stroke: var(--ColorMain);
+            stroke-width: 2px;
+            stroke-dasharray: 2400;
+            stroke-dashoffset: 2400;
+        }
+    }
+}
+
+@keyframes AnimLoading {
+
+    60% {
+        fill: transparent;
+    }
+
+    100% {
+        fill: var(--ColorMain);
+        stroke-dashoffset: 0;
+    }
+
+}
+
+/* @media (prefers-color-scheme: dark) {
+
+    .Loading {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(4, 4, 4);
+        position: fixed;
+        z-index: 100;
+        transition: 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+
+        .loadingImage {
+            &.loadingImage svg path {
+                animation: AnimLoadingDark 1.5s cubic-bezier(0.65, 0.05, 0.36, 1) forwards;
+                fill: transparent;
+                stroke: #ffffe9;
+                stroke-width: 2px;
+                stroke-dasharray: 2400;
+                stroke-dashoffset: 2400;
+            }
+        }
+    }
+
+    @keyframes AnimLoadingDark {
+
+        60% {
+            fill: transparent;
+        }
+
+        100% {
+            fill: #ffffe9;
+            stroke-dashoffset: 0;
+        }
+
+    }
+
+} */
