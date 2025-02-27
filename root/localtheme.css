@@ -1,3 +1,59 @@
-@media (prefers-color-scheme: light) {
+#FilterDefaultColor1 {
+    background-color: #000;
+}
 
+#FilterDefaultColor2 {
+    background-color: #1B1B1B;
+}
+
+#FilterDefaultColor3 {
+    background-color: #323232;
+}
+
+#FilterDefaultLightColor1 {
+    background-color: #ffffe9;
+}
+
+#FilterDefaultLightColor2 {
+    background-color: #ffffd1;
+}
+
+#FilterDefaultLightColor3 {
+    background-color: #f5eec1;
+}
+
+#FilterLightPinkColor2 {
+    background-color: rgba(255, 250, 248);
+}
+
+#FilterLightPinkColor3 {
+    background-color: rgba(247, 238, 236);
+}
+
+#FilterLightPinkColor1 {
+    background-color: rgba(103, 73, 70);
+}
+
+#FilterLamonColor1 {
+    background-color: rgba(232, 232, 197);
+}
+
+#FilterLamonColor2 {
+    background-color: rgba(247, 245, 236);
+}
+
+#FilterLamonColor3 {
+    background-color: rgb(248, 253, 228);
+}
+
+#FilterPurpleDarkColor1 {
+    background-color: rgba(82, 61, 88);
+}
+
+#FilterPurpleDarkColor2 {
+    background-color: rgb(222, 200, 231);
+}
+
+#FilterPurpleDarkColor3 {
+    background-color: rgba(20, 19, 20);
 }

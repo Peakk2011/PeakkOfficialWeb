@@ -81,6 +81,44 @@ html.todesktop .header .nav {
 }
 
 :root,
+[data-selected-theme="ธีมเริ่มต้น"] {
+    --DEFINEThemeSwitcherCONTENTtext: #000;
+    --color-background: #0a0a0a;
+    --SidebarColor: rgba(10, 10, 10, 0.811);
+    --ColorUnderSidebarColor: #000;
+    /* MoreSidebarOption */
+    --SidebarBackgroundBlur: rgba(10, 10, 10, 0.811);
+    --SidebarTextTitleColor: #ffffe9;
+    --BorderSidebar: solid 1px #262626;
+    --SidebarLinksColor: #959595;
+    /* MainColor */
+    --ColorMain: #fff;
+    --ColorHighlightSidebar: #ffffe9;
+    --bordersolid: #222;
+    /* WebElement */
+    --headerColor: #000;
+    --StrokePeakkofficial2025Color: #ffffe9;
+    --FillPeakkofficial2025Color: #ffffe9;
+    --ColorUnderHIGHLIGHT: #000;
+    /* HeaderAnimate */
+    --DEFINEblobblue: #162332;
+    --DEFINEblobwhite: #070707;
+    --DEFINEblobpurple: #212132;
+    --DEFINEblobpink: #ffb1ed50;
+    /* NavbarColor */
+    --DEFINEnavbarColor: #ffffe9;
+    /* HeadernavbarLinks */
+    --UsingDefaultNavbarColor: rgba(6, 6, 6, 0.7);
+    --HighlightNavbarColor: #ffffe9;
+    /* webContent */
+    --WebIntroBorder: solid 1px #1c1c1c;
+    --IntrospanBorder: solid 1px #343434;
+    --BtnWhyweb: #ffffe9;
+    --BtntextWhyweb: #000;
+    --IconAndTextcolor: #ffffe9;
+    --PtextColor: #aeaeae;
+}
+
 [data-selected-theme="Default"] {
     --DEFINEThemeSwitcherCONTENTtext: #000;
     --color-background: #0a0a0a;
@@ -119,7 +157,9 @@ html.todesktop .header .nav {
     --PtextColor: #aeaeae;
 }
 
-[data-selected-theme="DefaultLight"] {
+/* End First theme switcher */
+
+[data-selected-theme="ธีมเริ่มต้นสว่าง"] {
     --DEFINEThemeSwitcherCONTENTtext: #ffffe9;
     --color-background: #fff;
     --SidebarColor: #fcfcf3;
@@ -156,7 +196,46 @@ html.todesktop .header .nav {
     --PtextColor: #555;
 }
 
-[data-selected-theme="LightPink"] {
+[data-selected-theme="LightDefault"] {
+    --DEFINEThemeSwitcherCONTENTtext: #ffffe9;
+    --color-background: #fff;
+    --SidebarColor: #fcfcf3;
+    --ColorUnderSidebarColor: #ffffe9;
+    /* MoreSidebarOption */
+    --SidebarBackgroundBlur: rgba(253, 253, 243, 0.660);
+    --SidebarTextTitleColor: #000;
+    --BorderSidebar: solid 1px #000;
+    --SidebarLinksColor: #000;
+    --ColorMain: #000;
+    --ColorHighlightSidebar: #000;
+    --bordersolid: #e9e9e9;
+    /* WebElement */
+    --headerColor: #fffff9;
+    --StrokePeakkofficial2025Color: #000;
+    --FillPeakkofficial2025Color: #000;
+    --ColorUnderHIGHLIGHT: #ffffe9;
+    /* HeaderAnimate */
+    --DEFINEblobblue: #4783c7;
+    --DEFINEblobwhite: #fff;
+    --DEFINEblobpurple: #8c8ff1;
+    --DEFINEblobpink: #e289cd50;
+    /* NavbarColor */
+    --DEFINEnavbarColor: #000;
+    /* HeadernavbarLinks */
+    --UsingDefaultNavbarColor: rgba(253, 253, 243, 0.845);
+    --HighlightNavbarColor: #000;
+    /* webContent */
+    --WebIntroBorder: solid 1px #e9e9e9;
+    --IntrospanBorder: solid 1px #000;
+    --BtnWhyweb: #000;
+    --BtntextWhyweb: #FFFFe9;
+    --IconAndTextcolor: #000;
+    --PtextColor: #555;
+}
+
+/* End light default theme switcher */
+
+[data-selected-theme="ธีมสีชมพูอ่อน"] {
     --DEFINEThemeSwitcherCONTENTtext: #000;
     --color-background: rgb(255, 241, 241);
     --SidebarColor: rgba(247, 238, 236);
@@ -193,7 +272,46 @@ html.todesktop .header .nav {
     --PtextColor: #555;
 }
 
-[data-selected-theme="LightLamonLight"] {
+[data-selected-theme="Pink"] {
+    --DEFINEThemeSwitcherCONTENTtext: #000;
+    --color-background: rgb(255, 241, 241);
+    --SidebarColor: rgba(247, 238, 236);
+    --ColorUnderSidebarColor: rgba(253, 255, 255);
+    /* MoreSidebarOption */
+    --SidebarBackgroundBlur: rgba(247, 238, 236, 0.775);
+    --SidebarTextTitleColor: #000;
+    --BorderSidebar: solid 1px #000;
+    --SidebarLinksColor: #000;
+    --ColorMain: #000;
+    --ColorHighlightSidebar: rgba(247, 238, 236);
+    --bordersolid: rgb(245, 232, 229);
+    /* WebElement */
+    --headerColor: rgb(255, 244, 244);
+    --StrokePeakkofficial2025Color: #3e2e31;
+    --FillPeakkofficial2025Color: #3e2e31;
+    --ColorUnderHIGHLIGHT: #000;
+    /* HeaderAnimate */
+    --DEFINEblobblue: #4783c7;
+    --DEFINEblobwhite: #fff;
+    --DEFINEblobpurple: #8c8ff1;
+    --DEFINEblobpink: #e289cd50;
+    /* NavbarColor */
+    --DEFINEnavbarColor: #3e2e31;
+    /* HeadernavbarLinks */
+    --UsingDefaultNavbarColor: rgb(255, 244, 244);
+    --HighlightNavbarColor: #000;
+    /* webContent */
+    --WebIntroBorder: solid 1px #e9e9e9;
+    --IntrospanBorder: solid 1px #000;
+    --BtnWhyweb: #000;
+    --BtntextWhyweb: #fff4f4;
+    --IconAndTextcolor: #3e2e31;
+    --PtextColor: #555;
+}
+
+/* End Pink theme switcher */
+
+[data-selected-theme="ธีมสีมะนาวอ่อน"] {
     --DEFINEThemeSwitcherCONTENTtext: #000;
     --color-background: rgba(252, 250, 241);
     --SidebarColor: rgba(247, 245, 236);
@@ -230,7 +348,84 @@ html.todesktop .header .nav {
     --PtextColor: #555;
 }
 
-[data-selected-theme="PurpleDark"] {
+[data-selected-theme="Lemon"] {
+    --DEFINEThemeSwitcherCONTENTtext: #000;
+    --color-background: rgba(252, 250, 241);
+    --SidebarColor: rgba(247, 245, 236);
+    --ColorUnderSidebarColor: #222;
+    /* MoreSidebarOption */
+    --SidebarBackgroundBlur: rgba(252, 250, 241, 0.775);
+    --SidebarTextTitleColor: #000;
+    --BorderSidebar: solid 1px #37372d;
+    --SidebarLinksColor: #37372d;
+    --ColorMain: #000;
+    --ColorHighlightSidebar: rgba(232, 232, 197);
+    --bordersolid: rgb(232, 230, 219);
+    /* WebElement */
+    --headerColor: rgba(252, 250, 241);
+    --StrokePeakkofficial2025Color: rgb(55, 55, 45);
+    --FillPeakkofficial2025Color: rgb(55, 55, 45);
+    --ColorUnderHIGHLIGHT: #000;
+    /* HeaderAnimate */
+    --DEFINEblobblue: transparent;
+    --DEFINEblobwhite: transparent;
+    --DEFINEblobpurple: transparent;
+    --DEFINEblobpink: transparent;
+    /* NavbarColor */
+    --DEFINEnavbarColor: #000;
+    /* HeadernavbarLinks */
+    --UsingDefaultNavbarColor: rgb(252, 250, 241);
+    --HighlightNavbarColor: rgb(8, 8, 6);
+    /* webContent */
+    --WebIntroBorder: solid 1px #e9e9e9;
+    --IntrospanBorder: solid 1px #000;
+    --BtnWhyweb: #000;
+    --BtntextWhyweb: rgba(252, 250, 241);
+    --IconAndTextcolor: #37372d;
+    --PtextColor: #555;
+}
+
+/* End lemon theme switcher */
+
+[data-selected-theme="ธีมสีม่วงเข้ม"] {
+    --DEFINEThemeSwitcherCONTENTtext: rgba(247, 217, 254);
+    --color-background: rgba(20, 19, 20);
+    /* HIGHLIGHTmaincolor 15,14,15 */
+    --SidebarColor: rgba(15, 14, 15);
+    --ColorUnderSidebarColor: rgba(247, 217, 254);
+    /* MoreSidebarOption */
+    --SidebarBackgroundBlur: rgba(28, 27, 29);
+    --SidebarTextTitleColor: rgba(247, 217, 254);
+    --BorderSidebar: solid 1px rgba(230, 225, 227, 0.200);
+    --SidebarLinksColor: rgba(230, 225, 227, 0.705);
+
+    --ColorHighlightSidebar: rgba(82, 61, 88);
+    --ColorMain: rgba(230, 225, 227);
+    --bordersolid: rgb(46, 40, 47);
+    /* WebElement */
+    --headerColor: rgba(15, 14, 15);
+    --StrokePeakkofficial2025Color: rgba(230, 225, 227);
+    --FillPeakkofficial2025Color: rgba(230, 225, 227);
+    --ColorUnderHIGHLIGHT: rgba(247, 217, 254);
+    /* HeaderAnimate */
+    --DEFINEblobblue: transparent;
+    --DEFINEblobwhite: transparent;
+    --DEFINEblobpurple: transparent;
+    --DEFINEblobpink: transparent;
+    /* NavbarColor */
+    --DEFINEnavbarColor: rgba(230, 225, 227);
+    /* HeadernavbarLinks */
+    --UsingDefaultNavbarColor: rgb(15, 14, 15);
+    --HighlightNavbarColor: rgba(247, 217, 254);
+    /* webContent */
+    --WebIntroBorder: solid 1px #1c1c1c;
+    --IntrospanBorder: solid 1px #343434;
+    --BtnWhyweb: rgba(82, 61, 88);
+    --BtntextWhyweb: rgba(247, 217, 254);
+    --PtextColor: #a0a0a0;
+}
+
+[data-selected-theme="Purple"] {
     --DEFINEThemeSwitcherCONTENTtext: rgba(247, 217, 254);
     --color-background: rgba(20, 19, 20);
     /* HIGHLIGHTmaincolor 15,14,15 */
@@ -291,7 +486,7 @@ html.todesktop .header .nav {
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     transform: translateY(-320px);
-    transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 600ms cubic-bezier(0.16, 1, 0.29, 0.99);
     z-index: 15;
 
     .PickContent {
@@ -368,69 +563,15 @@ html.todesktop .header .nav {
     }
 }
 
-#FilterDefaultColor1 {
-    background-color: #000;
-}
-
-#FilterDefaultColor2 {
-    background-color: #1B1B1B;
-}
-
-#FilterDefaultColor3 {
-    background-color: #323232;
-}
-
-#FilterDefaultLightColor1 {
-    background-color: #ffffe9;
-}
-
-#FilterDefaultLightColor2 {
-    background-color: #ffffd1;
-}
-
-#FilterDefaultLightColor3 {
-    background-color: #f5eec1;
-}
-
-#FilterLightPinkColor2 {
-    background-color: rgba(255, 250, 248);
-}
-
-#FilterLightPinkColor3 {
-    background-color: rgba(247, 238, 236);
-}
-
-#FilterLightPinkColor1 {
-    background-color: rgba(103, 73, 70);
-}
-
-#FilterLamonColor1 {
-    background-color: rgba(232, 232, 197);
-}
-
-#FilterLamonColor2 {
-    background-color: rgba(247, 245, 236);
-}
-
-#FilterLamonColor3 {
-    background-color: rgb(248, 253, 228);
-}
-
-#FilterPurpleDarkColor1 {
-    background-color: rgba(82, 61, 88);
-}
-
-#FilterPurpleDarkColor2 {
-    background-color: rgb(222, 200, 231);
-}
-
-#FilterPurpleDarkColor3 {
-    background-color: rgba(20, 19, 20);
-}
-
 #ButtonThemeToggle {
     width: 165.5px;
     cursor: pointer;
+}
+
+#MBthemetoggle {
+    width: 165.5px;
+    cursor: pointer;
+    display: none;
 }
 
 #DEFINEtextthemeswit {
@@ -449,6 +590,7 @@ html.todesktop .header .nav {
     background: linear-gradient(90deg, rgba(66, 100, 108, 1) 0%, rgba(147, 191, 167, 1) 35%, rgba(255, 157, 157, 1) 70%, rgba(212, 207, 253, 1) 100%);
     background-size: 600% 600%;
     animation: gradientAnimation 5s linear infinite;
+    opacity: 5%;
 }
 
 @keyframes gradientAnimation {
@@ -473,7 +615,9 @@ html.todesktop .header .nav {
     background-color: var(--SidebarColor);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    transition: cubic-bezier(0.4, 0.0, 0.2, 1)700ms all;
+    transition: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* call */
+    transform: translateX(-300px);
 }
 
 .Mbtmsw {
@@ -505,7 +649,7 @@ html.todesktop .header .nav {
 
 .Mbthswlinks {
     position: absolute;
-    bottom: 60px;
+    bottom: 44px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -515,6 +659,7 @@ html.todesktop .header .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    all: unset;
 }
 
 .MbThswlinksCon {
@@ -556,7 +701,7 @@ html.todesktop .header .nav {
 .Mbthswtext h1 {
     color: var(--ColorMain);
     font-size: 16.5px;
-    font-family: "Inter Tight", "LineSeedRegular", "Manrope", "sans-serif";
+    font-family: "Manrope", "LineSeedRegular", "sans-serif";
     margin-bottom: 1.25rem;
     font-weight: 400;
     padding: 0.55rem 0rem;

@@ -109,6 +109,12 @@ document.addEventListener('keydown', ({ key }) => {
   setTimeout(() => isAnimating = false, 150);
 });
 
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    ClsSbThsw();
+  }
+});
+
 // Dragable sidebar
 
 let isDragging = false, initialX;
@@ -701,10 +707,14 @@ Define900.addEventListener('change', DefineWidth900func);
 let CurrentTheme = document.getElementById("CurrentTheme");
 let ObjectUsingCloseThemebtn = document.getElementById("ObjectUsingCloseThemebtn");
 const pressedButtonSelector = '[data-theme][aria-pressed="true"]';
-const defaultTheme = 'Default';
+const defaultTheme = 'ธีมเริ่มต้น';
 
 const applyTheme = (theme) => {
   const target = document.querySelector(`[data-theme="${theme}"]`);
+  if (!target) {
+    console.log(`Define Theme 0x00: ${theme}`);
+    return;
+  }
   document.documentElement.setAttribute("data-selected-theme", theme);
 
   // Check if there is an already pressed button and set 'aria-pressed' to 'false'
@@ -737,7 +747,7 @@ const handleThemeSelection = (event) => {
     applyTheme(theme);
     localStorage.setItem('selected-theme', theme);
     HandleThemeContent(); // Add this line to update content when theme changes
-    CurrentTheme.innerHTML = `เปลียนธีมเป็น: ${theme}`; // Update innerHTML when theme changes
+    CurrentTheme.innerHTML = `เปลี่ยนธีมเป็น: ${theme}`; // Update innerHTML when theme changes
     console.log(`Theme applied: ${theme}`);
   } else {
     console.log(`Theme already applied: ${theme}`);
@@ -750,7 +760,7 @@ const setInitialTheme = () => {
   if (savedTheme && savedTheme !== defaultTheme) {
     applyTheme(savedTheme);
     CurrentTheme.innerHTML = `ธีมเริ่มต้นตั้งไว้ที่: ${savedTheme}`; // Update innerHTML on initial theme set
-    console.log(`Initial theme set: ${savedTheme}`);
+    console.log(`Set: ${savedTheme}`);
   }
 };
 
@@ -760,20 +770,25 @@ const PostSvg = document.getElementById("secwhywbimg");
 
 const HandleThemeContent = () => {
   const selectedTheme = document.documentElement.getAttribute("data-selected-theme");
-  if (selectedTheme === "Default") {
-    PostSvg.src="./Image/SvgMainbrowserdark.svg";
-  } else if (selectedTheme === "DefaultLight") {
-    PostSvg.src="./Image/SvgMainbrowserLight.svg";
-  } else if (selectedTheme === "LightPink") {
-    PostSvg.src="./Image/SvgMainbrowserLight.svg";
-  } else if (selectedTheme === "LightLamonLight") {
-    PostSvg.src="./Image/SvgMainbrowserLight.svg";
-  } else if (selectedTheme === "PurpleDark") {
-    PostSvg.src="./Image/SvgMainbrowserdark.svg";
+  // ชื่อแต่ล่ะธีม sync ขึ้นอยู่กับ data-theme ใน HTML และ Css
+  if (selectedTheme === "ธีมเริ่มต้น") {
+    PostSvg.src = "./Image/SvgMainbrowserdark.svg";
+  } else if (selectedTheme === "ธีมเริ่มต้นสว่าง") {
+    PostSvg.src = "./Image/SvgMainbrowserLight.svg";
+  } else if (selectedTheme === "ธีมสีชมพูอ่อน") {
+    PostSvg.src = "./Image/SvgMainbrowserLight.svg";
+  } else if (selectedTheme === "ธีมสีมะนาวอ่อน") {
+    PostSvg.src = "./Image/SvgMainbrowserLight.svg";
+  } else if (selectedTheme === "ธีมสีม่วงเข้ม") {
+    PostSvg.src = "./Image/SvgMainbrowserdark.svg";
+  } else {
+    console.log(`${selectedTheme} 0x00`);
   }
 }
 
 HandleThemeContent();
+
+// ตั้งค่าสำหรับการแสดงผล Theme เมื่อยังไม่ถูกตั้งค่าใน Local Storage ให้มันแสดงข้อความ
 
 const themeSwitcher = document.querySelector('.PickTheme');
 const usingButtonThemeBoxContent = themeSwitcher.querySelectorAll('.ThemeBox');
@@ -805,7 +820,6 @@ function DisableBGBLUR() {
 const containerHover = document.getElementById("containerHover");
 const PickThemeContainer = document.getElementById("PickThemeContainer");
 const ButtonThemeToggle = document.getElementById("ButtonThemeToggle");
-const usingSBThemeSwitcher = document.getElementById('usingSBThemeSwitcher');
 
 const usingThemeContainer = () => {
   PickThemeContainer.style.transform = "translateY(0px)";
@@ -833,9 +847,6 @@ containerHover.addEventListener("mouseleave", disableThemeContainer);
 PickThemeContainer.addEventListener("mouseleave", disableThemeContainer);
 PickThemeContainer.addEventListener("mouseenter", usingThemeContainer);
 ButtonThemeToggle.addEventListener("click", usingThemeContainer);
-
-usingSBThemeSwitcher.addEventListener("click", usingThemeContainer);
-
 containerHover.addEventListener("touchstart", usingThemeContainer);
 containerHover.addEventListener("touchcancel", disableThemeContainer);
 PickThemeContainer.addEventListener("touchcancel", disableThemeContainer);
@@ -847,8 +858,6 @@ function checkScreenWidth() {
 
   if (screenWidth < 600) {
     ButtonThemeToggle.addEventListener("click", MBDEFINEusingTheme);
-
-    usingSBThemeSwitcher.addEventListener("click", MBDEFINEusingTheme);
     ObjectUsingCloseThemebtn.addEventListener("click", MBDEFINEdisabledtheme);
     // -> เลือนขวาเพื่อหาธีมที่ชอบและใช่สําหรับคุณ
     document.getElementById("DEFINEtextthemeswit").innerHTML = "-> เลือนขวาเพื่อหาธีมที่ชอบและใช่สําหรับคุณ";
@@ -862,3 +871,77 @@ function checkScreenWidth() {
 
 checkScreenWidth();
 window.addEventListener('resize', checkScreenWidth);
+
+// Replace old theme switcher as new theme switcher to lie javascript that have many theme to use same theme to define a new function that make user insterface more accessible
+
+const activeButtonSelector = '[data-theme][aria-pressed="true"]';
+const initialTheme = 'green';
+
+const switchTheme = (selectedTheme) => {
+  const selectedButton = document.querySelector(`[data-theme="${selectedTheme}"]`);
+  document.documentElement.setAttribute("data-selected-theme", selectedTheme);
+  const currentPressedButton = document.querySelector(activeButtonSelector);
+  if (currentPressedButton) {
+    currentPressedButton.setAttribute('aria-pressed', 'false');
+  }
+  if (selectedButton) {
+    selectedButton.setAttribute('aria-pressed', 'true');
+  } else {
+    console.error(`Button with data-theme="${selectedTheme}" not found`);
+  }
+};
+
+// Handlethemeselection == this
+const handleThemeButtonClick = (event) => {
+  const clickedButton = event.target;
+  const isButtonPressed = clickedButton.getAttribute('aria-pressed');
+  const newTheme = clickedButton.getAttribute('data-theme');
+
+  if (newTheme === "null") {
+    console.log('New theme as 0x00');
+    return;
+  }
+
+  if (isButtonPressed !== "true") {
+    switchTheme(newTheme);
+    localStorage.setItem('selected-theme', newTheme);
+    // console.log(`Theme switched to: ${newTheme}`); // Add this line to log the selected theme
+    CurrentTheme.innerHTML = `เปลี่ยนธีมเป็น: ${newTheme}`; // Update innerHTML when theme changes
+  }
+}
+
+const initializeTheme = () => {
+  const storedTheme = localStorage.getItem('selected-theme');
+  if (storedTheme && storedTheme !== initialTheme) {
+    switchTheme(storedTheme);
+  }
+};
+
+initializeTheme();
+
+const themeContainer = document.querySelector('.Mbthswlinks');
+const themeButtons = themeContainer.querySelectorAll('.MbThswlinksCon');
+
+themeButtons.forEach((button) => {
+  button.addEventListener('click', handleThemeButtonClick);
+});
+
+// DONE! Theme switcher 👌✅
+// 0x00 for null
+
+// Call
+const MBthemetoggle = document.getElementById("MBthemetoggle");
+const mobileThemeSwitcher = document.getElementById("mobileThemeSwitcher")
+
+function HandleThemeContentSwitcher() {
+  mobileThemeSwitcher.style.transform = "translateX(0px)";
+}
+
+function ClsSbThsw() {
+  mobileThemeSwitcher.style.transform = "translateX(-300px)";
+}
+
+const usingSBThemeSwitcher = document.getElementById('usingSBThemeSwitcher');
+
+usingSBThemeSwitcher.addEventListener("click", HandleThemeContentSwitcher)
+MBthemetoggle.addEventListener("click", HandleThemeContentSwitcher);

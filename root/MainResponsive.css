@@ -816,8 +816,12 @@ body.dark-theme .iconsRes {
 
 @media (max-width: 1460px) {
 
-    .PickThemeContainer {
+    #ButtonThemeToggle {
         display: none;
+    }
+
+    #MBthemetoggle {
+        display: block;
     }
 
 }
