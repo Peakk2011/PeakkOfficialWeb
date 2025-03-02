@@ -1,29 +1,59 @@
 :root,
+[data-selected-theme="ธีมเริ่มต้น"] {
+    --ctacolor: rgba(15, 15, 15, 0.731);
+    --bordercolor: #222;
+    --ColorUnderCta: #ffffe9;
+}
+
 [data-selected-theme="Default"] {
     --ctacolor: rgba(15, 15, 15, 0.731);
     --bordercolor: #222;
     --ColorUnderCta: #ffffe9;
 }
 
-[data-selected-theme="DefaultLight"] {
+[data-selected-theme="ธีมเริ่มต้นสว่าง"] {
     --ctacolor: #fdfdf3;
     --bordercolor: #f1f1f1;
     --ColorUnderCta: #000;
 }
 
-[data-selected-theme="LightPink"] {
+[data-selected-theme="LightDefault"] {
+    --ctacolor: #fdfdf3;
+    --bordercolor: #f1f1f1;
+    --ColorUnderCta: #000;
+}
+
+[data-selected-theme="ธีมสีชมพูอ่อน"] {
     --ctacolor: #fff4f4;
     --bordercolor: #f1f1f1;
     --ColorUnderCta: #3e2e31;
 }
 
-[data-selected-theme="LightLamonLight"] {
+[data-selected-theme="Pink"] {
+    --ctacolor: #fff4f4;
+    --bordercolor: #f1f1f1;
+    --ColorUnderCta: #3e2e31;
+}
+
+[data-selected-theme="ธีมสีมะนาวอ่อน"] {
     --ctacolor: #fcfaf1;
     --bordercolor: #f1f1f1;
     --ColorUnderCta: #37372d;
 }
 
-[data-selected-theme="PurpleDark"] {
+[data-selected-theme="Lemon"] {
+    --ctacolor: #fcfaf1;
+    --bordercolor: #f1f1f1;
+    --ColorUnderCta: #37372d;
+}
+
+[data-selected-theme="ธีมสีม่วงเข้ม"] {
+    --ctacolor: rgb(15, 14, 15);
+    --bordercolor: #222;
+    --ColorUnderCta: #e6e1e3;
+}
+
+[data-selected-theme="Purple"] {
     --ctacolor: rgb(15, 14, 15);
     --bordercolor: #222;
     --ColorUnderCta: #e6e1e3;

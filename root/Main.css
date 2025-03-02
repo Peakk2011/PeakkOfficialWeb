@@ -117,6 +117,12 @@ html.todesktop .header .nav {
     --BtntextWhyweb: #000;
     --IconAndTextcolor: #ffffe9;
     --PtextColor: #aeaeae;
+    /* Define wb */
+    --whywebBgColor: #0a0a0a;
+    --wyfillwbt: #ffffe9;
+    --wyfillwbtp: #505050;
+    --wyPublicBorder: solid 1px #242424;
+    --wy2bg: #070707;
 }
 
 [data-selected-theme="Default"] {
@@ -155,6 +161,12 @@ html.todesktop .header .nav {
     --BtntextWhyweb: #000;
     --IconAndTextcolor: #ffffe9;
     --PtextColor: #aeaeae;
+    /* Define wb */
+    --whywebBgColor: #0a0a0a;
+    --wyfillwbt: #ffffe9;
+    --wyfillwbtp: #505050;
+    --wyPublicBorder: solid 1px #242424;
+    --wy2bg: #070707;
 }
 
 /* End First theme switcher */
@@ -194,6 +206,12 @@ html.todesktop .header .nav {
     --BtntextWhyweb: #FFFFe9;
     --IconAndTextcolor: #000;
     --PtextColor: #555;
+    /* Define wb */
+    --whywebBgColor: #fffff9;
+    --wyfillwbt: #000;
+    --wyfillwbtp: #000;
+    --wyPublicBorder: solid 1px #d7d7d7;
+    --wy2bg: #fdfdf5;
 }
 
 [data-selected-theme="LightDefault"] {
@@ -231,6 +249,12 @@ html.todesktop .header .nav {
     --BtntextWhyweb: #FFFFe9;
     --IconAndTextcolor: #000;
     --PtextColor: #555;
+    /* Define wb */
+    --whywebBgColor: #fffff9;
+    --wyfillwbt: #000;
+    --wyfillwbtp: #000;
+    --wyPublicBorder: solid 1px #d7d7d7;
+    --wy2bg: #fdfdf5;
 }
 
 /* End light default theme switcher */
@@ -270,6 +294,12 @@ html.todesktop .header .nav {
     --BtntextWhyweb: #fff4f4;
     --IconAndTextcolor: #3e2e31;
     --PtextColor: #555;
+    /* Define wb */
+    --whywebBgColor: #fff1f1;
+    --wyfillwbt: #000;
+    --wyfillwbtp: #000;
+    --wyPublicBorder: solid 1px #d7d7d7;
+    --wy2bg: #fff4f4;
 }
 
 [data-selected-theme="Pink"] {
@@ -307,6 +337,12 @@ html.todesktop .header .nav {
     --BtntextWhyweb: #fff4f4;
     --IconAndTextcolor: #3e2e31;
     --PtextColor: #555;
+    /* Define wb */
+    --whywebBgColor: #fff1f1;
+    --wyfillwbt: #000;
+    --wyfillwbtp: #000;
+    --wyPublicBorder: solid 1px #d7d7d7;
+    --wy2bg: #fff4f4;
 }
 
 /* End Pink theme switcher */
@@ -346,6 +382,12 @@ html.todesktop .header .nav {
     --BtntextWhyweb: rgba(252, 250, 241);
     --IconAndTextcolor: #37372d;
     --PtextColor: #555;
+    /* Define wb */
+    --whywebBgColor: #fcfaf1;
+    --wyfillwbt: #000;
+    --wyfillwbtp: #000;
+    --wyPublicBorder: solid 1px #d7d7d7;
+    --wy2bg: #fff;
 }
 
 [data-selected-theme="Lemon"] {
@@ -383,13 +425,19 @@ html.todesktop .header .nav {
     --BtntextWhyweb: rgba(252, 250, 241);
     --IconAndTextcolor: #37372d;
     --PtextColor: #555;
+    /* Define wb */
+    --whywebBgColor: #fff1f1;
+    --wyfillwbt: #000;
+    --wyfillwbtp: #000;
+    --wyPublicBorder: solid 1px #d7d7d7;
+    --wy2bg: #fff;
 }
 
 /* End lemon theme switcher */
 
 [data-selected-theme="ธีมสีม่วงเข้ม"] {
     --DEFINEThemeSwitcherCONTENTtext: rgba(247, 217, 254);
-    --color-background: rgba(20, 19, 20);
+    --color-background: #141314;
     /* HIGHLIGHTmaincolor 15,14,15 */
     --SidebarColor: rgba(15, 14, 15);
     --ColorUnderSidebarColor: rgba(247, 217, 254);
@@ -423,11 +471,17 @@ html.todesktop .header .nav {
     --BtnWhyweb: rgba(82, 61, 88);
     --BtntextWhyweb: rgba(247, 217, 254);
     --PtextColor: #a0a0a0;
+    /* Define wb */
+    --whywebBgColor: #141314;
+    --wyfillwbt: #ffffe9;
+    --wyfillwbtp: #505050;
+    --wyPublicBorder: solid 1px #242424;
+    --wy2bg: #0f0e0f;
 }
 
 [data-selected-theme="Purple"] {
     --DEFINEThemeSwitcherCONTENTtext: rgba(247, 217, 254);
-    --color-background: rgba(20, 19, 20);
+    --color-background: #141314;
     /* HIGHLIGHTmaincolor 15,14,15 */
     --SidebarColor: rgba(15, 14, 15);
     --ColorUnderSidebarColor: rgba(247, 217, 254);
@@ -461,6 +515,12 @@ html.todesktop .header .nav {
     --BtnWhyweb: rgba(82, 61, 88);
     --BtntextWhyweb: rgba(247, 217, 254);
     --PtextColor: #a0a0a0;
+    /* Define wb */
+    --whywebBgColor: #141314;
+    --wyfillwbt: #ffffe9;
+    --wyfillwbtp: #505050;
+    --wyPublicBorder: solid 1px #242424;
+    --wy2bg: #0f0e0f;
 }
 
 ::selection {
@@ -1610,10 +1670,11 @@ section {
 }
 
 .detailsWeb {
-    height: 955px;
+    height: 1135px;
     width: 100%;
     position: relative;
-    /* overflow: hidden; */
+    background-color: var(--whywebBgColor);
+    overflow: hidden;
 
     .DeWbcon {
         max-width: 1100px;
@@ -1632,7 +1693,7 @@ section {
     }
 
     .DeWbtxt h1 {
-        color: #ffffe9;
+        color: var(--wyfillwbt);
         /* font-family: "Inter Tight", "LineSeedRegular", "sans-serif"; */
         font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
         font-size: 38px;
@@ -1642,12 +1703,11 @@ section {
     }
 
     .DeWbtxt p {
-        color: #fff;
+        color: var(--wyfillwbtp);
         font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
         font-size: 16px;
         margin-top: 1.25rem;
         letter-spacing: -0.3px;
-        opacity: 30%;
     }
 
     .DoWbimg {
@@ -1660,7 +1720,7 @@ section {
             object-fit: cover;
             border-radius: 20px !important;
             aspect-ratio: 9 / 14;
-            outline: solid 1px #242424;
+            outline: var(--wyPublicBorder);
             overflow-x: scroll;
             filter: saturate(90%) contrast(90%);
         }
@@ -1679,17 +1739,16 @@ section {
     }
 
     .DeWbDes p {
-        color: #fff;
+        color: var(--wyfillwbtp);
         font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
         font-size: 16px;
         margin-top: 1.25rem;
-        opacity: 30%;
     }
 
     .DeWbDes a {
         padding: 0.55rem 1.25rem;
-        background-color: #ffffE9;
-        color: #000;
+        background-color: var(--BtnWhyweb);
+        color: var(--BtntextWhyweb);
         border-radius: 25px;
         font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
         display: inline-block;
@@ -1751,7 +1810,7 @@ section {
     width: 100%;
     position: relative;
     overflow: hidden;
-    background-color: #070707;
+    background-color: var(--wy2bg);
 }
 
 .whywebcon {
@@ -1762,7 +1821,7 @@ section {
     min-width: auto;
 
     .whywebtxt h1 {
-        color: #fff;
+        color: var(--wyfillwbt);
         font-weight: 400;
         font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
         font-size: 42px;
@@ -1774,11 +1833,11 @@ section {
         font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
         font-weight: 500;
         letter-spacing: -1.5px;
-        color: #000;
+        color: var(--BtntextWhyweb);
         border-radius: 8px;
         padding: 0.2rem 0.8rem;
         margin: 0rem 0.5rem;
-        background-color: #ffffe9;
+        background-color: var(--BtnWhyweb);
     }
 }
 
@@ -1807,8 +1866,8 @@ section {
 }
 
 .whywebbtn a {
-    color: #000;
-    background-color: #ffffe9;
+    color: var(--BtntextWhyweb);
+    background-color: var(--BtnWhyweb);
     padding: 0.55rem 1.2rem;
     border-radius: 50px;
     font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
@@ -1840,7 +1899,7 @@ section {
         } */
 
         &.trySelftxt p {
-            color: #767676;
+            color: var(--wyfillwbtp);
             font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             font-size: 22.5px;
             line-height: 1.6;
@@ -1877,7 +1936,7 @@ section {
     .alltext {
 
         &.alltext p {
-            color: #767676;
+            color: var(--wyfillwbtp);
             text-align: right;
             font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             font-size: 22.5px;
@@ -1891,7 +1950,7 @@ section {
 .howweb {
     position: relative;
     width: 100%;
-    background-color: #070707;
+    background-color: var(--wy2bg);
     overflow: hidden;
 
     .howwebwrapper {
@@ -1931,7 +1990,7 @@ section {
         justify-content: space-between;
 
         &.howwebtext h1 {
-            color: #ffffe9;
+            color: var(--wyfillwbt);
             /* font-family: "Inter Tight", "LineSeedRegular", "sans-serif"; */
             font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
             font-size: 38px;
@@ -1943,9 +2002,9 @@ section {
         &.howwebtext strong {
             font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
             font-weight: 800;
-            color: #000;
             line-height: 1.6;
-            background-color: #ffffe9;
+            background-color: var(--BtnWhyweb);
+            color: var(--BtntextWhyweb);
             padding: 0rem 0.8rem;
             display: inline-block;
             transform: translateY(0px);
@@ -1958,7 +2017,7 @@ section {
             letter-spacing: -0.3px;
             text-align: right;
             font-weight: 400;
-            color: #767676;
+            color: var(--wyfillwbtp);
             line-height: 1.6;
         }
     }
@@ -1968,7 +2027,7 @@ section {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-color: #0a0a0a;
+    background-color: var(--whywebBgColor);
 
     .ctacontactcontent {
         display: flex;
@@ -1991,7 +2050,7 @@ section {
 #facebookcta,
 #tiktokcta,
 #youtubecta {
-    background-color: #ffffE9;
+    background-color: var(--BtnWhyweb);
     display: flex;
     align-items: center;
     padding: 0.55rem 1.5rem;
@@ -2008,7 +2067,8 @@ section {
 #youtubecta ion-icon {
     font-size: 16px;
     transform: translateY(-1px);
-    color: #000;
+    color: var(--BtntextWhyweb);
+
 }
 
 #instagramcta h1,
@@ -2018,7 +2078,7 @@ section {
     font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
     font-size: 16px;
     margin-left: 0.5rem;
-    color: #000;
+    color: var(--BtntextWhyweb);
     font-weight: 400;
     -webkit-text-stroke-width: 0.3px;
 }
@@ -2026,7 +2086,7 @@ section {
 .hiredetails {
     overflow: hidden;
     width: 100%;
-    background-color: #0a0a0a;
+    background-color: var(--whywebBgColor);
 
     .hiredetailscontent {
         display: flex;
@@ -2040,7 +2100,7 @@ section {
     .hiredetailstext {
 
         &.hiredetailstext h1 {
-            color: #ffffe9;
+            color: var(--wyfillwbt);
             font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
             font-size: 44px;
             font-weight: 500;
@@ -2049,15 +2109,14 @@ section {
 
         &.hiredetailstext hr {
             margin: 1.25rem 0rem;
-            border: solid 2px #424242;
+            border: solid 2px var(--wyPublicBorder);
             border-radius: 50px;
             width: 100px;
         }
 
         &.hiredetailstext p {
             font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
-            color: #fff;
-            opacity: 35%;
+            color: var(--wyfillwbtp);
             margin-bottom: 1.5rem;
             font-size: 16px;
         }
@@ -2079,8 +2138,8 @@ section {
             justify-content: center;
             height: 45px;
             width: 100px;
-            background-color: #ffffe9;
-            color: #000;
+            background-color: var(--BtnWhyweb);
+            color: var(--BtntextWhyweb);
             font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
             border-radius: 25px;
         }
@@ -2094,9 +2153,9 @@ section {
             padding-left: 1rem;
             transition: all 350ms cubic-bezier(0.4, 0.0, 0.2, 1);
             background-color: transparent;
-            border: solid 1px #323232;
+            border: var(--IntrospanBorder);
             border-radius: 50px;
-            color: #fff;
+            color: var(--SidebarTextTitleColor);
         }
     }
 

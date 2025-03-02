@@ -250,7 +250,7 @@ const updateNavbar = () => {
 
 setTimeout(() => {
   BlobContent.style.opacity = "1";
-}, 6000);
+}, 4600);
 
 // Check header large screen
 const updateNavbarLargeScreen = () => {
@@ -386,9 +386,9 @@ MainNavbar.style.opacity = "0";
 document.body.style.overflow = "hidden";
 
 setTimeout(() => {
-  updateText(["รับทํา", "เว็บไซต์", "ติดต่อ", "พวกเรา", "ได้ครับ", ""], [250, 250, 250, 250, 250, 320], () => {
+  updateText(["รับทํา", "เว็บไซต์", ""], [200, 220], () => {
     document.body.style.overflow = "auto";
-    setTimeout(() => setOpacity("Pkofficialsvg", "1"), 1000);
+    setTimeout(() => setOpacity("Pkofficialsvg", "1"), 600);
   });
 }, 3600);
 
@@ -396,7 +396,7 @@ setTimeout(() => {
   MainNavbar.style.transform = "translatey(0px)";
   MainNavbar.style.opacity = "1";
   ["headernav", "Pkidbutton"].forEach(id => setOpacity(id, "1"));
-}, 7000);
+}, 4400);
 
 // Mouse interactive
 
