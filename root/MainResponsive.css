@@ -73,10 +73,6 @@ body.dark-theme .iconsRes {
 
 @media (max-height: 900px) {
 
-    #Pkofficialsvg {
-        width: 420px;
-    }
-
     #Pkidbutton {
         transform: translateY(3rem);
     }
@@ -131,10 +127,6 @@ body.dark-theme .iconsRes {
 
 @media (max-width: 1280px) {
 
-    #Pkofficialsvg {
-        width: 420px;
-    }
-
     #Pkidbutton {
         transform: translateY(3rem);
     }
@@ -142,10 +134,6 @@ body.dark-theme .iconsRes {
 }
 
 @media (max-width: 545px) {
-
-    #Pkofficialsvg {
-        width: 80%;
-    }
 
     #Pkidbutton {
         transform: translateY(3.5rem);
@@ -643,10 +631,6 @@ body.dark-theme .iconsRes {
 
 @media (max-height: 1080px) {
 
-    #Pkofficialsvg {
-        width: 370px !important;
-    }
-
     #Pkidbutton {
         transform: translateY(3rem);
     }
@@ -665,16 +649,6 @@ body.dark-theme .iconsRes {
 
     .allcon {
         height: 300px !important;
-    }
-
-}
-
-@media (max-height: 960px) {
-
-    #Pkofficialsvg {
-        width: 85.75vw !important;
-        max-width: 480px !important;
-        min-width: 320px !important;
     }
 
 }
@@ -838,4 +812,49 @@ body.dark-theme .iconsRes {
         font-size: 14px;
     }
 
-}   
+}
+
+/* Adjust width */
+
+@media screen and (max-width: 1460px) {
+
+    #Hdbgwb {
+        width: 580px;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+
+    #Hdbgwb {
+        width: 75vw;
+        max-width: 300px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .PkWarn p {
+        font-size: 4vw;
+        min-width: max-content;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .headertext h1 {
+        font-size: 12vw !important;
+    }
+
+    .PkWarn {
+        transform: translate(-50%,-12vw);
+    }
+
+    
+    #Pkidbutton {
+        transform: translateY(12vw);
+    }
+
+}

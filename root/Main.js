@@ -369,41 +369,21 @@ ImagesHover.forEach(image => {
 // Loading screen
 
 const setOpacity = (id, opacity) => document.getElementById(id).style.opacity = opacity;
-const updateText = (texts, delays, callback) => {
-  let index = 0;
-  const nextText = () => {
-    if (index < texts.length) {
-      document.getElementById("TextAnimationGlitch").innerHTML = texts[index];
-      setTimeout(nextText, delays[index++]);
-    } else if (callback) callback();
-  };
-  nextText();
-};
-
 MainNavbar.style.transform = "translatey(-100px)";
 MainNavbar.style.opacity = "0";
-["headernav", "Pkidbutton", "Pkofficialsvg"].forEach(id => setOpacity(id, "0"));
-document.body.style.overflow = "hidden";
-
-setTimeout(() => {
-  updateText(["รับทํา", "เว็บไซต์", ""], [200, 220], () => {
-    document.body.style.overflow = "auto";
-    setTimeout(() => setOpacity("Pkofficialsvg", "1"), 600);
-  });
-}, 3600);
+["headernav", "Pkidbutton", "headercon", "Hdbgwb"].forEach(id => setOpacity(id, "0"));
 
 setTimeout(() => {
   MainNavbar.style.transform = "translatey(0px)";
   MainNavbar.style.opacity = "1";
-  ["headernav", "Pkidbutton"].forEach(id => setOpacity(id, "1"));
-}, 4400);
+  ["headernav", "Pkidbutton","headercon","Hdbgwb"].forEach(id => setOpacity(id, "1"));
+}, 2250);
 
 // Mouse interactive
 
 function UsingMouseMov() {
-  // Check if the screen width is less than 1200px
   if (window.innerWidth < 1200) {
-    return; // Exit the function if the screen width is less than 1200px
+    return;
   }
 
   setTimeout(() => {
@@ -461,7 +441,7 @@ function UsingMouseMov() {
 
 function UsingFuncMouseMov() {
   if (window.innerWidth >= 1465) {
-    UsingMouseMov();
+    // UsingMouseMov();
   }
 }
 
