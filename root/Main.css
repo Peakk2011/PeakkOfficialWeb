@@ -502,10 +502,11 @@ body {
     --IntrospanBorder: solid 1px #343434;
     --BtnWhyweb: rgba(82, 61, 88);
     --BtntextWhyweb: rgba(247, 217, 254);
+    --IconAndTextcolor: rgba(247, 217, 254);
     --PtextColor: #FFF;
     /* Define wb */
     --whywebBgColor: #141314;
-    --wyfillwbt: #ffffe9;
+    --wyfillwbt: rgba(230, 225, 227);
     --wyfillwbtp: #FFF;
     --wyPublicBorder: solid 1px #242424;
     --wy2bg: #0f0e0f;
@@ -551,10 +552,11 @@ body {
     --IntrospanBorder: solid 1px #343434;
     --BtnWhyweb: rgba(82, 61, 88);
     --BtntextWhyweb: rgba(247, 217, 254);
+    --IconAndTextcolor: rgba(247, 217, 254);
     --PtextColor: #FFF;
     /* Define wb */
     --whywebBgColor: #141314;
-    --wyfillwbt: #ffffe9;
+    --wyfillwbt: rgba(230, 225, 227);
     --wyfillwbtp: #FFF;
     --wyPublicBorder: solid 1px #242424;
     --wy2bg: #0f0e0f;
@@ -1947,8 +1949,7 @@ hiredetailstext span {
 .hiredetailsimage hr {
     width: 1px;
     height: 460px;
-    /* Static */
-    border: solid 2px #2f2f2f;
+    border: var(--WebIntroBorder);
     position: absolute;
     left: 0;
     border-radius: 50px;

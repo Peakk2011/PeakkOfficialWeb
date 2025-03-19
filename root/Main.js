@@ -244,7 +244,7 @@ const updateNavbar = () => {
   } else if (window.scrollY >= SectionmainTop) {
     navbar.textContent = 'มีเว็บไซต์เพื่ออะไร';
   } else {
-    navbar.textContent = 'หน้าแรก 2025';
+    navbar.textContent = 'หน้าแรก';
   }
 };
 
