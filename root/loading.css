@@ -5,10 +5,66 @@
     transition: all 0.5s;
 }
 
+/* Other page */
+:root {
+    --color-background: #0a0a0a;
+    --ColorMain: #FFFFe9;
+}
+
+/* Default */
+[data-selected-theme="Default"] {
+    --color-background: #0a0a0a;
+    --ColorMain: #FFFFe9;
+}
+
+[data-selected-theme="ธีมเริ่มต้น"] {
+    --color-background: #0a0a0a;
+    --ColorMain: #FFFFe9;
+}
+/* ์ Light theme */
+[data-selected-theme="LightDefault"] {
+    --color-background: #fff;
+    --ColorMain: #000;
+}
+
+[data-selected-theme="ธีมเริ่มต้นสว่าง"] {
+    --color-background: #fff;
+    --ColorMain: #000;
+}
+/* Pink theme */
+[data-selected-theme="Pink"] {
+    --color-background: rgb(255, 241, 241);
+    --ColorMain: #3e2e31;
+}
+
+[data-selected-theme="ธีมสีชมพูอ่อน"] {
+    --color-background: rgb(255, 241, 241);
+    --ColorMain: #3e2e31;
+}
+/* Lemon Theme */
+[data-selected-theme="Lemon"] {
+    --color-background: rgba(252, 250, 241);
+    --ColorMain: rgb(55, 55, 45);
+}
+
+[data-selected-theme="ธีมสีมะนาวอ่อน"] {
+    --color-background: rgba(252, 250, 241);
+    --ColorMain: rgb(55, 55, 45);
+}
+/* Purple Dark theme */
+[data-selected-theme="ธีมสีม่วงเข้ม"] {
+    --color-background: #141314;
+    --ColorMain: rgba(230, 225, 227);
+}
+
+[data-selected-theme="Purple"] {
+    --color-background: #141314;
+    --ColorMain: rgba(230, 225, 227);
+}
+
 .Loading {
     width: 100%;
     height: 100vh;
-    --color-background: #0a0a0a;
     background-color: var(--color-background);
     /* Other */
     position: fixed;
@@ -27,7 +83,6 @@
     /* animation: AnimLoading 3.2s cubic-bezier(0.65, 0.05, 0.36, 1); */
     animation: AnimLoading 1.65s cubic-bezier(0.65, 0.05, 0.36, 1) forwards;
     fill: transparent;
-    --ColorMain: #fff;
     stroke: var(--ColorMain);
     stroke-width: 2px;
     stroke-dasharray: 2400;
