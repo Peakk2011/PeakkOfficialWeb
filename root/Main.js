@@ -651,38 +651,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-const hiredetailstextspan = document.getElementById("hiredetailstextspan");
-
-const spanHover = () => {
-  hiredetailstextspan.style.width = "275px";
-  setTimeout(() => {
-    hiredetailstextspan.innerHTML = "ราคาเว็บไซต์มีดังนี้ 399฿ 599฿ 999฿";
-  }, 350);
-}
-
-const UnspanHover = () => {
-  hiredetailstextspan.style.width = "152px";
-  hiredetailstextspan.innerHTML = "399฿ 599฿ 999฿";
-}
-
-hiredetailstextspan.addEventListener('mouseover', spanHover);
-hiredetailstextspan.addEventListener('mouseout', UnspanHover);
-hiredetailstextspan.addEventListener('mouseleave', UnspanHover);
-
-const Define900 = window.matchMedia('(max-width: 900px)');
-
-function DefineWidth900func(event) {
-  if (event.matches) {
-    hiredetailstextspan.removeEventListener('mouseover', spanHover);
-
-  } else {
-    hiredetailstextspan.addEventListener('mouseover', spanHover);
-  }
-}
-
-DefineWidth900func(Define900);
-Define900.addEventListener('change', DefineWidth900func);
-
 // Theme Switcher
 let CurrentTheme = document.getElementById("CurrentTheme");
 let ObjectUsingCloseThemebtn = document.getElementById("ObjectUsingCloseThemebtn");

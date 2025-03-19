@@ -374,8 +374,8 @@ body.dark-theme .iconsRes {
         height: 200px;
         border-radius: 0px;
         margin: 0rem !important;
-        background-color: #0a0a0a;
-        border-right: solid 1px #222;
+        background-color: var(--whywebBgColor);
+        border-right: var(--WebIntroBorder);
     }
 
     .ctacontactcontent {
@@ -384,21 +384,21 @@ body.dark-theme .iconsRes {
     }
 
     .ctacontact {
-        border-top: solid 1px #222;
+        border-top: var(--WebIntroBorder);
     }
 
     #instagramcta h1,
     #facebookcta h1,
     #tiktokcta h1,
     #youtubecta h1 {
-        color: #ffffe9;
+        color: var(--ColorMain);
     }
 
     #instagramcta ion-icon,
     #facebookcta ion-icon,
     #tiktokcta ion-icon,
     #youtubecta ion-icon {
-        color: #ffffe9;
+        color: var(--ColorMain);
     }
 
 }
@@ -419,14 +419,14 @@ body.dark-theme .iconsRes {
     #tiktokcta,
     #youtubecta {
         height: 70px;
-        border-top: solid 1px #121212;
-        border-bottom: solid 1px #121212;
+        border-top: var(--WebIntroBorder);
+        border-bottom: var(--WebIntroBorder);
         justify-content: space-between;
         padding: 0.5rem 2rem;
     }
 
     .ctacontact {
-        border-top: solid 1px #121212;
+        border-top: solid 1px var(--WebIntroBorder);
     }
 
     #instagramcta ion-icon,

@@ -4,14 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> -->
     <link rel="stylesheet" href="localtheme.css">
-    <link rel="icon" type="image/x-icon" href="../ResourceDesktop/Image/Present/Newlogo.svg">
+    <title>Peakkofficial - รับทําเว็บไซต์และรับออกแบบ Banner ฟรีหากต้องการ</title>
+    <link id="favicon" rel="icon" href="/favicon.svg" type="image/svg+xml">
     <meta name="viewport"
         content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <title>Peakkofficial - Main</title>
+    <meta name="description"
+        content="Peakkofficial - Website development service & Design รับทําเว็บไซต์แบบมือโปรที่พร้อมและรับทําเฉพาะสําหรับคุณ">
+    <meta name="keywords"
+        content="Peakkofficial,website,web,รับทําเว็บไซต์,รับทําเว็บ,รับทําเว็บไซต์ราคาถูก,รับทำเว็บไซต์มือโปร,รับทําเว็บไซต์ Frontend,รับทำเว็บ Frontend,ทําเว็บไซต์เป็นและราคาเข้าถึงง่าย,ทําเว็บ,ทําเว็บไซต์">
+    <meta name="author"
+        content="รับทําเว็บไซต์แบบมือโปรที่พร้อมและรับทําเฉพาะสําหรับคุณและพร้อมให้บริการทุกคนทุกท่านที่เข้ามาติดต่อสอบถามและเข้ามารับชมเว็บไซต์ของพวกเรา">
+    <link rel="canonical" href="Main.html">
+    <meta name="theme-color" id="ThemeColor">
+    <!-- content="#0A0A0A" -->
+    <!-- Social SEO -->
+    <!-- <meta property="og:title" content="Peakkofficial - Website development service & Design" />
+    <meta property="og:description" content="รับทำเว็บไซต์แบบมือโปรที่พร้อมและรับทำเฉพาะสำหรับคุณ" />
+    <meta property="og:image" content="https://drive.google.com/uc?export=view&id=1VoUB4txfOXZK9VFmxDwrgRt8T-SZ6-pM" />
+    <meta property="og:url" content="https://webpeakkofficial.web.app/Main.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Peakkofficial" />
+    <meta property="og:locale" content="th_TH" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Peakkofficial - Website development service & Design" />
+    <meta name="twitter:description" content="รับทำเว็บไซต์แบบมือโปรที่พร้อมและรับทำเฉพาะสำหรับคุณ" />
+    <meta name="twitter:image" content="https://drive.google.com/uc?export=view&id=1VoUB4txfOXZK9VFmxDwrgRt8T-SZ6-pM" />
+    <meta name="twitter:url" content="https://webpeakkofficial.web.app/Main.html" />
+    <meta property="og:title" content="Peakkofficial - Website development service & Design" />
+    <meta property="og:description" content="รับทำเว็บไซต์แบบมือโปรที่พร้อมและรับทำเฉพาะสำหรับคุณ" />
+    <meta property="og:image" content="https://drive.google.com/uc?export=view&id=1VoUB4txfOXZK9VFmxDwrgRt8T-SZ6-pM" />
+    <meta property="og:url" content="https://webpeakkofficial.web.app/Main.html" />
+    <meta name="pinterest:title" content="Peakkofficial - Website development service & Design" />
+    <meta name="pinterest:description" content="รับทำเว็บไซต์แบบมือโปรที่พร้อมและรับทำเฉพาะสำหรับคุณ" />
+    <meta name="pinterest:image" content="https://drive.google.com/uc?export=view&id=1VoUB4txfOXZK9VFmxDwrgRt8T-SZ6-pM" />
+    <meta property="og:title" content="Peakkofficial - Website development service & Design" />
+    <meta property="og:description" content="รับทำเว็บไซต์แบบมือโปรที่พร้อมและรับทำเฉพาะสำหรับคุณ" />
+    <meta property="og:image" content="https://drive.google.com/uc?export=view&id=1VoUB4txfOXZK9VFmxDwrgRt8T-SZ6-pM" /> -->
     <link rel="stylesheet" href="Main.css">
-    <!-- <link rel="stylesheet" href="./Custom.css"> -->
     <link rel="stylesheet" href="./Font.css">
     <link rel="stylesheet" href="./loading.css">
     <link rel="stylesheet" href="./MainResponsive.css">
@@ -27,18 +57,30 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Data aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <meta name="description" content="Peakkofficial">
-    <meta name="keywords" content="Peakkofficial">
-    <meta name="author" content="Peakkofficial">
-    <meta name="theme-color" content="#0a0a0a">
-    <link rel="stylesheet" href="./Animation.css">
     <link rel="stylesheet" href="ctaAnimation.css">
-    <link rel="stylesheet" href="localtheme.css">
+
+    <script>
+        function setFavicon(path) {
+          const favicon = document.getElementById('favicon');
+          favicon.href = path;
+        }
+    
+        function updateFavicon() {
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setFavicon('https://drive.google.com/uc?export=view&id=1aJXgOZlYrlkaJXPJOftOWX8r7pJ39IpE');
+          } else {
+            setFavicon('https://drive.google.com/uc?export=view&id=1RZCxbtS0vkhKG0jY1ZzMEk6OniGgW-0s');
+          }
+        }
+    
+        updateFavicon();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+    </script>
 </head>
 
 <body>
-
-    <script>
+    <script defer>
+        document.getElementById('ThemeColor').setAttribute('content', getComputedStyle(document.documentElement).getPropertyValue('--color-background'));
         AOS.init();
     </script>
 
@@ -539,7 +581,8 @@
                 </div>
             </div>
 
-            <svg width="514" height="1296" viewBox="0 0 514 1296" fill="none" xmlns="http://www.w3.org/2000/svg" id="Hdbgwb">
+            <svg width="514" height="1296" viewBox="0 0 514 1296" fill="none" xmlns="http://www.w3.org/2000/svg"
+                id="Hdbgwb">
                 <rect x="2" width="130" height="1262" fill="var(--hdbgwbfst)" />
                 <rect x="132" width="127" height="1174" fill="var(--hdbgwbsec)" />
                 <rect x="257" width="130" height="1091" fill="var(--hdbgwbthd)" />
@@ -562,7 +605,7 @@
                         </div>
 
                         <div id="Pkidbutton">
-                            <a href="./PostViewer/2025ig.html">ดูเพิ่มเติมสําหรับรายระเอียด</a>
+                            <a href="index.html" target="_blank">ดูเพิ่มเติมสําหรับรายระเอียด</a>
                         </div>
                     </div>
                 </div>
@@ -618,8 +661,7 @@
         <section id="Sectionmain">
             <div class="secwhyweb">
 
-                <div class="secwhywebcon" data-aos="fade-down" data-aos-offset="300" data-aos-duration="500"
-                    data-aos-delay="600">
+                <div class="secwhywebcon" data-aos="fade-down" data-aos-offset="300" data-aos-duration="500">
 
                     <div class="secwhywebtext">
                         <span>มีเว็บไซต์เพื่ออะไร</span>
@@ -668,7 +710,7 @@
                                     <h1>เพื่อการสื่อสาร</h1>
                                     <p>สามารถสื่อสารและตอบสนองความต้องการของ<br>ลูกค้าได้โดยตรงผ่านระบบช่วยเหลือลูกค้าในเว็บไซต์
                                     </p>
-                                    <a href="#" id="secwhywebabtextcon">ดูเพิ่มเติมใน Instagram</a>
+                                    <a href="hire.html" id="secwhywebabtextcon">ต้องการรายระเอียดเพิ่มเติม?</a>
                                 </div>
 
                             </div>
@@ -677,15 +719,14 @@
                     </div>
                 </div>
 
-                <div class="secwhywbimg" data-aos="fade-left" data-aos-offset="300" data-aos-duration="500"
-                    data-aos-delay="300" data-aos-anchor-placement="top-bottom">
+                <div class="secwhywbimg" data-aos="fade-left" data-aos-offset="300" data-aos-duration="500">
                     <img src="./Image/SvgMainbrowserdark.svg" alt="" id="secwhywbimg">
                 </div>
 
             </div>
         </section>
 
-        <div class="detailsWeb" data-aos="fade-down" data-aos-offset="300" data-aos-duration="500" id="detailsWeb">
+        <div class="detailsWeb" data-aos="fade-down" data-aos-offset="100" data-aos-duration="500" id="detailsWeb">
 
             <svg width="1406" height="1214" viewBox="0 0 1406 1214" fill="none" xmlns="http://www.w3.org/2000/svg"
                 id="SvgWebPortAbsoulte">
@@ -734,20 +775,20 @@
                         <div class="DoWbImagecon" id="Port1" data-aos="fade-right">
                             <img src="./Image/Port1.png" alt="" draggable="false">
                         </div>
-                        <div class="DoWbImagecon" data-aos="fade-right" data-aos-delay="300">
+                        <div class="DoWbImagecon" data-aos="fade-right">
                             <img src="./Image/Port2.png" alt="" draggable="false">
                         </div>
-                        <div class="DoWbImagecon" data-aos="fade-right" data-aos-delay="500">
+                        <div class="DoWbImagecon" data-aos="fade-right">
                             <img src="./Image/Port3.png" alt="" draggable="false">
                         </div>
-                        <div class="DoWbImagecon" id="Port4" data-aos="fade-right" data-aos-delay="700">
+                        <div class="DoWbImagecon" id="Port4" data-aos="fade-right">
                             <img src="./Image/Port4.png" alt="" draggable="false">
                         </div>
                     </div>
                     <div class="DeWbDes">
                         <p>Design ที่เรียบง่ายและพร้อมที่จะ<br>เปลียนไปตาม life style ของคุณลูกค้าได้</p>
                         <p id="mbDeWbDes">เลื่อนที่รูปภาพเพื่อดูตัวอย่างถัดไป -></p>
-                        <a href="https://www.instagram.com/direct/t/17848578972196808?__pwa=1" data-aos="zoom-in"
+                        <a href="https://www.instagram.com/direct/t/17843846910267255" data-aos="zoom-in"
                             id="DoWbDesLinks">ติดต่อสอบถามเพื่มเติม</a>
                     </div>
                 </div>
@@ -880,7 +921,7 @@
                 </div>
 
                 <div class="whywebbtn" id="whywebbtn">
-                    <a href="#Howweb">ดูเพิ่มเติม</a>
+                    <a href="https://www.instagram.com/p/DF12OkuTKuy/">ดูเพิ่มเติม</a>
                 </div>
             </div>
         </div>
@@ -900,7 +941,8 @@
                 <div class="trySelftxt">
                     <!-- <h1>ถ้าทําเว็บเองจะเป็นยังไง</h1> -->
                     <p>
-                        ถ้าลูกค้าลองจะทําเว็บไซต์เอง<br>พวกเราคิดว่ามันน่าจะยากสําหรับใครที่<br>ไม่ได้มีเวลาขนาดนั้น
+                        ถ้าลูกค้าลองจะทําเว็บไซต์เอง
+                        ⛓️‍💥<br>พวกเราคิดว่ามันน่าจะยากสําหรับใครที่<br>ไม่ได้มีเวลาขนาดนั้น
                         และต้องการ<br>เว็บไซต์ที่สวยงามและไม่ต้อง<br>เสียเวลาการสร้างเว็บไซต์<br>ลองจ้างให้พวกเรา
                         "พีคออฟฟิเชียล"<br>ที่ทําเว็บไซต์เป็นและราคาเข้าถึงง่าย
                     </p>
@@ -922,8 +964,9 @@
                 </div>
                 <div class="alltext">
                     <p>
-                        ทุกอย่างที่คุณต้องเช่นเว็บไซต์ของคุณ<br>เรามีให้คุณและพร้อมในการมีเว็บไซต์เดียว<br>ไม่ต้องเสียเวลาและเร็วขึ้น
-                        <br>จากการสร้างเว็บไซต์ของคุณเอง<br>
+                        ทุกอย่างที่คุณต้องเช่นเว็บไซต์ของคุณ
+                        🤖<br>เรามีให้คุณและพร้อมในการมีเว็บไซต์<br>และไม่ต้องเสียเวลาและเร็วขึ้น 🚩
+                        <br>จากการสร้างเว็บไซต์ของคุณเอง 📷<br>
                     </p>
                 </div>
             </div>
@@ -965,19 +1008,17 @@
                         <h1>ติดต่อพวกเราผ่าน Instagram</h1>
                     </a>
                     <a id="facebookcta" href="https://www.facebook.com/search/top?q=peakk%20official" target="_blank"
-                        rel='noreferrer' data-aos="fade-down" data-aos-offset="100" data-aos-duration="500"
-                        data-aos-delay="150">
+                        rel='noreferrer' data-aos="fade-down" data-aos-offset="100" data-aos-duration="500">
                         <ion-icon name="logo-facebook"></ion-icon>
                         <h1>ติดต่อพวกเราผ่าน Facebook</h1>
 
                         <a id="tiktokcta" href="https://www.tiktok.com/@peakkoffical" target="_blank" rel='noreferrer'
-                            data-aos="fade-down" data-aos-offset="100" data-aos-duration="500" data-aos-delay="250">
+                            data-aos="fade-down" data-aos-offset="100" data-aos-duration="500">
                             <ion-icon name="logo-tiktok"></ion-icon>
                             <h1>ติดต่อพวกเราผ่าน Tiktok</h1>
                         </a>
                         <a id="youtubecta" href="https://www.youtube.com/@Peakkofficial" target="_blank"
-                            rel='noreferrer' data-aos="fade-down" data-aos-offset="100" data-aos-duration="500"
-                            data-aos-delay="500">
+                            rel='noreferrer' data-aos="fade-down" data-aos-offset="100" data-aos-duration="500">
                             <ion-icon name="logo-youtube"></ion-icon>
                             <h1>ติดต่อพวกเราผ่าน Youtube</h1>
                         </a>
@@ -990,14 +1031,24 @@
                 <div class="hiredetailstext">
                     <h1>รายระเอียด<br>การจ้างงาน<br>ของพวกเรา</h1>
                     <hr>
-                    <p>การจ้างงานของพวกเรานั้นราคาเริ่มต้น<br>จะราคา 399฿
-                        พร้อมกับรายละเอียดกในเว็บมากมาย<br>แต่ถ้าอยากจะได้เว็บไซต์ที่สวยงามและทันใจ<br>พวกเราจะมีเรทราคาซึ่งจะเปลียนไปตามความยากง่าย<br>
+                    <p>
+                        รายระเอียด ในการจ้างงาน ของพวกเรา ✅💻<br>
+                        โดยขั้นตอนแรกจะเป็นการทักไปสอบถามคุณลูกค้า<br>
+                        ว่าเว็บไซต์ที่คุณอยากจะได้หรือเว็บไซต์ของคุณเป็นยังไง<br>
+                        และเรื่อง scope ของเวลาว่าจะให้ทํากี่วัน
                     </p>
-                    <p>โดยการตั้งราคาของเว็บไซต์พวกเรา<br>ในส่วนที่กําหนดใว้แล้วและเป็นเว็บไซต์ที่<br>เป็นตามในเรทการสร้างเว็บไซต์นั้นโดยจะมีการตั้งราคาดังนี้
+                    <p>
+                        เมื่อคุณได้คุยเรื่องเว็บไซต์ที่อยากจะได้แล้ว ✨<br>
+                        แล้วก็เรื่องระยะเวลาที่คุณอยากจะให้ทํา<br>
+                        เมื่อเสร็จ ทางเราจะส่งตัวอย่างไปให้ 🎁<br>
+                        เป็นรูปก่อนว่าควรจะแก้ตรงใหน <br>
+                        และหากเมื่อไม่มีจะแก้ 👍<br>
+                        ทางเราจะส่งไปเป็น Git Repository
                     </p>
                     <div class="hiredetailstextlin" id='hiredetailstextlin'>
-                        <a href="Hire.html" target="_blank" rel='noreferrer'>ดูเพิ่มเติม</a>
-                        <span id="hiredetailstextspan">399฿ 599฿ 999฿</span>
+                        <a href="https://www.instagram.com/p/DFhytCKSsce/" target="_blank"
+                            rel='noreferrer'>ตัวอย่างและรายระเอียด</a>
+                        <!-- <span id="hiredetailstextspan">399฿ 599฿ 999฿</span> -->
                     </div>
                 </div>
                 <div class="hiredetailsimage">
