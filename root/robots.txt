@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://webpeakkofficial.web.app/sitemapindex.xml
+
+# Sitemap location
+Sitemap: https://webpeakkofficial.web.app/sitemap.xml

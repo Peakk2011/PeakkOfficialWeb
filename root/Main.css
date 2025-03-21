@@ -4,6 +4,10 @@
 html,
 body {
     background-color: var(--color-background) !important;
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+    -ms-scroll-snap-type: none;
+    overflow-y: auto;
 }
 
 /* Define Theme switcher */
@@ -1370,6 +1374,8 @@ section {
     height: 1165px;
     border-bottom: var(--WebIntroBorder);
     background-color: var(--UsingDefaultNavbarColor);
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
 }
 
 .secwhyweb {
@@ -1651,7 +1657,7 @@ section {
     font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
     font-weight: 500;
     letter-spacing: -1.5px;
-    color: var(--BtntextWhyweb);
+    color: var (--BtntextWhyweb);
     border-radius: 8px;
     padding: 0.2rem 0.8rem;
     margin: 0rem 0.5rem;
@@ -1960,4 +1966,14 @@ hiredetailstext span {
     height: auto;
     display: block;
     width: 420px;
+}
+
+[data-scroll-container] {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.scroll-container {
+    scroll-snap-type: none !important;
+    scroll-behavior: auto !important;
 }

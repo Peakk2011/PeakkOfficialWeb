@@ -1,5 +1,3 @@
-"use strict";
-
 // Hover effects
 const gsapHoverEffect = (element, scaleIn, scaleOut) => {
   element.addEventListener('mouseenter', () => {
