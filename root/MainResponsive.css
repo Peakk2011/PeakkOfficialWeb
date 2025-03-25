@@ -175,16 +175,19 @@ body.dark-theme .iconsRes {
     }
 
     .secwhywebtext p {
-        font-size: 3.7vw !important;
+        font-size: 5vw !important;
+        text-wrap: balance;
     }
 
     .secwhywebabtextcon p {
-        font-size: 3.22vw;
+        font-size: 3.8vw;
+        text-wrap: balance;
+        max-inline-size: 25ch;
     }
 
     section {
-        height: 1100px;
-        min-height: 1100px;
+        height: 1450px;
+        min-height: 1450px;
     }
 
 }
@@ -203,7 +206,6 @@ body.dark-theme .iconsRes {
 
     .DoWbimg {
         position: relative !important;
-        overflow-x: scroll;
         scroll-snap-type: x mandatory;
         overscroll-behavior-x: contain;
         overflow-x: scroll;

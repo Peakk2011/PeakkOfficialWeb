@@ -1,3 +1,184 @@
+// Effects
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(Observer);
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Reset initial states
+  gsap.set(".headercon", { opacity: 1, y: 0, filter: "blur(0px)" });
+  gsap.set(".SvgFadeColor", { opacity: 1, y: 0, scaleY: 1 });
+  gsap.set(".Mainsecwhywebtext", { opacity: 0, scale: 0.8, filter: "blur(10px)" });
+  gsap.set(".Spansecwhywebtext", { opacity: 0, scale: 0.8, filter: "blur(2.5px)" });
+  gsap.set(".secwhywebtext p", { opacity: 0, scale: 0.8, filter: "blur(1.5px)" });
+
+  // Header content animation
+  gsap.to(".headercon", {
+    scrollTrigger: {
+      trigger: ".headercon",
+      start: "center center",
+      end: "bottom top",
+      scrub: 1,
+      toggleActions: "play none none reverse"
+    },
+    y: -200,
+    filter: "blur(5px)",
+    immediateRender: false
+  });
+
+  // SVG color fade animation
+  gsap.to(".SvgFadeColor", {
+    scrollTrigger: {
+      trigger: ".SvgFadeColor",
+      start: "center center",
+      end: "bottom top",
+      scrub: 1,
+      pin: "headercon",
+      toggleActions: "play none none reverse"
+    },
+    y: 200,
+    scaleY: 2,
+    ease: "power3.out",
+    immediateRender: false
+  });
+
+  // Main text animation
+  gsap.to(".Mainsecwhywebtext", {
+    scrollTrigger: {
+      trigger: ".Mainsecwhywebtext",
+      start: "top 80%",
+      end: "top 20%",
+      scrub: 1,
+      toggleActions: "play none none reverse"
+    },
+    opacity: 1,
+    scale: 1,
+    filter: "blur(0px)",
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    immediateRender: false
+  });
+
+  // Span text animation
+  gsap.to(".Spansecwhywebtext", {
+    scrollTrigger: {
+      trigger: ".Spansecwhywebtext",
+      start: "top 60%",
+      end: "top 20%",
+      scrub: 1,
+      toggleActions: "play none none reverse"
+    },
+    opacity: 1,
+    scale: 1,
+    filter: "blur(0px)",
+    y: 0,
+    duration: 1.5,
+    ease: "power3.out",
+    immediateRender: false
+  });
+
+  // Paragraph text animation
+  gsap.to(".secwhywebtext p", {
+    scrollTrigger: {
+      trigger: ".secwhywebtext p",
+      start: "top 80%",
+      end: "top 20%",
+      scrub: 1,
+      toggleActions: "play none none reverse"
+    },
+    opacity: 1,
+    scale: 1,
+    filter: "blur(0px)",
+    y: 0,
+    duration: 0.6,
+    ease: "power3.out",
+    immediateRender: false
+  });
+});
+
+gsap.to(".secwhywebtext", {
+  scrollTrigger: {
+    trigger: ".secwhywebtext",
+    start: "top+=500 center",
+    end: "+=500",
+    scrub: true,
+    toggleActions: "play none none reverse"
+  },
+  opacity: 0,
+  filter: "blur(7px)",
+  y: -200,
+  duration: 1
+});
+
+// Fadeout
+gsap.to(".secwhywebabcon", {
+  scrollTrigger: {
+    trigger: ".secwhywebabcon",
+    start: "top+=600 center",
+    end: "+=550",
+    scrub: true,
+    toggleActions: "play none none reverse"
+  },
+  opacity: 0,
+  filter: "blur(15px)",
+  duration: 1,
+  ease: "power3.out",
+});
+
+// Image Fade
+
+gsap.from(".secwhywbimg", {
+  scrollTrigger: {
+    trigger: ".secwhywbimg",
+    start: "top-=260 center",
+    end: "+=420",
+    scrub: 0.5, // ลด scrub เพื่อลดความเร็ว (ค่าน้อยลงให้ smooth ขึ้น)
+    toggleActions: "play none none reverse",
+    markers: true // เพิ่ม markers เพื่อ debug จุดเริ่ม-จบ
+  },
+  x: 250,
+  opacity: 0,
+  duration: 1.5, // เพิ่ม duration ให้เคลื่อนไหวช้าลง
+  ease: "power1.out", // ใช้ ease ที่นุ่มนวลขึ้น เช่น power1
+  filter: "blur(10px)",
+  immediateRender: false
+});
+
+// Animation ของเนื้อหาในส่วนของ howweb
+
+const textChange = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.howwebwrapper',
+    start: 'center center',
+    end: '+=500',
+    scrub: true,
+    pin: true,
+  },
+})
+  .to('.howwebwrapper', { duration: 1 })
+  .set('.HighlightWords', { innerHTML: 'สำหรับธุรกิจของคุณ' }, 0.33)
+  .set('.HighlightWords', { innerHTML: 'สำหรับงานส่วนตัว' }, 0.66)
+
+function Screen(ChengeScrollable) {
+  if (ChengeScrollable.matches) {
+  } else {
+    gsap.to(".howwebimage", {
+      scrollTrigger: {
+        trigger: ".howwebimage",
+        start: "center center",
+        end: "bottom top",
+        scrub: 1,
+      },
+      scale: 0.8
+    });
+  }
+}
+
+var ChengeScrollable = window.matchMedia("(max-width: 1460px)")
+Screen(ChengeScrollable);
+ChengeScrollable.addEventListener("change", function () {
+  Screen(ChengeScrollable);
+});
+
 // Hover effects
 const gsapHoverEffect = (element, scaleIn, scaleOut) => {
   element.addEventListener('mouseenter', () => {
@@ -374,7 +555,7 @@ MainNavbar.style.opacity = "0";
 setTimeout(() => {
   MainNavbar.style.transform = "translatey(0px)";
   MainNavbar.style.opacity = "1";
-  ["headernav", "Pkidbutton","headercon","Hdbgwb"].forEach(id => setOpacity(id, "1"));
+  ["headernav", "Pkidbutton", "headercon", "Hdbgwb"].forEach(id => setOpacity(id, "1"));
 }, 2250);
 
 // Mouse interactive

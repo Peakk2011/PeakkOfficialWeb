@@ -28,6 +28,7 @@
         content="รับทําเว็บไซต์,รับทําเว็บ,เว็บ,Peakkofficial,เว็บไซต์ Peakkofficial,Peakkofficial เว็บไซต์,Peakkofficial รับทําเว็บไซต์,เว็บไซต์,เว็บไซต์ของพีคออฟฟิเชียล">
     <meta name="author"
         content="หน้าเพจจาก Peakkofficial และกับรายระเอียดการจ้างงานดีไซน์ตัวอย่างเว็บไซต์ และอีกมากมาย">
+    <!-- Social SEO -->
     <meta property="og:title" content="Peakkofficial - Details about website development service" />
     <meta property="og:description"
         content="รายระเอียดของการรับจ้างทําเว็บไซต์และเรื่องอื่นๆเช่นตัวอย่างเว็บไซต์ อื่นๆ" />
@@ -56,9 +57,6 @@
     <meta property="og:description"
         content="รายระเอียดของการรับจ้างทําเว็บไซต์และเรื่องอื่นๆเช่นตัวอย่างเว็บไซต์ อื่นๆ" />
     <meta property="og:image" content="https://drive.google.com/uc?export=view&id=1VoUB4txfOXZK9VFmxDwrgRt8T-SZ6-pM" />
-    <link rel="canonical" href="https://webpeakkofficial.web.app/index.html" />
-    <meta name="language" content="th">
-    <meta http-equiv="content-language" content="th">
     <!-- Ended Meta tags -->
     <!-- Structured Data สำหรับหน้าแรก -->
     <script type="application/ld+json">
@@ -576,8 +574,10 @@
                                 </li>
                                 <li><a href="javascript:void(0)"><ion-icon
                                             name="gift-sharp"></ion-icon>สามารถแลือกแบบอักษรที่ต้องการได้</a></li>
-                                <li><a href="javascript:void(0)"><ion-icon name="gift-sharp"></ion-icon>หน้าเว็บสบายตาไม่ยุ่งยาก</a></li>
-                                <li><a href="javascript:void(0)"><ion-icon name="gift-sharp"></ion-icon>มีตัวเลือกที่สามารถเปลียนภาษาได้</a></li>
+                                <li><a href="javascript:void(0)"><ion-icon
+                                            name="gift-sharp"></ion-icon>หน้าเว็บสบายตาไม่ยุ่งยาก</a></li>
+                                <li><a href="javascript:void(0)"><ion-icon
+                                            name="gift-sharp"></ion-icon>มีตัวเลือกที่สามารถเปลียนภาษาได้</a></li>
                                 <span>นี้คือสิ่งที่ได้แบบย่อๆ<br>ท่านสามารถดูเพิ่มเติมได้</span>
                             </ul>
                         </div>
@@ -1070,17 +1070,20 @@
         }
     </style>
 
-</body>
+    <script src="Control.js" defer></script>
+    <!-- <script src="initialize.js" defer></script> -->
+    <!-- <script src="default.js"></script> -->
+    <script src="Falut.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+        // เริ่มต้น Locomotive Scroll
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector("[data-scroll-container]"), // คอนเทนเนอร์ที่ควบคุมการเลื่อน
+            smooth: true, // เปิดใช้งาน smooth scrolling
+            multiplier: 1.5, // ความเร็วในการเลื่อน
+        });
+    </script>
 
-</html>
-
-</script>
-
-<script src="Control.js" defer></script>
-<!-- <script src="initialize.js" defer></script> -->
-<!-- <script src="default.js"></script> -->
-<script src="Falut.js" defer></script>
-<script src="../../eel.js" defer></script>
 </body>
 
 </html>

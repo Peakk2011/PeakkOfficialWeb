@@ -4,10 +4,6 @@
 html,
 body {
     background-color: var(--color-background) !important;
-    scroll-behavior: auto;
-    scroll-snap-type: none;
-    -ms-scroll-snap-type: none;
-    overflow-y: auto;
 }
 
 /* Define Theme switcher */
@@ -19,7 +15,6 @@ body {
     list-style: none;
     text-decoration: none;
     font-family: "inter tight", "LineSeedRegular", "Manrope", "sans-serif";
-    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.75s all;
     user-select: none;
     -webkit-user-select: none;
     scroll-behavior: smooth;
@@ -457,7 +452,7 @@ body {
     --IconAndTextcolor: #37372d;
     --PtextColor: #000;
     /* Define wb */
-    --whywebBgColor: #fff1f1;
+    --whywebBgColor: #fcfaf1;
     --wyfillwbt: #000;
     --wyfillwbtp: #000;
     --wyPublicBorder: solid 1px #d7d7d7;
@@ -1160,7 +1155,7 @@ header {
 }
 
 .links li a:hover {
-    color: #ccc;
+    color: var(--ColorMain);
     cursor: pointer;
 }
 
@@ -1228,6 +1223,7 @@ header {
 .PkWarn p {
     color: var(--wyfillwbtp);
     font-size: 22.5px;
+    min-width: max-content;
 }
 
 #Hdbgwb {
@@ -1374,8 +1370,6 @@ section {
     height: 1165px;
     border-bottom: var(--WebIntroBorder);
     background-color: var(--UsingDefaultNavbarColor);
-    scroll-snap-align: none;
-    scroll-snap-stop: normal;
 }
 
 .secwhyweb {
@@ -1410,7 +1404,7 @@ section {
     font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
     border-radius: 50px;
     border: var(--IntrospanBorder);
-    margin-top: 12.25rem;
+    margin-top: 10rem;
 }
 
 .secwhywebtext h1 {
@@ -1438,7 +1432,7 @@ section {
     margin-top: 1.4rem;
     line-height: 1.7;
     letter-spacing: -0.3px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 5.5rem;
 }
 
 .secwhywebabtextcon a {
@@ -1471,20 +1465,27 @@ section {
 .secwhywebabtextcon h1,
 .secwhywebabtextcon p {
     color: var(--IconAndTextcolor);
-    font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
     line-height: 1.8;
     letter-spacing: -0.3px;
 }
 
 .secwhywebabtextcon h1 {
     font-size: 16px;
-    margin-bottom: 0.5rem;
+    font-family: "Inter Tight", "MisansRegular", "IBM Plex Sans Thai", "sans-serif";
+    line-height: 1.1;
+}
+
+.secwhywebabtextcon hr {
+    margin: 1rem 0rem;
+    border: solid 1px var(--IconAndTextcolor);
+    width: 35%;
 }
 
 .secwhywebabtextcon p {
     color: var(--PtextColor);
     font-size: 12px;
     font-weight: 700;
+    font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
 }
 
 #backgroundElements svg {
@@ -1499,6 +1500,7 @@ section {
     height: 955px;
     width: 100%;
     position: relative;
+    /* transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
 
 .DeWbcon {
@@ -1656,8 +1658,8 @@ section {
 .whywebtxt strong {
     font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
     font-weight: 500;
-    letter-spacing: -1.5px;
-    color: var (--BtntextWhyweb);
+    letter-spacing: -0.5px;
+    color: var(--BtntextWhyweb);
     border-radius: 8px;
     padding: 0.2rem 0.8rem;
     margin: 0rem 0.5rem;
@@ -1779,6 +1781,7 @@ section {
     left: 50%;
     top: 35%;
     transform: translate(-50%, -50%);
+    transition: 0s;
 }
 
 .howwebimage img {
@@ -1968,12 +1971,4 @@ hiredetailstext span {
     width: 420px;
 }
 
-[data-scroll-container] {
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-}
-
-.scroll-container {
-    scroll-snap-type: none !important;
-    scroll-behavior: auto !important;
-}
+/* Gsap debug */

@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.5s;
 }
 
 /* Other page */
@@ -81,16 +80,15 @@
 
 .loadingImage svg path {
     /* animation: AnimLoading 3.2s cubic-bezier(0.65, 0.05, 0.36, 1); */
-    animation: AnimLoading 1.65s cubic-bezier(0.65, 0.05, 0.36, 1) forwards;
+    animation: AnimLoading 1.8s cubic-bezier(0.65, 0.05, 0.36, 1) forwards;
     fill: transparent;
     stroke: var(--ColorMain);
-    stroke-width: 2px;
+    stroke-width: 3px;
     stroke-dasharray: 2400;
     stroke-dashoffset: 2400;
 }
 
 @keyframes AnimLoading {
-
     60% {
         fill: transparent;
     }
