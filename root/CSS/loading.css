@@ -42,12 +42,12 @@
 }
 /* Lemon Theme */
 [data-selected-theme="Lemon"] {
-    --color-background: rgba(252, 250, 241);
+    --color-background: #f3f9e5;
     --ColorMain: rgb(55, 55, 45);
 }
 
 [data-selected-theme="ธีมสีมะนาวอ่อน"] {
-    --color-background: rgba(252, 250, 241);
+    --color-background: #f3f9e5;
     --ColorMain: rgb(55, 55, 45);
 }
 /* Purple Dark theme */

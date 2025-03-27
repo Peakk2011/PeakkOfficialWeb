@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
       pin: "headercon",
       toggleActions: "play none none reverse"
     },
-    y: 200,
-    scaleY: 2,
+    y: 100,
+    scaleY: 1.85,
     ease: "power3.out",
     immediateRender: false
   });
@@ -44,17 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.to(".Mainsecwhywebtext", {
     scrollTrigger: {
       trigger: ".Mainsecwhywebtext",
-      start: "top 80%",
+      start: "top 85%",
       end: "top 20%",
-      scrub: 1,
+      scrub: 1.5,
       toggleActions: "play none none reverse"
     },
     opacity: 1,
     scale: 1,
     filter: "blur(0px)",
     y: 0,
-    duration: 1,
-    ease: "power3.out",
+    duration: 2,
+    ease: "power2.inOut",
     immediateRender: false
   });
 
@@ -62,17 +62,17 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.to(".Spansecwhywebtext", {
     scrollTrigger: {
       trigger: ".Spansecwhywebtext",
-      start: "top 60%",
-      end: "top 20%",
-      scrub: 1,
+      start: "top 75%",
+      end: "top 20%", 
+      scrub: 1.75,
       toggleActions: "play none none reverse"
     },
     opacity: 1,
     scale: 1,
     filter: "blur(0px)",
     y: 0,
-    duration: 1.5,
-    ease: "power3.out",
+    duration: 2.5,
+    ease: "power2.inOut",
     immediateRender: false
   });
 
@@ -82,15 +82,15 @@ document.addEventListener('DOMContentLoaded', () => {
       trigger: ".secwhywebtext p",
       start: "top 80%",
       end: "top 20%",
-      scrub: 1,
+      scrub: 2,
       toggleActions: "play none none reverse"
     },
     opacity: 1,
     scale: 1,
     filter: "blur(0px)",
     y: 0,
-    duration: 0.6,
-    ease: "power3.out",
+    duration: 1.8,
+    ease: "power2.inOut",
     immediateRender: false
   });
 });
@@ -133,15 +133,103 @@ gsap.from(".secwhywbimg", {
     end: "+=420",
     scrub: 0.5, // ลด scrub เพื่อลดความเร็ว (ค่าน้อยลงให้ smooth ขึ้น)
     toggleActions: "play none none reverse",
-    markers: true // เพิ่ม markers เพื่อ debug จุดเริ่ม-จบ
   },
   x: 250,
   opacity: 0,
-  duration: 1.5, // เพิ่ม duration ให้เคลื่อนไหวช้าลง
+  duration: 1.5,
   ease: "power1.out", // ใช้ ease ที่นุ่มนวลขึ้น เช่น power1
   filter: "blur(10px)",
   immediateRender: false
 });
+
+gsap.from(".DeWbtxtconten h1", {
+  scrollTrigger: {
+    trigger: ".DeWbtxtconten h1",
+    start: "top-=320 center",
+    end: "+=300",
+    scrub: 0.2, // ลด scrub เพื่อความ smooth
+    toggleActions: "play none none reverse",
+  },
+  y: 250,
+  opacity: 0,
+  duration: 4, // เพิ่มเวลา
+  scale: 0.4,
+  ease: "expo.out", // เปลี่ยน ease เพื่อความนุ่มนวล
+  filter: "blur(42.5px)",
+  immediateRender: false
+});
+
+gsap.from(".DeWbtxtconten p", {
+  scrollTrigger: {
+    trigger: ".DeWbtxtconten h1",
+    start: "top-=300 center",
+    end: "+=300",
+    scrub: 0.2, // ลด scrub
+    toggleActions: "play none none reverse",
+  },
+  y: 350,
+  opacity: 0,
+  duration: 3.5, // เพิ่ม duration
+  scale: 0,
+  ease: "power2.out", // ease ที่นุ่มนวลขึ้น
+  filter: "blur(45px)",
+  immediateRender: false
+});
+
+gsap.from(".restextdw", {
+  scrollTrigger: {
+    trigger: ".restextdw",
+    start: "top-=300 center",
+    end: "+=300",
+    scrub: 0.2, // ลด scrub
+    toggleActions: "play none none reverse",
+  },
+  y: 300,
+  opacity: 0,
+  duration: 2, // เพิ่ม duration
+  scale: 0,
+  ease: "expo.out", // ease ที่เหมาะสม
+  filter: "blur(45px)",
+  immediateRender: false
+});
+
+gsap.from(".DoWbImagecon", {
+  scrollTrigger: {
+    trigger: ".DoWbImagecon",
+    start: "top-=100 center",
+    end: "+=300",
+    scrub: 0.3, // ลด scrub
+    toggleActions: "play none none reverse",
+  },
+  x: -300,
+  opacity: 0,
+  duration: 2.5, // เพิ่ม duration
+  scale: 0.5,
+  ease: "power2.out", // ใช้ ease สำหรับการเคลื่อนไหวที่ลื่น
+  immediateRender: false
+});
+
+gsap.fromTo(
+  ".AllinoneImage path",
+  {
+    strokeDasharray: "1000 1000",
+    strokeDashoffset: 1000,
+    fill: "transparent"
+  },
+  {
+    strokeDashoffset: 0,
+    scrollTrigger: {
+      trigger: ".AllinoneImage",
+      start: "top-=200 center",
+      end: "bottom+=200 center",
+      scrub: 1,
+      toggleActions: "play none none reverse"
+    },
+    onComplete: () => {
+      gsap.to(".AllinoneImage path", { fill: "var(--ColorMain)" });
+    }
+  }
+);
 
 // Animation ของเนื้อหาในส่วนของ howweb
 
@@ -709,7 +797,7 @@ document.addEventListener('DOMContentLoaded', function () {
           requestAnimationFrame(() => {
             ctabtn.classList.add('styleCtabtnWidth');
             setTimeout(() => {
-              ctabtnContent.style.transition = "opacity 300ms";
+              ctabtnContent.style.transition = "opacity 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275)";
               ctabtnContent.style.opacity = 1;
             }, 100);
           });
@@ -721,8 +809,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const uninitialized = () => {
     ctabtn.classList.remove('styleCtabtninitialize', 'styleCtabtnAnimateFlow', 'styleCtabtnAnimateFlowBACKDEF', 'styleCtabtnWidth');
-    ctabtn.style.transition = "cubic-bezier(0.4, 0.0, 1, 1) 400ms all";
-    ctabtnContent.style.transition = "opacity 300ms";
+    ctabtn.style.transition = "cubic-bezier(0.175, 0.885, 0.32, 1.275) 400ms all";
+    ctabtnContent.style.transition = "opacity 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275)";
     ctabtnContent.style.opacity = 0;
     hasRun = false;
   }
@@ -823,12 +911,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
+    // Check if user not scrolled
+
+    let isScrolled = false;
+
+    window.addEventListener('scroll', function () {
+      isScrolled = true;
+      if (isScrolled) {
+        ctabtnContent.style.opacity = 1;
+      }
+      const header = document.querySelector('header');
+      const headerPosition = header.getBoundingClientRect().top;
+
+      if (headerPosition <= 0) {
+        ctabtnContent.style.opacity = 0;
+      } else if (headerPosition <= 20) {
+        ctabtnContent.style.opacity = 0;
+      }
+    });
+
+    if (!isScrolled) {
+      ctabtnContent.style.opacity = 0;
+    }
+
   }
 
   window.addEventListener('scroll', HandleScrollEvents);
   window.addEventListener('touchmove', HandleScrollEvents);
 
-});
+}); // End of DOMContentLoaded
 
 // Theme Switcher
 let CurrentTheme = document.getElementById("CurrentTheme");
