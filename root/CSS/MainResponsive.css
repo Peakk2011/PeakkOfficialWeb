@@ -802,8 +802,6 @@ body.dark-theme .iconsRes {
 
     #MBthemetoggle {
         display: block;
-        -webkit-backdrop-filter: blur(30px);
-        backdrop-filter: blur(30px);
     }
 
 }
