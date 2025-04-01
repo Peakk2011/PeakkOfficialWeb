@@ -11,18 +11,6 @@
     display: none;
 }
 
-#GoToHireAnim {
-    display: none;
-}
-
-#DesktopHire {
-    display: block;
-}
-
-#GoToinstaAnim {
-    display: none;
-}
-
 body.dark-theme .iconsRes {
     color: #000;
 }
@@ -79,22 +67,6 @@ body.dark-theme .iconsRes {
 
     .headerText p {
         font-size: 50px !important;
-    }
-
-    #GoToHireAnim {
-        display: block;
-    }
-
-    #DesktopHire {
-        display: none;
-    }
-
-    #DesktopIG {
-        display: none !important;
-    }
-
-    #GoToinstaAnim {
-        display: block;
     }
 
     .NavLogo h1 {

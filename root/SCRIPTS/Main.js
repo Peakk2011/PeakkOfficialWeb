@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollTrigger: {
       trigger: ".Spansecwhywebtext",
       start: "top 75%",
-      end: "top 20%", 
+      end: "top 20%",
       scrub: 1.75,
       toggleActions: "play none none reverse"
     },
@@ -93,178 +93,444 @@ document.addEventListener('DOMContentLoaded', () => {
     ease: "power2.inOut",
     immediateRender: false
   });
-});
 
-gsap.to(".secwhywebtext", {
-  scrollTrigger: {
-    trigger: ".secwhywebtext",
-    start: "top+=500 center",
-    end: "+=500",
-    scrub: true,
-    toggleActions: "play none none reverse"
-  },
-  opacity: 0,
-  filter: "blur(7px)",
-  y: -200,
-  duration: 1
-});
-
-// Fadeout
-gsap.to(".secwhywebabcon", {
-  scrollTrigger: {
-    trigger: ".secwhywebabcon",
-    start: "top+=600 center",
-    end: "+=550",
-    scrub: true,
-    toggleActions: "play none none reverse"
-  },
-  opacity: 0,
-  filter: "blur(15px)",
-  duration: 1,
-  ease: "power3.out",
-});
-
-// Image Fade
-
-gsap.from(".secwhywbimg", {
-  scrollTrigger: {
-    trigger: ".secwhywbimg",
-    start: "top-=260 center",
-    end: "+=420",
-    scrub: 0.5, // ลด scrub เพื่อลดความเร็ว (ค่าน้อยลงให้ smooth ขึ้น)
-    toggleActions: "play none none reverse",
-  },
-  x: 250,
-  opacity: 0,
-  duration: 1.5,
-  ease: "power1.out", // ใช้ ease ที่นุ่มนวลขึ้น เช่น power1
-  filter: "blur(10px)",
-  immediateRender: false
-});
-
-gsap.from(".DeWbtxtconten h1", {
-  scrollTrigger: {
-    trigger: ".DeWbtxtconten h1",
-    start: "top-=320 center",
-    end: "+=300",
-    scrub: 0.2, // ลด scrub เพื่อความ smooth
-    toggleActions: "play none none reverse",
-  },
-  y: 250,
-  opacity: 0,
-  duration: 4, // เพิ่มเวลา
-  scale: 0.4,
-  ease: "expo.out", // เปลี่ยน ease เพื่อความนุ่มนวล
-  filter: "blur(42.5px)",
-  immediateRender: false
-});
-
-gsap.from(".DeWbtxtconten p", {
-  scrollTrigger: {
-    trigger: ".DeWbtxtconten h1",
-    start: "top-=300 center",
-    end: "+=300",
-    scrub: 0.2, // ลด scrub
-    toggleActions: "play none none reverse",
-  },
-  y: 350,
-  opacity: 0,
-  duration: 3.5, // เพิ่ม duration
-  scale: 0,
-  ease: "power2.out", // ease ที่นุ่มนวลขึ้น
-  filter: "blur(45px)",
-  immediateRender: false
-});
-
-gsap.from(".restextdw", {
-  scrollTrigger: {
-    trigger: ".restextdw",
-    start: "top-=300 center",
-    end: "+=300",
-    scrub: 0.2, // ลด scrub
-    toggleActions: "play none none reverse",
-  },
-  y: 300,
-  opacity: 0,
-  duration: 2, // เพิ่ม duration
-  scale: 0,
-  ease: "expo.out", // ease ที่เหมาะสม
-  filter: "blur(45px)",
-  immediateRender: false
-});
-
-gsap.from(".DoWbImagecon", {
-  scrollTrigger: {
-    trigger: ".DoWbImagecon",
-    start: "top-=100 center",
-    end: "+=300",
-    scrub: 0.3, // ลด scrub
-    toggleActions: "play none none reverse",
-  },
-  x: -300,
-  opacity: 0,
-  duration: 2.5, // เพิ่ม duration
-  scale: 0.5,
-  ease: "power2.out", // ใช้ ease สำหรับการเคลื่อนไหวที่ลื่น
-  immediateRender: false
-});
-
-gsap.fromTo(
-  ".AllinoneImage path",
-  {
-    strokeDasharray: "1000 1000",
-    strokeDashoffset: 1000,
-    fill: "transparent"
-  },
-  {
-    strokeDashoffset: 0,
+  gsap.to(".secwhywebtext", {
     scrollTrigger: {
-      trigger: ".AllinoneImage",
-      start: "top-=200 center",
-      end: "bottom+=200 center",
-      scrub: 1,
+      trigger: ".secwhywebtext",
+      start: "top+=500 center",
+      end: "+=500",
+      scrub: true,
       toggleActions: "play none none reverse"
     },
-    onComplete: () => {
-      gsap.to(".AllinoneImage path", { fill: "var(--ColorMain)" });
+    opacity: 0,
+    filter: "blur(7px)",
+    y: -200,
+    duration: 1
+  });
+
+  gsap.to(".secwhywebabcon", {
+    scrollTrigger: {
+      trigger: ".secwhywebabcon",
+      start: "top+=600 center",
+      end: "+=550",
+      scrub: true,
+      toggleActions: "play none none reverse"
+    },
+    opacity: 0,
+    filter: "blur(15px)",
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.fromTo(
+    ".secwhywebabcon",
+    {
+      filter: "blur(20px)",
+      opacity: 0,
+      y: 100,
+    },
+    {
+      filter: "blur(0px)",
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".secwhywebabcon",
+        start: "top 60%",
+        end: "top 20%",
+        scrub: 1,
+        toggleActions: "play none none reverse",
+      }
+    }
+  );
+
+  gsap.from(".secwhywbimg", {
+    scrollTrigger: {
+      trigger: ".secwhywbimg",
+      start: "top center",
+      end: "+=840",
+      scrub: 1,
+      toggleActions: "play none none reverse",
+    },
+    x: 250,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power3.out",
+    filter: "blur(10px)",
+    immediateRender: false
+  });
+
+  gsap.from(".DeWbtxtconten h1", {
+    scrollTrigger: {
+      trigger: ".DeWbtxtconten h1",
+      start: "top-=320 center",
+      end: "+=600",
+      scrub: 1,
+      toggleActions: "play none none reverse",
+    },
+    y: 250,
+    opacity: 0,
+    duration: 4,
+    scale: 0.4,
+    ease: "power3.out",
+    filter: "blur(42.5px)",
+    immediateRender: false,
+  });
+
+  gsap.from(".DeWbtxtconten p", {
+    scrollTrigger: {
+      trigger: ".DeWbtxtconten h1",
+      start: "top-=300 center",
+      end: "+=600",
+      scrub: 1.5,
+      toggleActions: "play none none reverse",
+    },
+    y: 350,
+    opacity: 0,
+    duration: 3.5,
+    scale: 0,
+    ease: "power3.out",
+    filter: "blur(45px)",
+    immediateRender: false
+  });
+
+  gsap.from(".restextdw", {
+    scrollTrigger: {
+      trigger: ".restextdw",
+      start: "top-=300 center",
+      end: "+=300",
+      scrub: 0.2,
+      toggleActions: "play none none reverse",
+    },
+    y: 300,
+    opacity: 0,
+    duration: 2,
+    scale: 0,
+    ease: "expo.out",
+    filter: "blur(45px)",
+    immediateRender: false
+  });
+
+  gsap.from(".DoWbImagecon", {
+    scrollTrigger: {
+      trigger: ".DoWbImagecon",
+      start: "top-=100 center",
+      end: "+=300",
+      scrub: 1.5,
+      toggleActions: "play none none reverse",
+    },
+    x: -220,
+    opacity: 0,
+    duration: 3,
+    scale: 0.75,
+    ease: "power2.out",
+    immediateRender: false
+  });
+
+  gsap.fromTo(
+    ".AllinoneImage path",
+    {
+      strokeDasharray: "1000 1000",
+      strokeDashoffset: 1000,
+      fill: "transparent"
+    },
+    {
+      strokeDashoffset: 0,
+      scrollTrigger: {
+        trigger: ".AllinoneImage",
+        start: "top-=200 center",
+        end: "bottom+=200 center",
+        scrub: 1,
+        toggleActions: "play none none reverse"
+      },
+      onComplete: () => {
+        gsap.to(".AllinoneImage path", { fill: "var(--ColorMain)" });
+      }
+    }
+  );
+
+  function revealText(elementId) {
+    let element = document.getElementById(elementId);
+    if (!element) return; // ถ้าไม่เจอ element ก็ไม่ต้องทำอะไร
+
+    gsap.fromTo(element,
+      {
+        filter: "blur(30px)",
+        opacity: 0,
+        y: 200,
+      },
+      {
+        filter: "blur(0px)",
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: 1,
+          toggleActions: "play none none reverse",
+        }
+      }
+    );
+  }
+
+  revealText("whywebtxt");
+
+  // Animation for .whywebtxt strong elements
+  gsap.fromTo(".whywebtxt strong",
+    { opacity: 0, y: -100, scale: 0 },
+    {
+      opacity: 1, y: 0, scale: 1,
+      delay: 2.7, duration: 1, ease: "power3.out", stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".whywebtxt strong",
+        start: "top 40%", end: "top 20%",
+        scrub: 1, toggleActions: "play none none reverse"
+      }
+    }
+  );
+
+  // Animation for #ListStrongWhyWeb
+  gsap.fromTo("#ListStrongWhyWeb",
+    { opacity: 0, y: -100, scale: 0 },
+    {
+      opacity: 1, y: 0, scale: 1,
+      delay: 2.7, duration: 1, ease: "power3.out", stagger: 0.2,
+      scrollTrigger: {
+        trigger: "#ListStrongWhyWeb",
+        start: "top 60%", end: "top 20%",
+        scrub: 1, toggleActions: "play none none reverse"
+      }
+    }
+  );
+
+  gsap.fromTo(
+    ".DeWbDes",
+    {
+      filter: "blur(20px)",
+      opacity: 0,
+      y: 100,
+    },
+    {
+      filter: "blur(0px)",
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".DeWbDes",
+        start: "top 100%",
+        end: "top 60%",
+        scrub: 1,
+        toggleActions: "play none none reverse",
+      }
+    }
+  );
+
+  let revealContainer = document.querySelector(".whywebimg");
+  let image = revealContainer.querySelector(".whywebimg img");
+  let Animwhywebimg = gsap.timeline({
+    scrollTrigger: {
+      trigger: revealContainer,
+      toggleActions: "restart none none reset"
+    }
+  });
+  Animwhywebimg.set(revealContainer, { autoAlpha: 1 });
+  Animwhywebimg.from(revealContainer, 1.5, {
+    xPercent: -100,
+    ease: Power2.out
+  });
+  Animwhywebimg.from(image, 1.5, {
+    xPercent: 100,
+    scale: 1.3,
+    delay: -1.5,
+    ease: Power2.out
+  });
+
+  const elementIds = ['TextRevealAnim1', 'TextRevealAnim2'];
+
+  elementIds.forEach(id => {
+    const container = document.getElementById(id);
+    if (!container) return;
+
+    // ฟังก์ชันวนซ้ำห่อหุ้ม text nodes ภายใน node ที่ระบุ
+    function wrapTextNodes(node) {
+      // คัดลอก childNodes เป็น array เพื่อป้องกันปัญหาเมื่อมีการเปลี่ยนแปลง DOM
+      const childNodes = Array.from(node.childNodes);
+      childNodes.forEach(child => {
+        if (child.nodeType === Node.TEXT_NODE) {
+          // หาก text node มีข้อความที่ไม่ใช่แค่ช่องว่าง
+          if (child.textContent.trim() !== "") {
+            const fragment = document.createDocumentFragment();
+            // ใช้ Array.from() เพื่อรองรับ emoji และอักขระ Unicode ที่ซับซ้อน
+            const chars = Array.from(child.textContent);
+            chars.forEach(letter => {
+              const span = document.createElement('span');
+              span.classList.add('reveal-char');
+              // แทนที่ช่องว่างด้วย non-breaking space
+              span.textContent = letter === ' ' ? '\u00A0' : letter;
+              fragment.appendChild(span);
+            });
+            node.replaceChild(fragment, child);
+          }
+        } else if (child.nodeType === Node.ELEMENT_NODE) {
+          // หากเป็น element ที่เป็น <br> ให้ออกจากการห่อหุ้ม เพื่อรักษา tag นี้ไว้
+          if (child.tagName.toLowerCase() !== 'br') {
+            wrapTextNodes(child);
+          }
+        }
+      });
+    }
+
+    // เริ่มต้นห่อหุ้มข้อความใน container
+    wrapTextNodes(container);
+
+    // ตรวจสอบว่ามี gsap และ ScrollTrigger หรือไม่ แล้วลงทะเบียน
+    if (typeof gsap !== "undefined" && gsap.registerPlugin && typeof ScrollTrigger !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
+    }
+
+    // กำหนดค่าเริ่มต้นสำหรับ element ที่จะ animate (ซ่อนและเลื่อนลงเล็กน้อย)
+    const spans = container.querySelectorAll('.reveal-char');
+    gsap.set(spans, { autoAlpha: 0, y: 20, filter: 'blur(5px)' });
+
+    // สร้าง timeline สำหรับ scroll animation ด้วย GSAP ScrollTrigger
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        start: "top-=300 80%",
+        end: "bottom-=500 20%",
+        scrub: 0.5,
+        markers: true
+      }
+    });
+
+    // เพิ่มเอฟเฟค reveal ให้กับแต่ละ span โดยใช้ stagger
+    timeline.to(spans, {
+      duration: 0.8,
+      autoAlpha: 1,
+      filter: 'blur(0px)',
+      y: 0,
+      ease: "power2.out",
+      stagger: {
+        each: 0.03,
+        from: "start"
+      }
+    });
+  });
+
+
+  const highlightTexts = window.innerWidth <= 768 ? [
+    'สำหรับคุณ',
+    'สำหรับงาน',
+    'สำหรับธุรกิจ'
+  ] : [
+    'สำหรับงานของคุณ',
+    'สำหรับเว็บไซต์ของคุณ',
+    'สำหรับธุรกิจของคุณ'
+  ];
+
+  window.addEventListener('resize', () => {
+    const texts = window.innerWidth <= 768 ? [
+      'สำหรับคุณ',
+      'สำหรับงาน',
+      'สำหรับธุรกิจ'
+    ] : [
+      'สำหรับงานของคุณ',
+      'สำหรับเว็บไซต์ของคุณ',
+      'สำหรับธุรกิจของคุณ'
+    ];
+
+    highlightTexts.length = 0;
+    highlightTexts.push(...texts);
+  });
+
+  let textChange = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.howwebwrapper',
+      start: 'top center',
+      end: () => `+=${document.querySelector('.howwebcontent').offsetHeight * 2.5}`,
+      pin: true,
+      pinSpacing: true,
+      scrub: 6,
+      anticipatePin: 1,
+      markers: true,
+    }
+  });
+
+  // Container animation for maintaining height
+  gsap.set('.howwebwrapper', { height: 'auto' });
+  const containerHeight = document.querySelector('.howwebwrapper').offsetHeight;
+  gsap.set('.howwebwrapper', { height: containerHeight });
+
+  // Add animations for each text in sequence
+  highlightTexts.forEach((text, index) => {
+    const duration = 6;
+    const stagger = duration * 4;
+
+    if (index === 0) {
+      textChange
+        .set('.HighlightWords', { innerHTML: text })
+        .fromTo('.HighlightWords',
+          {
+            opacity: 0,
+            y: 150,
+            scale: 0.8,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: duration,
+            ease: "power1.out"
+          }
+        )
+        .to('.HighlightWords', { duration: stagger });
+    } else {
+      textChange
+        .to('.HighlightWords', {
+          opacity: 0,
+          y: -50,
+          scale: 0.8,
+          duration: duration,
+          ease: "power2.in",
+          onComplete: () => gsap.set('.HighlightWords', { innerHTML: text })
+        })
+        .fromTo('.HighlightWords',
+          {
+            opacity: 0,
+            y: 50,
+            scale: 0.8,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: duration,
+            ease: "power1.out"
+          }
+        )
+        .to('.HighlightWords', { duration: stagger });
+    }
+  });
+
+  // Media query for responsiveness
+  function Screen(ChengeScrollable) {
+    if (!ChengeScrollable.matches) {
+
     }
   }
-);
 
-// Animation ของเนื้อหาในส่วนของ howweb
-
-const textChange = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.howwebwrapper',
-    start: 'center center',
-    end: '+=500',
-    scrub: true,
-    pin: true,
-  },
-})
-  .to('.howwebwrapper', { duration: 1 })
-  .set('.HighlightWords', { innerHTML: 'สำหรับธุรกิจของคุณ' }, 0.33)
-  .set('.HighlightWords', { innerHTML: 'สำหรับงานส่วนตัว' }, 0.66)
-
-function Screen(ChengeScrollable) {
-  if (ChengeScrollable.matches) {
-  } else {
-    gsap.to(".howwebimage", {
-      scrollTrigger: {
-        trigger: ".howwebimage",
-        start: "center center",
-        end: "bottom top",
-        scrub: 1,
-      },
-      scale: 0.8
-    });
-  }
-}
-
-var ChengeScrollable = window.matchMedia("(max-width: 1460px)")
-Screen(ChengeScrollable);
-ChengeScrollable.addEventListener("change", function () {
+  const ChengeScrollable = window.matchMedia("(max-width: 1460px)");
   Screen(ChengeScrollable);
+  ChengeScrollable.addEventListener("change", () => Screen(ChengeScrollable));
+
 });
 
 // Hover effects
@@ -717,229 +983,225 @@ window.onresize = UsingFuncMouseMov;
 
 // Cta 
 
-document.addEventListener('DOMContentLoaded', function () {
+const ctabtn = document.getElementById("ctabtn");
+const ctabtnContent = document.getElementById("ctabtncontent");
+const detailscontact = document.getElementById("detailscontact");
+const CtaTextContent = document.getElementById("CtaTextContent");
+const Ctaclasslinksigtoggles = document.getElementById("classlinksigtoggles");
 
-  const ctabtn = document.getElementById("ctabtn");
-  const ctabtnContent = document.getElementById("ctabtncontent");
-  const detailscontact = document.getElementById("detailscontact");
-  const CtaTextContent = document.getElementById("CtaTextContent");
-  const Ctaclasslinksigtoggles = document.getElementById("classlinksigtoggles");
+Ctaclasslinksigtoggles.addEventListener("click", () => {
+  window.open("https://www.instagram.com/peakkofficial/", "_top");
+})
 
-  Ctaclasslinksigtoggles.addEventListener("click", () => {
-    window.open("https://www.instagram.com/peakkofficial/", "_top");
-  })
+const disable = () => {
+  ctabtn.disabled = true;
+  Object.assign(ctabtn.style, { opacity: '0' });
+}
 
-  const disable = () => {
-    ctabtn.disabled = true;
-    Object.assign(ctabtn.style, { opacity: '0' });
+const enable = () => {
+  ctabtn.disabled = false;
+  Object.assign(ctabtn.style, { opacity: '1' });
+}
+
+// enableDetailsContact
+
+const enableDetailsContact = () => {
+  detailscontact.disableDetailsContact = false;
+  Object.assign(detailscontact.style, { opacity: '1' });
+}
+
+const disableDetailsContact = () => {
+  detailscontact.disableDetailsContact = true;
+  Object.assign(detailscontact.style, { opacity: '0' });
+}
+
+let hasRun = false;
+
+// pragma <once> for 2 functions below
+// use for initialization
+
+const UsingDetailscta = () => {
+  if (!hasRun) {
+    setTimeout(enableDetailsContact, 200);
+    disableDetailsContact();
+    hasRun = true;
   }
+}
 
-  const enable = () => {
-    ctabtn.disabled = false;
-    Object.assign(ctabtn.style, { opacity: '1' });
+const usingctn = () => {
+  if (!hasRun) {
+    setTimeout(enable, 200);
+    disable();
+    hasRun = true;
   }
+}
 
-  // enableDetailsContact
+// initialize cta button detailscontact
 
-  const enableDetailsContact = () => {
-    detailscontact.disableDetailsContact = false;
-    Object.assign(detailscontact.style, { opacity: '1' });
-  }
+const initializeDetailsContact = () => {
+  detailscontact.classList.remove("uninitializeDetailsContact");
+  detailscontact.classList.add("initializedetailscontact");
+}
 
-  const disableDetailsContact = () => {
-    detailscontact.disableDetailsContact = true;
-    Object.assign(detailscontact.style, { opacity: '0' });
-  }
+const uninitializedDetailsContact = () => {
+  detailscontact.classList.add("uninitializeDetailsContact");
+  detailscontact.classList.remove("initializedetailscontact");
+}
 
-  let hasRun = false;
+// initialize cta button
 
-  // pragma <once> for 2 functions below
-  // use for initialization
+const initialize = () => {
+  ctabtn.style.transition = "cubic-bezier(0.4, 0.0, 0.2, 1) 600ms all";
+  ctabtn.classList.add('styleCtabtninitialize', 'styleCtabtnAnimateFlow');
 
-  const UsingDetailscta = () => {
-    if (!hasRun) {
-      setTimeout(enableDetailsContact, 200);
-      disableDetailsContact();
-      hasRun = true;
-    }
-  }
-
-  const usingctn = () => {
-    if (!hasRun) {
-      setTimeout(enable, 200);
-      disable();
-      hasRun = true;
-    }
-  }
-
-  // initialize cta button detailscontact
-
-  const initializeDetailsContact = () => {
-    detailscontact.classList.remove("uninitializeDetailsContact");
-    detailscontact.classList.add("initializedetailscontact");
-  }
-
-  const uninitializedDetailsContact = () => {
-    detailscontact.classList.add("uninitializeDetailsContact");
-    detailscontact.classList.remove("initializedetailscontact");
-  }
-
-  // initialize cta button
-
-  const initialize = () => {
-    ctabtn.style.transition = "cubic-bezier(0.4, 0.0, 0.2, 1) 600ms all";
-    ctabtn.classList.add('styleCtabtninitialize', 'styleCtabtnAnimateFlow');
-
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        ctabtn.classList.add('styleCtabtnAnimateFlowBACKDEF');
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      ctabtn.classList.add('styleCtabtnAnimateFlowBACKDEF');
+      requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            ctabtn.classList.add('styleCtabtnWidth');
-            setTimeout(() => {
-              ctabtnContent.style.transition = "opacity 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275)";
-              ctabtnContent.style.opacity = 1;
-            }, 100);
-          });
+          ctabtn.classList.add('styleCtabtnWidth');
+          setTimeout(() => {
+            ctabtnContent.style.transition = "opacity 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+            ctabtnContent.style.opacity = 1;
+          }, 100);
         });
-      }, 400);
+      });
+    }, 400);
+  });
+
+}
+
+const uninitialized = () => {
+  ctabtn.classList.remove('styleCtabtninitialize', 'styleCtabtnAnimateFlow', 'styleCtabtnAnimateFlowBACKDEF', 'styleCtabtnWidth');
+  ctabtn.style.transition = "cubic-bezier(0.175, 0.885, 0.32, 1.275) 400ms all";
+  ctabtnContent.style.transition = "opacity 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+  ctabtnContent.style.opacity = 0;
+  hasRun = false;
+}
+
+// Scroll events
+
+const HandleScrollEvents = () => {
+  const scrollTop = window.scrollY;
+
+  // DEFINE FUNC
+  const ResultsUninitialized = () => {
+    uninitialized();
+    uninitializedDetailsContact();
+    ctabtn.style.opacity = 0;
+  }
+
+  const Resultsinitialized = () => {
+    usingctn();
+    ctabtn.style.opacity = 1;
+    initialize();
+    UsingDetailscta();
+    initializeDetailsContact();
+  }
+
+  function DEFINEscrollfirst() {
+    if (scrollTop >= 200) {
+      // pass
+      Resultsinitialized();
+    } else if (scrollTop < 200) {
+      ResultsUninitialized();
+    } else {
+      ResultsUninitialized();
+    }
+  }
+
+  DEFINEscrollfirst();
+
+  // ctastyle
+
+  const UsingCtaStyle = () => {
+    ctabtn.classList.add('styleCtabtnWidth');
+    document.querySelectorAll('.styleCtabtnWidth').forEach(widthChenge => {
+      widthChenge.style.width = "230px";
     });
-
+    CtaTextContent.innerHTML = "ตัวอย่างเว็บไซต์เพิ่มเติม";
+    ctabtn.style.transform = "translateX(-60%)";
+    // Toggle class ig cta
+    Ctaclasslinksigtoggles.style.opacity = 1;
+    Ctaclasslinksigtoggles.classList.add('initializeclasslinksigtoggles');
   }
 
-  const uninitialized = () => {
-    ctabtn.classList.remove('styleCtabtninitialize', 'styleCtabtnAnimateFlow', 'styleCtabtnAnimateFlowBACKDEF', 'styleCtabtnWidth');
-    ctabtn.style.transition = "cubic-bezier(0.175, 0.885, 0.32, 1.275) 400ms all";
-    ctabtnContent.style.transition = "opacity 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275)";
-    ctabtnContent.style.opacity = 0;
-    hasRun = false;
+  const DisableCtaStyle = () => {
+    document.querySelectorAll('.styleCtabtnWidth').forEach(widthChenge => {
+      widthChenge.style.width = "180px";
+    });
+    CtaTextContent.innerHTML = "ดูเพิ่มเติมได้ใน";
+    ctabtn.style.transform = "translateX(-50%)";
+    // igctabtn
+    Ctaclasslinksigtoggles.classList.remove('initializeclasslinksigtoggles');
+    Ctaclasslinksigtoggles.style.opacity = 0;
   }
 
-  // Scroll events
-
-  const HandleScrollEvents = () => {
-    const scrollTop = window.scrollY;
-
-    // DEFINE FUNC
-    const ResultsUninitialized = () => {
-      uninitialized();
-      uninitializedDetailsContact();
-      ctabtn.style.opacity = 0;
-    }
-
-    const Resultsinitialized = () => {
-      usingctn();
-      ctabtn.style.opacity = 1;
-      initialize();
-      UsingDetailscta();
-      initializeDetailsContact();
-    }
-
-    function DEFINEscrollfirst() {
-      if (scrollTop >= 200) {
-        // pass
-        Resultsinitialized();
-      } else if (scrollTop < 200) {
-        ResultsUninitialized();
-      } else {
-        ResultsUninitialized();
-      }
-    }
-
+  if (scrollTop >= 1200) {
+    // operation 2 here
+    UsingCtaStyle();
+    uninitializedDetailsContact();
+  } else {
     DEFINEscrollfirst();
+    DisableCtaStyle();
+  }
 
-    // ctastyle
+  const elementId = 'whyweb';
+  const targetElement = document.getElementById(elementId);
+  const elementTop = targetElement.getBoundingClientRect().top + window.scrollY;
+  const elementHeight = targetElement.offsetHeight;
 
-    const UsingCtaStyle = () => {
-      ctabtn.classList.add('styleCtabtnWidth');
-      document.querySelectorAll('.styleCtabtnWidth').forEach(widthChenge => {
-        widthChenge.style.width = "230px";
-      });
-      CtaTextContent.innerHTML = "ตัวอย่างเว็บไซต์เพิ่มเติม";
-      ctabtn.style.transform = "translateX(-60%)";
-      // Toggle class ig cta
-      Ctaclasslinksigtoggles.style.opacity = 1;
-      Ctaclasslinksigtoggles.classList.add('initializeclasslinksigtoggles');
-    }
+  if (scrollTop >= elementTop - window.innerHeight + (elementHeight / 4)) {
+    initialize();
+  } else {
+    uninitialized();
+  }
 
-    const DisableCtaStyle = () => {
-      document.querySelectorAll('.styleCtabtnWidth').forEach(widthChenge => {
-        widthChenge.style.width = "180px";
-      });
-      CtaTextContent.innerHTML = "ดูเพิ่มเติมได้ใน";
-      ctabtn.style.transform = "translateX(-50%)";
-      // igctabtn
-      Ctaclasslinksigtoggles.classList.remove('initializeclasslinksigtoggles');
-      Ctaclasslinksigtoggles.style.opacity = 0;
-    }
+  const bgElement = document.getElementById('whyweb');
+  const bgElementTop = bgElement.getBoundingClientRect().top + window.scrollY;
+  const bgElementHeight = bgElement.offsetHeight;
 
-    if (scrollTop >= 1200) {
-      // operation 2 here
-      UsingCtaStyle();
-      uninitializedDetailsContact();
-    } else {
-      DEFINEscrollfirst();
-      DisableCtaStyle();
-    }
-
-    const elementId = 'whyweb';
-    const targetElement = document.getElementById(elementId);
-    const elementTop = targetElement.getBoundingClientRect().top + window.scrollY;
-    const elementHeight = targetElement.offsetHeight;
-
-    if (scrollTop >= elementTop - window.innerHeight + (elementHeight / 4)) {
-      initialize();
-    } else {
-      uninitialized();
-    }
-
-    const bgElement = document.getElementById('whyweb');
-    const bgElementTop = bgElement.getBoundingClientRect().top + window.scrollY;
-    const bgElementHeight = bgElement.offsetHeight;
-
-    // whyweb section
-    if (scrollTop >= bgElementTop + bgElementHeight) {
-      DEFINEscrollfirst();
-      DisableCtaStyle();
-      uninitializedDetailsContact();
-      CtaTextContent.innerHTML = "เลื่อนลงเพื่อดูรายละเอียด";
-      // adjust width
-      document.querySelectorAll('.styleCtabtnWidth').forEach(widthChenge => {
-        widthChenge.style.width = "230px";
-      });
-    } else {
-
-    }
-
-    // Check if user not scrolled
-
-    let isScrolled = false;
-
-    window.addEventListener('scroll', function () {
-      isScrolled = true;
-      if (isScrolled) {
-        ctabtnContent.style.opacity = 1;
-      }
-      const header = document.querySelector('header');
-      const headerPosition = header.getBoundingClientRect().top;
-
-      if (headerPosition <= 0) {
-        ctabtnContent.style.opacity = 0;
-      } else if (headerPosition <= 20) {
-        ctabtnContent.style.opacity = 0;
-      }
+  // whyweb section
+  if (scrollTop >= bgElementTop + bgElementHeight) {
+    DEFINEscrollfirst();
+    DisableCtaStyle();
+    uninitializedDetailsContact();
+    CtaTextContent.innerHTML = "เลื่อนลงเพื่อดูรายละเอียด";
+    // adjust width
+    document.querySelectorAll('.styleCtabtnWidth').forEach(widthChenge => {
+      widthChenge.style.width = "230px";
     });
+  } else {
 
-    if (!isScrolled) {
+  }
+
+  // Check if user not scrolled
+
+  let isScrolled = false;
+
+  window.addEventListener('scroll', function () {
+    isScrolled = true;
+    if (isScrolled) {
+      ctabtnContent.style.opacity = 1;
+    }
+    const header = document.querySelector('header');
+    const headerPosition = header.getBoundingClientRect().top;
+
+    if (headerPosition <= 0) {
+      ctabtnContent.style.opacity = 0;
+    } else if (headerPosition <= 20) {
       ctabtnContent.style.opacity = 0;
     }
+  });
 
+  if (!isScrolled) {
+    ctabtnContent.style.opacity = 0;
   }
 
-  window.addEventListener('scroll', HandleScrollEvents);
-  window.addEventListener('touchmove', HandleScrollEvents);
+}
 
-}); // End of DOMContentLoaded
+window.addEventListener('scroll', HandleScrollEvents);
+window.addEventListener('touchmove', HandleScrollEvents);
 
 // Theme Switcher
 let CurrentTheme = document.getElementById("CurrentTheme");

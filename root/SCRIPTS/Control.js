@@ -525,6 +525,8 @@ document.querySelectorAll(".aboutconbottombtn > a").forEach(WeDoLinks => {
   });
 });
 
+ExpChoOverlay = document.getElementById("ExpChoOverlay");
+
 function CloseOverlayoff() {
   overlayPrice.style.opacity = "0";
   setTimeout(() => {
@@ -533,19 +535,16 @@ function CloseOverlayoff() {
 }
 
 function OpenExpOverlay() {
-  document.getElementById("ExpainLinkOverlay").style.display = "block";
+  ExpChoOverlay.style.display = "block";
   setTimeout(() => {
-    document.getElementById("ExpainLinkOverlay").style.opacity = "1";
+    ExpChoOverlay.style.opacity = "1";
+    ExpChoOverlay.style.transform = "translate(-50%, -50%) scale(1)";
   }, 50);
 }
 
-// function CloseExpOverlay() {
-//   console.log("CloseExpOverlay()");
-//   document.getElementById("ExpainLinkOverlay").style.opacity = "0";
-//   setTimeout(() => {
-//     document.getElementById("ExpainLinkOverlay").style.display = "none";
-//   }, 200);
-// }
+function CloseExpOverlay() {
+
+}
 
 
 // Slider
@@ -590,61 +589,6 @@ function mouseMove(e) {
 
   }
 }
-
-// New Links click ui
-
-const GoToHireAnimExp = document.getElementById("GoToHireAnim");
-const FrameHire = document.getElementById("FrameHire");
-const GoToinstaAnim = document.getElementById("GoToinstaAnim");
-const ExpainLinkOverlay = document.getElementById("ExpainLinkOverlay");  // Assuming this is an existing element
-
-// Function to handle animation and transition
-function handleClick(element, displayFrame, openLink) {
-  element.style.color = "transparent";
-  element.style.borderRadius = "0px";
-  ExpainLinkOverlay.style.zIndex = "100";
-
-  // CSS transitions for smooth scaling
-  element.style.transition = "transform 0.6s ease, padding 0.6s ease, color 0.3s ease";
-
-  // Detect device type and apply appropriate scaling
-  let scaleFactor = window.innerWidth <= 768 ? 3 : 2; // Example scale factors for mobile and tablet
-
-  // Scale to appropriate size for device
-  setTimeout(() => {
-    element.style.transform = `scale(${scaleFactor})`;
-    setTimeout(() => {
-      // Set final padding to cover full screen based on device
-      element.style.padding = window.innerWidth <= 768 ? "50vh 50vw" : "100vh 100vw";
-    }, 150); // Delay for scaling completion
-
-  }, 30); // Initial delay to start scaling
-
-  if (displayFrame) {
-    setTimeout(() => {
-      FrameHire.style.display = "block";
-      FrameHire.style.transition = "opacity 0.6s ease, width 0.6s ease, height 0.6s ease";
-      setTimeout(() => {
-        FrameHire.style.width = "100%";
-        FrameHire.style.height = "100%";
-        setTimeout(() => {
-          FrameHire.style.opacity = "1";
-        }, 90); // Delay for height scaling completion
-      }, 60);
-    }, 300); // Delay for element scaling
-  }
-
-  if (openLink) {
-    setTimeout(() => {
-      window.open(openLink, "_parent");
-    }, 200); // Delay for smooth transition and scaling completion
-  }
-}
-
-// Add event listeners
-GoToHireAnimExp.addEventListener("click", () => handleClick(GoToHireAnimExp, true));
-GoToinstaAnim.addEventListener("click", () => handleClick(GoToinstaAnim, false, "https://www.instagram.com/peakkofficial/"));
-const CircleHeader = document.getElementById("CircleHeader");
 
 setTimeout(() => {
   CircleHeader.style.opacity = "20%";

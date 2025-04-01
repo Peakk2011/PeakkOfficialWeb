@@ -352,20 +352,21 @@ nav {
     align-items: center;
     width: 100%;
     display: fit-content;
-    height: 55px;
+    height: 60px;
 
     &.NavLogo svg {
         width: 13px;
+        height: auto;
     }
 
     &.NavLogo h1 {
         font-size: 19.5px;
         letter-spacing: -0.4px;
         /* font-family: Inter; */
-        font-family: "LineSeedRegular", sans-serif;
+        font-family: "Anuphan", sans-serif;
         color: #ffffe9;
-        font-weight: 500;
-        transform: translate(5px, 1px);
+        font-weight: 450;
+        transform: translate(5px, 0px);
     }
 }
 
@@ -373,7 +374,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 16.5px;
-    height: 55px;
+    height: 60px;
     width: 100%;
     justify-content: end;
 
@@ -384,7 +385,7 @@ nav {
         position: relative;
         transition: all 0.25s;
         /* font-family: "Inter Tight", sans-serif; */
-        font-family: "LineSeedRegular", sans-serif;
+        font-family: "lineseedregular", sans-serif;
     }
 
     &.navbarlinks li ion-icon {
@@ -648,55 +649,47 @@ body.dark-theme .Expain {
     transition: 0.35s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-#ExpainLinkOverlay {
-    opacity: 0;
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.715);
-    z-index: 5;
-    cursor: pointer;
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.85s;
-}
-
 body.dark-theme .ExpCho {
     background-color: #fffff9;
     border: solid 1px #eee;
 }
 
 .ExpCho {
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     width: 300px;
-    height: 310px;
+    height: 360px;
     border-radius: 20px;
-    background-color: #0f0f0f;
+    background-color: rgba(10, 10, 10, 0.750);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
     border: solid 1px #222;
+    /* Style */
+    display: none;
+    opacity: 0;
+    transition: 400ms cubic-bezier(0.76, 0.523, 0.196, 1.653);
+    z-index: 5;
 
     &.ExpCho h1 {
-        font-family: lineseedregular;
-        font-size: 34px;
-        width: 70%;
+        font-size: 24px;
         line-height: 1.4;
-        margin-left: auto;
-        margin-right: auto;
-        letter-spacing: -1px;
-        text-align: center;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         font-weight: 400;
+        text-align: center;
     }
 }
 
-body.dark-theme .ExpCho h1 {
+.ExpCho ion-icon {
+    font-size: 68px;
+    color: #ffffe9;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+}
+
+body.dark-theme .ExpCho h1,body.dark-theme .ExpCho ion-icon {
     color: #000;
 }
 
@@ -718,8 +711,8 @@ body.dark-theme .ExpCho h1 {
     color: #000;
     display: block;
     text-align: center;
-    padding: 0.6rem 1rem;
-    font-family: lineseedregular;
+    padding: 0.7rem 1rem;
+    font-family: "inter tight";
     margin-bottom: 1rem;
     border-radius: 30px;
 }
@@ -727,10 +720,6 @@ body.dark-theme .ExpCho h1 {
 body.dark-theme .Explink a {
     color: #ffffe9;
     background-color: #000;
-}
-
-body.dark-theme #ExpainLinkOverlay {
-    background-color: rgba(255, 255, 246, 0.815);
 }
 
 body.dark-theme .ExpTit h1 {

@@ -196,7 +196,7 @@ body.dark-theme .iconsRes {
 
 @media (max-width: 1080px) {
 
-    .whywebimg img {
+    .whywebimg {
         width: 700px;
     }
 
@@ -342,11 +342,6 @@ body.dark-theme .iconsRes {
 
 @media (max-width: 1460px) {
 
-    .trySelfcon {
-        max-width: 100% !important;
-        padding: 0rem 2rem;
-    }
-
     .allcon {
         max-width: 100% !important;
         padding: 0rem 2rem;
@@ -473,6 +468,7 @@ body.dark-theme .iconsRes {
 
     .trySelfcon {
         height: 500px;
+        padding: 0rem 2rem;
     }
 
     .allcon {
@@ -523,11 +519,6 @@ body.dark-theme .iconsRes {
         height: 620px;
     }
 
-    .howwebimage img {
-        width: 60vw;
-        min-width: 450px !important;
-    }
-
 }
 
 @media (max-width: 560px) {
@@ -560,16 +551,8 @@ body.dark-theme .iconsRes {
         height: 400px !important;
     }
 
-    .howwebimage img {
-        min-width: 320px !important;
-    }
-
     .howwebwrapper {
         height: 1000px !important;
-    }
-
-    .howwebimage {
-        top: 25% !important;
     }
 
     .howwebtext {

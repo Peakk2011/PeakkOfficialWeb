@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="./CSS/cursor.css">
     <link rel="stylesheet" href="./CSS/loading.css">
     <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap" rel="stylesheet">
     <meta name="description" content="รายระเอียดและตัวอย่างกับดีไซต์จาก Peakkofficial">
     <meta name="keywords"
         content="รับทําเว็บไซต์,รับทําเว็บ,เว็บ,Peakkofficial,เว็บไซต์ Peakkofficial,Peakkofficial เว็บไซต์,Peakkofficial รับทําเว็บไซต์,เว็บไซต์,เว็บไซต์ของพีคออฟฟิเชียล">
@@ -358,19 +361,13 @@
         </header>
 
         <!-- onclick="CloseExpOverlay() -->
-        <div id="ExpainLinkOverlay">
-            <div class="ExpCho">
-                <h1>จะดูรายระเอียดได้ที่ใหน?</h1>
-                <div class="Explink">
-                    <a href="javascript:void(0)" id="GoToinstaAnim">ดูข้อมูลใน peakkofficial</a>
-                    <a href="javascript:void(0)" id="GoToHireAnim">ดูข้อมูลในเว็บนี้</a>
-                    <a href="hire.html" id="DesktopHire">ดูข้อมูลในเว็บนี้</a>
-                    <a href="https://www.instagram.com/peakkofficial/" id="DesktopIG">ดูข้อมูลใน peakkofficial</a>
-                </div>
+        <div class="ExpCho" id="ExpChoOverlay">
+            <ion-icon name="arrow-redo"></ion-icon>
+            <h1 style="font-family: 'MiSANS','inter-tight';">มีรายระเอียดจาก</h1>
+            <div class="Explink">
+                <a href="https://www.instagram.com/p/DHN78yiySfr/?img_index=1">Mew.peakkteamsub</a>
+                <a href="https://www.instagram.com/peakkofficial/">Peakkofficial</a>
             </div>
-            <iframe src="Hire.html" width="90%" height="360" style="border:none;" id="FrameHire">
-                <!-- <iframe src="https://www.instagram.com/peakkofficial/" width="90%" height="360" style="border:none;" id="FrameIgOpen">
-            </iframe> -->
         </div>
 
         <div class="Expain" data-aos="fade" data-aos-anchor-placement="center-bottom">
@@ -464,7 +461,7 @@
         <div class="Cardintro" data-aos="fade">
             <div class="CardIntroContent">
                 <div class="CardIntroImage" data-aos="fade-down" data-aos-duration="500" data-aos-delay="150">
-                    <img src="./Image/Present/PeakkFrameWeb.png" alt="">
+                    <img src="./Image/Present/PeakkFrameWeb.png" alt="PeakkFramewebImage" onerror="this.onerror=null; this.src='./Image/Present/PeakkFrameWeb.png';">
                 </div>
                 <div class="CardIntrotext" data-aos="fade-right" data-aos-delay="200">
                     <h1>พวกเราเป็นใคร<br>พวกเรารับทํา?</h1>
@@ -474,7 +471,8 @@
                         instagram เป็นส่วนใหญ่ครับ<br>โดยสามารถติดต่อพวกเราในช่องทางนั้นโดยติดต่อได้ที่</p>
                     <br>
                     <ul class="WeDoLinks" data-aos="zoom-in" data-aos-delay="350">
-                        <li><a href="https://www.instagram.com/peakkofficial/" target="_blank">@peakkofficial</a></li>
+                        <li><a href="https://www.instagram.com/peakkofficial/" target="_blank">@peakkofficial</a>
+                        </li>
                         <li><a href="https://www.instagram.com/mew.peakkteamsub/" target="_blank">@mew.peakkteamsub</a>
                         </li>
                     </ul>
@@ -565,11 +563,14 @@
                 <li><a href="javascript:void(0)"><ion-icon
                             name="gift-sharp"></ion-icon>มีตัวเลือกที่สามารถเปลียนภาษาได้</a>
                 </li>
-                <li><a href="javascript:void(0)"><ion-icon name="gift-sharp"></ion-icon>มี Effect เคลื่อนไหว</a></li>
+                <li><a href="javascript:void(0)"><ion-icon name="gift-sharp"></ion-icon>มี Effect เคลื่อนไหว</a>
+                </li>
                 <li><a href="javascript:void(0)"><ion-icon name="gift-sharp"></ion-icon>เว็บเสถียรไม่ค้างลื่นไหล</a>
                 </li>
-                <li><a href="javascript:void(0)"><ion-icon name="gift-sharp"></ion-icon>สามารถเลือกธีมเว็บได้</a></li>
-                <li><a href="javascript:void(0)"><ion-icon name="gift-sharp"></ion-icon>มี Effect เมื่อ Scroll</a></li>
+                <li><a href="javascript:void(0)"><ion-icon name="gift-sharp"></ion-icon>สามารถเลือกธีมเว็บได้</a>
+                </li>
+                <li><a href="javascript:void(0)"><ion-icon name="gift-sharp"></ion-icon>มี Effect เมื่อ Scroll</a>
+                </li>
                 <li><a href="javascript:void(0)"><ion-icon name="gift-sharp"></ion-icon>มีธีมที่หลากหลายให้เลือก</a>
                 </li>
                 <li><a href="javascript:void(0)"><ion-icon name="gift-sharp"></ion-icon>สามารถเลือก Cursor
