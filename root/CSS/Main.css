@@ -1689,6 +1689,7 @@ section {
 .whywebimgmb svg {
     display: none;
     border-radius: 20px;
+
 }
 
 .DoWbImagecon {
@@ -1735,9 +1736,10 @@ section {
 .trySelftxt p {
     color: var(--wyfillwbtp);
     font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
-    font-size: 22.5px;
+    font-size: 24.5px;
     line-height: 1.6;
     letter-spacing: -0.25px;
+    text-align: left;
 }
 
 .trySelfsvg img {
@@ -1769,7 +1771,7 @@ section {
     color: var(--wyfillwbtp);
     text-align: right;
     font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
-    font-size: 22.5px;
+    font-size: 24.5px;
     line-height: 1.6;
     letter-spacing: -0.25px;
 }
@@ -1807,7 +1809,7 @@ section {
     max-width: 1100px;
     height: fit-content;
     left: 50%;
-    top: 85%;
+    top: 28%;
     transform: translate(-50%, -30%);
     display: flex;
     align-items: center;
@@ -1888,7 +1890,6 @@ section {
 #tiktokcta ion-icon,
 #youtubecta ion-icon {
     font-size: 16px;
-    transform: translateY(-1px);
     color: var(--BtntextWhyweb);
 }
 
@@ -1925,6 +1926,7 @@ section {
     font-size: 44px;
     font-weight: 500;
     letter-spacing: -1.1px;
+    white-space: pre-line;
 }
 
 .hiredetailstext hr {
@@ -1990,25 +1992,4 @@ hiredetailstext span {
     stroke-width: 3px;
     fill: transparent;
     transition: fill 0.3s ease-in-out;
-}
-
-/* Individual character spans */
-.reveal-char {
-    display: inline-block;
-    will-change: transform, opacity, filter;
-    opacity: 0;
-    filter: blur(8px);
-    transform: translateY(20px);
-    position: relative;
-    vertical-align: baseline;
-}
-
-#TextRevealAnim1, #TextRevealAnim2 {
-    overflow: hidden;
-    width: 100%;
-    line-height: 1.5;
-    position: relative;
-    display: block;
-    height: auto;
-    margin: 1.25rem 0;
 }

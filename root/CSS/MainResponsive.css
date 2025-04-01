@@ -245,8 +245,12 @@ body.dark-theme .iconsRes {
         display: none !important;
     }
 
+    .whywebimgmb {
+        width: 100%;
+    }
+
     .whywebimgmb svg {
-        display: block;
+        display: flex;
         width: 340px;
         height: auto;
     }
@@ -255,6 +259,11 @@ body.dark-theme .iconsRes {
         font-size: 32px !important;
     }
 
+    .whywebimgmb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* Bob anim header */
@@ -350,11 +359,17 @@ body.dark-theme .iconsRes {
     .howwebtext {
         max-width: 100% !important;
         min-width: 100% !important;
+        top: 130px;
         padding: 0rem 2rem;
     }
 
     .ctacontactcontent {
         max-width: 100% !important;
+        padding: 0rem 2rem;
+    }
+
+    .trySelfcon {
+        max-width: 100%;
         padding: 0rem 2rem;
     }
 
@@ -447,7 +462,8 @@ body.dark-theme .iconsRes {
 @media (max-width: 1000px) {
 
     .trySelftxt p {
-        font-size: 18.5px !important;
+        font-size: 2.5vw !important;
+        text-wrap: balance;
     }
 
     .trySelfsvg img {
@@ -459,11 +475,13 @@ body.dark-theme .iconsRes {
     }
 
     .alltext p {
-        font-size: 18.5px !important;
+        font-size: 2.5vw !important;
+        text-wrap: balance;
     }
 
     .howwebtext p {
-        font-size: 16px !important;
+        font-size: 18.5px !important;
+        text-wrap: balance;
     }
 
     .trySelfcon {
@@ -474,16 +492,19 @@ body.dark-theme .iconsRes {
     .allcon {
         height: 400px;
     }
-
 }
 
-@media (max-width: 850px) {
+@media (max-width: 870px) {
+
+    .howweb {
+        height: 700px;
+    }
 
     .howwebtext {
         flex-direction: column;
         align-items: stretch !important;
-        height: 460px !important;
-        top: 75% !important;
+        height: 550px !important;
+        top: 170px;
     }
 
 }
@@ -498,7 +519,7 @@ body.dark-theme .iconsRes {
     }
 
     .trySelftxt p {
-        margin-top: 4.5rem;
+        margin-top: 6rem;
     }
 
     .trySelfsvg img {
@@ -511,14 +532,13 @@ body.dark-theme .iconsRes {
     .allcon {
         flex-direction: column;
         align-items: stretch !important;
-        height: 300px !important;
-        margin-top: 12rem !important;
+        height: 350px !important;
+        margin-top: 11rem !important;
     }
 
     .allinone {
         height: 620px;
     }
-
 }
 
 @media (max-width: 560px) {
@@ -555,9 +575,6 @@ body.dark-theme .iconsRes {
         height: 1000px !important;
     }
 
-    .howwebtext {
-        top: 70% !important;
-    }
 
 }
 
@@ -670,7 +687,7 @@ body.dark-theme .iconsRes {
 
 
     .hiredetailstext p {
-        font-size: 12px !important;
+        font-size: 12px;
     }
 
 }
@@ -853,6 +870,71 @@ body.dark-theme .iconsRes {
     #Hdbgwb {
         width: 55vw;
         max-width: 290px;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .trySelftxt p {
+        font-size: 2.25vw !important;
+        text-wrap: pretty;
+    }
+
+    .alltext p {
+        font-size: 2.25vw !important;
+        text-wrap: pretty;
+    }
+
+    .whywebimg {
+        width: 78vw !important;
+    }
+
+}
+
+@media (max-width: 775px) {
+
+    .alltext p {
+        font-size: 3vw !important;
+    }
+
+    .trySelftxt p {
+        font-size: 3vw !important;
+    }
+
+    .howwebtext p {
+        font-size: 2.5vw !important;
+    }
+
+    .howwebtext {
+        height: 500px !important;
+        top: 200px;
+    }
+
+}
+
+/* Text */
+
+@media (max-width: 460px) {
+
+    .alltext p {
+        font-size: 4vw !important;
+    }
+
+    .trySelftxt p {
+        font-size: 4vw !important;
+    }
+
+    .howwebtext p {
+        font-size: 3.5vw !important;
+    }
+
+    .hiredetailstext h1 {
+        font-size: 12vw !important;
+    }
+
+    .TextPTagHireDetails {
+        font-size: 3.5vw !important;
     }
 
 }
