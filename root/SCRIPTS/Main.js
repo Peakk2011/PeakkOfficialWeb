@@ -43,9 +43,9 @@ gsap.to(".SvgFadeColor", {
 gsap.to(".Mainsecwhywebtext", {
   scrollTrigger: {
     trigger: ".Mainsecwhywebtext",
-    start: "top 85%",
-    end: "top 20%",
-    scrub: 1.5,
+    start: "top-=450 bottom",
+    end: "top-=20 center",
+    scrub: true,
     toggleActions: "play none none reverse"
   },
   opacity: 1,
@@ -54,16 +54,16 @@ gsap.to(".Mainsecwhywebtext", {
   y: 0,
   duration: 2,
   ease: "power2.inOut",
-  immediateRender: false
+  immediateRender: false,
 });
 
 // Span text animation
 gsap.to(".Spansecwhywebtext", {
   scrollTrigger: {
     trigger: ".Spansecwhywebtext",
-    start: "top 75%",
-    end: "top 20%",
-    scrub: 1.75,
+    start: "top-=450 bottom",
+    end: "top-=20 center",
+    scrub: true,
     toggleActions: "play none none reverse"
   },
   opacity: 1,
@@ -79,9 +79,9 @@ gsap.to(".Spansecwhywebtext", {
 gsap.to(".secwhywebtext p", {
   scrollTrigger: {
     trigger: ".secwhywebtext p",
-    start: "top 80%",
-    end: "top 20%",
-    scrub: 2,
+    start: "top-=450 bottom",
+    end: "top-=20 center",
+    scrub: true,
     toggleActions: "play none none reverse"
   },
   opacity: 1,
@@ -107,20 +107,6 @@ gsap.to(".secwhywebtext", {
   duration: 1
 });
 
-gsap.to(".secwhywebabcon", {
-  scrollTrigger: {
-    trigger: ".secwhywebabcon",
-    start: "top+=600 center",
-    end: "+=550",
-    scrub: true,
-    toggleActions: "play none none reverse"
-  },
-  opacity: 0,
-  filter: "blur(15px)",
-  duration: 1,
-  ease: "power3.out",
-});
-
 gsap.fromTo(
   ".secwhywebabcon",
   {
@@ -137,10 +123,11 @@ gsap.fromTo(
     stagger: 0.2,
     scrollTrigger: {
       trigger: ".secwhywebabcon",
-      start: "top 60%",
-      end: "top 20%",
+      start: "top 100%",
+      end: "top 60%",
       scrub: 1,
       toggleActions: "play none none reverse",
+      ease: "power3.out",
     }
   }
 );
@@ -148,7 +135,7 @@ gsap.fromTo(
 gsap.from(".secwhywbimg", {
   scrollTrigger: {
     trigger: ".secwhywbimg",
-    start: "top center",
+    start: "top-=400 center",
     end: "+=840",
     scrub: 1,
     toggleActions: "play none none reverse",
@@ -161,39 +148,55 @@ gsap.from(".secwhywbimg", {
   immediateRender: false
 });
 
-gsap.from(".DeWbtxtconten h1", {
-  scrollTrigger: {
-    trigger: ".DeWbtxtconten h1",
-    start: "top-=320 center",
-    end: "+=600",
-    scrub: 1,
-    toggleActions: "play none none reverse",
+gsap.fromTo(
+  ".DeWbtxtconten h1",
+  {
+    opacity: 0,
+    filter: "blur(10px)",
+    scale: 0.8,
+    y: 50, // Initial position for text-like appearance
   },
-  y: 250,
-  opacity: 0,
-  duration: 4,
-  scale: 0.4,
-  ease: "power3.out",
-  filter: "blur(42.5px)",
-  immediateRender: false,
-});
+  {
+    opacity: 1,
+    filter: "blur(0px)",
+    scale: 1,
+    y: 0,
+    duration: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".DeWbtxtconten h1",
+      start: "top-=450 center",
+      end: "+=600",
+      scrub: 1,
+      toggleActions: "play none none reverse",
+    },
+  }
+);
 
-gsap.from(".DeWbtxtconten p", {
-  scrollTrigger: {
-    trigger: ".DeWbtxtconten h1",
-    start: "top-=300 center",
-    end: "+=600",
-    scrub: 1.5,
-    toggleActions: "play none none reverse",
+gsap.fromTo(
+  ".DeWbtxtconten p",
+  {
+    opacity: 0,
+    filter: "blur(10px)",
+    scale: 0.8,
+    y: 50, // Initial position for text-like appearance
   },
-  y: 350,
-  opacity: 0,
-  duration: 3.5,
-  scale: 0,
-  ease: "power3.out",
-  filter: "blur(45px)",
-  immediateRender: false
-});
+  {
+    opacity: 1,
+    filter: "blur(0px)",
+    scale: 1,
+    y: 0,
+    duration: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".DeWbtxtconten p",
+      start: "top-=380 center",
+      end: "+=600",
+      scrub: 1.5,
+      toggleActions: "play none none reverse",
+    },
+  }
+);
 
 gsap.from(".restextdw", {
   scrollTrigger: {
@@ -212,21 +215,30 @@ gsap.from(".restextdw", {
   immediateRender: false
 });
 
-gsap.from(".DoWbImagecon", {
-  scrollTrigger: {
-    trigger: ".DoWbImagecon",
-    start: "top-=100 center",
-    end: "+=300",
-    scrub: 1.5,
-    toggleActions: "play none none reverse",
+gsap.fromTo(
+  ".DoWbImagecon",
+  {
+    opacity: 0,
+    filter: "blur(10px)",
+    scale: 0.8,
+    x: -50,
   },
-  x: -220,
-  opacity: 0,
-  duration: 3,
-  scale: 0.75,
-  ease: "power2.out",
-  immediateRender: false
-});
+  {
+    opacity: 1,
+    filter: "blur(0px)",
+    scale: 1,
+    x: 0,
+    duration: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".DoWbImagecon",
+      start: "top-=180 center",
+      end: "+=300",
+      scrub: true,
+      toggleActions: "play none none reverse",
+    },
+  }
+);
 
 gsap.fromTo(
   ".AllinoneImage path",
@@ -252,7 +264,7 @@ gsap.fromTo(
 
 function revealText(elementId) {
   let element = document.getElementById(elementId);
-  if (!element) return; // ถ้าไม่เจอ element ก็ไม่ต้องทำอะไร
+  if (!element) return;
 
   gsap.fromTo(element,
     {
@@ -270,43 +282,15 @@ function revealText(elementId) {
       scrollTrigger: {
         trigger: element,
         start: "top-=200 100%",
-        end: "top 20%",
+        end: "top 60%",
         scrub: 1,
-        toggleActions: "play none none reverse",  
+        toggleActions: "play none none reverse",
       }
     }
   );
 }
 
 revealText("whywebtxt");
-
-// Animation for .whywebtxt strong elements
-gsap.fromTo(".whywebtxt strong",
-  { opacity: 0, y: -100, scale: 0 },
-  {
-    opacity: 1, y: 0, scale: 1,
-    delay: 2.7, duration: 1, ease: "power3.out", stagger: 0.2,
-    scrollTrigger: {
-      trigger: ".whywebtxt strong",
-      start: "top 40%", end: "top 20%",
-      scrub: 1, toggleActions: "play none none reverse"
-    }
-  }
-);
-
-// Animation for #ListStrongWhyWeb
-gsap.fromTo("#ListStrongWhyWeb",
-  { opacity: 0, y: -100, scale: 0 },
-  {
-    opacity: 1, y: 0, scale: 1,
-    delay: 2.7, duration: 1, ease: "power3.out", stagger: 0.2,
-    scrollTrigger: {
-      trigger: "#ListStrongWhyWeb",
-      start: "top 60%", end: "top 20%",
-      scrub: 1, toggleActions: "play none none reverse"
-    }
-  }
-);
 
 gsap.fromTo(
   ".DeWbDes",
@@ -324,7 +308,7 @@ gsap.fromTo(
     stagger: 0.2,
     scrollTrigger: {
       trigger: ".DeWbDes",
-      start: "top 100%",
+      start: "top-=200 100%",
       end: "top 60%",
       scrub: 1,
       toggleActions: "play none none reverse",
@@ -341,17 +325,16 @@ let Animwhywebimg = gsap.timeline({
   }
 });
 Animwhywebimg.set(revealContainer, { autoAlpha: 1 });
-Animwhywebimg.from(revealContainer, 1.5, {
+Animwhywebimg.from(revealContainer, 1, {
   xPercent: -100,
   ease: Power2.out
 });
-Animwhywebimg.from(image, 1.5, {
+Animwhywebimg.from(image, 1, {
   xPercent: 100,
   scale: 1.3,
-  delay: -1.5,
+  delay: -1,
   ease: Power2.out
 });
-
 
 const highlightTexts = window.innerWidth <= 768 ? [
   'สำหรับคุณ',
@@ -382,64 +365,13 @@ let textChange = gsap.timeline({
   scrollTrigger: {
     trigger: '.howwebwrapper',
     start: 'top center',
-    end: () => `+=${document.querySelector('.howwebcontent').offsetHeight * 2.5}`,
-    scrub: 6,
-  }
-});
-
-// Container animation for maintaining height
-gsap.set('.howwebwrapper', { height: 'auto' });
-const containerHeight = document.querySelector('.howwebwrapper').offsetHeight;
-gsap.set('.howwebwrapper', { height: containerHeight });
-
-// Add animations for each text in sequence
-highlightTexts.forEach((text, index) => {
-  const duration = 6;
-  const stagger = duration * 4;
-
-  if (index === 0) {
-    textChange
-      .set('.HighlightWords', { innerHTML: text })
-      .fromTo('.HighlightWords',
-        {
-          opacity: 0,
-          y: 150,
-          scale: 0.8,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: duration,
-          ease: "power1.out"
-        }
-      )
-      .to('.HighlightWords', { duration: stagger });
-  } else {
-    textChange
-      .to('.HighlightWords', {
-        opacity: 0,
-        y: -50,
-        scale: 0.8,
-        duration: duration,
-        ease: "power2.in",
-        onComplete: () => gsap.set('.HighlightWords', { innerHTML: text })
-      })
-      .fromTo('.HighlightWords',
-        {
-          opacity: 0,
-          y: 50,
-          scale: 0.8,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: duration,
-          ease: "power1.out"
-        }
-      )
-      .to('.HighlightWords', { duration: stagger });
+    end: 'bottom center',
+    scrub: 1,
+    onUpdate: (self) => {
+      const progress = self.progress; // Get scroll progress (0 to 1)
+      const index = Math.min(Math.floor(progress * highlightTexts.length), highlightTexts.length - 1); // Calculate index
+      document.querySelector('.HighlightWords').innerHTML = highlightTexts[index]; // Update text
+    }
   }
 });
 
@@ -458,23 +390,23 @@ let typeSplit = new SplitType('[animate], .trySelftx, .trySelftxt p, .alltext p,
 });
 
 document.querySelectorAll('[animate], .trySelftx, .trySelftxt p, .alltext p, .howwebtext p, .TextPTagHireDetails').forEach(paramPtagAnimation => {
-  gsap.set(paramPtagAnimation.querySelectorAll('.line'), { opacity: 0 }); // Set initial opacity to 0
+  gsap.set(paramPtagAnimation.querySelectorAll('.line'), { opacity: 0 });
 
   gsap.fromTo(
     paramPtagAnimation.querySelectorAll('.line'),
-    { y: '100%', opacity: 0, filter: 'blur(10px)' }, // Start with opacity 0 and blur
+    { y: '100%', opacity: 0, filter: 'blur(10px)' },
     {
       y: '0%',
-      opacity: 1, // End with opacity 1
-      filter: 'blur(0px)', // Remove blur
-      duration: 1.15,
-      ease: 'back.out',
-      stagger: 0.1,
+      opacity: 1,
+      filter: 'blur(0px)',
+      duration: window.innerWidth < 768 ? 0.8 : 0.6,
+      ease: 'power3.out',
+      stagger: window.innerWidth < 768 ? 0.05 : 0.04,
       scrollTrigger: {
         trigger: paramPtagAnimation,
         start: 'top 110%',
-        end: 'top 20%',
-        scrub: 1,
+        end: 'top 40%',
+        scrub: true,
         toggleActions: 'play none none reverse'
       }
     }
@@ -903,6 +835,72 @@ ImagesHover.forEach(image => {
   image.addEventListener('mouseenter', imghover);
   image.addEventListener('mouseleave', Exitimghover);
 });
+
+ImagesHover.forEach((DoWbImagecon) => {
+  const elemHeight = DoWbImagecon.clientHeight;
+  const elemWidth = DoWbImagecon.clientWidth;
+
+  DoWbImagecon.addEventListener("mousemove", (event) => {
+    const posX = event.layerX;
+    const posY = event.layerY;
+
+    const rotationY = 4 * ((posX - elemWidth / 2) / elemWidth);
+    const rotationX = -4 * ((posY - elemHeight / 2) / elemHeight);
+
+    const transformString =
+      "perspective(300px) scale(1) rotateX(" +
+      rotationX +
+      "deg) rotateY(" +
+      rotationY +
+      "deg)";
+
+    DoWbImagecon.style.transform = transformString;
+  });
+
+  DoWbImagecon.addEventListener("mouseout", () => {
+    DoWbImagecon.style.transform =
+      "perspective(300px) scale(1) rotateX(0) rotateY(0)";
+  });
+});
+
+const hoverArea = document.getElementById('DoWbimg');
+const tooltip = document.getElementById('tooltip');
+
+function moveTooltip(e) {
+  tooltip.style.left = (e.pageX + 10) + 'px';
+  tooltip.style.top = (e.pageY + 10) + 'px';
+}
+
+// เมื่อเอาเมาส์มาวางบนโซน (hoverArea) ให้แสดง tooltip
+hoverArea.addEventListener('mouseenter', () => {
+  tooltip.classList.add('show');
+});
+
+// เมื่อเลื่อนเมาส์บนโซน (hoverArea) ให้ปรับตำแหน่ง tooltip ตามเมาส์
+hoverArea.addEventListener('mousemove', (e) => {
+  moveTooltip(e);
+});
+
+// เมื่อเมาส์ออกจากโซน ให้ซ่อน tooltip
+hoverArea.addEventListener('mouseleave', () => {
+  tooltip.classList.remove('show');
+});
+
+// Tooltip logic
+function showTooltip(event, text) {
+    tooltip.textContent = text;
+    tooltip.style.left = `${event.pageX}px`;
+    tooltip.style.top = `${event.pageY - 20}px`;
+    tooltip.style.display = "block";
+    tooltip.classList.add("show");
+}
+
+function hideTooltip() {
+    tooltip.classList.remove("show");
+    setTimeout(() => {
+        tooltip.style.display = "none";
+    }, 200);
+}
 
 // Loading screen
 
