@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap');
 
 html,
 body {
@@ -370,17 +371,17 @@ body {
 
 [data-selected-theme="ธีมสีมะนาวอ่อน"] {
     --DEFINEThemeSwitcherCONTENTtext: #000;
-    --color-background: #f3f9e5;
-    --SidebarColor: #F5F9F1;
+    --color-background: #e3f5db;
+    --SidebarColor: #f2ffed;
     --ColorUnderSidebarColor: #222;
     /* MoreSidebarOption */
-    --SidebarBackgroundBlur: rgba(252, 250, 241, 0.450);
+    --SidebarBackgroundBlur: rgba(221, 245, 210, 0.530);
     --SidebarTextTitleColor: #000;
     --BorderSidebar: solid 1px #a7a7a7;
     --SidebarLinksColor: #37372d;
     --ColorMain: #000;
     --ColorHighlightSidebar: #e0eed9;
-    --bordersolid: rgb(232, 230, 219);
+    --bordersolid: #b9c7b3;
     /* WebElement */
     --headerColor: #EDFFE6;
     --StrokePeakkofficial2025Color: #33332b;
@@ -394,21 +395,21 @@ body {
     /* NavbarColor */
     --DEFINEnavbarColor: #000;
     /* HeadernavbarLinks */
-    --UsingDefaultNavbarColor: #eafbe3;
+    --UsingDefaultNavbarColor: #f0ffef;
     --HighlightNavbarColor: rgb(8, 8, 6);
     /* webContent */
-    --WebIntroBorder: solid 1px #e9e9e9;
+    --WebIntroBorder: solid 1px #F1F1F1;
     --IntrospanBorder: solid 1px #000;
     --BtnWhyweb: #000;
     --BtntextWhyweb: rgba(252, 250, 241);
     --IconAndTextcolor: #37372d;
     --PtextColor: #000;
     /* Define wb */
-    --whywebBgColor: #f3f9e5;
+    --whywebBgColor: #edffe6;
     --wyfillwbt: #000;
     --wyfillwbtp: #404b3b;
     --wyPublicBorder: solid 1px #bcd2bc;
-    --wy2bg: #f8fbf2;
+    --wy2bg: #f0ffef;
     /* Making hdbgwb */
     --hdbgwbfst: #d5e5ca;
     --hdbgwbsec: #d9ead0;
@@ -418,17 +419,17 @@ body {
 
 [data-selected-theme="Lemon"] {
     --DEFINEThemeSwitcherCONTENTtext: #000;
-    --color-background: #f3f9e5;
-    --SidebarColor: rgb(245, 249, 241);
+    --color-background: #e3f5db;
+    --SidebarColor: #f2ffed;
     --ColorUnderSidebarColor: #222;
     /* MoreSidebarOption */
-    --SidebarBackgroundBlur: rgba(252, 250, 241, 0.450);
+    --SidebarBackgroundBlur: rgba(221, 245, 210, 0.530);
     --SidebarTextTitleColor: #000;
     --BorderSidebar: solid 1px #a7a7a7;
     --SidebarLinksColor: #37372d;
     --ColorMain: #000;
     --ColorHighlightSidebar: #e0eed9;
-    --bordersolid: rgb(232, 230, 219);
+    --bordersolid: #b9c7b3;
     /* WebElement */
     --headerColor: #EDFFE6;
     --StrokePeakkofficial2025Color: #33332b;
@@ -442,21 +443,21 @@ body {
     /* NavbarColor */
     --DEFINEnavbarColor: #000;
     /* HeadernavbarLinks */
-    --UsingDefaultNavbarColor: #eafbe3;
+    --UsingDefaultNavbarColor: #f3ffef;
     --HighlightNavbarColor: rgb(8, 8, 6);
     /* webContent */
-    --WebIntroBorder: solid 1px #e9e9e9;
+    --WebIntroBorder: solid 1px #F1F1F1;
     --IntrospanBorder: solid 1px #000;
     --BtnWhyweb: #000;
     --BtntextWhyweb: rgba(252, 250, 241);
     --IconAndTextcolor: #37372d;
     --PtextColor: #000;
     /* Define wb */
-    --whywebBgColor: #f3f9e5;
+    --whywebBgColor: #edffe6;
     --wyfillwbt: #000;
     --wyfillwbtp: #404b3b;
     --wyPublicBorder: solid 1px #bcd2bc;
-    --wy2bg: #f8fbf2;
+    --wy2bg: #f0ffef;
     /* Making hdbgwb */
     --hdbgwbfst: #d5e5ca;
     --hdbgwbsec: #d9ead0;
@@ -1126,7 +1127,8 @@ header {
 
 .links li a {
     color: #636363;
-    font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+    /* font-family: "Inter Tight", "LineSeedRegular", "sans-serif"; */
+    font-family: "Anuphan", sans-serif;
     height: 55px;
     display: flex;
     /* define center of links */
@@ -1409,7 +1411,6 @@ section {
 }
 
 .secwhywebtext h1 {
-    color: var(--ColorMain);
     /* font-family: "Inter Tight", "LineSeedRegular", "sans-serif"; */
     font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
     font-size: 38px;
@@ -1417,12 +1418,14 @@ section {
     margin-top: 1.5rem;
     font-weight: 500;
     letter-spacing: -1.1px;
+    color: var(--ColorMain);
 }
 
 .secwhywebtext h1 strong {
-    font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
-    font-weight: 800;
-    color: var(--SidebarTextTitleColor);
+    /* font-family: "Inter Tight", "LineSeedRegular", "sans-serif"; */
+    font-family: "Anuphan", sans-serif;
+    font-weight: 900;
+    color: var(--ColorMain);
     border-bottom: solid 2px currentColor;
 }
 
@@ -1657,8 +1660,9 @@ section {
 }
 
 .whywebtxt strong {
-    font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif";
-    font-weight: 500;
+    /* font-family: "Inter Tight", "MiSANS", "IBM Plex Sans Thai", "sans-serif"; */
+    font-family: "Anuphan", sans-serif;
+    font-weight: 800;
     letter-spacing: -0.5px;
     color: var(--BtntextWhyweb);
     border-radius: 8px;
@@ -1704,17 +1708,10 @@ section {
     text-align: center;
 }
 
-.whywebbtn a {
-    background-color: var(--ColorHighlightSidebar);
-    outline: var(--wyPublicBorder);
-    color: var(--ColorUnderHIGHLIGHT);
-    padding: 0.55rem 1.2rem;
-    border-radius: 50px;
-    font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
-    display: inline-block;
-    margin-top: 2.25rem;
-    margin-left: auto;
-    margin-right: auto;
+.whywebbtn p {
+    color: var(--ColorMain);
+    text-align: center;
+    margin-top: 3rem;
 }
 
 .trySelf {
@@ -1877,7 +1874,7 @@ section {
 #facebookcta,
 #tiktokcta,
 #youtubecta {
-    background-color: var(--BtnWhyweb);
+    border: var(--IntrospanBorder);
     display: flex;
     align-items: center;
     padding: 0.55rem 1.5rem;
@@ -1893,7 +1890,7 @@ section {
 #tiktokcta ion-icon,
 #youtubecta ion-icon {
     font-size: 16px;
-    color: var(--BtntextWhyweb);
+    color: var(--SidebarTextTitleColor);
 }
 
 #instagramcta h1,
@@ -1903,7 +1900,7 @@ section {
     font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
     font-size: 16px;
     margin-left: 0.5rem;
-    color: var(--BtntextWhyweb);
+    color: var(--SidebarTextTitleColor);
     font-weight: 400;
     -webkit-text-stroke-width: 0.3px;
 }
@@ -2008,7 +2005,7 @@ hiredetailstext span {
     padding: 8px 16px;
     border-radius: 50px;
     font-size: 14px;
-    font-family: "Inter Tight", "LineSeedRegular", "sans-serif";
+    font-family: "Anuphan", sans-serif;
     pointer-events: none;
     z-index: 999;
     transition: opacity 0.2s ease, transform 0.2s ease;

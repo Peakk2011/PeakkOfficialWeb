@@ -726,11 +726,18 @@ body.dark-theme .iconsRes {
 
     .hiredetailsimage svg {
         transform: translateX(-70%);
+        bottom: 200px;
     }
 
     .hiredetailsimage hr {
         display: block !important;
         bottom: 70px;
+    }
+
+    .hiredetailscontent {
+        height: 1250px;
+        max-height: 1250px;
+        min-height: 1250px;
     }
 
 }
@@ -935,6 +942,40 @@ body.dark-theme .iconsRes {
 
     .TextPTagHireDetails {
         font-size: 3.5vw !important;
+    }
+
+    .hiredetailscontent {
+        height: 1400px;
+        max-height: 1660px;
+        min-height: 1660px;
+    }
+
+    .hiredetailsimage svg {
+        bottom: 500px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .hiredetailsimage svg {
+        bottom: 600px;
+    }
+
+}
+
+@media (max-width: 365px) {
+
+    .DeWbDes a {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 330px) {
+
+    .secwhywebtext h1 {
+        font-size: 9.85vw !important;
     }
 
 }

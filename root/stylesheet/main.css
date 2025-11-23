@@ -1,0 +1,39 @@
+:root {
+    --bg-primary: #000000;
+    --bg-card: #101010;
+    --bg-preview: #2D2D2D;
+    --bg-gradient-start: #3A3A3A;
+    --bg-gradient-end: #2D2D2D;
+
+    --border-default: #333333;
+    --border-hover: #4A4A4A;
+
+    --text-primary: #FFFFFF;
+    --text-secondary: #E0E0E0;
+    --text-tertiary: #d6d6d6;
+
+    --accent-primary: #acb5ba;
+    --accent-hover: #dcdfdc;
+
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+
+    --radius-sm: 2px;
+    --radius-md: 8px;
+    --radius-full: 50%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'General Sans', system-ui, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}

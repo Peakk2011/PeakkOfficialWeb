@@ -342,7 +342,6 @@ const highlightTexts = window.innerWidth <= 768 ? [
   'สำหรับธุรกิจ'
 ] : [
   'สำหรับงานของคุณ',
-  'สำหรับเว็บไซต์ของคุณ',
   'สำหรับธุรกิจของคุณ'
 ];
 
@@ -353,7 +352,6 @@ window.addEventListener('resize', () => {
     'สำหรับธุรกิจ'
   ] : [
     'สำหรับงานของคุณ',
-    'สำหรับเว็บไซต์ของคุณ',
     'สำหรับธุรกิจของคุณ'
   ];
 
@@ -368,9 +366,9 @@ let textChange = gsap.timeline({
     end: 'bottom center',
     scrub: 1,
     onUpdate: (self) => {
-      const progress = self.progress; // Get scroll progress (0 to 1)
-      const index = Math.min(Math.floor(progress * highlightTexts.length), highlightTexts.length - 1); // Calculate index
-      document.querySelector('.HighlightWords').innerHTML = highlightTexts[index]; // Update text
+      const progress = self.progress;
+      const index = Math.min(Math.floor(progress * highlightTexts.length), highlightTexts.length - 1);
+      document.querySelector('.HighlightWords').innerHTML = highlightTexts[index];
     }
   }
 });
@@ -414,7 +412,7 @@ document.querySelectorAll('[animate], .trySelftx, .trySelftxt p, .alltext p, .ho
 });
 
 const finalText = "รายละเอียด\nการจ้างงาน\nของพวกเรา";
-const duration = 2.75;
+const duration = 6;
 const revealDelay = 1;
 // String Scramnle text
 const allowedChars = "abcdefghijklmnopqrstuvwxyzกขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮะาเแโใไ";
@@ -442,10 +440,6 @@ function updateScramble() {
     }
   }
   textElement.textContent = displayText;
-
-  // Add blur and scale effect during scramble
-  const blurValue = 2 - effectiveProgress * 2; // Reduce blur as progress increases
-  textElement.style.filter = `blur(${blurValue}px)`;
 }
 
 gsap.to(scrambleObj, {
@@ -457,12 +451,11 @@ gsap.to(scrambleObj, {
     toggleActions: "play none none reset"
   },
   duration: duration,
-  progress: 2.5,
+  progress: 3.5,
   ease: "none",
   onUpdate: updateScramble,
   onComplete: () => {
     textElement.textContent = finalText;
-    textElement.style.filter = "blur(0px)"; // Ensure blur is removed
   }
 });
 
@@ -871,22 +864,18 @@ function moveTooltip(e) {
   tooltip.style.top = (e.pageY + 10) + 'px';
 }
 
-// เมื่อเอาเมาส์มาวางบนโซน (hoverArea) ให้แสดง tooltip
 hoverArea.addEventListener('mouseenter', () => {
   tooltip.classList.add('show');
 });
 
-// เมื่อเลื่อนเมาส์บนโซน (hoverArea) ให้ปรับตำแหน่ง tooltip ตามเมาส์
 hoverArea.addEventListener('mousemove', (e) => {
   moveTooltip(e);
 });
 
-// เมื่อเมาส์ออกจากโซน ให้ซ่อน tooltip
 hoverArea.addEventListener('mouseleave', () => {
   tooltip.classList.remove('show');
 });
 
-// Tooltip logic
 function showTooltip(event, text) {
     tooltip.textContent = text;
     tooltip.style.left = `${event.pageX}px`;
