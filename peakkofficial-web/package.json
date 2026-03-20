@@ -1,0 +1,23 @@
+{
+  "name": "_",
+  "version": "1.0.0",
+  "description": "A Mintkit framework application - _",
+  "main": "index.html",
+  "keywords": [
+    "mintkit",
+    "vanilla-js",
+    "web-framework"
+  ],
+  "author": "Created with create-mint-app",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "vite": "^5.3.5",
+    "typescript": "^5.5.3"
+  }
+}

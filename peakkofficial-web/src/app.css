@@ -1,0 +1,48 @@
+@import url('./stylesheet/typeface.css');
+@import url('./stylesheet/impl/navbar.css');
+@import url('./stylesheet/impl/header.css');
+@import url('./stylesheet/impl/typeface-styling-section.css');
+@import url('./stylesheet/impl/fascinate-note.css');
+@import url('./stylesheet/impl/animation-open.css');
+/* Effects */
+@import url('./stylesheet/fx/cursor.css');
+@import url('./stylesheet/fx/ripple-click.css');
+
+:root {
+    /* Body styles */
+    --theme-typeface-default: 'General Sans', 'Anuphan', 'sans-serif';
+    --theme-bg: #FFFFFF;
+    --theme-navbar: hsla(0, 0%, 100%, 0.700);
+    --theme-navbar-dark: hsla(0, 0%, 0%, 0.7);
+
+    --theme-primary-buttons: #00FFC3;
+    --theme-primary-buttons-color: #000000;
+    --theme-buttons: #000000;
+    --theme-buttons-color: #ffffff;
+    --theme-buttons-typeface: 'Geist Mono', 'Anuphan', monospace;
+
+    --theme-typeface-section-background: #000000;
+    --theme-typeface-section-color: #FFFFFF;
+    --theme-typeface-section-1-typeface: 'General Sans', 'Anuphan', 'sans-serif';
+
+    --theme-typeface-section-background-3: #ffffff;
+    --theme-typeface-section-background-color-3: #000000;
+
+    /* Cards */
+    --theme-fascinate-notes-primary-default: #F5F5F5;
+    --theme-fascinate-notes-primary: #EDEDED;
+    --theme-fascinate-notes-border: #C4C4C4;
+    --theme-fascinate-notes-shadow: 4px 12px 32px 2px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: var(--theme-typeface-default);
+    background-color: var(--theme-bg);
+}
