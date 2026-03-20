@@ -1,0 +1,52 @@
+:root {
+    --theme-bg: #fdfbf6;
+    --theme-border: hsl(0, 0%, 88%);
+    --text-muted: #3f3f3f;
+    --text: #000;
+    --white: #ffffff;
+    --code: #f5f5f2;
+
+    --shadow:
+        0 12px 24px rgba(0, 0, 0, 0.05),
+        0 24px 48px rgba(0, 0, 0, 0.06);
+    --border: hsl(0, 0%, 90%);
+    --menu: #fefcf7;
+    --accent: hsl(191, 20%, 80%);
+    --accent-text: hsl(191, 20%, 10%);
+    --hover: #f2f0eb;
+}
+
+@font-face {
+    font-family: 'Anuphan';
+    src: url('./typeface/Anuphan-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./typeface/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General-sans';
+    src: url('./typeface/GeneralSans-Variable.woff2') format('woff2');
+    font-weight: 200 900;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    background-color: var(--theme-bg);
+    font-family: 'General-sans';
+}
