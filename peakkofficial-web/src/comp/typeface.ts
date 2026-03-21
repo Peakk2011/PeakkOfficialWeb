@@ -4,7 +4,12 @@ export const Typeface1 = {
             <div class='section-typeface-1-content'>
                 <div class='section-typeface1-content-text'>
                     <div class='section-typeface1-content-text-title'>
-                        <img src='../assets/typeface-svg/title-section-typeface1.png' alt=''>
+                        <img
+                            src='../assets/typeface-svg/title-section-typeface1.png'
+                            alt=''
+                            loading='lazy'
+                            decoding='async'
+                        >
                     </div>
                     <div class='section-typeface1-content-text-description'>
                         <p>
@@ -20,7 +25,12 @@ export const Typeface1 = {
             </div>
 
             <div class='section-typeface-1-image'>
-                <img src='../assets/typeface-svg/typeface1-image-showcase.png' alt=''>
+                <img
+                    src='../assets/typeface-svg/typeface1-image-showcase.png'
+                    alt=''
+                    loading='lazy'
+                    decoding='async'
+                >
             </div>
         </section>
     `
@@ -49,7 +59,11 @@ export const Typeface2 = {
                 </div>
 
                 <div class='section-typeface-2-content-image-shwocase'>
-                    <img src='../assets/typeface-svg/section-typeface-2-content-image-shwocase.png'>
+                    <img
+                        src='../assets/typeface-svg/section-typeface-2-content-image-shwocase.png'
+                        loading='lazy'
+                        decoding='async'
+                    >
                 </div>
                 
             </div>
@@ -61,7 +75,11 @@ export const Typeface3 = {
     components: `
         <section class='section-typeface-3'>
             <div id='section-typeface-3-image-typewritter'>
-                <img src='../assets/typeface-svg/section-typeface-3-content-image.png'>
+                <img
+                    src='../assets/typeface-svg/section-typeface-3-content-image.png'
+                    loading='lazy'
+                    decoding='async'
+                >
             </div>
             <div class='section-typeface-3-content'>
                 <div class='section-typeface-3-content-text'>
@@ -79,7 +97,12 @@ export const Typeface3 = {
                 </div>
             </div>
             <div id='section-typeface-3-image-fonts-showcase'>
-                <img src='../assets/typeface-svg/section-typeface-3-content-image-ก้าวร้าว-showcase.png' alt=''>
+                <img
+                    src='../assets/typeface-svg/section-typeface-3-content-image-ก้าวร้าว-showcase.png'
+                    alt=''
+                    loading='lazy'
+                    decoding='async'
+                >
             </div>
         </section>
     `

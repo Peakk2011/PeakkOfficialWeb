@@ -46,3 +46,11 @@ body {
     font-family: var(--theme-typeface-default);
     background-color: var(--theme-bg);
 }
+
+.lazy-section-slot {
+    width: 100%;
+}
+
+.lazy-section-slot-loaded {
+    min-height: 0 !important;
+}

@@ -3,7 +3,7 @@ const isTouchOnly = (): boolean =>
     !window.matchMedia('(pointer: fine)').matches;
 
 export const initCursor = (): (() => void) | void => {
-    if (isTouchOnly()) return;
+    if (isTouchOnly() || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const dot = document.createElement('div');
     dot.id = 'cursor-dot';
@@ -11,8 +11,22 @@ export const initCursor = (): (() => void) | void => {
 
     let mouseX = 0;
     let mouseY = 0;
+    let rafId = 0;
+    let isVisible = false;
 
-    const onMouseMove = (e: MouseEvent): void => {
+    const render = (): void => {
+        rafId = 0;
+        dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+    };
+
+    const requestRender = (): void => {
+        if (rafId !== 0) return;
+        rafId = window.requestAnimationFrame(render);
+    };
+
+    const onPointerMove = (e: PointerEvent): void => {
+        if (e.pointerType !== 'mouse') return;
+
         if (document.pointerLockElement) {
             mouseX = Math.min(Math.max(mouseX + e.movementX, 0), window.innerWidth);
             mouseY = Math.min(Math.max(mouseY + e.movementY, 0), window.innerHeight);
@@ -20,13 +34,18 @@ export const initCursor = (): (() => void) | void => {
             mouseX = e.clientX;
             mouseY = e.clientY;
         }
-        dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+        requestRender();
+
+        if (!isVisible) {
+            isVisible = true;
+            dot.style.opacity = '1';
+        }
     };
 
-    const onMouseDown = (): void => {
+    const onPointerDown = (): void => {
         dot.style.opacity = '0';
     };
-    const onMouseUp = (): void => {
+    const onPointerUp = (): void => {
         dot.style.opacity = '1';
     };
 
@@ -35,17 +54,21 @@ export const initCursor = (): (() => void) | void => {
     const onMouseEnter = (): void => setOpacity('1');
     const onPointerLockChange = (): void => setOpacity(document.pointerLockElement ? '0' : '1');
 
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mousedown', onMouseDown);
-    document.addEventListener('mouseup', onMouseUp);
+    document.addEventListener('pointermove', onPointerMove, { passive: true });
+    document.addEventListener('pointerdown', onPointerDown, { passive: true });
+    document.addEventListener('pointerup', onPointerUp, { passive: true });
     document.addEventListener('mouseleave', onMouseLeave);
     document.addEventListener('mouseenter', onMouseEnter);
     document.addEventListener('pointerlockchange', onPointerLockChange);
 
     return () => {
-        document.removeEventListener('mousemove', onMouseMove);
-        document.removeEventListener('mousedown', onMouseDown);
-        document.removeEventListener('mouseup', onMouseUp);
+        if (rafId !== 0) {
+            window.cancelAnimationFrame(rafId);
+        }
+
+        document.removeEventListener('pointermove', onPointerMove);
+        document.removeEventListener('pointerdown', onPointerDown);
+        document.removeEventListener('pointerup', onPointerUp);
         document.removeEventListener('mouseleave', onMouseLeave);
         document.removeEventListener('mouseenter', onMouseEnter);
         document.removeEventListener('pointerlockchange', onPointerLockChange);

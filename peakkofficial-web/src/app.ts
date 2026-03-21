@@ -18,11 +18,11 @@ import { createAnimationOpen } from './fx/fx-animation-open.ts';
 import './app.css';
 
 const rootPath: string = "#app";
+const LAZY_SECTION_ROOT_MARGIN = '300px 0px';
 
 interface IContent {
     title: string;
     description: string;
-    keywords: string;
 }
 
 const content: IContent = {
@@ -31,29 +31,65 @@ const content: IContent = {
         Peakkofficial, Peakk2011
         Design Services | Landing Pages | Website | Social Media
     `,
-    keywords: "Mintkit, JavaScript, framework, web development",
 };
 
-const html: string = `
+interface LazySection {
+    id: string;
+    minHeight: string;
+    html: string;
+}
+
+const initialHtml: string = `
     ${Navbar.components}
     ${Header.components}
-
     ${AnimationOpen.components}
+`;
 
-    ${Typeface1.components}
-    ${Typeface2.components}
-    ${Typeface3.components}
-    ${FascinateNotes.components}
+const lazySections: LazySection[] = [
+    {
+        id: 'typeface-1',
+        minHeight: '1080px',
+        html: Typeface1.components,
+    },
+    {
+        id: 'typeface-2',
+        minHeight: '1080px',
+        html: Typeface2.components,
+    },
+    {
+        id: 'typeface-3',
+        minHeight: '1200px',
+        html: Typeface3.components,
+    },
+    {
+        id: 'fascinate-notes',
+        minHeight: '1600px',
+        html: FascinateNotes.components,
+    },
+];
+
+const html: string = `
+    ${initialHtml}
+    ${lazySections
+        .map(({ id, minHeight }) => `
+            <div
+                class="lazy-section-slot"
+                data-lazy-section="${id}"
+                style="min-height: ${minHeight};"
+                aria-hidden="true"
+            ></div>
+        `)
+        .join('')}
 `;
 
 const initNavbarScroll = (): void => {
     const nav = document.querySelector("nav");
     if (!nav) return;
 
-    const darkSections = document.querySelectorAll<HTMLElement>("[data-navbar='dark']");
-    if (darkSections.length === 0) return;
-
     const checkSections = (): void => {
+        const darkSections = document.querySelectorAll<HTMLElement>("[data-navbar='dark']");
+        if (darkSections.length === 0) return;
+
         const navBottom = nav.getBoundingClientRect().bottom;
         let isDark = false;
 
@@ -71,6 +107,34 @@ const initNavbarScroll = (): void => {
     checkSections();
 };
 
+const initLazySections = (): void => {
+    const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            const slot = entry.target as HTMLDivElement;
+            const sectionId = slot.dataset.lazySection;
+            const section = lazySections.find(({ id }) => id === sectionId);
+
+            if (!section) {
+                currentObserver.unobserve(slot);
+                return;
+            }
+
+            slot.innerHTML = section.html;
+            slot.classList.add('lazy-section-slot-loaded');
+            slot.removeAttribute('aria-hidden');
+            slot.style.minHeight = '0';
+
+            currentObserver.unobserve(slot);
+        });
+    }, { rootMargin: LAZY_SECTION_ROOT_MARGIN });
+
+    document
+        .querySelectorAll<HTMLDivElement>('.lazy-section-slot')
+        .forEach((slot) => observer.observe(slot));
+};
+
 Mint.injectTitle(`<title>${content.title}</title>`);
 
 Mint.init(() => {
@@ -83,28 +147,13 @@ Mint.init(() => {
         },
     });
 
-    setTimeout(() => {
-        initNavbarScroll(),
-        initCursor(),
-        initRipple(),
-        initScramble(),
-        createAnimationOpen(),
-        0
-    });
+    initLazySections();
+
+    window.setTimeout(() => {
+        initNavbarScroll();
+        initCursor();
+        initRipple();
+        initScramble();
+        void createAnimationOpen();
+    }, 0);
 });
-
-/**
- * Creates and injects a meta tag into the document's <head>.
- * @param {string} name - The name attribute of the meta tag
- * @param {string} content - The content attribute of the meta tag.
- */
-
-const injectMeta = (name: string, content: string): void => {
-    const meta = document.createElement("meta");
-    meta.name = name;
-    meta.content = content;
-    document.head.appendChild(meta);
-};
-
-injectMeta("description", content.description.replace(/<br\s*\/?>/g, " "));
-injectMeta("keywords", content.keywords);
