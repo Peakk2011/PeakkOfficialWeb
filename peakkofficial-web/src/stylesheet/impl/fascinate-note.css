@@ -207,6 +207,106 @@
     bottom: 0;
 }
 
+.fascinate-notes-trip-2 {
+    background-color: #000000;
+    height: 875px;
+}
+
+.fascinate-notes-trip-section {
+    display: flex;
+    /* align-items: center; */
+    gap: 19.5rem;
+}
+
+.fascinate-notes-trip-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fascinate-notes-trip-section-title {
+    position: relative;
+    height: 875px;
+    width: 100%;
+    bottom: 0;
+}
+
+.__FN-trip-flex-section-image-showcasae {
+    position: absolute;
+    bottom: 0;
+}
+
+.__FN-trip-section-title {
+    margin-top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    position: absolute;
+}
+
+.__FN-trip-flex-section-text {
+    margin-top: 30rem;
+    transform: translateX(9rem);
+}
+
+.__FN-trip-flex-section-text a {
+    padding: 0.5rem 0rem;
+    background-color: var(--theme-buttons);
+    color: var(--theme-buttons-color);
+    font-family: var(--theme-buttons-typeface), sans-serif;
+    letter-spacing: -0.4px;
+    font-weight: 550;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    border-bottom: solid 1px #3F3F3F;
+}
+
+@media (max-width: 1110px) {
+    .__FN-trip-flex-section-text {
+        transform: translateX(0);
+        position: absolute;
+        right: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .fascinate-notes-trip-section-title {
+        all: unset;
+        height: 875px;
+        position: relative;
+    }
+
+    .__FN-trip-flex-section-image-showcasae {
+        position: relative;
+        width: 100%;
+        height: 875px;
+    }
+    
+    .__FN-trip-flex-section-image-showcasae svg {
+        bottom: 0;
+        position: absolute;
+        right: -11rem;
+    }
+}
+
+/* @media (max-width: 940px) {
+    .__FN-trip-flex-section-image-showcasae svg,
+    .__FN-trip-flex-section-image-showcasae,
+    .__FN-trip-section-title,
+    .__FN-trip-flex-section-text {
+        all: unset;
+    }
+
+    .fascinate-notes-trip-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+} */
+
 @media (max-width: 1024px) {
 
     .center-fascinate-notes-content-card {

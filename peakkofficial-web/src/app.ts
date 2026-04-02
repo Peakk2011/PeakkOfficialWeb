@@ -8,7 +8,8 @@ import { Navbar } from "./comp/navbar.ts";
 import { Header } from "./comp/header.ts";
 import { Typeface1, Typeface2, Typeface3 } from './comp/typeface.ts';
 import { FascinateNotes } from "./comp/fascinate-notes.ts";
-import { AnimationOpen } from './comp/animation-open.ts'
+import { AnimationOpen } from './comp/animation-open.ts';
+import { VisitDesignWorks } from "./comp/visit-design-works.ts";
 // Effects
 import { initCursor } from './fx/cursor.ts';
 import { initRipple } from './fx/ripple.ts';
@@ -66,6 +67,11 @@ const lazySections: LazySection[] = [
         minHeight: '1600px',
         html: FascinateNotes.components,
     },
+    {
+        id: 'visit-design-works',
+        minHeight: '1080px',
+        html: VisitDesignWorks.components,
+    }
 ];
 
 const html: string = `
