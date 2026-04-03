@@ -16,7 +16,8 @@ import { initRipple } from './fx/ripple.ts';
 import { initScramble } from "./fx/scramble.ts";
 import { createAnimationOpen } from './fx/fx-animation-open.ts';
 // Stylesheet
-import './app.css';
+// @ts-ignore
+import "./app.css";
 
 const rootPath: string = "#app";
 const LAZY_SECTION_ROOT_MARGIN = '300px 0px';
@@ -27,7 +28,7 @@ interface IContent {
 }
 
 const content: IContent = {
-    title: "Peakk",
+    title: "Peakk - Developer & Designer",
     description: `
         Peakkofficial, Peakk2011
         Design Services | Landing Pages | Website | Social Media

@@ -271,7 +271,7 @@
         display: flex;
         flex-direction: column;
     }
-    
+
     .fascinate-notes-trip-section-title {
         all: unset;
         height: 875px;
@@ -283,7 +283,7 @@
         width: 100%;
         height: 875px;
     }
-    
+
     .__FN-trip-flex-section-image-showcasae svg {
         bottom: 0;
         position: absolute;
@@ -291,21 +291,65 @@
     }
 }
 
-/* @media (max-width: 940px) {
-    .__FN-trip-flex-section-image-showcasae svg,
-    .__FN-trip-flex-section-image-showcasae,
-    .__FN-trip-section-title,
-    .__FN-trip-flex-section-text {
-        all: unset;
-    }
-
+@media (max-width: 940px) {
     .fascinate-notes-trip-section {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 2rem;
     }
-} */
+
+    .__FN-trip-flex-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .__FN-trip-flex-section-image-showcasae svg {
+        all: unset;
+        width: 80%;
+        position: static;
+    }
+
+    .__FN-trip-flex-section-text {
+        all: unset;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12rem;
+        margin-top: 2rem;
+    }
+
+    .__FN-trip-flex-section-image-showcasae {
+        all: unset;
+        margin-top: 18rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fascinate-notes-trip-section-title {
+        all: unset;
+    }
+
+    .__FN-trip-section-title {
+        margin-top: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .__FN-trip-section-title svg {
+        width: 80%;
+    }
+
+    .fascinate-notes-trip-2 {
+        height: auto;
+        border-bottom: solid 1px #3F3F3F;
+    }
+}
 
 @media (max-width: 1024px) {
 

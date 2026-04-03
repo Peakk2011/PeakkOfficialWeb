@@ -13,12 +13,12 @@ export const Typeface1 = {
                     </div>
                     <div class='section-typeface1-content-text-description'>
                         <p>
-                            เราทำงานออกแบบหลายอย่างทั้งการออกแบบ<br>
-                            3D ด้วยโปรแกรม SketchUP<br>
-                            หรือ Poster จิปาถะ ที่เราได้ออกแบบ<br>
-                            รวมถึงการออกแบบ แบบตัวอักษร<br>
-                            ไว้สำหรับการใช้งานเอง<br>
-                            โดยปรากฏออกมาในรูปด้านล่างนี้<br>
+                            ไม่ว่าจะเป็น 3D Architecture ที่ render<br>
+                            ออกมาเป็น Brutalist structure<br>
+                            Poster ที่ออกแบบด้วยความคิดเห็นของเรา<br>
+                            หรือ Typeface ที่สร้างขึ้นเพื่อใช้เอง<br>
+                            ทุกชิ้นมาจากระบบเดียวกันนั้น<br>
+                            สร้างโดยคนคนเดียว<br>
                         </p>
                     </div>
                 </div>
