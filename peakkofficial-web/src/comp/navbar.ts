@@ -16,7 +16,30 @@ export const Navbar = {
                 <div class='navbar-menu'>
                     <ul>
                         <li><a href='#' id='primary-navbar-content-links-items' data-ripple data-scramble-hover-fx data-scramble-duration="800" data-scramble-chars="01010101">Showcase</a></li>
-                        <li><a href='#' data-ripple data-scramble-hover-fx data-scramble-duration="800" data-scramble-chars="01010101">Contact</a></li>
+                        <li class='navbar-dropdown'>
+                            <a href='#' class='navbar-dropdown-toggle' aria-expanded='false' data-ripple data-scramble-hover-fx data-scramble-duration="800" data-scramble-chars="01010101">Contact</a>
+                            <ul class='navbar-dropdown-menu'>
+                                <h4 id='navbar-dropdown-menu-title'>Contact</h4>
+                                <div class='navbar-dropdown-links'>
+                                    <a class='row' href='https://www.instagram.com/peakkofficial' target='_blank' rel='noreferrer' data-ripple>
+                                        <span>Instagram</span>
+                                        <span>↗</span>
+                                    </a>
+                                    <a class='row' href='https://www.facebook.com/Itz.peaki183/' target='_blank' rel='noreferrer' data-ripple>
+                                        <span>Facebook</span>
+                                        <span>↗</span>
+                                    </a>
+                                    <a class='row' href='https://www.threads.com/@peakkofficial' target='_blank' rel='noreferrer' data-ripple>
+                                        <span>Threads</span>
+                                        <span>↗</span>
+                                    </a>
+                                    <a class='row' href='https://github.com/peakk2011/' target='_blank' rel='noreferrer' data-ripple>
+                                        <span>Github</span>
+                                        <span>↗</span>
+                                    </a>
+                                </div>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

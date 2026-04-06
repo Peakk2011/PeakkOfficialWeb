@@ -32,7 +32,7 @@ nav.navbar-dark #primary-navbar-content-links-items {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     margin: auto;
     max-width: 100%;
     padding: 0rem 1.25rem;
@@ -65,4 +65,85 @@ nav.navbar-dark #primary-navbar-content-links-items {
 #primary-navbar-content-links-items {
     background-color: var(--theme-primary-buttons);
     color: var(--theme-primary-buttons-color);
+}
+
+.navbar-dropdown {
+    position: relative;
+}
+
+.navbar-dropdown-toggle {
+    display: inline-block;
+    width: 100%;
+}
+
+.navbar-dropdown-menu {
+    all: unset;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    min-width: 240px;
+    max-height: 0;
+    list-style: none;
+    background-color: var(--theme-bg);
+    border: solid 1px #cccccc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.24s ease, max-height 0.24s ease, transform 0.24s ease, padding 0.24s ease;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.navbar-dropdown-links {
+    width: 100%;
+}
+
+#navbar-dropdown-menu-title {
+    margin: 0.5rem 0.6rem;
+    margin-bottom: 1rem;
+    font-family: var(--theme-buttons-typeface), monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.navbar-dropdown-menu .row {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    background-color: var(--theme-bg);
+    color: #000000;
+    border-bottom: solid 1px #cccccc;
+
+    padding: 1.1rem 0rem;
+    margin: auto;
+}
+
+.navbar-dropdown-menu .row:hover {
+    background-color: #f5f5f5;
+}
+
+.navbar-dropdown.is-open .navbar-dropdown-menu {
+    opacity: 1;
+    max-height: 320px;
+    padding: 0.8rem 0;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+nav.navbar-dark .navbar-dropdown-menu {
+    background-color: #0c0c0c;
+    border: solid 1px #515151;
+    color: #ffffff;
+}
+
+nav.navbar-dark .navbar-dropdown-menu .row {
+    border: 0px;
+    border-bottom: 1px solid #515151;
+}
+
+nav.navbar-dark .navbar-dropdown-menu .row:hover {
+    background-color: #1f1f1f;
 }

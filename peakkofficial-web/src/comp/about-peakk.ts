@@ -330,7 +330,7 @@ export const AboutPeakk = {
                                 C/TypeScript/JavaScript
                             </p>
                             
-                            <div class="__ASP-product-item-images">
+                            <div class="__ASP-product-item-images-last">
                                 <img
                                     src='../assets/mintif-vscode-preview-screenshot.png'
                                     alt='EssentialAPP Screenshot'
@@ -339,16 +339,20 @@ export const AboutPeakk = {
                                     decoding='async'
                                 >
                             </div>
-                            <p class="__ASP-product-item-desc">
+                            <p class="__ASP-product-item-desc" id="about-peakk-product-mintif-desc">
                                 Mintif (Mint Infrastructure)<br>
                                 อ่านไฟล์ .md ตรวจ Syntax Markdown<br>
                                 ทั่วไป แปลงผลลัพธ์เป็นเอกสาร HTML ที่สมบูรณ์<br>
                                 และอาจฝัง CSS จากไฟล์สไตล์เพิ่มเติมได้<br>
                             </p>
                             
-                            <div class="__ASP-product-item-links">
-                                <a class="__ASP-product-item-link" href="https://github.com/Peakk2011/Mint-Infrastructure" target='_blank'>Source Code สำหรับ Mint Infrastructure ↗</a>
-                                <a class="__ASP-product-item-link" href="#">สำรวจ Application, Framework, Library ↗</a>
+                            <div class="__ASP-product-item-links" id='__ASP-product-item-links-mintif'>
+                                <a class="__ASP-product-item-link" href="https://github.com/Peakk2011/Mint-Infrastructure" target='_blank'>Source Code สำหรับ Mint Infrastructure                                 <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.655174 5.23997L-3.39299e-05 4.58477L3.08812 1.4918L4.18655 0.480078L4.75023 1.04375L3.75296 2.15182L0.655174 5.23997ZM4.26364 4.00182L4.31182 1.44844L4.33109 0.932943H3.78187L1.2333 0.971484V0.00312493H5.232V4.00182H4.26364Z" fill="white"/>
+                                </svg>  </a>
+                                <a class="__ASP-product-item-link" href="https://github.com/Peakk2011?tab=repositories">สำรวจ Application, Framework, Library                                 <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.655174 5.23997L-3.39299e-05 4.58477L3.08812 1.4918L4.18655 0.480078L4.75023 1.04375L3.75296 2.15182L0.655174 5.23997ZM4.26364 4.00182L4.31182 1.44844L4.33109 0.932943H3.78187L1.2333 0.971484V0.00312493H5.232V4.00182H4.26364Z" fill="white"/>
+                                </svg>  </a>
                             </div>
                         </article>
 
@@ -368,7 +372,7 @@ export const AboutPeakk = {
                                     and lifecycle are handled directly<br>
                                     by the OS.<br>
                                 </p>
-                                <div class="__ASP-product-item-images">
+                                <div class="__ASP-product-item-images-last">
                                     <img
                                         src='../assets/darling-code-screenshow-preview-showcase.png'
                                         alt='EssentialAPP Screenshot'
@@ -377,11 +381,18 @@ export const AboutPeakk = {
                                         decoding='async'
                                     > 
                                 </div>
-                                <a class="__ASP-product-item-link" href="https://github.com/Peakk2011/Darling" target='_blank' rel='noopener noreferrer'>Source Code สำหรับ Darling ↗</a>
+                                <div class="__ASP-product-item-links">
+                                    <a href='https://github.com/Peakk2011/Darling' target='_blank' rel='noopener noreferrer'>
+                                        Source Code สำหรับ Darling
+                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.655174 5.23997L-3.39299e-05 4.58477L3.08812 1.4918L4.18655 0.480078L4.75023 1.04375L3.75296 2.15182L0.655174 5.23997ZM4.26364 4.00182L4.31182 1.44844L4.33109 0.932943H3.78187L1.2333 0.971484V0.00312493H5.232V4.00182H4.26364Z" fill="white"/>
+                                        </svg>    
+                                    </a>
+                                </div>
                             </article>
 
                             <article class="about-section-peakk-product-item">
-                                <div class="__ASP-product-item-logo">
+                                <div class="__ASP-product-item-logo" id='__ASP-product-item-desc-linda'>
                                     <svg width="370" height="180" viewBox="0 0 370 180" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1508_21)">
 <rect width="370" height="180" fill="#F6F7F5"/>
@@ -428,8 +439,15 @@ export const AboutPeakk = {
                                     component with smooth animations<br>
                                     and customizable styling.<br>
                                 </p>
-                                <a class="__ASP-product-item-link" href="#">Source Code สำหรับ Linda ↗</a>
-                                <a class="__ASP-product-item-link" href="#">รายละเอียดเพิ่มเติมสำหรับ Linda ↗</a>
+
+                                <div class="__ASP-product-item-links" id='__ASP-product-item-links-linda'>
+                                    <a class="__ASP-product-item-link" href="#">Source Code สำหรับ Linda                                 <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.655174 5.23997L-3.39299e-05 4.58477L3.08812 1.4918L4.18655 0.480078L4.75023 1.04375L3.75296 2.15182L0.655174 5.23997ZM4.26364 4.00182L4.31182 1.44844L4.33109 0.932943H3.78187L1.2333 0.971484V0.00312493H5.232V4.00182H4.26364Z" fill="white"/>
+                                </svg>  </a>
+                                    <a class="__ASP-product-item-link" href="#">รายละเอียดเพิ่มเติมสำหรับ Linda                                 <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.655174 5.23997L-3.39299e-05 4.58477L3.08812 1.4918L4.18655 0.480078L4.75023 1.04375L3.75296 2.15182L0.655174 5.23997ZM4.26364 4.00182L4.31182 1.44844L4.33109 0.932943H3.78187L1.2333 0.971484V0.00312493H5.232V4.00182H4.26364Z" fill="white"/>
+                                </svg>  </a>
+                                </div>
                             </article>
                         </div>
                     </div>

@@ -120,6 +120,36 @@ const initNavbarScroll = (): void => {
     checkSections();
 };
 
+const initNavbarDropdown = (): void => {
+    const dropdownToggle = document.querySelector<HTMLAnchorElement>(".navbar-dropdown-toggle");
+    const dropdown = document.querySelector<HTMLLIElement>(".navbar-dropdown");
+
+    if (!dropdownToggle || !dropdown) return;
+
+    const closeDropdown = (): void => {
+        dropdown.classList.remove('is-open');
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    // const openDropdown = (): void => {
+    //     dropdown.classList.add('is-open');
+    //     dropdownToggle.setAttribute('aria-expanded', 'true');
+    // };
+
+    dropdownToggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        dropdown.classList.toggle('is-open');
+        const expanded = dropdown.classList.contains('is-open');
+        dropdownToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+
+    window.addEventListener('click', (event) => {
+        if (!dropdown.contains(event.target as Node)) {
+            closeDropdown();
+        }
+    });
+};
+
 const initLazySections = (): void => {
     const observer = new IntersectionObserver((entries, currentObserver) => {
         entries.forEach((entry) => {
@@ -164,6 +194,7 @@ Mint.init(() => {
 
     window.setTimeout(() => {
         initNavbarScroll();
+        initNavbarDropdown();
         initCursor();
         initRipple();
         initScramble();

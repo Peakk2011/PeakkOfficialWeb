@@ -267,7 +267,7 @@
     .__FN-trip-flex-section-text {
         transform: translateX(0);
         position: absolute;
-        right: 1.5rem;
+        right: 3rem;
         display: flex;
         flex-direction: column;
     }

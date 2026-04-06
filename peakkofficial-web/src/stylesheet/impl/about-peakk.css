@@ -94,6 +94,8 @@
     font-weight: 400;
     line-height: 1.5;
     margin: 0;
+    font-family: var(--theme-buttons-typeface);
+    margin-bottom: 0.5rem;
 }
 
 .__ASP-product-item-flex {
@@ -127,6 +129,10 @@
     /* margin: 4px 0; */
 }
 
+.__ASP-product-item-images-last {
+    width: 100%;
+}
+
 .__ASP-product-item-image {
     display: block;
     width: 100%;
@@ -149,8 +155,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 12px;
-    font-family: monospace;
+    font-size: 12.5px;
     color: #fff;
     text-decoration: none;
     padding: 12px 0;
@@ -224,11 +229,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: 12.5px;
     color: #fff;
     text-decoration: none;
     padding: 10px 0;
-    border-bottom: 1px solid #3f3f3f;
+    border-bottom: 1px solid #515151;
 }
 
 .__ASP-contact-email svg,
@@ -263,7 +268,7 @@
     color: #fff;
     text-decoration: none;
     padding: 10px 0;
-    border-bottom: 1px solid #3f3f3f;
+    border-bottom: 1px solid #515151;
 }
 
 .__ASP-nav-item svg {
@@ -281,4 +286,140 @@
     justify-content: space-between;
     gap: 16px;
     flex-direction: row-reverse;
+}
+
+#__ASP-product-item-links-linda {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .__ASP-product-item-flex {
+        flex-direction: column;
+    }
+    
+    .__ASP-product-item-images {
+        width: 100%;
+    }
+
+    .__ASP-product-items-fascinate-notes-flex {
+        flex-direction: column;
+    }
+
+    .about-section-peakk-layout {
+        padding: 4.5rem 3rem;
+    }
+
+    .about-section-peakk-product-row {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .__ASP-product-item-desc {
+        margin-bottom: 2rem;
+    }
+
+    #__ASP-product-item-desc-linda {
+        margin-bottom: 0;
+        margin-top: 1rem;
+    }
+
+    #__ASP-product-item-links-linda {
+        margin-top: 1rem;
+    }
+
+    #about-peakk-product-mintif-desc {
+        margin-bottom: 0rem !important;
+    }
+
+    #__ASP-product-item-links-mintif {
+        margin-top: 1rem !important;
+    }
+
+    .__ASP-product-item-tagline {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Layout */
+    .about-section-peakk-layout {
+        grid-template-columns: 1fr;
+        padding: 24px 20px;
+        gap: 32px;
+    }
+
+    .about-section-peakk-sidebar {
+        position: static;
+        margin-bottom: 1.1rem;
+    }
+
+    .about-section-peakk-content {
+        min-height: unset;
+    }
+
+    /* Product row — stack แทน 2 col */
+    .about-section-peakk-product-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .__ASP-product-item--right {
+        gap: 0;
+    }
+
+    /* Product item flex — stack desc + image */
+    .__ASP-product-item-flex {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 24px;
+        padding-bottom: 28px;
+    }
+
+    /* Fascinate Notes reverse row → stack ปกติ */
+    .__ASP-product-items-fascinate-notes-flex {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    /* Image — full width */
+    .__ASP-product-item-images {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    /* Description — full width */
+    .__ASP-product-item-desc {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+
+    :root {
+        --pad: 2rem;
+    }
+
+    .about-section-peakk-layout {
+        padding: 20px 16px;
+        gap: 24px;
+    }
+
+    .__ASP-product-item-tagline {
+        font-size: 14px;
+    }
+
+    .__ASP-product-item-flex {
+        margin-bottom: 16px;
+        padding-bottom: 20px;
+    }
+
+    .__ASP-product-item-links {
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .__ASP-experience-text {
+        margin-bottom: 32px;
+    }
 }
