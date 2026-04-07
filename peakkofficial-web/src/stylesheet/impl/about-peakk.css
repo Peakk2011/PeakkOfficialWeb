@@ -61,7 +61,7 @@
     font-size: 13px;
     font-weight: 500;
     letter-spacing: -0px;
-    border-bottom: 1px solid #3f3f3f;
+    border-bottom: 1px solid #515151;
     padding-bottom: 12px;
     margin-bottom: 32px;
     font-family: var(--theme-buttons-typeface);
@@ -102,7 +102,7 @@
     display: flex;
     justify-content: space-between;
     gap: 16px;
-    border-bottom: 1px solid #3f3f3f;
+    border-bottom: 1px solid #515151;
     margin-bottom: 38px;
     padding-bottom: 42px;
 }
@@ -145,7 +145,7 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    border-top: 1px solid #3f3f3f;
+    border-top: 1px solid #515151;
     margin-top: 2.5rem;
     margin-bottom: 3rem;
 }
@@ -159,7 +159,7 @@
     color: #fff;
     text-decoration: none;
     padding: 12px 0;
-    border-bottom: 1px solid #3f3f3f;
+    border-bottom: 1px solid #515151;
     gap: 8px;
 }
 
@@ -189,7 +189,7 @@
     font-size: 13px;
     font-weight: 500;
     letter-spacing: -0px;
-    border-bottom: 1px solid #3f3f3f;
+    border-bottom: 1px solid #515151;
     padding-bottom: 12px;
     margin-bottom: 32px;
     font-family: var(--theme-buttons-typeface);
@@ -217,7 +217,7 @@
 .about-section-peakk-contact {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid #3f3f3f;
+    border-top: 1px solid #515151;
     margin-bottom: 32px;
 }
 
@@ -257,7 +257,7 @@
 .about-section-peakk-nav {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid #3f3f3f;
+    border-top: 1px solid #515151;
 }
 
 .__ASP-nav-item {

@@ -11,11 +11,17 @@ import { FascinateNotes } from "./comp/fascinate-notes.ts";
 import { AnimationOpen } from './comp/animation-open.ts';
 import { VisitDesignWorks } from "./comp/visit-design-works.ts";
 import { AboutPeakk } from "./comp/about-peakk.ts";
+import { bikePack } from "./comp/bike-pack.ts";
+import { Footer } from "./comp/footer.ts";
+import { RuntimeConsider } from "./comp/runtime-consider.ts";
 // Effects
 import { initCursor } from './fx/cursor.ts';
 import { initRipple } from './fx/ripple.ts';
 import { initScramble } from "./fx/scramble.ts";
 import { createAnimationOpen } from './fx/fx-animation-open.ts';
+import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 // Stylesheet
 // @ts-ignore
 import "./app.css";
@@ -78,6 +84,21 @@ const lazySections: LazySection[] = [
         id: 'about-peakk',
         minHeight: '1080px',
         html: AboutPeakk.components,
+    },
+    {
+        id: 'runtime-consider',
+        minHeight: '1080px',
+        html: RuntimeConsider.components,
+    },
+    {
+        id: 'bike-pack',
+        minHeight: '1080px',
+        html: bikePack.components,
+    },
+    {
+        id: 'footer',
+        minHeight: '300px',
+        html: Footer.components,
     }
 ];
 
@@ -94,6 +115,48 @@ const html: string = `
         `)
         .join('')}
 `;
+
+const SCROLL_CONFIGS = [
+    {
+        trigger: '.fascinate-notes-section',
+        targets: '.fascinate-notes-flex-column-image, .fascinate-notes-buttons, .fascinate-notes-p, .fascinate-notes-card-1, .fascinate-notes-card-2',
+        stagger: 0.18,
+    },
+    {
+        trigger: '.visit-design-works',
+        targets: '.visit-design-works-content-showcase',
+    },
+    {
+        trigger: '.about-section-peakk',
+        targets: '.about-section-peakk-sidebar, .about-section-peakk-content',
+        stagger: 0.2,
+    },
+];
+
+const initGSAPAnimations = (root: ParentNode = document): void => {
+    SCROLL_CONFIGS.forEach(({ trigger, targets, stagger = 0 }) => {
+        const el = root.querySelector<HTMLElement>(trigger);
+        if (!el) return;
+
+        gsap.from(targets, {
+            y: 120,
+            opacity: 0,
+            scale: 0.85,
+            filter: 'blur(20px)',
+            rotationX: 15,
+            stagger,
+            duration: 1.5,
+            ease: 'power4.out',
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 85%',
+                // scrub: 1,
+                toggleActions: 'restart reverse restart reverse',
+                // play=enter, reverse=leave, play=re-enter, reverse=re-leave
+            },
+        });
+    });
+};
 
 const initNavbarScroll = (): void => {
     const nav = document.querySelector("nav");
@@ -169,6 +232,7 @@ const initLazySections = (): void => {
             slot.removeAttribute('aria-hidden');
             slot.style.minHeight = '0';
 
+            initGSAPAnimations(slot);
             currentObserver.unobserve(slot);
         });
     }, { rootMargin: LAZY_SECTION_ROOT_MARGIN });
@@ -198,6 +262,7 @@ Mint.init(() => {
         initCursor();
         initRipple();
         initScramble();
+        initGSAPAnimations();
         void createAnimationOpen();
     }, 0);
 });

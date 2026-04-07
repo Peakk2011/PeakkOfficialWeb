@@ -479,14 +479,69 @@
 @media (max-width: 768px) {
 
     .fascinate-notes-p p {
-        font-size: 3.1vw;
-        letter-spacing: -0.25px;
+        font-size: 3.05vw;
         padding: 0rem 1.25rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        letter-spacing: -0.4px;
+    }
+
+    .flex-content-fascinate-notes-content-card2-2 {
+        all: unset;
+    }
+
+    .fascinate-notes-card-2 {
+        all: unset;
+    }
+
+    .flex-content-fascinate-notes-content-1-card-2 {
+        all: unset;
+    }
+
+    .center-fascinate-notes-content-card>.fascinate-notes-card-1,
+    .center-fascinate-notes-content-card>.fascinate-notes-card-2 {
+        all: unset;
+        width: 100%;
+    }
+
+    .flex-content-fascinate-notes-content-1-card-2-text-description {
+        all: unset;
+    }
+
+    .flex-fascinate-notes-card-1 {
+        all: unset;
+    }
+
+    .flex-content-fascinate-notes-content-card2-2 p {
+        padding: 0;
+        margin-top: 2.5rem;
+    }
+
+    .flex-content-fascinate-notes-content-1-card-2-text-description p {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
     }
 
     .center-fascinate-notes-content-card {
-        display: none;
+        gap: 0;
+        padding: 0 1.25rem;
     }
+
+    .flex-content-fascinate-notes-content-2 p,
+    .flex-content-fascinate-notes-content-card2-2 p,
+    .flex-content-fascinate-notes-content-1-card-2-text-description p {
+        font-size: 3.05vw;
+    }
+
+    .fascinate-notes-p {
+        all: unset;
+        margin-top: 3rem;
+        display: block;
+    }
+}
+
+#fascinate-notes-p-mobile-display-viewer {
+    display: none;
 }
 
 @media (max-width: 500px) {
@@ -496,7 +551,19 @@
         margin-bottom: 8rem;
     }
 
-    .fascinate-notes-p p {
+    .flex-content-fascinate-notes-content-2 p,
+    .flex-content-fascinate-notes-content-card2-2 p,
+    .flex-content-fascinate-notes-content-1-card-2-text-description p,
+    #fascinate-notes-p-mobile-display-viewer {
+        font-size: 3.7vw;
+        white-space: nowrap;
+    }
+
+    #fascinate-notes-p-desktop-display-viewer {
         display: none;
+    }
+
+    #fascinate-notes-p-mobile-display-viewer {
+        display: block;
     }
 }

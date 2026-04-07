@@ -15,7 +15,7 @@ export const Navbar = {
                 
                 <div class='navbar-menu'>
                     <ul>
-                        <li><a href='#' id='primary-navbar-content-links-items' data-ripple data-scramble-hover-fx data-scramble-duration="800" data-scramble-chars="01010101">Showcase</a></li>
+                        <!-- <li><a href='#' id='primary-navbar-content-links-items' data-ripple data-scramble-hover-fx data-scramble-duration="800" data-scramble-chars="01010101">Showcase</a></li> -->
                         <li class='navbar-dropdown'>
                             <a href='#' class='navbar-dropdown-toggle' aria-expanded='false' data-ripple data-scramble-hover-fx data-scramble-duration="800" data-scramble-chars="01010101">Contact</a>
                             <ul class='navbar-dropdown-menu'>
