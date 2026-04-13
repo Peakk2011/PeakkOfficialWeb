@@ -2,7 +2,7 @@ export const Navbar = {
     components: `
         <nav>
             <div class='navbar-content'>
-                <div class='logo'>
+                <a class='logo' href='/' data-router-link style='color: currentColor; fill: currentColor;'>
                     <svg width="55" height="21" viewBox="0 0 55 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M49.0445 0.0429688V8.1599H49.415L50.1843 0.0429688H55V10.153H53.1478L55 20.2631H50.2983L49.415 12.1462H49.0445V20.2631H44.4854V0.0429688H49.0445Z" fill="currentColor"/>
                         <path d="M38.0646 0.0429688V8.1599H38.4301L39.1892 0.0429688H43.9404L42.113 10.153L44.081 20.2631H39.3016L38.4301 12.1462H38.0646V20.2631H33.5664V0.0429688H38.0646Z" fill="currentColor"/>
@@ -11,11 +11,13 @@ export const Navbar = {
                         <path d="M10.4873 0H22.2546V20.2088H10.4873V0Z" fill="currentColor"/>
                         <path d="M10.4873 0H20.2081V20.2088H10.4873V0Z" fill="currentColor"/>
                     </svg>
-                </div>
+                </a>
                 
                 <div class='navbar-menu'>
                     <ul>
-                        <!-- <li><a href='#' id='primary-navbar-content-links-items' data-ripple data-scramble-hover-fx data-scramble-duration="800" data-scramble-chars="01010101">Showcase</a></li> -->
+                        <!-- <li><a href='/' data-router-link data-ripple data-scramble-hover-fx data-scramble-duration="800" data-scramble-chars="01010101">Home</a></li> -->
+                        <li><a href='/showcase' id='primary-navbar-content-links-items' data-ripple data-scramble-hover-fx data-scramble-duration="800" data-scramble-chars="01010101">Showcase</a></li> 
+                        <!-- <li><a href='/fascinate-notes' data-router-link data-ripple data-scramble-hover-fx data-scramble-duration="800" data-scramble-chars="01010101">Fascinate Notes</a></li> -->
                         <li class='navbar-dropdown'>
                             <a href='#' class='navbar-dropdown-toggle' aria-expanded='false' data-ripple data-scramble-hover-fx data-scramble-duration="800" data-scramble-chars="01010101">Contact</a>
                             <ul class='navbar-dropdown-menu'>
@@ -25,7 +27,7 @@ export const Navbar = {
                                         <span>Instagram</span>
                                         <span>↗</span>
                                     </a>
-                                    <a class='row' href='https://www.facebook.com/Itz.peaki183/' target='_blank' rel='noreferrer' data-ripple>
+                                    <a class='row' href='https://www.facebook.com/Itz.peakkofficial/' target='_blank' rel='noreferrer' data-ripple>
                                         <span>Facebook</span>
                                         <span>↗</span>
                                     </a>

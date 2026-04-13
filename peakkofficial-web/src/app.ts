@@ -22,9 +22,12 @@ import { createAnimationOpen } from './fx/fx-animation-open.ts';
 import { gsap } from 'gsap';
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Stylesheet
 // @ts-ignore
 import "./app.css";
+// @ts-ignore
+import notFoundHtml from './404.html?raw';
+// @ts-ignore
+import showcase from './showcase.html?raw';
 
 const rootPath: string = "#app";
 const LAZY_SECTION_ROOT_MARGIN = '300px 0px';
@@ -47,12 +50,6 @@ interface LazySection {
     minHeight: string;
     html: string;
 }
-
-const initialHtml: string = `
-    ${Navbar.components}
-    ${Header.components}
-    ${AnimationOpen.components}
-`;
 
 const lazySections: LazySection[] = [
     {
@@ -101,20 +98,6 @@ const lazySections: LazySection[] = [
         html: Footer.components,
     }
 ];
-
-const html: string = `
-    ${initialHtml}
-    ${lazySections
-        .map(({ id, minHeight }) => `
-            <div
-                class="lazy-section-slot"
-                data-lazy-section="${id}"
-                style="min-height: ${minHeight};"
-                aria-hidden="true"
-            ></div>
-        `)
-        .join('')}
-`;
 
 const SCROLL_CONFIGS = [
     {
@@ -213,6 +196,71 @@ const initNavbarDropdown = (): void => {
     });
 };
 
+const initRouterLinks = (): void => {
+    document.body.addEventListener('click', (event) => {
+        if (!(event.target instanceof HTMLElement)) return;
+        const anchor = event.target.closest('a[data-router-link]') as HTMLAnchorElement | null;
+        if (!anchor) return;
+
+        const href = anchor.getAttribute('href');
+        if (!href || href.startsWith('http')) return;
+
+        event.preventDefault();
+        Mint.navigate(href);
+    });
+};
+
+const getPageShell = (contentHtml: string): string => `
+    ${Navbar.components}
+    <main class="route-page-shell">
+        ${contentHtml}
+    </main>
+`;
+
+const renderPage = (contentHtml: string): void => {
+    Mint.injectHTML(rootPath, getPageShell(contentHtml));
+    initNavbarDropdown();
+    initCursor();
+    initRipple();
+    initScramble();
+    initGSAPAnimations();
+    void createAnimationOpen();
+    initLazySections();
+    initNavbarScroll();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+const renderHomePage = (): void => {
+    renderPage(`
+        ${Header.components}
+        ${AnimationOpen.components}
+        ${lazySections
+            .map(({ id, minHeight }) => `
+                <div
+                    class="lazy-section-slot"
+                    data-lazy-section="${id}"
+                    style="min-height: ${minHeight};"
+                    aria-hidden="true"
+                ></div>
+            `)
+            .join('')}
+    `);
+};
+
+const renderShowcasePage = (): void => {
+    renderPage(showcase);
+};
+
+const renderFascinateNotesPage = (): void => {
+    renderPage(`
+        ${FascinateNotes.components}
+    `);
+};
+
+const renderNotFoundPage = (): void => {
+    renderPage(notFoundHtml);
+};
+
 const initLazySections = (): void => {
     const observer = new IntersectionObserver((entries, currentObserver) => {
         entries.forEach((entry) => {
@@ -244,25 +292,13 @@ const initLazySections = (): void => {
 
 Mint.injectTitle(`<title>${content.title}</title>`);
 
+initRouterLinks();
+
 Mint.init(() => {
-    Mint.inject({
-        html: {
-            id: rootPath,
-            location() {
-                return html;
-            },
-        },
-    });
-
-    initLazySections();
-
-    window.setTimeout(() => {
-        initNavbarScroll();
-        initNavbarDropdown();
-        initCursor();
-        initRipple();
-        initScramble();
-        initGSAPAnimations();
-        void createAnimationOpen();
-    }, 0);
+    Mint.Router
+        .route('/', renderHomePage)
+        .route('/showcase', renderShowcasePage)
+        .route('/fascinate-notes', renderFascinateNotesPage)
+        .notFound(renderNotFoundPage)
+        .init();
 });

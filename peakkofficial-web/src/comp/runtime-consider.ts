@@ -29,7 +29,7 @@ export const RuntimeConsider = {
 }
         </style>
 
-        <div class='visit-design-works' data-navbar="dark">
+        <div class='visit-design-works' data-navbar="dark" id='about-section-peakk-runtime-consider'>
             <div class='runtime-consider-image'></div>
             <a class='visit-design-works-links-absolute-position' id='runtime-consider-link' href='https://mint-teams.web.app/runtime-consider/' target='_blank' rel='noopener noreferrer'></a>
         </div>

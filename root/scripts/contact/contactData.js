@@ -23,7 +23,7 @@ export const contactData = {
         {
             icon: 'logo-facebook',
             text: 'Facebook',
-            href: 'https://www.facebook.com/Itz.peaki183/'
+            href: 'https://www.facebook.com/Itz.peakkofficial/'
         },
         {
             icon: 'logo-instagram',

@@ -15,5 +15,11 @@ declare module 'https://mint-teams.web.app/Mintkit/mint.js' {
         injectTitle(titleHtml: string): void;
         init(callback: () => void): void;
         inject(config: InjectConfig): void;
+        Router: {
+            route(pattern: string, callback: (params: Record<string, string>) => void): any;
+            notFound(callback: (path: string) => void): any;
+            init(): any;
+        };
+        navigate(path: string): void;
     };
 }

@@ -1,0 +1,400 @@
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .showcase-logo {
+        width: 100%;
+        height: 100vh;
+        padding: 0rem 1.25rem;
+        display: flex;
+        align-items: inherit;
+        justify-content: center;
+        position: relative;
+        /* margin-top: 65px; */
+    }
+
+    .showcase-logo img {
+        width: 800px;
+        height: fit-content;
+        object-fit: contain;
+        display: block;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .showcase-center-hero {
+        position: absolute;
+        left: 50%;
+        top: 48%;
+        transform: translate(-50%, -50%);
+    }
+
+    .showcase-center-hero img {
+        width: 800px;
+        height: auto;
+        transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .showcase-center-hero img:hover {
+        transform: scale(1.1);
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .grid-work-showcase {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 200px;
+        gap: 0;
+        width: 100%;
+    }
+
+    /* Card Base Styles */
+    .card {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border: 1px solid #222;
+        margin: -1px 0 0 -1px;
+    }
+
+    /* Image - Full cover, always visible */
+    .card-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        transition: transform 0.4s ease;
+    }
+
+    .card:hover .card-image {
+        transform: scale(1.05);
+    }
+
+    /* Content overlay - Hidden by default, slides up on hover */
+    .card-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%);
+        z-index: 2;
+        transform: translateY(100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card:hover .card-content {
+        transform: translateY(0);
+    }
+
+    .card-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease 0.05s;
+    }
+
+    .card:hover .card-icon {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+        letter-spacing: 0.5px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease 0.1s;
+    }
+
+    .card:hover .card-title {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .card-desc {
+        font-size: 0.85rem;
+        color: #aaa;
+        line-height: 1.4;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease 0.15s;
+    }
+
+    .card:hover .card-desc {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Size Variations */
+    .card-small {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .card-wide {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .card-tall {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    .card-large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+        .grid-work-showcase {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media (max-width: 900px) {
+        .grid-work-showcase {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .card-large,
+        .card-wide {
+            grid-column: span 2;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .grid-work-showcase {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .card-large,
+        .card-wide {
+            grid-column: span 2;
+        }
+
+        .card-tall {
+            grid-row: span 1;
+        }
+    }
+</style>
+
+<div class="showcase">
+    <div class="showcase-logo">
+        <img src="../assets/งานออกแบบ.png">
+    </div>
+    <div class="showcase-center-hero">
+        <img src="../assets/showcaseงานออกแบบ-hero.png">
+    </div>
+</div>
+
+<div class="grid-work-showcase">
+    <!-- Row 1 -->
+    <div class="card card-large">
+        <img class="card-image" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◐</div>
+            <div class="card-title">Featured Project</div>
+            <div class="card-desc">Large card spanning 2x2 grid for highlighted content</div>
+        </div>
+    </div>
+
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◑</div>
+            <div class="card-title">Analytics</div>
+            <div class="card-desc">Quick stats</div>
+        </div>
+    </div>
+
+    <div class="card card-tall">
+        <img class="card-image" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◒</div>
+            <div class="card-title">Mobile App</div>
+            <div class="card-desc">Vertical layout for mobile-focused content with details</div>
+        </div>
+    </div>
+
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◓</div>
+            <div class="card-title">Security</div>
+            <div class="card-desc">Enterprise</div>
+        </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="card card-wide">
+        <img class="card-image" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◎</div>
+            <div class="card-title">Design System</div>
+            <div class="card-desc">Horizontal card for wide-format content and galleries</div>
+        </div>
+    </div>
+
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">●</div>
+            <div class="card-title">Performance</div>
+            <div class="card-desc">99.9% uptime</div>
+        </div>
+    </div>
+
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">○</div>
+            <div class="card-title">Cloud</div>
+            <div class="card-desc">Auto sync</div>
+        </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◐</div>
+            <div class="card-title">Database</div>
+            <div class="card-desc">Real-time</div>
+        </div>
+    </div>
+
+    <div class="card card-tall">
+        <img class="card-image" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◑</div>
+            <div class="card-title">API</div>
+            <div class="card-desc">RESTful endpoints with documentation and examples</div>
+        </div>
+    </div>
+
+    <div class="card card-wide">
+        <img class="card-image" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◒</div>
+            <div class="card-title">Collaboration</div>
+            <div class="card-desc">Team workspaces with real-time editing features</div>
+        </div>
+    </div>
+
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◓</div>
+            <div class="card-title">Growth</div>
+            <div class="card-desc">+150%</div>
+        </div>
+    </div>
+
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◎</div>
+            <div class="card-title">Support</div>
+            <div class="card-desc">24/7</div>
+        </div>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1667372393119-3d4c48d07cc9?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">●</div>
+            <div class="card-title">Deploy</div>
+            <div class="card-desc">One-click</div>
+        </div>
+    </div>
+
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1551288049-bebda4e38fbe?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">○</div>
+            <div class="card-title">Monitor</div>
+            <div class="card-desc">Live logs</div>
+        </div>
+    </div>
+
+    <div class="card card-large">
+        <img class="card-image" src="https://images.unsplash.com/photo-1551288049-bebda4e38fbe?w=800&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◐</div>
+            <div class="card-title">Dashboard</div>
+            <div class="card-desc">Centralized view of all metrics and KPIs in one place</div>
+        </div>
+    </div>
+
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◑</div>
+            <div class="card-title">Settings</div>
+            <div class="card-desc">Configure</div>
+        </div>
+    </div>
+
+    <!-- Row 5 -->
+    <div class="card card-wide">
+        <img class="card-image" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◒</div>
+            <div class="card-title">Integration</div>
+            <div class="card-desc">Connect with third-party services and tools</div>
+        </div>
+    </div>
+
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◓</div>
+            <div class="card-title">Backup</div>
+            <div class="card-desc">Daily</div>
+        </div>
+    </div>
+
+    <div class="card card-tall">
+        <img class="card-image" src="https://images.unsplash.com/photo-1551288049-bebda4e38fbe?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">◎</div>
+            <div class="card-title">Analytics</div>
+            <div class="card-desc">Deep insights into user behavior and trends</div>
+        </div>
+    </div>
+
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">●</div>
+            <div class="card-title">Export</div>
+            <div class="card-desc">CSV/JSON</div>
+        </div>
+    </div>
+
+    <div class="card card-small">
+        <img class="card-image" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&q=80" alt="">
+        <div class="card-content">
+            <div class="card-icon">○</div>
+            <div class="card-title">Help</div>
+            <div class="card-desc">Docs</div>
+        </div>
+    </div>
+</div>
